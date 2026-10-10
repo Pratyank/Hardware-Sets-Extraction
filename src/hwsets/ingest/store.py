@@ -21,9 +21,9 @@ from collections.abc import Iterable, Sequence
 from pathlib import Path
 from typing import Any
 
-from hwsets.models import PageInfo, Token
+from hwsets.models import PageInfo, Rule, Token
 
-INGEST_VERSION = 2
+INGEST_VERSION = 3
 _SLUG_RE = re.compile(r"[^a-z0-9]+")
 
 
@@ -103,10 +103,20 @@ class TokenStore:
         return bool(data.get("sha256") == sha256 and data.get("ingest_version") == INGEST_VERSION)
 
     def write(
-        self, source_pdf: str, sha256: str, pages: list[PageInfo], tokens: list[list[Token]]
+        self,
+        source_pdf: str,
+        sha256: str,
+        pages: list[PageInfo],
+        tokens: list[list[Token]],
+        rules: list[list[Rule]] | None = None,
     ) -> None:
         d = self.doc_dir(sha256)
         d.mkdir(parents=True, exist_ok=True)
+        for info, page_rules in zip(pages, rules or [[] for _ in pages], strict=True):
+            rows = [[*r.bbox, int(r.horizontal)] for r in page_rules]
+            _atomic_write(
+                d / f"p{info.page:04d}.rules.json", json.dumps(rows, separators=(",", ":"))
+            )
         for info, page_tokens in zip(pages, tokens, strict=True):
             rows = [_token_row(t) for t in page_tokens]
             _atomic_write(
@@ -129,6 +139,13 @@ class TokenStore:
         rows = json.loads((self.doc_dir(sha256) / f"p{page:04d}.tokens.json").read_text("utf-8"))
         return [_row_token(page, i, r) for i, r in enumerate(rows)]
 
+    def page_rules(self, sha256: str, page: int) -> list[Rule]:
+        path = self.doc_dir(sha256) / f"p{page:04d}.rules.json"
+        if not path.exists():
+            return []
+        rows = json.loads(path.read_text("utf-8"))
+        return [Rule.model_construct(bbox=tuple(r[:4]), horizontal=bool(r[4])) for r in rows]
+
     def tokens(self, sha256: str, pages: Iterable[int] | None = None) -> list[Token]:
         wanted = [p.page for p in self.pages(sha256)] if pages is None else sorted(set(pages))
         return [t for p in wanted for t in self.page_tokens(sha256, p)]
@@ -139,6 +156,10 @@ class TokenStore:
         sha = meta["sha256"]
         pages = self.pages(sha)
         return meta["source_pdf"], pages, {p.page: self.page_tokens(sha, p.page) for p in pages}
+
+    def load_rules(self, doc_id: str) -> dict[int, list[Rule]]:
+        sha = self.resolve(doc_id)["sha256"]
+        return {p.page: self.page_rules(sha, p.page) for p in self.pages(sha)}
 
     def resolve(self, doc_id: str) -> dict[str, Any]:
         try:

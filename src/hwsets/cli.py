@@ -14,7 +14,7 @@ import typer
 from hwsets.eval import aggregate, evaluate_document, write_report
 from hwsets.export import to_flat
 from hwsets.ingest import render
-from hwsets.ingest.pdf import extract_document
+from hwsets.ingest.pdf import extract_document_with_rules
 from hwsets.ingest.store import TokenStore, doc_id_for, sha256_file
 from hwsets.layout.pages import PageScore, score_page
 from hwsets.models import DocumentResult, FlatDocument, Token
@@ -54,8 +54,8 @@ def _ingest_one(
     doc_id = doc_id_for(pdf, raw_root)
     cached = store.is_cached(sha) and not force
     if not cached:
-        pages, tokens = extract_document(pdf)
-        store.write(str(pdf.relative_to(raw_root)), sha, pages, tokens)
+        pages, tokens, rules = extract_document_with_rules(pdf)
+        store.write(str(pdf.relative_to(raw_root)), sha, pages, tokens, rules)
     infos = store.pages(sha)
     candidates = [s.page for s in _score_doc(store, sha) if s.is_candidate]
     to_render = {
@@ -181,7 +181,7 @@ def _gold_final(doc_id: str) -> bool:
 def _extract_one(doc_id: str) -> DocumentResult:
     store = TokenStore(TOKENS)
     source_pdf, pages_info, tokens = store.load_all(doc_id)
-    return extract(source_pdf, pages_info, tokens)
+    return extract(source_pdf, pages_info, tokens, store.load_rules(doc_id))
 
 
 def _write_result(doc_id: str, result: DocumentResult, flat: bool) -> Path:

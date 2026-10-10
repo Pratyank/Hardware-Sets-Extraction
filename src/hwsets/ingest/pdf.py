@@ -15,7 +15,7 @@ from pathlib import Path
 import pymupdf
 
 from hwsets.ingest import ocr
-from hwsets.models import BBox, PageInfo, Token
+from hwsets.models import BBox, PageInfo, Rule, Token
 
 log = logging.getLogger(__name__)
 
@@ -120,13 +120,88 @@ def page_tokens(
     return tokens
 
 
+_RULE_THICK = 1.6  # max thickness (pt) of a drawn line
+_RULE_MIN_LEN = 6.0
+_MAX_RULES_PER_PAGE = 4000
+
+
+def page_rules(page: pymupdf.Page) -> list[Rule]:
+    """Thin horizontal / vertical drawn lines (strokes or filled hairline rectangles)."""
+    rules: list[Rule] = []
+    try:
+        drawings = page.get_drawings()
+    except Exception:  # malformed content streams must not stop ingest
+        log.warning("could not read drawings on page %d", page.number + 1)
+        return rules
+    for d in drawings:
+        for item in d.get("items", ()):
+            kind = item[0]
+            if kind == "l":
+                p1, p2 = item[1], item[2]
+                raw: BBox = (min(p1.x, p2.x), min(p1.y, p2.y), max(p1.x, p2.x), max(p1.y, p2.y))
+            elif kind == "re":
+                r = item[1]
+                raw = (r.x0, r.y0, r.x1, r.y1)
+            else:
+                continue
+            bbox = _display_bbox(raw, page)
+            w, h = bbox[2] - bbox[0], bbox[3] - bbox[1]
+            if h <= _RULE_THICK and w >= _RULE_MIN_LEN:
+                rules.append(Rule(bbox=bbox, horizontal=True))
+            elif w <= _RULE_THICK and h >= _RULE_MIN_LEN:
+                rules.append(Rule(bbox=bbox, horizontal=False))
+            if len(rules) >= _MAX_RULES_PER_PAGE:
+                return rules
+    return rules
+
+
+def apply_drawn_strikes(tokens: list[Token], rules: list[Rule]) -> list[Token]:
+    """Mark tokens crossed by a horizontal line through their middle band as struck.
+
+    Some redlines draw the strike as a vector line instead of a font strikeout flag. Table borders
+    run between rows and underlines sit at the baseline, so neither crosses the middle band.
+    """
+    hz = [r for r in rules if r.horizontal]
+    if not hz:
+        return tokens
+    out: list[Token] = []
+    for t in tokens:
+        out.append(t.model_copy(update={"strike": True}) if _crossed(t, hz) else t)
+    return out
+
+
+def _crossed(t: Token, hz: list[Rule]) -> bool:
+    if t.strike:
+        return False
+    x0, y0, x1, y1 = t.bbox
+    h = y1 - y0
+    lo, hi = y0 + 0.3 * h, y0 + 0.72 * h
+    for r in hz:
+        ry = (r.bbox[1] + r.bbox[3]) / 2
+        cover = min(x1, r.bbox[2]) - max(x0, r.bbox[0])
+        if lo <= ry <= hi and cover >= 0.6 * (x1 - x0):
+            return True
+    return False
+
+
 def extract_document(path: Path) -> tuple[list[PageInfo], list[list[Token]]]:
-    """Tokenize every page. Pages with almost no text but with images go through OCR."""
+    """Tokenize every page (see ``extract_document_with_rules``)."""
+    pages, tokens, _rules = extract_document_with_rules(path)
+    return pages, tokens
+
+
+def extract_document_with_rules(
+    path: Path,
+) -> tuple[list[PageInfo], list[list[Token]], list[list[Rule]]]:
+    """Tokenize every page and collect its drawn rules. Pages with almost no text but with
+    images go through OCR. Tokens crossed by a drawn strike line are flagged ``strike``."""
     pages: list[PageInfo] = []
     per_page: list[list[Token]] = []
+    per_page_rules: list[list[Rule]] = []
     with pymupdf.open(path) as doc:
         for page in doc:
-            tokens = page_tokens(page)
+            rules = page_rules(page)
+            tokens = apply_drawn_strikes(page_tokens(page), rules)
             has_images = bool(page.get_images(full=False))
             used_ocr = False
             if len(tokens) < OCR_MIN_WORDS and has_images:
@@ -148,4 +223,5 @@ def extract_document(path: Path) -> tuple[list[PageInfo], list[list[Token]]]:
                 )
             )
             per_page.append(tokens)
-    return pages, per_page
+            per_page_rules.append(rules)
+    return pages, per_page, per_page_rules

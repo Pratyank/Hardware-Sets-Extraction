@@ -1,0 +1,51 @@
+"""Drawn table rules as row boundaries.
+
+In a ruled table every row is closed by a horizontal border, while a wrapped cell's second
+line is not. So "is there a horizontal rule between these two lines, under both of them?" is an
+exact row-boundary test where rules exist, and a no-op where they do not.
+
+Pure functions of lines and rules.
+"""
+
+from __future__ import annotations
+
+from collections.abc import Mapping, Sequence
+
+from hwsets.models import Line, Rule
+
+_MIN_OVERLAP = 0.3  # the rule must run under this share of the narrower line
+
+
+class RuleIndex:
+    def __init__(self, rules_by_page: Mapping[int, Sequence[Rule]]) -> None:
+        self._hz = {
+            p: sorted((r for r in rules if r.horizontal), key=lambda r: r.bbox[1])
+            for p, rules in rules_by_page.items()
+        }
+
+    def has_rules(self, page: int) -> bool:
+        return bool(self._hz.get(page))
+
+    def separated(self, upper: Line, lower: Line) -> bool:
+        """True when a horizontal rule runs between ``upper`` and ``lower`` (same page)."""
+        if upper.page != lower.page:
+            return False
+        top, bottom = upper.bbox[3] - 1.0, lower.bbox[1] + 1.0
+        if bottom <= top:
+            return False
+        left = max(upper.bbox[0], lower.bbox[0])
+        right = min(upper.bbox[2], lower.bbox[2])
+        narrow = max(min(upper.bbox[2] - upper.bbox[0], lower.bbox[2] - lower.bbox[0]), 1.0)
+        for r in self._hz.get(upper.page, ()):
+            y = (r.bbox[1] + r.bbox[3]) / 2
+            if y < top:
+                continue
+            if y > bottom:
+                break
+            overlap = min(right, r.bbox[2]) - max(left, r.bbox[0])
+            if overlap >= _MIN_OVERLAP * narrow:
+                return True
+        return False
+
+
+EMPTY_RULES = RuleIndex({})

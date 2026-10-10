@@ -43,6 +43,13 @@ class PageInfo(_Frozen):
     ocr: bool = False
 
 
+class Rule(_Frozen):
+    """A thin drawn line (table border, strike line) on the displayed page."""
+
+    bbox: BBox
+    horizontal: bool
+
+
 class TokenDocument(_Frozen):
     """Cached ingest output for one PDF (``data/tokens/<sha>.tokens.json``)."""
 

@@ -36,6 +36,7 @@ from hwsets.columns.lexicon import (
     unit_code,
 )
 from hwsets.layout.columns import cell_gap, column_of
+from hwsets.layout.rules import EMPTY_RULES, RuleIndex
 from hwsets.models import Component, Field, Line, Token
 
 _NOTE_RE = re.compile(r"^(?:notes?|properties|note\s*\d*)\s*[:\-]", re.IGNORECASE)
@@ -125,6 +126,7 @@ def assemble_rows(
     toks: Mapping[str, Token],
     model: ColumnModel,
     set_desc: list[str] | None = None,
+    rules: RuleIndex = EMPTY_RULES,
 ) -> tuple[list[Row], list[str]]:
     """Group candidate row lines into logical rows. Returns rows and set-note token ids.
 
@@ -145,7 +147,8 @@ def assemble_rows(
     last_page = -1
     note_x: float | None = None  # left edge of the note being continued, if any
     note_to_set = False
-    for ln in lines:
+    pending: list[Line] = []  # fragments of a vertically centred cell, held for the next row
+    for idx, ln in enumerate(lines):
         tokens = [toks[i] for i in ln.token_ids]
         if not tokens:
             continue
@@ -187,11 +190,26 @@ def assemble_rows(
         near = rows and ln.page == last_page and ln.bbox[1] - last_bottom <= 1.6 * max(height, 6)
         new_page_cont = rows and ln.page != last_page
         value_roles = set(roles) & {"description", "catalog", "finish", "mfr"}
-        if _starts_row(roles, tokens, model) or (rows and len(value_roles) >= 3):
+        ruled_break = bool(
+            rows and value_roles and rows[-1].lines and rules.separated(rows[-1].lines[-1], ln)
+        )
+        if (
+            _starts_row(roles, tokens, model)
+            or (rows and len(value_roles) >= 3)
+            or ruled_break  # a drawn table border closes the previous row
+        ):
             # A line filling three value columns is a new item even without a quantity
             # ("GASKETING / SWEEP | PEMKO - ... | BLACK"); wrapped cells rarely span three.
             row = Row()
             rows.append(row)
+            for frag in pending:  # centred-cell fragments printed above this row's first line
+                _add_line(row, frag, toks, model)
+            pending = []
+        elif rows and _closer_to_next(
+            ln, idx, lines=lines, toks=toks, model=model, last_bottom=last_bottom
+        ):
+            pending.append(ln)
+            continue
         elif rows and (near or new_page_cont) and _continuation_ok(rows[-1], roles):
             row = rows[-1]
         elif sum(r in {"description", "catalog", "finish", "mfr"} for r in set(roles)) >= 2:
@@ -200,16 +218,52 @@ def assemble_rows(
         else:
             set_notes.extend(ln.token_ids)
             continue
-        known = 0
-        for tok, role in zip(tokens, roles, strict=True):
-            if role in {"ignore", "left"}:
-                continue
-            known += 1
-            row.add(role, tok)
-        row.lines.append(ln)
-        row.fit = min(row.fit, known / len(tokens))
+        _add_line(row, ln, toks, model)
         last_bottom, last_page = ln.bbox[3], ln.page
+    if pending and rows:
+        for frag in pending:
+            _add_line(rows[-1], frag, toks, model)
     return rows, set_notes
+
+
+def _add_line(row: Row, ln: Line, toks: Mapping[str, Token], model: ColumnModel) -> None:
+    tokens = [toks[i] for i in ln.token_ids]
+    known = 0
+    for tok in tokens:
+        role = model.role_of(tok)
+        if role in {"ignore", "left"}:
+            continue
+        known += 1
+        row.add(role, tok)
+    row.lines.append(ln)
+    if tokens:
+        row.fit = min(row.fit, known / len(tokens))
+
+
+def _closer_to_next(
+    ln: Line,
+    idx: int,
+    *,
+    lines: Sequence[Line],
+    toks: Mapping[str, Token],
+    model: ColumnModel,
+    last_bottom: float,
+) -> bool:
+    """A continuation fragment that sits much closer to the next row's first line than to the
+    line above belongs to that next row: its cell is vertically centred on the row, so the cell's
+    first line is printed above the row's single-line cells (quantity, manufacturer)."""
+    if idx + 1 >= len(lines):
+        return False
+    nxt = lines[idx + 1]
+    if nxt.page != ln.page:
+        return False
+    nxt_tokens = [toks[i] for i in nxt.token_ids]
+    nxt_roles = [model.role_of(t) for t in nxt_tokens]
+    if not _starts_row(nxt_roles, nxt_tokens, model):
+        return False
+    gap_prev = max(ln.bbox[1] - last_bottom, 0.0)
+    gap_next = max(nxt.bbox[1] - ln.bbox[3], 0.0)
+    return gap_next < 0.5 * gap_prev
 
 
 def _continuation_ok(prev: Row, roles: Sequence[str]) -> bool:
@@ -395,10 +449,14 @@ def build_component(row: Row, model: ColumnModel, legend: Legend) -> tuple[Compo
 
 
 def parse_rows(
-    lines: Sequence[Line], toks: Mapping[str, Token], model: ColumnModel, legend: Legend
+    lines: Sequence[Line],
+    toks: Mapping[str, Token],
+    model: ColumnModel,
+    legend: Legend,
+    rules: RuleIndex = EMPTY_RULES,
 ) -> ParsedRows:
     set_desc: list[str] = []
-    rows, set_notes = assemble_rows(lines, toks, model, set_desc)
+    rows, set_notes = assemble_rows(lines, toks, model, set_desc, rules)
     comps: list[Component] = []
     warnings: list[str] = []
     for row in rows:

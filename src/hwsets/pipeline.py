@@ -21,6 +21,7 @@ from hwsets.components.parse import ColumnModel, is_mfr_prefix, parse_rows
 from hwsets.layout.chrome import chrome_keys, header_row_roles, is_chrome
 from hwsets.layout.columns import Layout, column_of, infer_layouts, layout_for_page
 from hwsets.layout.lines import clean_tokens, group_lines, union_bbox
+from hwsets.layout.rules import RuleIndex
 from hwsets.models import (
     Component,
     DocumentResult,
@@ -30,6 +31,7 @@ from hwsets.models import (
     Location,
     PageInfo,
     PageRegion,
+    Rule,
     Token,
 )
 from hwsets.segment.headers import NOT_USED_RE, HeaderParse
@@ -175,7 +177,11 @@ def _location(lines: Sequence[Line]) -> Location:
 
 
 def _build_set(
-    sp: Span, doc: _Doc, models: Mapping[int, ColumnModel], legend: Legend
+    sp: Span,
+    doc: _Doc,
+    models: Mapping[int, ColumnModel],
+    legend: Legend,
+    rules: RuleIndex,
 ) -> tuple[HardwareSet, list[str]]:
     h: HeaderParse = sp.header
     warnings: list[str] = []
@@ -216,7 +222,7 @@ def _build_set(
             else:
                 groups.append((model, [ln]))
         for model, lines in groups:
-            parsed = parse_rows(lines, doc.toks, model, legend)
+            parsed = parse_rows(lines, doc.toks, model, legend, rules)
             components.extend(parsed.components)
             set_level.extend(parsed.set_note_tokens)
             if h.inline and not h.desc_token_ids:
@@ -250,9 +256,13 @@ def _component_conf(c: Component) -> float:
 
 
 def extract(
-    source_pdf: str, pages: Sequence[PageInfo], tokens_by_page: Mapping[int, Sequence[Token]]
+    source_pdf: str,
+    pages: Sequence[PageInfo],
+    tokens_by_page: Mapping[int, Sequence[Token]],
+    rules_by_page: Mapping[int, Sequence[Rule]] | None = None,
 ) -> DocumentResult:
     doc = _prepare(pages, tokens_by_page)
+    rules = RuleIndex(rules_by_page or {})
     section = find_hardware_pages(doc.lines_by_page, doc.toks)
     warnings = list(section.warnings)
     if not section.pages:
@@ -310,7 +320,7 @@ def extract(
 
     sets: list[HardwareSet] = []
     for sp in spans:
-        hw, w = _build_set(sp, doc, models, legend)
+        hw, w = _build_set(sp, doc, models, legend, rules)
         sets.append(hw)
         warnings.extend(w)
     result = DocumentResult(
