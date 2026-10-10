@@ -15,6 +15,8 @@ import statistics
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 
+from hwsets.calibration import Calibration
+from hwsets.calibration import apply as apply_calibration
 from hwsets.columns.assign import assign_roles
 from hwsets.columns.features import column_features
 from hwsets.columns.legend import Legend, find_legend
@@ -314,6 +316,7 @@ def extract(
     pages: Sequence[PageInfo],
     tokens_by_page: Mapping[int, Sequence[Token]],
     rules_by_page: Mapping[int, Sequence[Rule]] | None = None,
+    calibration: Calibration | None = None,
 ) -> DocumentResult:
     doc = _prepare(pages, tokens_by_page)
     rules = RuleIndex(rules_by_page or {})
@@ -390,4 +393,4 @@ def extract(
         sets=sets,
         warnings=warnings,
     )
-    return validate_document(result, doc.toks)
+    return apply_calibration(validate_document(result, doc.toks), calibration)

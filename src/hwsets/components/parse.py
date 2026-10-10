@@ -490,15 +490,18 @@ def build_component(row: Row, model: ColumnModel, legend: Legend) -> tuple[Compo
         fin_conf = min(1.0, fin_conf + 0.1) if is_finish_value(fin_text) else fin_conf * 0.85
 
     fit = row.fit
+    # Values assembled from several wrapped lines are where row-assembly mistakes live, so their
+    # raw score drops with each extra line (calibration turns scores into accuracies later).
+    wrap = 0.93 ** max(len(row.lines) - 1, 0)
     comp = Component(
         qty=qty_field,
         qty_unit=unit,
-        description=_field(desc, m_conf.get("description", 0.6) * (0.7 + 0.3 * fit)),
-        catalog_number=_field(cat, m_conf.get("catalog", 0.6) * (0.7 + 0.3 * fit)),
+        description=_field(desc, m_conf.get("description", 0.6) * (0.7 + 0.3 * fit) * wrap),
+        catalog_number=_field(cat, m_conf.get("catalog", 0.6) * (0.7 + 0.3 * fit) * wrap),
         mfr=_field(mfr, mfr_conf if mfr else 0.7),
         mfr_resolved=mfr_resolved,
         finish=_field(finish, fin_conf if finish else 0.7),
-        notes=_field(notes, 0.7),
+        notes=_field(notes, 0.7 * wrap),
     )
     return comp, warnings
 

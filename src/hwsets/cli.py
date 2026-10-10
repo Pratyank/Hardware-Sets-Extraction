@@ -11,6 +11,9 @@ from typing import Annotated, Any
 
 import typer
 
+from hwsets.calibration import FIELDS as CAL_FIELDS
+from hwsets.calibration import Calibration
+from hwsets.calibration import fit as fit_calibration
 from hwsets.eval import aggregate, evaluate_document, write_report
 from hwsets.export import to_flat
 from hwsets.ingest import render
@@ -178,10 +181,48 @@ def _gold_final(doc_id: str) -> bool:
     return bool(json.loads(path.read_text("utf-8")).get("_final"))
 
 
-def _extract_one(doc_id: str) -> DocumentResult:
+CALIBRATION = DATA / "calibration.json"
+
+
+def _load_calibration() -> Calibration | None:
+    if not CALIBRATION.exists():
+        return None
+    return Calibration.model_validate_json(CALIBRATION.read_text("utf-8"))
+
+
+def _extract_one(doc_id: str, *, calibrated: bool = True) -> DocumentResult:
     store = TokenStore(TOKENS)
     source_pdf, pages_info, tokens = store.load_all(doc_id)
-    return extract(source_pdf, pages_info, tokens, store.load_rules(doc_id))
+    cal = _load_calibration() if calibrated else None
+    return extract(source_pdf, pages_info, tokens, store.load_rules(doc_id), cal)
+
+
+@app.command()
+def calibrate(out: Annotated[Path, typer.Option()] = CALIBRATION) -> None:
+    """Fit per-field confidence calibration on the (final) gold books."""
+    obs: dict[str, list[tuple[float, bool]]] = {}
+    docs = [d for d in _docs_for(Split.gold) if _gold_final(d)]
+    for d in docs:
+        result = _extract_one(d, calibrated=False)
+        gold = FlatDocument.model_validate_json((GOLD / f"{d}.gold.json").read_text("utf-8"))
+        de = evaluate_document(result, gold, doc_id=d)
+        for se in de.sets:
+            if se.pred_idx is None:
+                continue
+            comps = result.sets[se.pred_idx].components
+            for ce in se.components:
+                if ce.pred_idx is None:
+                    continue
+                c = comps[ce.pred_idx]
+                for name, ok in ce.field_correct.items():
+                    if name in CAL_FIELDS:
+                        obs.setdefault(name, []).append((getattr(c, name).confidence, bool(ok)))
+    cal = fit_calibration(obs, source=f"gold books: {', '.join(docs)}")
+    out.write_text(cal.model_dump_json(indent=1), encoding="utf-8")
+    for name, fmap in cal.fields.items():
+        pairs = ", ".join(f"{x:.2f}->{y:.2f}" for x, y in zip(fmap.xs, fmap.ys, strict=True))
+        typer.echo(f"{name:15} n={fmap.n:5} {pairs}")
+    typer.echo(f"wrote {out}")
 
 
 def _write_result(doc_id: str, result: DocumentResult, flat: bool) -> Path:
