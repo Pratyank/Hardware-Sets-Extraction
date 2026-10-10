@@ -181,3 +181,17 @@ negatives (still 0 sets) to make sure nothing regressed.
   the README.
 - **Process:** two commits went in with a hidden failure because exit codes were piped through `tail`. Both
   were fixed immediately. All commits now go through `make check` (lint, types and the full test suite).
+
+## 2026-10-10: Held-out evaluation
+
+- **Held-out gold** for oswego (pp 418–445, 39 sets, 376 components) and livelle-vol1 (pp 643–662, 68 sets, 445
+  components) was drafted from page images by a separate agent (gold-holdout) after development was frozen.
+  I spot-checked oswego p430 and livelle p655 against the images (exact match, including wrapped catalog cells
+  and NOTE rows kept out of components), then marked both files `_final`.
+- **Result, measured once:** set recall 100%, set precision 100%, component F1 99.9%, set_fully_correct 94.4%
+  (oswego 89.7%, livelle 97.1%). There were no manufacturer↔finish confusions. The gold-fitted calibration
+  holds: fields scored ≥ 0.9 are 99.8% exact.
+- **Not fixed, deliberately:** the two error classes it shows (`NOTE:` rows merging into the component above
+  in oswego, and a trailing foot mark dropped in `LP200A 6'` in livelle). Fixing them would tune on the hold-out
+  and spoil it as a measurement. Both are listed as known failures in the README.
+- `eval/holdout/report.*` is committed next to `eval/report.*`.

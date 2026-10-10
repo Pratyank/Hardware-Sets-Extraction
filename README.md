@@ -200,7 +200,20 @@ category in `docs/DECISIONS.md` (Checkpoint 6b). Because the gold books then inf
 books below are the honest generalization number.**
 
 **Held-out books** (never opened during development; gold drafted at the end by a separate agent):
-HELDOUT_RESULTS
+Measured once, after development was frozen. Full report: `eval/holdout/report.md`.
+
+| Book (format) | Sets | Set R / P | Components R / P | Fully correct |
+|---|---|---|---|---|
+| oswego (`Hardware Group No.` list, door lines, NOTE rows), pp 418–445 | 39 | 100 / 100 | 99.7 / 100 | 89.7% |
+| livelle (`Set: N.0` list, `Description:` titles, no unit), pp 643–662 | 68 | 100 / 100 | 100 / 100 | 97.1% |
+| **Total (micro)** | **107** | **100 / 100** | **99.9 / 100** | **94.4%** |
+
+- Field accuracy on held-out data: qty 99.9%, unit 99.8%, description 99.4%, catalog 99.1%, manufacturer 99.9%,
+  finish 100%, notes 100%. No manufacturer↔finish confusions. Mean location IoU 0.93.
+- Calibration fitted on gold still holds out of sample: fields scored ≥ 0.9 are 99.8% exact (4,893 fields), and
+  fields scored 0.8–0.9 are 81.5% exact (27 fields).
+- All 17 held-out errors fall into two classes, listed under known failures below. Neither was fixed, so the
+  held-out books stay clean for future measurement.
 
 **Confidence** (`calibration.py`): per-field isotonic calibration fitted on gold. Measured accuracy is very high, so most fields calibrate close to 1.0 and the set badges spread little. The relative ordering still drives the UI's review queue. In-sample, fields scored ≥ 0.9
 are 99.7% exact and fields scored 0.8–0.9 are 93.5% exact. The UI's `n` key jumps to the low-confidence fields
@@ -211,6 +224,11 @@ first.
   strikeout flag, so the quantity comes out `null` (gold is 2).
 - **Wrapped "DIAGRAMS" rows printed without a quantity** directly under a complete row are sometimes merged into
   it (hfh).
+- **Held-out oswego, `NOTE:` rows:** a row whose description cell is just `NOTE:` and whose text sits in the
+  catalog column ("FURNISH ADDITIONAL PIVOTS …") is merged into the component above instead of becoming a set
+  note (4 sets). The same set's unquantified `SEALS` row merges into the row above it, the same class as the
+  hfh "DIAGRAMS" rows.
+- **Held-out livelle, a trailing foot mark:** `LP200A 6'` comes out as `LP200A` (2 rows).
 - **Roselle notes column:** a few multi-line notes join a following remark line.
 - **starhardware (dev):** paragraph-long catalog cells with images and sentence-form headers ("For doors assigned
   Hardware Group/Set #103 …") are found only partially. About 70 of about 74 sets.

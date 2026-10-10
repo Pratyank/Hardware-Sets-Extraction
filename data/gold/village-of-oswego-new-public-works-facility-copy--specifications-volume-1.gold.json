@@ -2,6 +2,7 @@
  "source_pdf": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
  "gold_pages": "418-445",
  "_annotator": "gold-holdout, drafted from page images",
+ "_final": true,
  "sets": [
   {
    "set_number": "02",
