@@ -1,0 +1,76 @@
+{
+  "doc_id": "valor-acres-building-e--087100-door-hardware-rev-2",
+  "hardware_pages": "7-18 (sets 01..36 incl. 21A/21B; under '3.3 DOOR HARDWARE SETS'). Detector 7-17 is correct but MISSES p18 (tail of Group 35 + all of Group 36). No false positives.",
+  "format": "list",
+  "header_pattern": [
+    "Hardware Group No. 01: (Door U1 – Interior Unit Entry Swing Doors)",
+    "Hardware Group No. 21A: (Doors 101A & 102A)",
+    "Hardware Group No. 34: (Gate 138)"
+  ],
+  "set_number_examples": [
+    "01",
+    "02",
+    "12",
+    "21A",
+    "21B",
+    "36"
+  ],
+  "approx_set_count": 37,
+  "column_order": [
+    "qty",
+    "unit",
+    "description",
+    "finish"
+  ],
+  "has_header_row": "Yes, repeated under every set: 'Qty    Description' (only two labels; unit and finish columns are unlabeled). Each set also has 'Each To Have:' line.",
+  "has_mfr_legend": false,
+  "has_lookup_codes": false,
+  "scanned": false,
+  "multi_page_sets": [
+    "03 (p7-8, header on p7, components p8)",
+    "08 (p8-9)",
+    "12 (p9-10)",
+    "14 (p10-11)",
+    "17 (p11-12)",
+    "20 (p12-13)",
+    "25 (p14-15)",
+    "28 (p15-16)",
+    "33 (p16-17)",
+    "35 (p17-18)"
+  ],
+  "not_used_style": null,
+  "set_level_lines": [
+    "Each To Have:",
+    "(Doors 104A, 105A & 126A 124, 130A & 130B) — door list in parentheses on header line, may wrap to 2 lines",
+    "THIS DOOR IS NOT AN EGRESS DOOR SO THAT IT LOCKS FROM BOTH SIDES ... PREP DOOR FOR WIRE TO ELECTRIC LOCKSET (bold full-width note after set 33 components)",
+    "REFER TO DIVISION 08 SECTION “ALL-GLASS ENTRANCES” (after 21B)",
+    "CARD SWIPE ALLOWS AUTO OPERATOR TO FUNCTION (after 12)"
+  ],
+  "mfr_codes_seen": [],
+  "finish_codes_seen": [
+    "BLK",
+    "BBLK",
+    "622",
+    "693",
+    "711",
+    "AL",
+    "GRY",
+    "---"
+  ],
+  "collision_examples": [
+    "AL here is a finish (aluminum) in the finish column, e.g. '1 EA THRESHOLD AL'; there is no mfr column at all, so any AL/BLK must go to finish."
+  ],
+  "quirks": [
+    "NO manufacturer and NO catalog-number columns: only qty, unit (EA/SET/PR), generic description, finish. Brand appears only inside description text, e.g. '(SCHLAGE LATITUDE LEVER STYLE)'.",
+    "Description wraps over 2-6 lines while finish sits on the first line, so token text interleaves: 'STOREROOM LEVER 622 LOCKSET', 'CONCEALED VERT 711 ROD ELECT. EXIT DEVICE'. Must use x-bands, not text order.",
+    "Bulletin revisions: strikethrough text in door lists and descriptions (e.g. 'Doors 103A & ~~111A~~ 114', 'DEVICE (~~DOGGING,~~ NIGHT LATCH'), and bold for added text/rows. Struck text is still in the text layer.",
+    "Some components have empty finish (CARD READER (BY OWNER’S SECURITY CONTRACTOR), POWER SUPPLY on 15) and some have '---' as finish.",
+    "Running header with 4 bulletin dates top-right; footer 'DOOR HARDWARE 087100 - N'.",
+    "Groups 21A and 21B have identical door lists."
+  ],
+  "pages_viewed": [
+    9,
+    17
+  ],
+  "notes_for_extractor": "Clean list format, but the finish column is the only right-hand column and must be detected by x-position because multi-line descriptions interleave with it in reading order. Strikethrough revision text will pollute door lists/descriptions unless filtered (drawn line through tokens). Mfr must be null everywhere."
+}

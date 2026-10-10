@@ -1,0 +1,74 @@
+{
+ "doc_id": "shubie-center--e2231795-ift-specs",
+ "hardware_pages": "174-175 (Section 08 71 10 DOOR HARDWARE spans 169-175; 3.1 SCHEDULE starts p174). Detector list 174-175 is correct; p171-172 (lower scores) are product prose with manufacturer names, no sets.",
+ "format": "list",
+ "header_pattern": [
+  "Hardware Group No. 01",
+  "Hardware Group No. 03"
+ ],
+ "set_number_examples": [
+  "01",
+  "02",
+  "03"
+ ],
+ "approx_set_count": 3,
+ "column_order": [
+  "qty",
+  "unit",
+  "description",
+  "catalog",
+  "finish",
+  "mfr"
+ ],
+ "has_header_row": false,
+ "has_mfr_legend": false,
+ "has_lookup_codes": false,
+ "scanned": false,
+ "multi_page_sets": "none (group 01 on p174; groups 02-03 on p175)",
+ "not_used_style": "none seen",
+ "set_level_lines": [
+  "For use on Door #(s):  D1  D2  (door numbers on following line, widely spaced)",
+  "Provide each SGL door(s) with the following:",
+  "DOORS ARE ALWAYS UNLOCKED DURING HOURS OF OPERATION / MODE OF OPERATION / A PERSON CAN ENTER ... FREE EGRESS AT ALL TIMES (bold caps prose after components)",
+  "END OF SECTION"
+ ],
+ "mfr_codes_seen": [
+  "IVE",
+  "VON",
+  "SCH",
+  "GLY",
+  "LCN",
+  "ZER",
+  "SCE",
+  "UNK"
+ ],
+ "finish_codes_seen": [
+  "711",
+  "315",
+  "622",
+  "630",
+  "BLK",
+  "ANCL",
+  "WHT",
+  "LGR",
+  "A",
+  "AA"
+ ],
+ "collision_examples": [
+  "'A'/'AA' Zero finishes ('312A-S x door width x (2) door A ZER')",
+  "UNK used as a mfr placeholder for by-others items ('CREDENTIAL BY OTHERS UNK')",
+  "Some ZER rows have blank finish (group 01 sweep/threshold)"
+ ],
+ "quirks": [
+  "Unit 'EA-R' variant on auto operator/actuator rows",
+  "Catalog contains free text '8192A x door width', 'GASKETING BY DR SUPPLIER', 'CON. TO SUIT', '679-05 TO SUIT DR MATERIAL', 'PS904 900-4RL 120/240 VAC'",
+  "Rows with no finish (door sweep/threshold/wire harness in group 01)",
+  "Boxed page header 'Shubenacadie Wetland Centre ... Section 08 71 10 Page N 2024-07-15' each page",
+  "Very small: only 3 groups in a ~200+ page project manual"
+ ],
+ "pages_viewed": [
+  174,
+  175
+ ],
+ "notes_for_extractor": "Clean Overture-style 6-column list with no header row; small and easy. Watch blank-finish rows (mfr directly after catalog), EA-R unit, and the 'For use on Door #(s):' door list on a separate line."
+}

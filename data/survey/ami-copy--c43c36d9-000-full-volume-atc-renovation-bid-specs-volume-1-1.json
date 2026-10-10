@@ -1,0 +1,22 @@
+{
+  "doc_id": "ami-copy--c43c36d9-000-full-volume-atc-renovation-bid-specs-volume-1-1",
+  "hardware_pages": "397-419 (Section 087100 3.8 DOOR HARDWARE SCHEDULE; first set 'Hardware Group No. 01' on p397, last 'X06' + END OF SECTION on p419). Detector p380 is a false positive (submittals paragraph describing 'Sequence of Format for the Hardware Schedule', no sets).",
+  "format": "list",
+  "header_pattern": ["Hardware Group No. 01", "Hardware Group No. 03B", "Hardware Group No. X01"],
+  "set_number_examples": ["01", "01A", "03B", "10E", "18C", "X01", "X03A"],
+  "approx_set_count": 44,
+  "column_order": ["qty", "unit", "description", "catalog", "finish", "mfr"],
+  "has_header_row": "Yes, repeated under every set: 'QTY DESCRIPTION CATALOG NUMBER FINISH MFR' (unit 'EA' column has no header label).",
+  "has_mfr_legend": false,
+  "has_lookup_codes": false,
+  "scanned": false,
+  "multi_page_sets": "none seen; every set fits on a single page (Openings Studio style with 1-3 sets per page).",
+  "not_used_style": "none seen; numbering simply has gaps (no 03A, 07, 12-17, 18) rather than NOT USED entries.",
+  "set_level_lines": ["For use on Door #(s): 118 137 138 184", "Each to have:", "DOOR(S) NORMALLY LOCKED AND LATCHED. ENTRY BY VALID CREDENTIAL OR ACCESS CONTROL TIME ZONE OR KEY OVERRIDE. FREE EGRESS AT ALL TIMES. UPON LOSS OF POWER, DOOR(S) REMAIN LOCKED.", "REPLACE RIM CYLINDER ... RE-USE REMAINING DOOR HW ENSURE DOORS CLOSE & LATCH PROPERLY (X-series existing-door scope notes)", "RE-USE EXISTING HINGES, DOOR CLOSER (IF INSTALLED)"],
+  "mfr_codes_seen": ["IVE", "SCH", "LCN", "VON", "ZER", "GLY", "SCE", "GEN", "LOC"],
+  "finish_codes_seen": ["652", "626", "630", "628", "689", "GRY", "BK", "AA", "A", "SP", "ORG", "BLK", "WHT", "PLA", "US28", "ANCL"],
+  "collision_examples": ["'SP' appears as a finish (ASTRAGAL 43SP  SP ZER) - SP is also a common mfr code in other books; here the finish column is immediately before MFR so position decides.", "'A' finish (THRESHOLD 545A  A ZER) and 'AA' finish are short tokens easily confused with catalog suffixes.", "Catalog for auto operator wraps: '9542 HL/D AS REQ (120/240 VAC) R' with finish 'ANCL' interleaved in the text stream ('AS REQ (120/240  ANCL LCN VAC) R')."],
+  "quirks": ["Each component row has a small document icon (and a lightning-bolt icon for electrified items) between CATALOG NUMBER and FINISH columns - non-text glyphs.", "Catalog cells wrap onto a second line (e.g. 'AD-300-MS-50-MT-SPA-J (BY' / 'DIV. 28)'); in the token stream the continuation appears after finish/mfr, e.g. '626 SCE DIV. 28)'. Descriptions also wrap ('CLASSROOM DEAD LOCK W/ OUTSIDE INDICATOR', 'DOOR POSITION SWITCH-DPDT', 'RELAY/DOOR SEQUENCER').", "Some rows lack unit, finish and mfr: '1 POWER SUPPLY (BY DIV. 28)', '1 EA PERIMETER GASKETING BY ALUMINUM DOOR MANUFACTURER'.", "Row with finish 'US28' and no gap: '2 EA COVER PLATE DOGGING KIT-LDK-98 US28 VON'.", "Lock catalog '(BY DIV. 28)' indicates item furnished by others but still has finish/mfr.", "Set numbers non-contiguous; X-prefixed groups are existing-door modification sets.", "Running page header 'Hagerstown Community College Advanced Technology Center Renovation' and footer 'Door Hardware 087100-NN'."],
+  "pages_viewed": [397, 399],
+  "notes_for_extractor": "Clean list format with a consistent column header per set; the main hazards are wrapped catalog/description cells whose continuation text lands after finish/mfr in reading order, rows with no unit/finish/mfr, and the operational-description paragraph after each set which must not be parsed as components."
+}

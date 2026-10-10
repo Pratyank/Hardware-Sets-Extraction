@@ -1,0 +1,22 @@
+{
+  "doc_id": "sat-tdp--2025-12-19-sat-tdp-project-manual",
+  "hardware_pages": {"ranges": ["715-836"], "false_positives_in_detector": [], "missed_by_detector": [814, 820], "notes": "Section 08 71 00 (Bulletin T039) Part 3 '3.6 HARDWARE SETS:' starts at bottom of p715 (Group 001, 005) and runs continuously to p836 ('END OF SECTION', 08 71 00 - 142). p837 begins 08 71 13 Automatic Door Operators. p814 (FC201AC) and p820 (J200) are real set pages missing from the detector list. No other hardware-set pages elsewhere in the 3930-page manual (next best page score 0.7)."},
+  "format": "list",
+  "header_pattern": ["Hardware Group No. 001", "Hardware Group No. 101AC", "Hardware Group No. XCY714ETW"],
+  "set_number_examples": ["001", "005.1", "101", "101T.1", "200AC", "C200CT", "CY201.1", "V-731CR", "XCY746"],
+  "approx_set_count": 178,
+  "column_order": ["qty", "unit", "description", "catalog", "finish", "mfr"],
+  "has_header_row": "Yes, repeated under every set: 'QTY DESCRIPTION CATALOG NUMBER FINISH MFR' (unit EA/SET column unlabeled).",
+  "has_mfr_legend": {"present": false, "page": null, "examples": [], "notes": "No abbreviation table in the set pages; Part 2 prose names manufacturers in full."},
+  "has_lookup_codes": false,
+  "scanned": false,
+  "multi_page_sets": "none seen; every page 716-836 begins with a 'Hardware Group No.' header (electrified sets typically one per page, simple sets 2-3 per page).",
+  "not_used_style": "none seen. Placeholder sets use a NOTE line instead: 'Hardware Group No. 005 ... EA NOTE ALL HARDWARE BY DOOR MANUFACTURER'; Group 001 '1 NOTE BALANCE OF HARDWARE BY DOOR Mfr -COORDINATE ...'.",
+  "set_level_lines": ["No door-number lines under headers (no 'Doors:' / opening list).", "Operation narrative after component list, e.g. '-INGRESS BY THE CREDENTIAL READER OR KEY OVERRIDE. -FREE EGRESS BY LEVER. -REQUEST TO EXIT, LATCH MONITOR AND DOOR POSITION SWITCHES ARE FOR USE BY SECURITY CONTRACTOR.'", "'DESCRIPTION OF OPERATION:' blocks and '**HARDWARE SET IS A GUIDELINE** -VERIFY AND COORDINATE ALL HARDWARE WITH DOOR/FRAME MANUFACTURER PRIOR TO SUBMITTALS.' (J200)", "'STOREROOM FUNCTION UNTIL COMMISSIONED WITH ACCESS CONTROL LATER.'"],
+  "mfr_codes_seen": ["IVE", "SAR", "LCN", "VON", "ZER", "MCK", "SCH", "GLY", "MED", "SCE", "ADA", "HAG", "KAB", "ACC", "LOX", "UNK", "B/O"],
+  "finish_codes_seen": ["626", "630", "689", "652", "628", "695", "AA", "A", "BK", "GRY", "WHT"],
+  "collision_examples": "AA/A/BK/GRY/WHT finishes on ZER/IVE items sit in the FINISH column; no PE/NO/AL. Finish-like strings also appear inside catalog numbers ('64-8205 FEJ 26D', 'LD-43-TB-8610 32D', 'ETJ 26D/32D') while the FINISH column holds 626/630 - must not take 26D/32D from the catalog as the finish. 'UNK' (unknown) and 'B/O' used as mfr for Div 28 items with no finish.",
+  "quirks": ["Alphanumeric set ids with prefixes/suffixes and dots: 005.1, 101T.1, C201.1, CY200TS1, V-731CR, XCY714ETW.", "Catalog cells wrap heavily; token text puts the wrapped remainder AFTER finish/mfr: '4040XP RW/PA TBWMS X MTG 689 LCN BRKT, SPCR & PLATE AS REQ', 'LD-43-TB-8610 32D LENGTH & 630 SAR HEIGHT AS R...'. Notes in parentheses wrap too: '5BB1 4.5 X 4.5 652 IVE (PROVIDE NRP @ OUTSWING, LOCKABLE DOORS)' - text shows the parenthetical after IVE.", "Many lines have no finish (Div 28 items 'AS SPECIFIED IN DIVISION 28 UNK/B/O', 'SEAL PERIMETER SEAL BY FRAME MFR' with no finish or mfr).", "Some lines lack qty ('EA NOTE ALL HARDWARE BY DOOR MANUFACTURER'); some lack unit ('1 NOTE BALANCE OF HARDWARE...').", "Mfr sometimes absent while finish present or vice versa (HAG pocket door kit: 'AS REQ HAG' no finish).", "Running header 'New Terminal - San Antonio International Airport 23183.A07a Bulletin T039 19 December 2025' and footer 'Door Hardware 08 71 00 - NN' on every page.", "No door assignments in sets at all (door-to-set mapping lives elsewhere, e.g. drawings)."],
+  "pages_viewed": [716, 741],
+  "notes_for_extractor": "Huge book (3930 pp) but hardware is one contiguous block 715-836 with ~178 groups in a clean Comsense list layout. Main difficulty is multi-line catalog/description cells whose continuation tokens follow finish/mfr in reading order, plus finish-looking tokens (26D, 32D) embedded in catalog numbers and Div-28 lines with no finish; group ids are free-form alphanumerics."
+}

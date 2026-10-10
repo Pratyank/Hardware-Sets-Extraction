@@ -1,0 +1,22 @@
+{
+  "doc_id": "national-doors-and-hardware--15e2b8ac-fs17-specs-v1",
+  "hardware_pages": {"ranges": ["406-412"], "false_positives_in_detector": [390, 397], "missed_by_detector": [412], "notes": "Section 087100 runs 389-412; sets start p406 under '3.x D. Hardware Sets:' and end p412 (Group 15) with 'END OF SECTION 08 71 00'. 390/397 are Part 1/Part 2 prose (submittals, continuous hinges)."},
+  "format": "list",
+  "header_pattern": ["Hardware Group No. 01", "Hardware Group No. 13", "Hardware Group No. 15"],
+  "set_number_examples": ["01", "02", "12", "15"],
+  "approx_set_count": 15,
+  "column_order": ["qty", "unit", "description", "catalog", "finish", "mfr"],
+  "has_header_row": "Yes, repeated under every set: 'QTY DESCRIPTION CATALOG NUMBER FINISH MFR' (unit EA/SET column is unlabeled, sits between QTY and DESCRIPTION).",
+  "has_mfr_legend": {"present": true, "page": 406, "examples": ["ADA Adams Rite Manufacturing Co", "IVE H.B. Ives", "ZER Zero International Inc", "B/O By Others"]},
+  "has_lookup_codes": false,
+  "scanned": false,
+  "multi_page_sets": "none seen; every group fits on one page (page breaks fall between groups).",
+  "not_used_style": "none seen. Groups 14/15 are 'ALL HARDWARE BY OVERHEAD DOOR MFG 626 B/O' and '1 EA ALL HARDWARE BY GATE MFG' (by-others placeholders, not NOT USED).",
+  "set_level_lines": ["Door numbers listed as a grid directly under the header with no label: '8A 8B 23 26 27 28 29 30 31 32 34 35 36 37 38', '41.1BF 41.2BF ... 41.8OH'", "'Provide each SGL door(s) with the following:' / 'Provide each PR door(s)...' / 'Provide each SL door(s)...' / 'Provide each RU door(s)...'", "Trailing notes in caps: 'BALANCE OF DOOR HARDWARE TO BE SUPPLIED BY ALUMINUM SUPPLIER', 'CARD READER BY SECURITY SUB DIV.28 TO RELEASE DEVICE FOR ACCESS', 'OPENING TO COMPLY WITH LEVEL E TESTING'"],
+  "mfr_codes_seen": ["IVE", "VON", "ADA", "SCH", "LCN", "ZER", "JOH", "TRI", "B/O"],
+  "finish_codes_seen": ["630", "689", "626", "652", "630-316", "A", "AA", "BK", "BR", "GRY"],
+  "collision_examples": "Finish 'A' / 'AA' (aluminum, on ZER thresholds/meeting stile) and 'BK'/'BR'/'GRY' are short alpha finish codes; they are always in the FINISH column immediately before the 3-letter MFR, so column position decides. No PE/NO/AL collisions seen.",
+  "quirks": ["Door numbers printed as a multi-column grid between header and 'Provide each ...' line, no 'Doors:' label - easy to mistake set header digits for door numbers (e.g. 'Hardware Group No. 02 40' in text = group 02, door 40).", "Catalog-cut-sheet link icon column between CATALOG and FINISH (renders as a glyph token in text).", "Wrapped description cells: token text emits the wrap continuation AFTER finish/mfr, e.g. 'PRIVACY LOCK W/ ND40S RHO OS-OCC 626 SCH OUTSIDE INDICATOR' and 'ELEC FIRE EXIT RX-QEL-WS-9927-L-F-06 24 626 VON HARDWARE VDC' (catalog wrap 'VDC' also trails).", "Wrapped finish cell: '630-' / '316' on two lines (p406 90 DEG OFFSET PULL) - text shows '630- IVE 316'.", "Missing mfr: Group 13 'BOTTOM FLOOR GUIDE C-GUIDE SLDING BARN DOOR FLOOR GUIDE 630' has no MFR.", "Missing qty: Group 14 'EA ALL HARDWARE BY OVERHEAD DOOR MFG 626 B/O'.", "Unit 'SET' used ('1 SET MEETING STILE 328AA-S AA ZER').", "Several groups per page; page footer '#2024814 DOOR HARDWARE 08 71 00 - 18 08/29/25' plus logo."],
+  "pages_viewed": [406, 411],
+  "notes_for_extractor": "Layout is clean Allegion/Comsense style, but wrapped description/catalog cells come out of reading order after the finish/mfr tokens, so line reconstruction must use bbox rows rather than token order. Door-number grids under the header need to be separated from the set number; some lines lack qty or mfr."
+}

@@ -1,0 +1,22 @@
+{
+  "doc_id": "the-door-company-copy--vantage-tx-22-div-01-08",
+  "hardware_pages": "389-421 (section 3.6 HARDWARE SETS starts p389; last set header 'HARDWARE GROUP NO. 002' on p421 followed by END OF SECTION). Detector list 389-420 is all true positives; it missed p421 (only an empty group 002 header).",
+  "format": "list",
+  "header_pattern": ["HARDWARE GROUP NO.  103", "PART 53 - HARDWARE GROUP NO.  764ADZ", "HARDWARE GROUP NO. 001  DO NOT APPLY DOOR NUMBERS TO SETS"],
+  "set_number_examples": ["103", "103A", "201C", "503SA", "720CRZ", "764ADZ", "C00", "C00.EXT", "CY705XZ", "D714DXZ", "001", "002"],
+  "approx_set_count": 44,
+  "column_order": ["qty", "unit", "description", "catalog", "(icon glyph)", "finish", "mfr"],
+  "has_header_row": "Yes, repeated for every set (and repeated at top of continuation page): 'QTY DESCRIPTION CATALOG NUMBER FINISH MFR'",
+  "has_mfr_legend": "No abbreviation legend found in 08 71 00 (pages 371-421). Part 2 lists full manufacturer names in product paragraphs only (e.g. 'Zero International, Inc.', 'LCN Door Control; 4040XP Series', Ives hinge comparison table).",
+  "has_lookup_codes": false,
+  "scanned": false,
+  "multi_page_sets": "Very common: header + 'PROVIDE EACH ... DOOR(S) WITH THE FOLLOWING:' at page bottom, component table on next page, e.g. group 201 header p389 -> lines p390; 720CRZ header p393 -> lines p394; C200C header p395 -> lines p396 (incl. OPERATION text); CY705XZ operation note spans p417->p418 ('BYPASSED. COORDINATE WITH ACCESS CONTROL...').",
+  "not_used_style": "No 'NOT USED'. Two empty placeholder groups at end: 'HARDWARE GROUP NO. 001  DO NOT APPLY DOOR NUMBERS TO SETS' (p420) and 'HARDWARE GROUP NO. 002  DO NOT APPLY DOOR NUMBERS TO SETS' (p421), bold, no component lines.",
+  "set_level_lines": ["PROVIDE EACH SGL DOOR(S) WITH THE FOLLOWING:", "PROVIDE EACH PR DOOR(S) WITH THE FOLLOWING:", "PROVIDE EACH RU DOOR(S) WITH THE FOLLOWING:", "PROVIDE EACH DE DOOR(S) WITH THE FOLLOWING:", "PROVIDE (3) HINGES FOR DOORS OVER 60 IN HEIGHT UP TO 84\". PROVIDE (1) ADDITIONAL HINGE FOR EVERY 30\" OF HEIGHT OVER 60\".", "OPERATION: EMERGENCY EXIT ONLY DOOR. DOOR POSITION SWITCH MONITORS DOOR STATUS. ...", "DOORS ARE DOGGED UNLATCHED FOR NORMAL USE."],
+  "mfr_codes_seen": ["IVE", "SCH", "LCN", "VON", "ZER", "GLY"],
+  "finish_codes_seen": ["626", "628", "630", "652", "689", "606", "GRY", "AA", "A", "BK", "STST"],
+  "collision_examples": "Few: finish codes A / AA / BK / GRY / STST are alpha but always sit immediately before mfr (ZER/IVE) in the last two columns, so position decides. 'BY DIV 28' lines have no finish/mfr; 'WIRE HARNESS ... CON-LENGTH AS REQ  SCH' has mfr but no finish.",
+  "quirks": ["Word-processor auto-numbering artifact: every paragraph prefixed 'PART N -' (PART 4 - ... PART 169 -), including empty 'PART 5 -' lines and before group headers and operation notes; must be stripped/ignored.", "Small icon glyphs (document icon, lightning bolt for electrified items) in a column between CATALOG NUMBER and FINISH; may appear as stray tokens.", "Lines with only qty + text in catalog column and no unit/description: '2  DOOR POSITION SWITCH BY DIV 28', '1 ACCESS CONTROL READER(S) BY DIV 28', '1 BALANCE OF HARDWARE BY DOOR MANUFACTURER', 'SEALS PROVIDED WITH STOREFRONT FRAME SYSTEM' (no qty at all).", "Description wraps onto second line in some rows ('PRIVACY WITH' / 'INDICATOR'; 'CONSTRUCTION' / 'CORE'; 'EU MORTISE LOCK ... 12/24' / 'VDC (FAIL SECURE)'; 'MOUNTING BRACKET MB, TO SUIT HM FRAME' / '(TO SUIT FRAME)'). In token order the continuation appears after finish/mfr.", "Unit column values: EA, SET, or blank.", "Set ids are alphanumeric with suffixes and a dot (C00.EXT).", "No door-number lists per set; header row repeated at top of every continuation page.", "Running header 'VANTAGE DATA CENTERS -TX22 24596.0100 ISSUE FOR PERMIT 16 JANUARY 2026' and footer 'DOOR HARDWARE 08 71 00 - NN'."],
+  "pages_viewed": [389, 394, 420],
+  "notes_for_extractor": "Must strip 'PART N -' auto-number prefixes and not treat them as set headers; the set header and its component table are often split across a page break so set context must carry over pages. Wrapped description continuation lines and qty-only 'BY DIV 28' lines need careful row assembly."
+}

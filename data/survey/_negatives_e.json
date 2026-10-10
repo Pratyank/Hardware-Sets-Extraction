@@ -1,0 +1,22 @@
+[
+  {
+    "doc_id": "woodridge-public-works--1548-specs-vow-new-public-works-facility-b-p",
+    "has_hardware_sets": false,
+    "evidence": "Section 08 71 00 DOOR HARDWARE runs pp. 631-647 (17 pages, 'Project No. 24-490-1548 08 71 00 - 17' footer, END OF SECTION on p647; p648 is an empty separator page with 0 tokens and no images; p649 starts 08 80 00 GLAZING). Content is a KLUBER MasterSpec-style proprietary spec: Part 1 references/submittals (p634 'Comply with DHI (H&S) using door numbers and hardware set numbers as indicated in construction documents'), Part 2 product paragraphs listing manufacturers (Rockwood, Pemko, BEST, dormakaba, Securitron), Part 3 installation/mounting heights/cleaning. No 'Hardware Set'/'Hardware Group'/'Heading'/'Set:' headers and no qty/catalog/finish/mfr component lines anywhere in the book (whole-book token search). Text references 'See Door Hardware Schedule' (p636, p644, p646) -- the schedule is evidently on the drawings, not in this book. Top detector score is only 0.71 (p634, Part 1 text). Detector p493 'hardware set' hit is a sliding glass door track kit ('KV P992 ... sliding glass door hardware set'), not a door hardware set."
+  },
+  {
+    "doc_id": "livelle-mulholland-life-plan-community--2025-12-12-livelle-bid-set-project-manual-vol2",
+    "has_hardware_sets": false,
+    "evidence": "Vol2 (530 pp, no rotated pages) contains Divisions 21-33 (first section 21 12 00, last 33 46 00; 82 sections). Only '08 71 00 DOOR HARDWARE' hit is the project-wide TOC on p7. Whole-book token search finds no 'hardware set', 'hardware group', 'heading', or 'Set: N' text. Detector max score 0.35 (p25, p38 = generic Part 3 execution/cleanup text). Hardware sets for this project are in Vol1 rev1 pp. 643-700."
+  },
+  {
+    "doc_id": "livelle-mulholland-life-plan-community--2025-12-12-livelle-bid-set-project-manual-vol3-rev1",
+    "has_hardware_sets": false,
+    "evidence": "Cover p1: 'Volume 3- Food Service Cut Sheets'. 580 pp of Clevenger Associates food service equipment cut sheets (e.g. p19 'OmniTeam ... Item #B-001', p92 'Streivor ... Item #B-027', p251 'Manitowoc IDT1200A Item #B-086', p580 'Made To Drain DT-12108 Item #C-080'). 12 rotated pages (rot 180/270, e.g. 19, 92, 142, 155, 245, 481, 548, 580) are equipment cut sheets with reversed/garbled token order, not hardware. Only 08 71 00 hit is the project TOC on p9; whole-book search for 'hardware set'/'hardware group'/'heading N'/'Set: N' finds nothing (the only 'Set:' style hits are 'Temperature Offset: 0' in refrigeration sheets). Detector max 0.488 (p251, Manitowoc ice machine)."
+  },
+  {
+    "doc_id": "livelle-mulholland-life-plan-community--2025-12-12-livelle-bid-set-project-manual-vol4",
+    "has_hardware_sets": false,
+    "evidence": "Cover p1: 'Volume 4- Salon Layout and Product Cut Sheets'. 103 pp of salon layout drawings and salon equipment cut sheets; 9 rotated pages (13-15, 18, 57-60, 63) are salon plan sheets (tokens like 'PS9 PS8 ... SALON ... A115'). Many pages carry only the blue 'LIVELLE - EXHIBIT B - BID SET_REV1 ... RECEIVED 01-16-2026' stamp text (image content). Only 08 71 00 hit is the project TOC on p7; no 'hardware set'/'hardware group'/'heading'/'Set: N' text anywhere. Detector max 0.151 (p3, TOC)."
+  }
+]

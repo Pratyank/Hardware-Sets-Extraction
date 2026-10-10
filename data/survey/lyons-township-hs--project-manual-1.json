@@ -1,0 +1,22 @@
+{
+  "doc_id": "lyons-township-hs--project-manual-1",
+  "hardware_pages": "285-294 (Section 087100 FINISH HARDWARE 3.06 DOOR HARDWARE SCHEDULE; intro 'D. Hardware Sets:' at bottom of p284, first set 'Hardware Group No. 01' on p285, last 'Hardware Group No. 29' on p294; p295 starts SECTION 088000 GLAZING). Detector p260 (submittal requirements) and p279 (2.17 door stops / 2.18 thresholds product spec) are false positives.",
+  "format": "list",
+  "header_pattern": ["Hardware Group No. 01", "Hardware Group No. 05 - Not Used", "Hardware Group No. 29"],
+  "set_number_examples": ["01", "02", "13", "29"],
+  "approx_set_count": 29,
+  "column_order": ["qty", "unit", "description", "catalog", "finish", "mfr"],
+  "has_header_row": "Yes, under every set: 'QTY DESCRIPTION CATALOG NUMBER FINISH MFR' (unit 'EA' column unlabeled).",
+  "has_mfr_legend": false,
+  "has_lookup_codes": false,
+  "scanned": false,
+  "multi_page_sets": "none seen; sets do not cross page breaks.",
+  "not_used_style": "Header line with suffix: 'Hardware Group No. 05 - Not Used' (also 16, 21, 22) - no body.",
+  "set_level_lines": ["For use on Door #(s): 222A-1 223 224 323 324 325 326 327 330 334 337B STORAGE 144A-1", "Provide each SGL door(s) with the following:", "Provide each PR door(s) with the following:", "Legend: Link to catalog cut sheet / Electrified Opening (icon legend at top of p285)"],
+  "mfr_codes_seen": ["LCN", "IVE", "SCH", "VON", "FAL", "GLY", "ZER"],
+  "finish_codes_seen": ["612", "626", "606", "691", "695", "711", "639", "BK"],
+  "collision_examples": ["None significant: finishes are all numeric BHMA codes plus 'BK'; 'DEL' appears in catalog '4041 DEL SCUSH' (DEL = delayed action, not a mfr)."],
+  "quirks": ["Door-number list is a multi-column grid where cells contain room names plus numbers wrapped over 2-3 lines ('ENGLISH / CLASSROOM / 116'); token reading order interleaves them: 'CLASSROOM CLASSROOM E CLASSROOM CLASSROOM I ENGLISH ENGLISH 119 H CLASSROOM CLASSROOM 116 117 ...'. Some door cells are notes like 'NEED TO SURVEY'.", "Mostly closer/lock retrofit groups with 1-3 items (e.g. Group 01 = single SURFACE CLOSER line).", "Wrapped description/catalog: 'CLASSROOM SECURITY W/ INSIDE INDICATOR'; 'HINGE 5BB1 4.5 X 4.5 (NRP AT OUTSWING LOCKING DOORS)' whose continuation lands after finish/mfr in token order ('(NRP AT  639 IVE OUTSWING LOCKING DOORS)').", "Rows without the catalog-cut icon collapse spacing: 'SFIC RIM HOUSING 80-129 612 SCH', 'SPRING CUSH ARM 4040XP-3077SCNS 691 LCN'.", "Schedule pages have no running header/footer (unlike prior spec pages with 'Project 2026.001 FINISH HARDWARE 087100-NN') - appear to be inserted Openings Studio output.", "No END OF SECTION after Group 29."],
+  "pages_viewed": [285, 291, 294],
+  "notes_for_extractor": "Clean Openings-Studio-style list; the hard part is the door-number grid with multi-line room-name cells (reading order scrambles them) and wrapped description/catalog continuations that land after finish/mfr tokens."
+}

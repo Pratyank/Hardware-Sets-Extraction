@@ -1,0 +1,68 @@
+{
+ "doc_id": "forest-park-school--project-manual-1",
+ "hardware_pages": "262-263 (Section 087100 spans 247-263; 3.07 HARDWARE SCHEDULE legends start p261; the only set, 'Set #1', starts at bottom of p262 and ends p263 'END OF SECTION'). Searched full 344-page text: no other 'Set #'/'Hardware Group'/'HARDWARE SET' anywhere. Detector p262 correct; p249/250/253/257/259 are spec prose false positives.",
+ "format": "list",
+ "header_pattern": [
+  "Set #1"
+ ],
+ "set_number_examples": [
+  "1"
+ ],
+ "approx_set_count": 1,
+ "column_order": [
+  "qty",
+  "description",
+  "catalog",
+  "finish",
+  "mfr"
+ ],
+ "has_header_row": false,
+ "has_mfr_legend": {
+  "value": true,
+  "page": "261-262",
+  "examples": [
+   "BES BEST",
+   "C-R Corbin Russwin",
+   "BRN Burns Manufacturing",
+   "NGP National Guard Products",
+   "BYO By Related Section"
+  ]
+ },
+ "has_lookup_codes": false,
+ "scanned": false,
+ "multi_page_sets": "Set #1 spans p262 (header, Doors line, 2 rows) -> p263 (3 rows)",
+ "not_used_style": "none seen",
+ "set_level_lines": [
+  "Doors: 256a, 2p57a"
+ ],
+ "mfr_codes_seen": [
+  "BES",
+  "C-R",
+  "ABH",
+  "BRN"
+ ],
+ "finish_codes_seen": [
+  "26D",
+  "626",
+  "US32D",
+  "Gray"
+ ],
+ "collision_examples": [
+  "Finish legend contains single letters A, B, C and 'AL' (C also an option code 'Quick Connect'); not used in the set rows here",
+  "'Gray' finish in mixed case",
+  "Mfr ABH used in set but missing from the manufacturer legend"
+ ],
+ "quirks": [
+  "Only ONE hardware set in a 344-page project manual",
+  "Quantities printed as decimals '3.0', '1.0'",
+  "Mfr code with hyphen 'C-R'",
+  "Door list contains odd token '2p57a' (likely typo)",
+  "Legends (Manufacturer/Option/Finish lists) immediately precede the set on p261-262 and contain code/name pairs that could be mistaken for rows",
+  "Footer 'Door Hardware 087100 - 16 February 3, 2026' and header '000053277 CHSD218 Phase 3'"
+ ],
+ "pages_viewed": [
+  262,
+  263
+ ],
+ "notes_for_extractor": "Trivial single-set book; main risks are decimal quantities ('3.0'), not mistaking Finish/Option legend lines on the same page for components, and the set spanning a page break. Low value for gold except as an edge case."
+}

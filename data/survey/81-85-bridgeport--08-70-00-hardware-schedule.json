@@ -1,0 +1,77 @@
+{
+  "doc_id": "81-85-bridgeport--08-70-00-hardware-schedule",
+  "hardware_pages": "3-49 (Heading #1 on p3 through Heading #90 on p49). p1 = cover, p2 = 'Manufacturers & Finishes' legend. Detector list (5,9,14,16,22,24,27,45-49) is all true positives but misses most set pages: every page 3-49 has sets.",
+  "format": "list",
+  "header_pattern": [
+    "Heading #1",
+    "Heading #55",
+    "Heading #90"
+  ],
+  "set_number_examples": [
+    "1",
+    "17",
+    "55",
+    "90"
+  ],
+  "approx_set_count": 90,
+  "column_order": [
+    "qty",
+    "description",
+    "catalog (includes finish/options/size)",
+    "finish"
+  ],
+  "has_header_row": false,
+  "has_mfr_legend": "Partial, p2 'Manufacturers & Finishes': lists full manufacturer names with cut-sheet page ranges (e.g. 'Falcon (Pgs 71-149)', 'LCN (Pgs 195-198)', 'Von Duprin (Pgs 227-238)') but NO abbreviation codes, and the components have no mfr column. Finish legend on same page: '626 - Satin chromium plated over nickel', 'C26D - Satin chromium plated over nickel', '689 - Aluminum painted', 'US15 - Satin nickel plated, clear coated'.",
+  "has_lookup_codes": "Finish legend on p2 only (codes→names), not on the same page as sets.",
+  "scanned": false,
+  "multi_page_sets": [
+    "#17 (p11-12: header+door items p11, more items + components p12)",
+    "#55 (p30-31: last component '483 Threshold CT-65 x 38\"' at top of p31)",
+    "#59 (p33-34)",
+    "#60 (p35-36)"
+  ],
+  "not_used_style": null,
+  "set_level_lines": [
+    "Item #1   1 Single door 101, EXTERIOR FROM VESTIBULE 101   RHR",
+    "Item #162 65 Single doors 1-65, CORRIDOR P253, ... TO SUITE LH",
+    "Item #447 857 Elevations 1-857(CLOSET), SUITE FROM CLOSET",
+    "965 x 2134 x 44 - HM DR x HM FR - 1.5HR (door size/material line, followed by horizontal rule)",
+    "Card Access Not Shown On Arch Drawings Or Door Schedule - Please Confirm",
+    "Card Access Required For Entry From Vestibule"
+  ],
+  "mfr_codes_seen": [],
+  "finish_codes_seen": [
+    "C32D",
+    "C26D",
+    "C28",
+    "626",
+    "626/622",
+    "626/626",
+    "626/630",
+    "630",
+    "628",
+    "689",
+    "26D",
+    "US15",
+    "US28",
+    "CA",
+    "GRY",
+    "-626E"
+  ],
+  "collision_examples": [
+    "No mfr column, so no mfr/finish collision; but finish is duplicated inside catalog text ('SC71A Rw/ PA 689' + finish '689', 'TA786 4 1/2\" x 4\" C26D' + 'C26D'). Brand names occasionally inside catalog ('Horton 4100', 'IVES 69 / 63', 'SALTO Suite Entry Levers By Others')."
+  ],
+  "quirks": [
+    "This is a supplier's tender hardware SUBMITTAL (Comsense-style 'Heading #/Item #'), not a spec section; 'Page N of 238' footers show it is the first 49 pages of the 238-page Rev_0 file.",
+    "Qtys are TOTALS across all doors in the heading (e.g. 204 Standard Hinge for 68 doors; 2571 hinges for 857 elevations).",
+    "Long door-item lists (up to ~70 'Item #' lines) can fill whole pages before components appear (p11-12, p33-36).",
+    "Many components have empty finish (Threshold CT-45, Card Access By Security Contractor).",
+    "Page 3 holds only Heading #1 — sets often start on new pages; frame border around each page.",
+    "No set descriptions/titles beyond the door items."
+  ],
+  "pages_viewed": [
+    3,
+    12
+  ],
+  "notes_for_extractor": "Header detection is trivial ('Heading #N') but sets contain two kinds of rows (door Item rows and component rows) that both start with a number; components follow the door-size line + rule. Mfr will be null for every component; finish must come from the rightmost band, not from codes inside catalog text."
+}

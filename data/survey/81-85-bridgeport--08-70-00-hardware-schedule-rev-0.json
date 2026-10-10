@@ -1,0 +1,57 @@
+{
+  "doc_id": "81-85-bridgeport--08-70-00-hardware-schedule-rev-0",
+  "hardware_pages": "3-49, byte-for-byte identical text to the 49-page '08-70-00-Hardware-Schedule.pdf' (all 49 pages' token text compared equal). Pages 50-238 are manufacturer product-data cut sheets (Adams Rite, Camden, Falcon, Glynn-Johnson, Ives, K.N. Crowder, LCN, McKinney, Norton, Rixson, Schlage, Standard Metal, Von Duprin) whose only text layer is the stamped 'Page N of 238' footer.",
+  "format": "list",
+  "header_pattern": [
+    "Heading #1",
+    "Heading #55",
+    "Heading #90"
+  ],
+  "set_number_examples": [
+    "1",
+    "17",
+    "55",
+    "90"
+  ],
+  "approx_set_count": 90,
+  "column_order": [
+    "qty",
+    "description",
+    "catalog",
+    "finish"
+  ],
+  "has_header_row": false,
+  "has_mfr_legend": "Same p2 'Manufacturers & Finishes' page as the 49-page file (names + cut-sheet page ranges, no codes).",
+  "has_lookup_codes": "Finish legend on p2 only.",
+  "scanned": "Pages 50-238 (189 pages) have no text except the footer stamp; I viewed ALL of them as contact-sheet thumbnails: every one is a catalog/cut-sheet page (product photos, dimension drawings, how-to-order tables, finish charts). NO hardware sets exist only on scanned pages. Pages 1-49 are fully text.",
+  "multi_page_sets": "Same as 49-page file (#17 p11-12, #55 p30-31, #59 p33-34, #60 p35-36).",
+  "not_used_style": null,
+  "set_level_lines": "Same as 49-page file.",
+  "mfr_codes_seen": [],
+  "finish_codes_seen": [
+    "C32D",
+    "C26D",
+    "C28",
+    "626",
+    "626/622",
+    "630",
+    "628",
+    "689",
+    "26D",
+    "US15",
+    "US28",
+    "CA",
+    "GRY",
+    "-626E"
+  ],
+  "collision_examples": "Same as 49-page file. Note cut-sheet finish charts (p220-221, p110, p117) contain finish/BHMA code tables that a naive finish-density detector might score as hardware pages if OCRed.",
+  "quirks": [
+    "DUPLICATE of 81-85-bridgeport--08-70-00-hardware-schedule for pages 1-49 — exclude one from evaluation or dedupe; do not put the pair across gold/holdout split.",
+    "189 image-only cut-sheet pages; OCR would be wasted on them and could create false-positive hardware pages (catalog how-to-order tables, finish charts)."
+  ],
+  "pages_viewed": [
+    "50-238 via contact sheets (6x4 thumbnails)",
+    "1-49 text compared programmatically to the 49-page file"
+  ],
+  "notes_for_extractor": "Treat as duplicate of the 49-page file; its only extra risk is false positives if OCR is run on catalog pages. Page-level OCR should be gated by hardware-page scoring of neighbouring text or skipped for pages whose only text is a footer stamp."
+}

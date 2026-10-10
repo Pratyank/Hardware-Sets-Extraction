@@ -1,0 +1,22 @@
+{
+  "doc_id": "usi--c9634958-radnet-building-specs",
+  "hardware_pages": "563 only (one set, 'Set: 1.0', at end of Section 08 4126 ALL-GLASS ENTRANCES; article '3.6 DOOR HARDWARE SETS' intro + 'B. Manufacturer's Abbreviations:' begins at bottom of p562). Detector pages 550, 555, 562 are false positives (550 = 08 4113 storefront spec text referencing an 'Entrance Door Hardware Sets' article that does not actually exist in the book; 555 = 08 4126 submittal text; 562 = intro paragraphs only). Section 08 7100 Door Hardware is NOT in this book: TOC p3 says '08 7100 DOOR HARDWARE – issued by Addendum'.",
+  "format": "list",
+  "header_pattern": ["Hardware Sets", "Set: 1.0"],
+  "set_number_examples": ["1.0"],
+  "approx_set_count": 1,
+  "column_order": ["qty", "description", "catalog", "finish", "mfr"],
+  "has_header_row": "No column header row.",
+  "has_mfr_legend": "Yes, p563 (heading 'B. Manufacturer's Abbreviations:' on p562): '1. GS - ASSA ABLOY Glass Solutions', '2. PE - Pemko', '3. RU - Corbin Russwin', '4. RO - Rockwood'.",
+  "has_lookup_codes": false,
+  "scanned": false,
+  "multi_page_sets": "none seen (single set on one page; its legend heading starts on the previous page)",
+  "not_used_style": "none seen",
+  "set_level_lines": ["Doors: 101a, 101b"],
+  "mfr_codes_seen": ["GS", "RU", "PE", "RO"],
+  "finish_codes_seen": ["BSP", "US32D"],
+  "collision_examples": "PE is used as mfr (Pemko) here: '1 Threshold 271A or Per Sill Detail PE' -- the finish cell is blank so PE is the only trailing code; context (legend + rightmost column x-position) decides. Concealed Closer row also has blank finish ('OHC-609-90NHO GS').",
+  "quirks": ["Qty and description are in the same left cell ('2 Door Bottom Rail'); no unit column.", "Catalog column printed in blue hyperlink-style text; values like 'DRT per Elevation', '271A or Per Sill Detail'.", "Some rows have no finish (blank cell) so finish/mfr must be assigned by x-position.", "Hardware set lives in an all-glass entrance section (08 4126), not 08 71 00; the actual 08 71 00 was issued by addendum and is absent.", "Running header 'RADNET CORPORATE OFFICE ... Harris Architecture Project No. SPR-59-2021 ... Construction Documents' and footer 'ALL-GLASS ENTRANCES 08 4126 - 9'."],
+  "pages_viewed": [563],
+  "notes_for_extractor": "Tiny sample (1 set, 10 lines). Blank finish cells mean trailing 2-letter codes must be assigned by column position, and PE here is a manufacturer. Set id '1.0' is a decimal, not an integer."
+}

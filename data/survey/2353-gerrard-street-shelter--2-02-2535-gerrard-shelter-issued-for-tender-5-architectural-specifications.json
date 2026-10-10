@@ -1,0 +1,85 @@
+{
+ "format": "list",
+ "header_pattern": [
+  "Set #AL 01",
+  "Set #01",
+  "Set #U-02"
+ ],
+ "set_number_examples": [
+  "AL 01",
+  "01",
+  "16",
+  "U-01",
+  "U-03"
+ ],
+ "approx_set_count": 35,
+ "column_order": [
+  "qty",
+  "description",
+  "catalog",
+  "finish",
+  "mfr"
+ ],
+ "has_header_row": false,
+ "has_mfr_legend": {
+  "value": true,
+  "page": 164,
+  "examples": [
+   "CMND Command Access",
+   "DE Detex",
+   "HA Hager Companies"
+  ],
+  "also": "Finish List (630 Satin Stainless Steel, ALM Sprayed Aluminum, S Charcoal, ...) and Option List (EPT/PREP, ER EX, MLRX, NRP, SFIC) and abbreviations (LDW, LAR, FEC) on same page, section 3.06 B/C/D"
+ },
+ "has_lookup_codes": false,
+ "scanned": false,
+ "multi_page_sets": "none seen: every set page begins with a new 'Set #' header; sets 25 and 26 each fill a full page alone",
+ "not_used_style": "none seen; set #15 simply absent from numbering (14 -> 16)",
+ "set_level_lines": [
+  "Doors: D101A, D149A, D153A",
+  "Operational Description: Door is normally closed and locked. Valid credential ... (multi-line prose paragraph after components)",
+  "trailing component notes on own line: 'Active Leaf', 'Top Jamb Mount' (set 02)"
+ ],
+ "mfr_codes_seen": [
+  "HA",
+  "DE",
+  "CMND"
+ ],
+ "finish_codes_seen": [
+  "630",
+  "AL",
+  "ALM",
+  "BLACK",
+  "BLU",
+  "CLR",
+  "GREY",
+  "LS",
+  "MIL",
+  "No Finish",
+  "S",
+  "US10B",
+  "US26D",
+  "US32D",
+  "USP"
+ ],
+ "collision_examples": [
+  "AL is a finish (Aluminum) used with CMND mfr ('AL CMND'); never a mfr here",
+  "S = Charcoal finish (single letter) e.g. 'Seal 726 x LAR S HA'",
+  "'No Finish' two-word finish token",
+  "BLU/BLACK/GREY are color finishes, BLU also appears in catalog '3982-BLU'"
+ ],
+ "quirks": [
+  "Sets are Hager-style schedule (HA nearly everywhere, DE exit device in AL 01, CMND for motorized locks)",
+  "Many lines with no finish/mfr: 'Reader/Keypad By Security Provider', 'Weatherstrip By Frame Mfr./Supplier', 'Wiring Diagrams Wiring Diagrams'",
+  "Set #01 is a single line '1 Hardware by Door Mfr./Supplier' (no catalog/finish/mfr)",
+  "Door Position Switch rows have mfr but blank finish",
+  "Description column is plural-ized names 'Hinge(s)', 'Closer(s)'",
+  "Set ids have prefixes 'AL ' (aluminum) and 'U-'",
+  "Page header '2535 Gerrard Shelter 105220' and footer 'Jan 30, 2026 Page N of 36' on every page",
+  "EXACT DUPLICATE: section 08 71 00 here (pp.147-182) is byte-identical text to standalone hdw-spec-sch-ift-5 pp.1-36 (offset +146; verified pages 18-36 vs 164-182 text equal after stripping footer). Do not put both in gold/holdout on different sides; treat as one book."
+ ],
+ "notes_for_extractor": "Clean 5-column list; main hazards are rows without finish/mfr (By Security Provider), the prose Operational Description block after components, and set ids with space/prefix ('AL 01', 'U-02'). Finish S and 'No Finish' need whitelisting. Duplicate of 2353-gerrard-street-shelter--hdw-spec-sch-ift-5 \u2014 dedupe.",
+ "doc_id": "2353-gerrard-street-shelter--2-02-2535-gerrard-shelter-issued-for-tender-5-architectural-specifications",
+ "hardware_pages": "165-182 (section 08 71 00 spans 147-182; legends on 164). Detector false positives: 148, 150, 151 (spec prose); 164 legend only",
+ "pages_viewed": []
+}

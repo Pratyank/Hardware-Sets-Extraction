@@ -1,0 +1,78 @@
+{
+  "doc_id": "roselle-public-library--087100-fl-door-hardware-ifb-revised",
+  "hardware_pages": "15-17 ('ROSELLE PUBLIC LIBRARY DISTRICT - DOOR HARDWARE SCHEDULE' grid). Detector p3 is a FALSE POSITIVE (submittal prose); p6 (Part 2 product list 'IVES - 5BB1 4.5\" x 4.5\"') is not sets either.",
+  "format": "table",
+  "header_pattern": [
+    "1.1 (shaded cell in SET column) followed by stacked labels 'SLIDING AUTO / EXTR ENTR'",
+    "2.2 / HM DOOR/FRM / EXTR ENTR / DBL DOORS",
+    "7.4 / YOUTH ENTR / ALL-GLASS / ENTRANCE / DBL DOORS"
+  ],
+  "set_number_examples": [
+    "1.1",
+    "1.5",
+    "2.4",
+    "3.2",
+    "4.7",
+    "5.1",
+    "6.2",
+    "7.6",
+    "8.3"
+  ],
+  "approx_set_count": 33,
+  "column_order": [
+    "set (number + stacked description lines)",
+    "hardware_type (description)",
+    "manufacturer - product (mfr and catalog merged, ' - ' separated)",
+    "qty",
+    "finish",
+    "notes"
+  ],
+  "has_header_row": "Yes, repeated on each page: 'SET | HARDWARE TYPE | MANUFACTURER - PRODUCT | QTY. | FINISH | NOTES'",
+  "has_mfr_legend": false,
+  "has_lookup_codes": false,
+  "scanned": false,
+  "multi_page_sets": null,
+  "not_used_style": null,
+  "set_level_lines": [
+    "Set-cell text below the number: 'CURTAINWALL / EXTR ENTR / SINGLE DOOR', and often 'CARD READER' at bottom of the set cell",
+    "Notes-only rows with empty type/product: 'COORDINATE W/ CURTAINWALL ENTRANCE MFR.', 'PROVIDE FLOOR STOP @ DOOR 223'"
+  ],
+  "mfr_codes_seen": [
+    "IVES",
+    "SCHLAGE",
+    "VON DUPRIN",
+    "LCN",
+    "PEMKO / NGP / ZERO",
+    "NGP",
+    "SENTRONIC",
+    "ROCKWOOD",
+    "ASSA ABLOY",
+    "ALUR",
+    "CRL",
+    "BLUMCRAFT",
+    "TRINE (no ' - ' separator: 'TRINE 3000 SERIES')"
+  ],
+  "finish_codes_seen": [
+    "613 (OIL RUBBED BRONZE)",
+    "691 (LIGHT BRONZE)",
+    "BLACK",
+    "MILL ALUM / BLACK"
+  ],
+  "collision_examples": [
+    "None of the classic code collisions: mfrs are full names. But finish column contains words (BLACK, MILL ALUM / BLACK) and qty '--'."
+  ],
+  "quirks": [
+    "Mfr and catalog merged in one cell 'IVES - 5BB1 4.5\" x 4.5\"'; split on first ' - ' (but 'LCN - 4040XP - EDA ARM - METAL COVER' has several dashes, and 'PEMKO / NGP / ZERO - ...' names 3 mfrs).",
+    "Qty '--' for gasketing/silencers/card readers (should be null).",
+    "Set cell vertically stacks number + 3-4 description lines that run alongside the first component rows; text order interleaves them (e.g. '1.2 MORTISE HINGE IVES ... CURTAINWALL MORTISE LOCKSET').",
+    "Wrapped product cells (2-4 lines) and wrapped notes.",
+    "Set numbers are decimal (group.sub), colored shading per group.",
+    "Footer says '122413 - 15' (wrong section number) while header says SECTION 087100.",
+    "Card reader rows are 'BY OTHERS' with no finish."
+  ],
+  "pages_viewed": [
+    15,
+    17
+  ],
+  "notes_for_extractor": "Table with ruled grid: column bands are reliable, but mfr+catalog must be split inside one cell and set descriptions live in the SET column beside component rows. Decimal set numbers ('1.1') look like outline numbers in prose, so header detection must be column-based."
+}

@@ -1,0 +1,72 @@
+{
+  "doc_id": "jc-ryan-2--087100-door-hardware-6",
+  "hardware_pages": "24-46 (Set: EX-1.0 starts mid p24 after 3.x prose; 'Interior Hardware Sets' title on p28; END OF SECTION on p46). Detector only found p3, which is a FALSE POSITIVE (submittal prose). Detector missed the sets because there are no finish codes and header is 'Set:'.",
+  "format": "list",
+  "header_pattern": [
+    "Set: EX-1.0 (bold underlined, centered) + next line 'Description: Balanced Door Assembly Opening'",
+    "Set: 1.0 / Description: Storeroom function with closer - single",
+    "Set: 15.0 / Description: Con-Ed Opening"
+  ],
+  "set_number_examples": [
+    "EX-1.0",
+    "EX-4.0",
+    "1.0",
+    "2.5",
+    "9.5",
+    "16.5",
+    "28.0"
+  ],
+  "approx_set_count": 37,
+  "column_order": [
+    "qty",
+    "description",
+    "catalog",
+    "mfr"
+  ],
+  "has_header_row": false,
+  "has_mfr_legend": false,
+  "has_lookup_codes": false,
+  "scanned": false,
+  "multi_page_sets": [
+    "EX-2.0 (p24-25; its only other component line 'Gasketing, threshold, sweep, astragal By Door Manufacturer' is alone on p25). All other pages p26-46 start with a new 'Set:' header (sets are page-broken)."
+  ],
+  "not_used_style": "None seen as 'NOT USED'. Closest: 'Set: 15.0 Description: Con-Ed Opening Notes: All hardware by door manufacturer.' (set with zero components) and EX-1.0/EX-2.0 where every line is 'By Balanced Door Manufacturer'.",
+  "set_level_lines": [
+    "Description: Single Opening – Access Controlled, Stairwell, Fail Safe",
+    "Operation: *Door normally closed and secured. *Upon use of mechanical key ...",
+    "Notes: Operation: ...",
+    "Notes: All hardware by door manufacturer.",
+    "Refer to Section : 08 34 53"
+  ],
+  "mfr_codes_seen": [
+    "Pemko",
+    "Sargent",
+    "Norton",
+    "Rockwood",
+    "McKinney",
+    "Securitron",
+    "LCN",
+    "Rixson",
+    "By Door Manufacturer",
+    "By Balanced Door Manufacturer",
+    "By Fire Rated Door Manufacturer"
+  ],
+  "finish_codes_seen": [],
+  "collision_examples": [
+    "No finish column at all; mfr is full name in the last column. Catalog text contains digits like '608' (Silencers 608 Rockwood) and '7500' that look like finish codes but are catalog numbers."
+  ],
+  "quirks": [
+    "NO finish column anywhere; finish must be null (some catalog cells say '(Finish to match door/frame color)').",
+    "Hinge lines have NO qty ('Hinge, Full Mortise  T4A3786  McKinney') — qty must be null.",
+    "'By ... Manufacturer' sits in the catalog column with empty mfr column (EX-1.0) — phrase spans catalog band.",
+    "Cells are vertically centered, so wrapped description/catalog cells interleave in text order: '290_S (Finish to match door/frame 1 Jamb Gasketing Pemko color)', 'RM860 / 446 / 9-ADJ Series Per 1 Stop Rockwood Conditions'.",
+    "Qty sometimes placed vertically centered to the left of a 2-line description ('1' then 'Surface Closer (Mounted on stairwell side of door)').",
+    "Set numbers with .0/.5 and EX- prefix; 'Exterior' vs 'Interior Hardware Sets' section titles.",
+    "Running header 'arkaspecs / January 28, 2026 / Bulletin 06 / Related - 70 Hudson Yards' — the PDF is for 70 Hudson Yards despite the 'JC Ryan 2' folder."
+  ],
+  "pages_viewed": [
+    24,
+    28
+  ],
+  "notes_for_extractor": "Keyword/finish-density page scoring fails here (detector found nothing); header 'Set: X.Y' + 'Description:' line must be recognized. Three-column positional layout (desc | catalog | mfr) with vertically-centered wrapped cells means rows must be built by y-overlap, not text order; missing qtys and empty mfr cells are common."
+}

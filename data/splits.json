@@ -1,0 +1,56 @@
+{
+  "_doc": "Phase 0 splits. gold = hand-labelled from page images; holdout = never opened during development, gold drafted only at final eval; dev = everything else (incl. negatives). gold_pages restricts a gold file to a page window for very large books; eval scores only sets located in that window. Duplicate groups always share a split.",
+  "gold": {
+    "valor-acres-building-e--087100-door-hardware-rev-2": {"cluster": "C5", "gold_pages": "7-18"},
+    "roselle-public-library--087100-fl-door-hardware-ifb-revised": {"cluster": "C4", "gold_pages": "15-17"},
+    "jc-ryan-2--087100-door-hardware-6": {"cluster": "C2", "gold_pages": "24-46"},
+    "2353-gerrard-street-shelter--hdw-spec-sch-ift-5": {"cluster": "C3", "gold_pages": "19-36"},
+    "lyons-township-hs--project-manual-1": {"cluster": "C1", "gold_pages": "285-294"},
+    "hfh-dg-hospital--08-71-00-door-hardware": {"cluster": "C1t", "gold_pages": "20-40"},
+    "81-85-bridgeport--08-70-00-hardware-schedule": {"cluster": "C6", "gold_pages": "3-18"},
+    "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications": {"cluster": "C7", "gold_pages": "711-724"}
+  },
+  "holdout": {
+    "village-of-oswego-new-public-works-facility-copy--specifications-volume-1": {"cluster": "C1"},
+    "livelle-mulholland-life-plan-community--2025-12-12-livelle-bid-set-project-manual-vol1-rev1": {"cluster": "C2"}
+  },
+  "dev": [
+    "ami-copy--c43c36d9-000-full-volume-atc-renovation-bid-specs-volume-1-1",
+    "market-view-apartments--s-251107-market-view-prelim-project-manual-pdf",
+    "national-doors-and-hardware--15e2b8ac-fs17-specs-v1",
+    "sat-tdp--2025-12-19-sat-tdp-project-manual",
+    "shubie-center--e2231795-ift-specs",
+    "the-door-company-copy--vantage-tx-22-div-01-08",
+    "morris-bank--030f2d1d-morris-bank-macon-spec-manual-issued-for-const-1-26-26-full-specs",
+    "forest-park-school--project-manual-1",
+    "usi--c9634958-radnet-building-specs",
+    "starhardware--9839d1a1-division-8-specs-commons-lane"
+  ],
+  "duplicates": {
+    "2353-gerrard-street-shelter--2-02-2535-gerrard-shelter-issued-for-tender-5-architectural-specifications": "2353-gerrard-street-shelter--hdw-spec-sch-ift-5",
+    "81-85-bridgeport--08-70-00-hardware-schedule-rev-0": "81-85-bridgeport--08-70-00-hardware-schedule"
+  },
+  "negatives": [
+    "woodridge-public-works--1548-specs-vow-new-public-works-facility-b-p",
+    "livelle-mulholland-life-plan-community--2025-12-12-livelle-bid-set-project-manual-vol2",
+    "livelle-mulholland-life-plan-community--2025-12-12-livelle-bid-set-project-manual-vol3-rev1",
+    "livelle-mulholland-life-plan-community--2025-12-12-livelle-bid-set-project-manual-vol4",
+    "hfh-dg-hospital--08-71-00-01-door-hardware-index-cut-up",
+    "roselle-public-library--081113-fl-hollow-metal-doors-and-frames",
+    "roselle-public-library--081416-fl-flush-wood-doors",
+    "roselle-public-library--083113-fl-access-doors-and-frames",
+    "jc-ryan-2--08-11-13-hollow-metal-doors-and-frames",
+    "jc-ryan-2--08-14-16-flush-wood-doors",
+    "81-85-bridgeport--08-10-00-hollow-metal-doors-frames-rev-0",
+    "81-85-bridgeport--08-20-00-wood-doors-rev-0",
+    "valor-acres-building-e--081113-hollow-metal-doors-and-frames-rev-1",
+    "valor-acres-building-e--081416-wood-doors-rev-1",
+    "valor-acres-building-e--083113-access-doors-and-frames-rev-1",
+    "valor-acres-building-e--084113-aluminum-framed-entrances-and-storefronts-rev-1",
+    "valor-acres-building-e--084126-all-glass-entrances-rev-0",
+    "valor-acres-building-e--085313-residential-windows-and-doors-rev-1",
+    "valor-acres-building-e--088000-glazing-rev-1",
+    "valor-acres-building-e--088300-mirrors-rev-1",
+    "valor-acres-building-e--088713-decorative-window-films-rev-0"
+  ]
+}

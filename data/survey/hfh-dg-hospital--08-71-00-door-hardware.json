@@ -1,0 +1,94 @@
+{
+ "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
+ "hardware_pages": "20-183 (3.5 DOOR HARDWARE SCHEDULE starts p20 with 'Hardware Group No. 001'; ends p183 'Hardware Group No.270 ... END OF SECTION'). Pages 121, 164, 165, 166 are blank (footer only) inside the range; p184 'intentionally left blank'. Pages 1-19 are spec prose (no sets).",
+ "format": "table",
+ "header_pattern": [
+  "Hardware Group No. 001",
+  "Hardware Group No. 197",
+  "Hardware Group No.263 [BULLETIN 023, 251218]"
+ ],
+ "set_number_examples": [
+  "001",
+  "012",
+  "142",
+  "211",
+  "263",
+  "270"
+ ],
+ "approx_set_count": 190,
+ "column_order": [
+  "qty",
+  "unit",
+  "description",
+  "catalog",
+  "[cut-sheet icon]",
+  "[electrified icon]",
+  "finish",
+  "mfr"
+ ],
+ "has_header_row": "Yes, repeated after every group and at the top of every continuation page: 'QTY DESCRIPTION CATALOG NUMBER FINISH MFR' (often wrapped so text reads 'QT DESCRIPTION CATALOG NUMBER FINISH MFR Y')",
+ "has_mfr_legend": false,
+ "has_lookup_codes": false,
+ "scanned": false,
+ "multi_page_sets": "Very common. E.g. Group 001 pp.20-21; Group 012 header orphaned at bottom of p27 with body on p28; Group 142 header alone at bottom of p135, body on p136; Group 171 header alone on p150. Continuation pages begin with the column header row and no group number.",
+ "not_used_style": "none seen; numbering has gaps (005, 007, 011, 198-210, ...) which are simply absent; pp.164-166 blank",
+ "set_level_lines": [
+  "Provide each PR door(s) with the following:  (also SGL, DE, UEP, SL, DA, FLD, RU)",
+  "NOTE: FURNISH 5BB1HW 5\" X 4.5\" HINGES AT DOORS OVER 3'0\" WIDE (in description/catalog columns)",
+  "DIAGRAMS  PROVIDE FACTORY POINT TO POINT WIRING DIAGRAMS",
+  "OPERATIONAL DESCRIPTION: ENTRANCE BY CREDENTIAL READER OR MANUAL KEY OVER- RIDE. ALWAYS FREE EGRESS. FAIL SECURE.",
+  "COORDINATE ADDITIONAL SECURITY REQUIREMENTS WITH DIVISION 28.",
+  "[BULLETIN 023, 251218] after header and inside rows"
+ ],
+ "mfr_codes_seen": [
+  "IVE",
+  "VON",
+  "BES",
+  "LCN",
+  "ZER",
+  "SCE",
+  "GLY",
+  "SCH",
+  "SDC",
+  "B/O"
+ ],
+ "finish_codes_seen": [
+  "626",
+  "630",
+  "689",
+  "652",
+  "628",
+  "713",
+  "691",
+  "695",
+  "630-316",
+  "AA",
+  "A",
+  "BK",
+  "BLK",
+  "GRY",
+  "GRN (in catalog '80-035 GRN')"
+ ],
+ "collision_examples": [
+  "'A' and 'AA' are Zero finish codes (e.g. 'DOOR SWEEP 39A  A ZER', 'RAIN DRIP 142AA  AA ZER') \u2014 single letter A easily lost",
+  "'B/O' (by others) in MFR column with no finish: 'BY DIVISION 28  B/O'",
+  "BLK finish with SCE ('MTB15 BLK SCE'); BK finish with ZER"
+ ],
+ "quirks": [
+  "Allegion Overture-style schedule exported as REVISION COMPARISON ('V16 8/21/2025 vs. V17 10/16/2025'): struck-through deleted text is still present in the text layer next to new bold text, e.g. catalog '80-035 GRN (KEYED CONSTRUCTION CORE) [BULLETIN 023, 251218]' with mfr 'SCH (BES)' (BES struck), and qty '2 (1) EA' (1 struck). 121 '[BULLETIN 023, 251218]' markers.",
+  "Cells wrap heavily: description, catalog and even finish ('630-' / '316') wrap onto 2-3 lines; catalog continuation text like '- PROVIDE BRASS CONSTRUCTION CORE' interleaves with description wrap ('PERMANENT CORE -' / 'COMBINATED')",
+  "Inline icon glyphs (cut-sheet link, lightning 'electrified') sit between catalog and finish columns",
+  "No door numbers inside sets; door->set mapping lives in separate index PDF (hfh-dg-hospital--08-71-00-01-door-hardware-index-cut-up)",
+  "Lines with B/O mfr and no finish ('AUTOMATIC OPERATOR BY RELATED SECTION 08 71 13 B/O'); 'EA ALL HARDWARE BY SLIDING DOOR MANUFACTURER' with no qty",
+  "Group header occasionally without space after 'No.' ('Hardware Group No.263')",
+  "Some page text begins with stray '] ] ] ] ] ]' tokens (p136)",
+  "Footer clutter every page: 'HDR Project No. 1674070/10350997 Henry Ford Hospital - Expansion and Bed Tower March 14, 2025 DOOR HARDWARE Hospital BP 6 - Issue for Permit 08 71 00 - N'"
+ ],
+ "pages_viewed": [
+  20,
+  135,
+  164,
+  168
+ ],
+ "notes_for_extractor": "Hardest book in group B: strikethrough revision text is in the text layer and must be filtered (needs drawing/line-strike detection or it will corrupt catalog/mfr/qty), multi-line wrapped cells need row reconstruction by y-bands/columns, and many groups span pages with orphaned headers. 190 groups \u2014 good large gold candidate only if strike-through is handled."
+}

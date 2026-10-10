@@ -1,0 +1,22 @@
+{
+  "doc_id": "market-view-apartments--s-251107-market-view-prelim-project-manual-pdf",
+  "hardware_pages": "770-780 (Section 08 71 00 DOOR HARDWARE, 3.7 DOOR HARDWARE SCHEDULE; schedule intro paragraphs A-C on p769, 'D. Hardware Sets:' + Group 01 on p770, Group 24 + 'End of Section' on p780). Detector pages 746 (references), 754 (hinge product spec), 766 (door position switch / finishes spec) and 769 (schedule intro text only, no sets) are false positives.",
+  "format": "list",
+  "header_pattern": ["Hardware Group No. 01 - ⚡ A/G EXT PR CR NL-OP-PANIC (DOUBLE EXTERIOR DOORS, EGRESS & CARD READER, ZENTRA PLATFORM)", "Hardware Group No. 09 - HM PRIVACY (SINGLE INTERIOR DOOR, PRIVACY SET & CLOSER)", "Hardware Group No. 24 - POCKET DOOR"],
+  "set_number_examples": ["01", "02", "13", "24"],
+  "approx_set_count": 24,
+  "column_order": ["qty", "unit", "description", "catalog", "finish", "mfr"],
+  "has_header_row": "Yes, under every set: 'QTY DESCRIPTION CATALOG NUMBER FINISH MFR' (unit 'EA' column unlabeled).",
+  "has_mfr_legend": false,
+  "has_lookup_codes": false,
+  "scanned": false,
+  "multi_page_sets": "none seen; each set fits on one page.",
+  "not_used_style": "none seen. Closest: 'Hardware Group No. 03 - HARDWARE BY DOOR MFG.' whose only body line is 'HARDWARE BY DOOR MFG.' under the column header (no components).",
+  "set_level_lines": ["For use on Door #(s): A118-A A216 B210 B308 B406 C208", "Provide each PR door(s) with the following:", "Provide each RU door(s) with the following:", "Provide each PD door(s) with the following:", "* = SUPPLIED BY ACCESS CONTROL VENDOR", "WIDE STILE ALUMINUM DOOR.", "DOOR NORMALLY CLOSED AND LOCKED. PRESENTING VALID CREDENTIALS TO THE READER WILL MOMENTARILY UNLOCK THE DOOR ...", "CARD READER, POWER SUPPLY, RX, DPS, AND WIRING BY SECURITY CONTRACTOR. COORDINATION ITEMS: POWER/CONDUIT/WIRING/ELECTRONIC SECURITY SYSTEM.", "134601 OPT0429556 Version 1 / Legend: Link to catalog cut sheet / Electrified Opening (once, p770)"],
+  "mfr_codes_seen": ["IVE", "VON", "FAL", "SCH", "ZER", "SCE", "ISO", "GLY", "JOH", "B/O", "TBD"],
+  "finish_codes_seen": ["628", "689", "626", "630", "652", "622", "630-316", "A", "AA", "BK", "BLK", "STST"],
+  "collision_examples": ["'A' as finish (DOOR SWEEP 39A  A ZER) - single letter, position before MFR decides.", "'B/O' used in MFR column for by-others items ('SEALS BY DOOR MANUFACTURER B/O', 'CREDENTIAL READER BY SECURITY CONSULTANT B/O').", "'1 EA CYLINDER SDGE KEYWAY 626 TBD' - TBD in MFR column.", "'LON' (lever style) and 'LAT' appear inside catalog numbers, not mfr codes."],
+  "quirks": ["Header carries a descriptive title after ' - ', sometimes with a lightning-bolt glyph '⚡' for electrified groups, and the title may wrap to a second line.", "Finish cell wraps: '630-' / '316' (stainless pull); in token order it becomes '630- IVE 316'.", "Catalog cells contain multi-line notes ('SC71A SS' / 'PROVIDE MTG BRKT, SPCR & PLATE AS REQ'D'; 'CON-XX/CON-XXP' / 'LENGTH TO SUIT DOOR CHANNEL'; 'WS406/407CVX' + 'REQUIRES BACKING IN WALL') that land after finish/mfr in the token stream.", "Many rows missing finish (INTERFACE BOX *JB7 VON; WIRE HARNESS ... SCH) or unit ('1 SEALS BY DOOR MANUFACTURER B/O').", "Catalog numbers prefixed '*' meaning supplied by access-control vendor.", "Electrified rows have both a cut-sheet icon and a lightning-bolt icon between catalog and finish.", "Running header 'MARKET VIEW APARTMENTS 303 HIGHLAND AVENUE NATIONAL CITY, CA 91950' and footer '087100 Door Hardware_Allegion_7-22-25.docx DOOR HARDWARE 087100-NN'.", "Residential unit groups use door ids like 'U-1.1', 'U-4.4'."],
+  "pages_viewed": [770, 780],
+  "notes_for_extractor": "Same Allegion/Openings Studio list layout as other books, but with titled headers (strip ' - title' and ⚡ to get the set number), lots of wrapped catalog notes, empty finish cells, and by-others rows whose MFR is 'B/O'; Group 03 is a 'HARDWARE BY DOOR MFG.' set with no components."
+}
