@@ -315,6 +315,17 @@ def test_static_ui_served(client: TestClient) -> None:
     r = client.get("/")
     assert r.status_code == 200
     assert "text/html" in r.headers["content-type"]
+    assert 'src="app.js"' in r.text
+    assets = ["/app.js", "/styles.css", "/panels.css"]
+    assets += [
+        f"/js/{m}.js"
+        for m in ("api", "state", "util", "viewer", "sidebar", "editor", "diagnostics")
+    ]
+    for asset in assets:
+        a = client.get(asset)
+        assert a.status_code == 200, asset
+        assert a.content, asset
+    assert "javascript" in client.get("/js/viewer.js").headers["content-type"]
 
 
 def test_module_level_app_uses_env(monkeypatch: pytest.MonkeyPatch, data_dir: Path) -> None:
