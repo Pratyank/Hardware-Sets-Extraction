@@ -18,6 +18,7 @@ from dataclasses import dataclass, field
 from hwsets.models import Line, Token
 from hwsets.segment.headers import (
     HeaderInduction,
+    induce_bare_ids,
     induce_headers,
     looks_like_component,
     parse_header,
@@ -42,6 +43,13 @@ def find_hardware_pages(
     }
     cand_lines = [ln for p in sorted(candidate_pages) for ln in lines_by_page[p]]
     induction = induce_headers(cand_lines, toks)
+    if induction.signature is None or induction.signature.support < 3:
+        # No keyword headers: try a table SET column (bare ids at the left of component rows).
+        bare = induce_bare_ids([ln for p in sorted(lines_by_page) for ln in lines_by_page[p]], toks)
+        if bare.signature is not None and (
+            induction.signature is None or bare.signature.support > induction.signature.support
+        ):
+            induction = bare
     out = SectionResult(pages=[], induction=induction, warnings=list(induction.warnings))
     if induction.signature is None:
         return out

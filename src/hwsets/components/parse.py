@@ -54,6 +54,9 @@ class ColumnModel:
     # The description column also holds model numbers (no catalog column of its own), so a row's
     # description cell is split at its first model-like token.
     split_merged: bool = False
+    # Most catalog cells read "MANUFACTURER - PRODUCT" (no manufacturer column): split every
+    # such cell at its first " - ", a document-level decision rather than a per-row guess.
+    mfr_prefix: bool = False
 
     def x_of(self, role: str) -> float | None:
         for x, r in zip(self.xs, self.roles, strict=True):
@@ -91,6 +94,7 @@ class ParsedRows:
     components: list[Component]
     set_note_tokens: list[str]
     warnings: list[str]
+    set_desc_tokens: list[str] = field(default_factory=list)  # text of a table SET column
 
 
 def _is_prose(line: Line, toks: Mapping[str, Token], model: ColumnModel) -> bool:
@@ -117,11 +121,26 @@ def _starts_row(roles: Sequence[str], tokens: Sequence[Token], model: ColumnMode
 
 
 def assemble_rows(
-    lines: Sequence[Line], toks: Mapping[str, Token], model: ColumnModel
+    lines: Sequence[Line],
+    toks: Mapping[str, Token],
+    model: ColumnModel,
+    set_desc: list[str] | None = None,
 ) -> tuple[list[Row], list[str]]:
-    """Group candidate row lines into logical rows. Returns rows and set-note token ids."""
+    """Group candidate row lines into logical rows. Returns rows and set-note token ids.
+
+    Tokens in a table's SET column are collected into ``set_desc`` (the set's description).
+    """
     rows: list[Row] = []
     set_notes: list[str] = []
+    if model.has("set_no"):
+        kept: list[Line] = []
+        for ln in lines:
+            ids = [i for i in ln.token_ids if model.role_of(toks[i]) != "set_no"]
+            if set_desc is not None:
+                set_desc.extend(i for i in ln.token_ids if model.role_of(toks[i]) == "set_no")
+            if ids:
+                kept.append(ln.model_copy(update={"token_ids": ids}))
+        lines = kept
     last_bottom = 0.0
     last_page = -1
     note_x: float | None = None  # left edge of the note being continued, if any
@@ -167,7 +186,10 @@ def assemble_rows(
         height = ln.bbox[3] - ln.bbox[1]
         near = rows and ln.page == last_page and ln.bbox[1] - last_bottom <= 1.6 * max(height, 6)
         new_page_cont = rows and ln.page != last_page
-        if _starts_row(roles, tokens, model):
+        value_roles = set(roles) & {"description", "catalog", "finish", "mfr"}
+        if _starts_row(roles, tokens, model) or (rows and len(value_roles) >= 3):
+            # A line filling three value columns is a new item even without a quantity
+            # ("GASKETING / SWEEP | PEMKO - ... | BLACK"); wrapped cells rarely span three.
             row = Row()
             rows.append(row)
         elif rows and (near or new_page_cont) and _continuation_ok(rows[-1], roles):
@@ -274,6 +296,16 @@ def _pop_revision_tags(tokens: list[Token]) -> tuple[list[Token], list[Token]]:
     return keep, tags
 
 
+def is_mfr_prefix(left: str, legend_codes: frozenset[str] = frozenset()) -> bool:
+    """ "VON DUPRIN", "PEMKO / NGP / ZERO", "IVES": known manufacturer names joined by / , &."""
+    parts = [p for p in re.split(r"[/,&]", left) if p.strip()]
+    return (
+        bool(parts)
+        and len(left.split()) <= 6
+        and all(is_mfr_code(p) or norm_code(p) in legend_codes for p in parts)
+    )
+
+
 def _split_desc_catalog(tokens: list[Token]) -> tuple[list[Token], list[Token]]:
     """One cell holding both: the catalog starts at the first model-like token."""
     for i, t in enumerate(tokens):
@@ -318,8 +350,7 @@ def build_component(row: Row, model: ColumnModel, legend: Legend) -> tuple[Compo
         m = _MFR_SPLIT_RE.search(text)
         if m:
             left = text[: m.start()]
-            parts = [p for p in re.split(r"[/,&]|\s", left) if p.strip()]
-            if parts and all(is_mfr_code(p) or norm_code(p) in legend.mfr for p in parts):
+            if model.mfr_prefix or is_mfr_prefix(left, legend.mfr_codes):
                 n_left = len(left.split())
                 mfr, cat = cat[:n_left], [t for t in cat[n_left:] if t.text not in {"-", "\u2013"}]
 
@@ -366,7 +397,8 @@ def build_component(row: Row, model: ColumnModel, legend: Legend) -> tuple[Compo
 def parse_rows(
     lines: Sequence[Line], toks: Mapping[str, Token], model: ColumnModel, legend: Legend
 ) -> ParsedRows:
-    rows, set_notes = assemble_rows(lines, toks, model)
+    set_desc: list[str] = []
+    rows, set_notes = assemble_rows(lines, toks, model, set_desc)
     comps: list[Component] = []
     warnings: list[str] = []
     for row in rows:
@@ -381,4 +413,4 @@ def parse_rows(
         comp, w = build_component(row, model, legend)
         comps.append(comp)
         warnings.extend(w)
-    return ParsedRows(comps, set_notes, warnings)
+    return ParsedRows(comps, set_notes, warnings, set_desc)

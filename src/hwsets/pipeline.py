@@ -17,7 +17,7 @@ from dataclasses import dataclass
 from hwsets.columns.assign import assign_roles
 from hwsets.columns.features import column_features
 from hwsets.columns.legend import Legend, find_legend
-from hwsets.components.parse import ColumnModel, parse_rows
+from hwsets.components.parse import ColumnModel, is_mfr_prefix, parse_rows
 from hwsets.layout.chrome import chrome_keys, header_row_roles, is_chrome
 from hwsets.layout.columns import Layout, column_of, infer_layouts, layout_for_page
 from hwsets.layout.lines import clean_tokens, group_lines, union_bbox
@@ -37,6 +37,7 @@ from hwsets.segment.section import find_hardware_pages
 from hwsets.segment.sets import Kind, Span, classify, split_spans
 from hwsets.validate import validate_document
 
+_MFR_SPLIT = re.compile(r"\s[-\u2013]\s")
 _CHROME_CONTEXT_PAGES = 3
 _LEGEND_LOOKBACK_PAGES = 6
 
@@ -65,17 +66,29 @@ def _prepare(pages: Sequence[PageInfo], tokens_by_page: Mapping[int, Sequence[To
 
 
 def _layout_model(
-    layout: Layout, spans: Sequence[Span], doc: _Doc, legend: Legend
+    layout: Layout,
+    spans: Sequence[Span],
+    doc: _Doc,
+    legend: Legend,
 ) -> tuple[ColumnModel, dict[str, str]]:
     xs = tuple(layout.xs)
     pages = set(layout.pages)
     per_col: list[list[str]] = [[] for _ in xs]
     n_rows = 0
     prior: dict[int, str] = {}
+    set_cols: list[int] = []
     for sp in spans:
-        for ln, kind in zip(sp.lines, sp.kinds, strict=True):
+        for k, (ln, line_kind) in enumerate(zip(sp.lines, sp.kinds, strict=True)):
             if ln.page not in pages:
                 continue
+            kind = line_kind
+            if k == 0 and sp.header.inline:
+                kind = Kind.ROW
+                set_cols.extend(
+                    column_of(doc.toks[i].bbox[0], xs)
+                    for grp in sp.header.id_token_ids
+                    for i in grp
+                )
             tokens = [doc.toks[i] for i in ln.token_ids]
             if kind == Kind.COLUMN_HEADER:
                 for tok, role in zip(tokens, header_row_roles([t.text for t in tokens]),
@@ -94,10 +107,29 @@ def _layout_model(
                     cells.setdefault(col, []).append(t.text)
             for col, words in cells.items():
                 per_col[col].append(" ".join(words))
+    # Column-header rows anywhere on the layout's pages count, including one printed above the
+    # first set (it is outside every set span).
+    # Read them before chrome removal: a header row repeated atop every page is chrome for the
+    # line stream but still role evidence (PLAN Phase 2).
+    for ln in (line for p in sorted(pages) for line in doc.lines_by_page.get(p, [])):
+        tokens = [doc.toks[i] for i in ln.token_ids]
+        for tok, role in zip(tokens, header_row_roles([t.text for t in tokens]), strict=False):
+            col = column_of(tok.bbox[0], xs)
+            if role and col >= 0 and role != "set_no":
+                prior.setdefault(col, role)
+    # A table SET column holds set ids and their stacked descriptions: pin it to "set_no" and
+    # keep it out of the role assignment so its words cannot pose as item descriptions.
+    set_col = max(set(set_cols), key=set_cols.count) if set_cols else -1
+    if set_col >= 0:
+        per_col[set_col] = []
     feats = [
         column_features(vals, n_rows, legend.mfr_codes, legend.finish_codes) for vals in per_col
     ]
     ra = assign_roles(feats, prior)
+    if set_col >= 0:
+        roles = list(ra.roles)
+        roles[set_col] = "set_no"
+        ra = type(ra)(tuple(roles), ra.scores, ra.margins)
     diag = {
         f"p{layout.pages[0]}-{layout.pages[-1]} x≈{x:.0f}": f"{role} (margin {m:.2f})"
         for x, role, m in zip(xs, ra.roles, ra.margins, strict=True)
@@ -109,7 +141,18 @@ def _layout_model(
         )
         and "catalog" not in ra.roles
     )
-    model = ColumnModel(xs=xs, roles=ra.roles, margins=ra.margins, split_merged=split_merged)
+    mfr_prefix = False
+    if "mfr" not in ra.roles and "catalog" in ra.roles:
+        cat_vals = per_col[ra.roles.index("catalog")]
+        with_prefix = sum(
+            1
+            for v in cat_vals
+            if (m := _MFR_SPLIT.search(v)) and is_mfr_prefix(v[: m.start()], legend.mfr_codes)
+        )
+        mfr_prefix = bool(cat_vals) and with_prefix >= 0.5 * len(cat_vals)
+    model = ColumnModel(
+        xs=xs, roles=ra.roles, margins=ra.margins, split_merged=split_merged, mfr_prefix=mfr_prefix
+    )
     return model, diag
 
 
@@ -145,6 +188,10 @@ def _build_set(
         status, status_text = "not_used", m.group(0)
     set_level: list[str] = []
     row_lines: list[Line] = []
+    id_tokens = {i for grp in h.id_token_ids for i in grp}
+    if h.inline:
+        rest = [i for i in sp.lines[0].token_ids if i not in id_tokens]
+        row_lines.append(sp.lines[0].model_copy(update={"token_ids": rest}))
     for ln, kind in zip(sp.lines[1:], sp.kinds[1:], strict=True):
         if kind == Kind.NOT_USED and status == "active":
             status, status_text = "not_used", ln.text.strip()
@@ -172,6 +219,8 @@ def _build_set(
             parsed = parse_rows(lines, doc.toks, model, legend)
             components.extend(parsed.components)
             set_level.extend(parsed.set_note_tokens)
+            if h.inline and not h.desc_token_ids:
+                desc_ids.extend(i for i in parsed.set_desc_tokens if i not in id_tokens)
             warnings.extend(f"set {sp.set_id}: {w}" for w in parsed.warnings)
 
     comp_conf = [_component_conf(c) for c in components]
@@ -237,9 +286,9 @@ def extract(
         classify(sp, doc.toks)
 
     row_lines_by_page: dict[int, list[Line]] = {}
-    for sp in spans[::1]:
-        for ln, kind in zip(sp.lines, sp.kinds, strict=True):
-            if kind == Kind.ROW:
+    for sp in spans:
+        for k, (ln, kind) in enumerate(zip(sp.lines, sp.kinds, strict=True)):
+            if kind == Kind.ROW or (k == 0 and sp.header.inline):
                 row_lines_by_page.setdefault(ln.page, []).append(ln)
     # Multi-id headers share lines: count each line once for layout inference.
     for p, ls in row_lines_by_page.items():

@@ -13,6 +13,7 @@ Pure functions of lines and tokens.
 
 from __future__ import annotations
 
+import itertools
 import re
 import statistics
 from collections import Counter
@@ -68,6 +69,9 @@ class HeaderParse:
     x0: float
     bold: bool
     font_size: float
+    # True when the id sits in a SET column of a table: the header line is also the set's
+    # first component row, and the set's description is stacked under the id in that column.
+    inline: bool = False
 
 
 @dataclass(frozen=True, slots=True)
@@ -191,6 +195,61 @@ def _candidate_score(h: HeaderParse, line: Line, body_size: float, is_comp: bool
     if is_comp:
         s -= 1.0
     return s
+
+
+_BARE_ID_RE = re.compile(r"^[A-Z]{0,3}-?\d{1,3}(?:\.\d{1,2})?[A-Z]?$")
+_MIN_ROW_TOKENS = 3
+
+
+def induce_bare_ids(lines: Sequence[Line], toks: Mapping[str, Token]) -> HeaderInduction:
+    """Table schedules with a SET column and no header keyword ("1.1 | MORTISE HINGE | ...").
+
+    Candidates are lines whose first token is id-shaped and followed by row content. They must
+    share one left x, and the ids must be (nearly) unique and mostly increasing: a quantity column
+    also holds small numbers at a fixed x, but they repeat ("1, 1, 3, 1") and do not ascend.
+    """
+    by_x: dict[int, list[tuple[Line, Token]]] = {}
+    for ln in lines:
+        if len(ln.token_ids) < 1 + _MIN_ROW_TOKENS:
+            continue
+        first = toks[ln.token_ids[0]]
+        if _BARE_ID_RE.match(first.text):
+            by_x.setdefault(round(first.bbox[0] / 6) * 6, []).append((ln, first))
+    out = HeaderInduction(signature=None)
+    if not by_x:
+        return out
+    x, cands = max(by_x.items(), key=lambda kv: len(kv[1]))
+    ids = [t.text for _, t in cands]
+    unique = len(set(ids)) / len(ids)
+    nums = [float(re.sub(r"[^0-9.]", "", i) or 0) for i in ids]
+    ascending = sum(b >= a for a, b in itertools.pairwise(nums)) / max(len(nums) - 1, 1)
+    out.candidates = len(cands)
+    # Row evidence: numbered spec articles ("1.1 SECTION INCLUDES") are unique and ascending
+    # too, but their lines carry no manufacturer or finish codes.
+    coded = sum(
+        any(is_mfr_code(toks[i].text) or is_finish_code(toks[i].text) for i in ln.token_ids[1:])
+        for ln, _ in cands
+    ) / len(cands)
+    if len(cands) < 3 or unique < 0.9 or ascending < 0.8 or coded < 0.6:
+        return out
+    out.signature = Signature(keyword="set column", x_anchor=float(x), bold=False,
+                              support=len(cands))  # fmt: skip
+    out.headers = [
+        HeaderParse(
+            line_id=ln.id,
+            keyword="set column",
+            set_ids=(t.text,),
+            id_token_ids=((t.id,),),
+            keyword_token_ids=(),
+            desc_token_ids=(),
+            x0=t.bbox[0],
+            bold=t.bold,
+            font_size=t.font_size,
+            inline=True,
+        )
+        for ln, t in cands
+    ]
+    return out
 
 
 def induce_headers(
