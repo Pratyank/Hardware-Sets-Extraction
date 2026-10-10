@@ -56,3 +56,23 @@ def test_demo_refuses_holdout(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -
     monkeypatch.setitem(demo.DEMO_BOOKS, "secret-book", "x")
     with pytest.raises(SystemExit):
         demo.main(["--data", str(tmp_path)])
+
+
+def test_pe_sample_resolves_pe_as_finish(tmp_path: Path) -> None:
+    from fastapi.testclient import TestClient
+
+    from hwsets.api.server import create_app
+
+    pdf = demo.write_pe_sample(tmp_path / "pe-finish.pdf")
+    client = TestClient(create_app(tmp_path / "data"))
+    r = client.post(
+        "/api/docs/upload", files={"file": (pdf.name, pdf.read_bytes(), "application/pdf")}
+    )
+    assert r.status_code == 200, r.text
+    res = client.get(f"/api/docs/{r.json()['doc_id']}/result").json()
+    assert len(res["sets"]) == 2
+    comps = [c for s in res["sets"] for c in s["components"]]
+    closers = [c for c in comps if "CLOSER" in c["description"]["value"]]
+    assert [c["finish"]["value"] for c in closers] == ["PE", "PE"]
+    assert [c["mfr"]["value"] for c in closers] == ["LCN", "LCN"]
+    assert all(c["mfr"]["value"] != "PE" for c in comps)

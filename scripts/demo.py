@@ -7,6 +7,9 @@ For each demo book: ingest it if its tokens are not cached yet (same worker the 
     uv run python scripts/demo.py               # data dir ./data
     uv run python scripts/demo.py --data path/to/data
 
+    uv run python scripts/demo.py --pe-sample pe-finish.pdf   # also write the "PE as finish"
+                                                              # sample to upload in the UI
+
 A book whose PDF is not under ``<data>/raw`` and whose tokens are not cached is skipped with a
 note; the script only fails if no demo book could be prepared.
 """
@@ -18,6 +21,8 @@ import json
 import sys
 import time
 from pathlib import Path
+
+import pymupdf
 
 from hwsets.api.storage import atomic_write_text
 from hwsets.cli import RenderMode, _ingest_one
@@ -94,6 +99,47 @@ def prepare(data: Path, doc_id: str, pdf: Path | None) -> int | None:
     return len(result.sets)
 
 
+# One-page schedule where "PE" sits in the FINISH column (Painted Enamel) for the frame
+# rows, next to a MFR column of real manufacturers: the column, not the code, decides.
+_PE_SAMPLE_COLS = (72.0, 100.0, 140.0, 280.0, 450.0, 500.0)
+_PE_SAMPLE_ROWS: list[tuple[str, bool]] = [
+    ("HARDWARE SET NO. 01", True),
+    ("SERVICE CORRIDOR", False),
+    ("QTY|UNIT|DESCRIPTION|CATALOG NUMBER|FINISH|MFR", False),
+    ("3|EA|HINGE|5BB1 4.5 X 4.5|652|IVE", False),
+    ("1|EA|STOREROOM LOCK|ND80PD RHO|626|SCH", False),
+    ("1|EA|CLOSER|4040XP|PE|LCN", False),
+    ("1|EA|KICK PLATE|8400 10 X 34|630|IVE", False),
+    ("", False),
+    ("HARDWARE SET NO. 02", True),
+    ("JANITOR", False),
+    ("3|EA|HINGE|5BB1 4.5 X 4.5|652|IVE", False),
+    ("1|EA|CLASSROOM LOCK|ND70PD RHO|626|SCH", False),
+    ("1|EA|SURFACE CLOSER|4040XP CUSH|PE|LCN", False),
+    ("1|EA|WALL STOP|WS406CVX|630|IVE", False),
+]
+
+
+def write_pe_sample(path: Path) -> Path:
+    """Write the "PE in the finish column" sample PDF (for the upload part of the demo)."""
+    doc = pymupdf.open()
+    page = doc.new_page(width=612, height=792)
+    page.insert_text(
+        (72, 80), "SECTION 087100 - DOOR HARDWARE (SAMPLE)", fontname="hebo", fontsize=10
+    )
+    y = 110.0
+    for text, bold in _PE_SAMPLE_ROWS:
+        y += 14.0 + (10.0 if bold else 0.0)
+        cells = text.split("|") if "|" in text else [text]
+        for x, cell in zip(_PE_SAMPLE_COLS, cells, strict=False):
+            if cell:
+                page.insert_text((x, y), cell, fontname="hebo" if bold else "helv", fontsize=9)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    doc.save(path)
+    doc.close()
+    return path
+
+
 def _span(pages: list[int]) -> str:
     return f"{pages[0]}-{pages[-1]}" if pages else "-"
 
@@ -101,8 +147,11 @@ def _span(pages: list[int]) -> str:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--data", type=Path, default=Path("data"), help="data directory")
+    ap.add_argument("--pe-sample", type=Path, help="also write the PE-as-finish sample PDF here")
     args = ap.parse_args(argv)
     data: Path = args.data
+    if args.pe_sample is not None:
+        print(f"wrote   {write_pe_sample(args.pe_sample)} (upload it via the UI)")
     _check_not_holdout(data)
     pdfs = _find_pdfs(data / "raw", set(DEMO_BOOKS))
     ready = 0
