@@ -1,0 +1,577 @@
+{
+  "DocumentResult": {
+    "$defs": {
+      "Component": {
+        "additionalProperties": false,
+        "properties": {
+          "qty": {
+            "$ref": "#/$defs/Field_Union_int__str__"
+          },
+          "qty_unit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Qty Unit"
+          },
+          "description": {
+            "$ref": "#/$defs/Field_str_"
+          },
+          "catalog_number": {
+            "$ref": "#/$defs/Field_str_"
+          },
+          "mfr": {
+            "$ref": "#/$defs/Field_str_"
+          },
+          "mfr_resolved": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Mfr Resolved"
+          },
+          "finish": {
+            "$ref": "#/$defs/Field_str_"
+          },
+          "notes": {
+            "$ref": "#/$defs/Field_str_"
+          },
+          "resolved_from_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Resolved From Code"
+          }
+        },
+        "required": [
+          "qty",
+          "description",
+          "catalog_number",
+          "mfr",
+          "finish",
+          "notes"
+        ],
+        "title": "Component",
+        "type": "object"
+      },
+      "Field_Union_int__str__": {
+        "additionalProperties": false,
+        "properties": {
+          "value": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Value"
+          },
+          "token_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Token Ids",
+            "type": "array"
+          },
+          "confidence": {
+            "default": 0.0,
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Confidence",
+            "type": "number"
+          },
+          "source": {
+            "default": "rule",
+            "enum": [
+              "rule",
+              "lookup",
+              "llm",
+              "human"
+            ],
+            "title": "Source",
+            "type": "string"
+          }
+        },
+        "title": "Field[Union[int, str]]",
+        "type": "object"
+      },
+      "Field_str_": {
+        "additionalProperties": false,
+        "properties": {
+          "value": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Value"
+          },
+          "token_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Token Ids",
+            "type": "array"
+          },
+          "confidence": {
+            "default": 0.0,
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Confidence",
+            "type": "number"
+          },
+          "source": {
+            "default": "rule",
+            "enum": [
+              "rule",
+              "lookup",
+              "llm",
+              "human"
+            ],
+            "title": "Source",
+            "type": "string"
+          }
+        },
+        "title": "Field[str]",
+        "type": "object"
+      },
+      "HardwareSet": {
+        "additionalProperties": false,
+        "properties": {
+          "set_number": {
+            "$ref": "#/$defs/Field_str_"
+          },
+          "description": {
+            "$ref": "#/$defs/Field_str_"
+          },
+          "status": {
+            "default": "active",
+            "enum": [
+              "active",
+              "not_used"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "status_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Status Text"
+          },
+          "location": {
+            "$ref": "#/$defs/Location"
+          },
+          "components": {
+            "items": {
+              "$ref": "#/$defs/Component"
+            },
+            "title": "Components",
+            "type": "array"
+          },
+          "notes": {
+            "$ref": "#/$defs/Field_str_"
+          },
+          "confidence": {
+            "default": 0.0,
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Confidence",
+            "type": "number"
+          }
+        },
+        "required": [
+          "set_number",
+          "description",
+          "location"
+        ],
+        "title": "HardwareSet",
+        "type": "object"
+      },
+      "Location": {
+        "additionalProperties": false,
+        "properties": {
+          "regions": {
+            "items": {
+              "$ref": "#/$defs/PageRegion"
+            },
+            "title": "Regions",
+            "type": "array"
+          },
+          "line_range": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "title": "Line Range",
+            "type": "array"
+          }
+        },
+        "required": [
+          "regions",
+          "line_range"
+        ],
+        "title": "Location",
+        "type": "object"
+      },
+      "PageRegion": {
+        "additionalProperties": false,
+        "properties": {
+          "page": {
+            "title": "Page",
+            "type": "integer"
+          },
+          "bbox": {
+            "maxItems": 4,
+            "minItems": 4,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "title": "Bbox",
+            "type": "array"
+          }
+        },
+        "required": [
+          "page",
+          "bbox"
+        ],
+        "title": "PageRegion",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "source_pdf": {
+        "title": "Source Pdf",
+        "type": "string"
+      },
+      "hardware_pages": {
+        "items": {
+          "type": "integer"
+        },
+        "title": "Hardware Pages",
+        "type": "array"
+      },
+      "column_roles": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "title": "Column Roles",
+        "type": "object"
+      },
+      "sets": {
+        "items": {
+          "$ref": "#/$defs/HardwareSet"
+        },
+        "title": "Sets",
+        "type": "array"
+      },
+      "warnings": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Warnings",
+        "type": "array"
+      }
+    },
+    "required": [
+      "source_pdf",
+      "hardware_pages",
+      "column_roles",
+      "sets"
+    ],
+    "title": "DocumentResult",
+    "type": "object"
+  },
+  "FlatDocument": {
+    "$defs": {
+      "FlatComponent": {
+        "additionalProperties": true,
+        "properties": {
+          "qty": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Qty"
+          },
+          "qty_unit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Qty Unit"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Description"
+          },
+          "catalog_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Catalog Number"
+          },
+          "mfr": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Mfr"
+          },
+          "finish": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Finish"
+          },
+          "notes": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Notes"
+          }
+        },
+        "title": "FlatComponent",
+        "type": "object"
+      },
+      "FlatLocation": {
+        "additionalProperties": false,
+        "properties": {
+          "pages": {
+            "items": {
+              "type": "integer"
+            },
+            "title": "Pages",
+            "type": "array"
+          },
+          "regions": {
+            "items": {
+              "$ref": "#/$defs/PageRegion"
+            },
+            "title": "Regions",
+            "type": "array"
+          },
+          "line_range": {
+            "anyOf": [
+              {
+                "maxItems": 2,
+                "minItems": 2,
+                "prefixItems": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Line Range"
+          }
+        },
+        "required": [
+          "pages"
+        ],
+        "title": "FlatLocation",
+        "type": "object"
+      },
+      "FlatSet": {
+        "additionalProperties": true,
+        "properties": {
+          "set_number": {
+            "title": "Set Number",
+            "type": "string"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Description"
+          },
+          "status": {
+            "default": "active",
+            "enum": [
+              "active",
+              "not_used"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "location": {
+            "$ref": "#/$defs/FlatLocation"
+          },
+          "components": {
+            "items": {
+              "$ref": "#/$defs/FlatComponent"
+            },
+            "title": "Components",
+            "type": "array"
+          }
+        },
+        "required": [
+          "set_number",
+          "location"
+        ],
+        "title": "FlatSet",
+        "type": "object"
+      },
+      "PageRegion": {
+        "additionalProperties": false,
+        "properties": {
+          "page": {
+            "title": "Page",
+            "type": "integer"
+          },
+          "bbox": {
+            "maxItems": 4,
+            "minItems": 4,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "title": "Bbox",
+            "type": "array"
+          }
+        },
+        "required": [
+          "page",
+          "bbox"
+        ],
+        "title": "PageRegion",
+        "type": "object"
+      }
+    },
+    "additionalProperties": true,
+    "properties": {
+      "source_pdf": {
+        "title": "Source Pdf",
+        "type": "string"
+      },
+      "sets": {
+        "items": {
+          "$ref": "#/$defs/FlatSet"
+        },
+        "title": "Sets",
+        "type": "array"
+      }
+    },
+    "required": [
+      "source_pdf",
+      "sets"
+    ],
+    "title": "FlatDocument",
+    "type": "object"
+  }
+}
