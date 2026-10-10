@@ -35,13 +35,24 @@ def test_assign_roles_on_a_clean_table() -> None:
 
 
 def test_unique_roles_are_used_at_most_once() -> None:
+    # Two manufacturer-like columns that are NOT neighbours: the Hungarian step uses "mfr" once.
     mfr_like = ["IVE", "SCH", "LCN", "IVE"]
-    feats = [column_features(c, n_rows=4) for c in (mfr_like, mfr_like, ["652", "626", "689"])]
+    feats = [column_features(c, n_rows=4) for c in (mfr_like, ["652", "626", "689"], mfr_like)]
     ra = assign_roles(feats)
     for role in UNIQUE_ROLES:
         assert ra.roles.count(role) <= 1
     assert ra.roles.count("mfr") == 1
-    assert ra.roles[2] == "finish"
+    assert ra.roles[1] == "finish"
+
+
+def test_adjacent_look_alike_column_shares_the_role() -> None:
+    """Centred or ragged cells split one column into two neighbouring anchors; the unassigned
+    neighbour that looks the same takes the same role."""
+    left = column_features(["Pemko", "Sargent", "Norton", "Pemko"], n_rows=8)
+    right = column_features(["Securitron", "McKinney", "Rockwood", "Pemko"], n_rows=8)
+    cat = column_features(["5BB1 4.5", "UNI7500", "S44BL", "315CN"], n_rows=8)
+    ra = assign_roles([cat, left, right])
+    assert ra.roles == ("catalog", "mfr", "mfr")
 
 
 def test_header_prior_overrides_weak_value_evidence() -> None:
