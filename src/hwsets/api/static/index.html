@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>hwsets review</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='4' fill='%235e6ad2'/%3E%3Cpath d='M4 4h3v8H4zM9 4h3v3H9zM9 9h3v3H9z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="panels.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#editor">Skip to set editor</a>
+
+  <header class="topbar">
+    <div class="brand" aria-label="hwsets review">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">hwsets</span>
+      <span class="brand-sub">review</span>
+    </div>
+
+    <div class="doc-picker">
+      <label for="doc-select" class="sr-only">Document</label>
+      <select id="doc-select" aria-label="Document" disabled>
+        <option>Loading documents…</option>
+      </select>
+      <span id="doc-meta" class="doc-meta" aria-live="polite"></span>
+    </div>
+
+    <div class="topbar-actions">
+      <span id="dirty-indicator" class="dirty-indicator" hidden>
+        <span class="dot" aria-hidden="true"></span><span id="dirty-text">Unsaved changes</span>
+      </span>
+      <button id="btn-save" class="btn btn-primary" type="button" disabled
+        aria-keyshortcuts="Control+S Meta+S" title="Save corrections (Ctrl/⌘ S)">Save</button>
+      <button id="btn-export" class="btn" type="button" disabled
+        title="Export the corrected result as a gold draft">Export as gold</button>
+      <button id="btn-help" class="btn btn-icon" type="button" aria-label="Keyboard shortcuts"
+        aria-keyshortcuts="?" title="Keyboard shortcuts (?)">?</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <!-- Left: sets -->
+    <nav class="sidebar" aria-label="Hardware sets">
+      <div class="sidebar-head">
+        <div class="search">
+          <svg aria-hidden="true" viewBox="0 0 16 16" class="search-icon"><path d="M7 2a5 5 0 0 1 3.96 8.05l3 3-.92.92-3-3A5 5 0 1 1 7 2Zm0 1.3a3.7 3.7 0 1 0 0 7.4 3.7 3.7 0 0 0 0-7.4Z"/></svg>
+          <input id="set-filter" type="search" placeholder="Filter sets" autocomplete="off"
+            aria-label="Filter sets by number, description or component" aria-keyshortcuts="/">
+          <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        </div>
+        <div class="segmented" role="radiogroup" aria-label="Show">
+          <button type="button" role="radio" aria-checked="true" data-mode="all">All <span class="count" data-count="all">0</span></button>
+          <button type="button" role="radio" aria-checked="false" data-mode="review">Needs review <span class="count" data-count="review">0</span></button>
+          <button type="button" role="radio" aria-checked="false" data-mode="not_used">Not used <span class="count" data-count="not_used">0</span></button>
+        </div>
+      </div>
+      <ul id="set-list" class="set-list" role="listbox" aria-label="Sets" tabindex="0"></ul>
+      <p id="set-empty" class="empty" hidden>No sets match.</p>
+    </nav>
+
+    <!-- Centre: pages -->
+    <section class="viewer-wrap" aria-label="Document pages">
+      <div class="viewer-toolbar">
+        <span id="viewer-pos" class="viewer-pos"></span>
+        <div class="legend" aria-hidden="true">
+          <span><i class="sw sw-region"></i>Set</span>
+          <span><i class="sw sw-selected"></i>Selected</span>
+          <span><i class="sw sw-token"></i>Source tokens</span>
+        </div>
+        <div class="zoom" role="group" aria-label="Zoom">
+          <button id="zoom-out" class="btn btn-icon btn-ghost" type="button" aria-label="Zoom out" aria-keyshortcuts="-" title="Zoom out (−)">−</button>
+          <button id="zoom-fit" class="btn btn-ghost zoom-level" type="button" aria-label="Fit width" aria-keyshortcuts="0" title="Fit width (0)">100%</button>
+          <button id="zoom-in" class="btn btn-icon btn-ghost" type="button" aria-label="Zoom in" aria-keyshortcuts="+" title="Zoom in (+)">+</button>
+        </div>
+      </div>
+      <div id="viewer" class="viewer" tabindex="-1">
+        <div id="pages" class="pages"></div>
+        <div id="viewer-empty" class="viewer-empty">
+          <div class="empty-card">
+            <div class="empty-title">No document loaded</div>
+            <div class="empty-body">Run <code>hwsets extract</code> to write results to <code>data/results/</code>, then reload.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right: editor -->
+    <section id="editor" class="editor" aria-label="Set editor" tabindex="-1">
+      <div class="tabs" role="tablist" aria-label="Panel">
+        <button type="button" role="tab" id="tab-set" aria-controls="panel-set" aria-selected="true">Components</button>
+        <button type="button" role="tab" id="tab-diag" aria-controls="panel-diag" aria-selected="false" tabindex="-1">Diagnostics <span id="warn-count" class="count warn" hidden>0</span></button>
+      </div>
+      <div id="panel-set" class="panel" role="tabpanel" aria-labelledby="tab-set"></div>
+      <div id="panel-diag" class="panel" role="tabpanel" aria-labelledby="tab-diag" hidden></div>
+      <footer id="inspector" class="inspector" aria-live="polite">
+        <span class="inspector-hint">Hover or focus a field to see where it came from.</span>
+      </footer>
+    </section>
+  </main>
+
+  <div id="toasts" class="toasts" role="status" aria-live="polite"></div>
+
+  <dialog id="help" class="dialog" aria-labelledby="help-title">
+    <div class="dialog-head">
+      <h2 id="help-title">Keyboard shortcuts</h2>
+      <button type="button" class="btn btn-icon btn-ghost" data-close aria-label="Close">×</button>
+    </div>
+    <dl class="shortcuts">
+      <div><dt><kbd>j</kbd> / <kbd>k</kbd></dt><dd>Next / previous set</dd></div>
+      <div><dt><kbd>n</kbd></dt><dd>Jump to next low-confidence field (&lt; 0.6)</dd></div>
+      <div><dt><kbd>Enter</kbd> / <kbd>⇧ Enter</kbd></dt><dd>Next / previous row while editing</dd></div>
+      <div><dt><kbd>Esc</kbd></dt><dd>Leave field / close dialog</dd></div>
+      <div><dt><kbd>Ctrl</kbd> <kbd>S</kbd></dt><dd>Save corrections</dd></div>
+      <div><dt><kbd>/</kbd></dt><dd>Filter sets</dd></div>
+      <div><dt><kbd>+</kbd> / <kbd>−</kbd> / <kbd>0</kbd></dt><dd>Zoom in / out / fit width</dd></div>
+      <div><dt><kbd>?</kbd></dt><dd>Show this help</dd></div>
+    </dl>
+    <div class="legend-block">
+      <div class="legend-title">Cell colours</div>
+      <div class="legend-row">
+        <span class="chip lvl-hi">≥ 0.85</span><span class="chip lvl-mid">0.60–0.85</span>
+        <span class="chip lvl-lo">&lt; 0.60</span><span class="chip lvl-null">empty</span>
+        <span class="chip human">edited by you</span>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
