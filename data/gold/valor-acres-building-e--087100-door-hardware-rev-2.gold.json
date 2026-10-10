@@ -1,0 +1,3085 @@
+{
+ "source_pdf": "valor-acres-building-e--087100-door-hardware-rev-2",
+ "gold_pages": "7-18",
+ "_annotator": "gold-valor-roselle agent, drafted from page images",
+ "_final": true,
+ "sets": [
+  {
+   "set_number": "01",
+   "description": "Interior Unit Entry Swing Doors",
+   "status": "active",
+   "location": {
+    "pages": [
+     7
+    ],
+    "regions": [
+     {
+      "page": 7,
+      "bbox": [
+       72.0,
+       261.6,
+       403.1,
+       428.4
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "BB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ENTRY SET (SCHLAGE LATITUDE LEVER STYLE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DEADBOLT W/ KEYFOB ACCESS",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (SMOKE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR VIEWER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "02",
+   "description": "Exterior Unit Entries & Balconies Swing Doors",
+   "status": "active",
+   "location": {
+    "pages": [
+     7
+    ],
+    "regions": [
+     {
+      "page": 7,
+      "bbox": [
+       72.0,
+       442.7,
+       475.7,
+       672.7
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "BB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ENTRY SET (SCHLAGE LATITUDE LEVER STYLE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DEADBOLT W/ KEYFOB ACCESS (EXTERIOR DOOR ONLY)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (THERMAL)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR VIEWER (ENTRY DOORS ONLY)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "03",
+   "description": "Bathrooms/ Bedrooms Swing Doors",
+   "status": "active",
+   "location": {
+    "pages": [
+     7,
+     8
+    ],
+    "regions": [
+     {
+      "page": 7,
+      "bbox": [
+       72.0,
+       687.0,
+       459.3,
+       698.0
+      ]
+     },
+     {
+      "page": 8,
+      "bbox": [
+       72.0,
+       88.4,
+       295.0,
+       179.3
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "PB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PRIVACY SET (SCHLAGE LATITUDE LEVER STYLE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "04",
+   "description": "Closets/ Laundry Swing Doors",
+   "status": "active",
+   "location": {
+    "pages": [
+     8
+    ],
+    "regions": [
+     {
+      "page": 8,
+      "bbox": [
+       72.0,
+       193.6,
+       432.7,
+       297.1
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "BB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PASSAGE SET (SCHLAGE LATITUDE LEVER STYLE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "HINGE STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "05",
+   "description": "Mechanical Closet Swing Doors",
+   "status": "active",
+   "location": {
+    "pages": [
+     8
+    ],
+    "regions": [
+     {
+      "page": 8,
+      "bbox": [
+       72.0,
+       311.5,
+       449.7,
+       414.9
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "PB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PASSAGE SET (SCHLAGE LATITUDE LEVER STYLE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "HINGE STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "06",
+   "description": "Balcony/Patio Swing Doors",
+   "status": "active",
+   "location": {
+    "pages": [
+     8
+    ],
+    "regions": [
+     {
+      "page": 8,
+      "bbox": [
+       72.0,
+       429.3,
+       384.9,
+       583.4
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HINGE BY DR SUPPLIER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ENTRY SET (SCHLAGE LATITUDE LEVER STYLE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE BOLTS",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DEADBOLT BY DR SUPPLIER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "07",
+   "description": "Single Barn doors",
+   "status": "active",
+   "location": {
+    "pages": [
+     8
+    ],
+    "regions": [
+     {
+      "page": 8,
+      "bbox": [
+       72.0,
+       597.8,
+       410.9,
+       675.9
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "BARN DR TRACK",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "PULL (ACCESSIBLE WHERE REQUIRED)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "08",
+   "description": "Double Barn Doors",
+   "status": "active",
+   "location": {
+    "pages": [
+     8,
+     9
+    ],
+    "regions": [
+     {
+      "page": 8,
+      "bbox": [
+       72.0,
+       690.3,
+       391.0,
+       713.9
+      ]
+     },
+     {
+      "page": 9,
+      "bbox": [
+       72.0,
+       88.4,
+       295.0,
+       137.3
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 2,
+     "qty_unit": "SET",
+     "description": "BARN DR TRACK",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "PULL (ACCESSIBLE WHERE REQUIRED)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "09",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     9
+    ],
+    "regions": [
+     {
+      "page": 9,
+      "bbox": [
+       72.0,
+       151.7,
+       318.4,
+       229.8
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "BARN DR TRACK",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ADA PULL",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DEADBOLT LOCK",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "10",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     9
+    ],
+    "regions": [
+     {
+      "page": 9,
+      "bbox": [
+       72.0,
+       244.2,
+       420.1,
+       373.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "BB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "STOREROOM LEVER LOCKSET",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (FIRE) (DR 104A ONLY)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "11",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     9
+    ],
+    "regions": [
+     {
+      "page": 9,
+      "bbox": [
+       72.0,
+       387.4,
+       314.1,
+       516.1
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "BB HINGE (NRP)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "STOREROOM LEVER LOCKSET",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (THERMAL)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "12",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     9,
+     10
+    ],
+    "regions": [
+     {
+      "page": 9,
+      "bbox": [
+       72.0,
+       530.5,
+       540.0,
+       684.6
+      ]
+     },
+     {
+      "page": 10,
+      "bbox": [
+       72.0,
+       88.4,
+       364.2,
+       339.7
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 8,
+     "qty_unit": "EA",
+     "description": "BB HINGE (NRP)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELECT TRANSFER OR HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CONCEALED VERT ROD ELECT. EXIT DEVICE (NIGHT LATCH FUNCTION)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CONCEALED VERT ROD ELECT. EXIT DEVICE (NIGHT LATCH FUNCTION)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "PULL",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "CYLINDER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER W/ OH STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "AUTO OPERATOR (DR 100B ONLY)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ACTUATOR (WALL MOUNT) (DR 100B)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (FIRE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ADA THRESHOLD",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "GRY",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CARD READER (BY OWNER’S SECURITY CONTRACTOR)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "13",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     10
+    ],
+    "regions": [
+     {
+      "page": 10,
+      "bbox": [
+       72.0,
+       354.1,
+       295.0,
+       609.4
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 8,
+     "qty_unit": "EA",
+     "description": "BB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "CONCEALED VERT ROD EXIT DEVICE (DUMMY OR PASSAGE FUNCTION)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "PULL",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER W/ OH STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "AUTO OPERATOR",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ACTUATOR (WALL MOUNT)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (SOUND)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ADA THRESHOLD",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "14",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     10,
+     11
+    ],
+    "regions": [
+     {
+      "page": 10,
+      "bbox": [
+       72.0,
+       623.7,
+       295.0,
+       701.9
+      ]
+     },
+     {
+      "page": 11,
+      "bbox": [
+       72.0,
+       88.4,
+       295.0,
+       162.6
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "BB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "STOREROOM LEVER LOCKSET",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER W/ OH STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (FIRE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR BOTTOM (FIRE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "15",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     11
+    ],
+    "regions": [
+     {
+      "page": 11,
+      "bbox": [
+       72.0,
+       177.0,
+       350.4,
+       432.3
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 7,
+     "qty_unit": "EA",
+     "description": "BB HINGE (HW)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELECT HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELECT STOREROOM LEVER LOCKSET",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "AUTO FLUSHBOLTS",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DUSTPROOF STRIKE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (THERMAL/ FIRE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ASTRAGAL",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR BOTTOM (THERMAL/ FIRE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": null,
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null,
+     "_uncertain": true,
+     "_uncertain_note": "Row prints only '1 EA' with blank description and blank finish (not struck through); kept as a component because it occupies an item row."
+    }
+   ]
+  },
+  {
+   "set_number": "16",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     11
+    ],
+    "regions": [
+     {
+      "page": 11,
+      "bbox": [
+       72.0,
+       446.6,
+       295.0,
+       626.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "BB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELECT STRIKE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "STOREROOM LEVER SET",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "GRY",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CARD READER (BY OWNER’S SECURITY CONTRACTOR)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "17",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     11,
+     12
+    ],
+    "regions": [
+     {
+      "page": 11,
+      "bbox": [
+       72.0,
+       640.4,
+       355.3,
+       705.9
+      ]
+     },
+     {
+      "page": 12,
+      "bbox": [
+       72.0,
+       88.4,
+       295.0,
+       124.7
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "BB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PASSAGE LEVER SET",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (SMOKE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "18",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     12
+    ],
+    "regions": [
+     {
+      "page": 12,
+      "bbox": [
+       72.0,
+       139.0,
+       295.0,
+       369.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "BB HINGE (NRP)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELECT HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELECT EXIT DEVICE W/ NIGHT LATCH FUNCTION & LEVER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CYLINDER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER W/ OH STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (FIRE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "GRY",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CARD READER(BY OWNER’S SECURITY CONTRACTOR)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "19",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     12
+    ],
+    "regions": [
+     {
+      "page": 12,
+      "bbox": [
+       72.0,
+       383.4,
+       337.7,
+       626.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "BB HINGE (NRP)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELECT HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELECT EXIT DEVICE W/ NIGHT LATCH/ FUNCTION & LEVER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CYLINDER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER W/ OH STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (FIRE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR BOTTOM",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "GRY",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CARD READER(BY OWNER’S SECURITY CONTRACTOR)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "20",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     12,
+     13
+    ],
+    "regions": [
+     {
+      "page": 12,
+      "bbox": [
+       72.0,
+       640.4,
+       540.0,
+       705.9
+      ]
+     },
+     {
+      "page": 13,
+      "bbox": [
+       72.0,
+       88.4,
+       295.0,
+       175.3
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "BB HINGE (NRP)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "EXIT DEVICE W/ LATCHING/ PASSAGE FUNCTION & LEVER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (FIRE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR BOTTOM",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "21A",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     13
+    ],
+    "regions": [
+     {
+      "page": 13,
+      "bbox": [
+       72.0,
+       189.6,
+       304.4,
+       356.4
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "BB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELECT STRIKE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "STOREROOM LEVER LOCKSET",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "GRY",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CARD READER (BY OWNER’S SECURITY CONTRACTOR)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "21B",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     13
+    ],
+    "regions": [
+     {
+      "page": 13,
+      "bbox": [
+       72.0,
+       370.7,
+       391.5,
+       562.8
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PIVOT (BY DR SUPPLIER)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CONCEALED CLOSER WITH H.O. (BY DR SUPPLIER)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SUPPLIED CENTER LOCK WITH DEADLATCH IN OFFICE FUNCTION",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "22",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     13
+    ],
+    "regions": [
+     {
+      "page": 13,
+      "bbox": [
+       72.0,
+       577.1,
+       476.4,
+       705.9
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "BB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "STOREROOM LEVER LOCKSET",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER W/ OH STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (SMOKE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "23",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     14
+    ],
+    "regions": [
+     {
+      "page": 14,
+      "bbox": [
+       72.0,
+       101.1,
+       295.0,
+       343.7
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 8,
+     "qty_unit": "EA",
+     "description": "BB HINGE (NRP)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "CONCEALED VERT ROD ELECT. EXIT DEVICE (DOGGING, NIGHT LATCH FUNCTION) (PROVIDE HOLES IN EXIT DEVICE FOR DRAINAGE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "PULL",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "CYLINDER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER W/ OH STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (SOUND)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ADA THRESHOLD",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "24",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     14
+    ],
+    "regions": [
+     {
+      "page": 14,
+      "bbox": [
+       72.0,
+       358.1,
+       360.1,
+       575.4
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "BB HINGE (NRP)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "EXIT DEVICE (DOGGING, NIGHT LATCH FUNCTION) (PROVIDE HOLES IN EXIT DEVICE FOR DRAINAGE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PULL",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CYLINDER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER W/ OH STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (THERMAL)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ADA THRESHOLD",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "25",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     14,
+     15
+    ],
+    "regions": [
+     {
+      "page": 14,
+      "bbox": [
+       72.0,
+       589.8,
+       408.6,
+       705.9
+      ]
+     },
+     {
+      "page": 15,
+      "bbox": [
+       72.0,
+       88.4,
+       295.0,
+       112.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "BB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "EXIT DEVICE (NL FUNCTION W/ LEVER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CYLINDER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER W/ OH STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "26",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     15
+    ],
+    "regions": [
+     {
+      "page": 15,
+      "bbox": [
+       72.0,
+       189.6,
+       312.9,
+       419.6
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "BB HINGE (NRP)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELECT STRIKE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "EXIT DEVICE W/ NIGHT LATCH/ FUNCTION & LEVER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "CYLINDER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (FIRE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "GRY",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CARD READER (BY OWNER’S SECURITY CONTRACTOR)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "27",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     15
+    ],
+    "regions": [
+     {
+      "page": 15,
+      "bbox": [
+       72.0,
+       434.0,
+       540.0,
+       689.3
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "BB HINGE (NRP)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELECT HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELECT EXIT DEVICE W/ NIGHT LATCH/ FUNCTION & LEVER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CYLINDER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (FIRE)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ADA THRESHOLD",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "GRY",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CARD READER (BY OWNER’S SECURITY CONTRACTOR)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "28",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     15,
+     16
+    ],
+    "regions": [
+     {
+      "page": 15,
+      "bbox": [
+       72.0,
+       703.6,
+       341.4,
+       714.5
+      ]
+     },
+     {
+      "page": 16,
+      "bbox": [
+       72.0,
+       88.4,
+       295.0,
+       154.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "BB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "B/B DUMMY LEVERS",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "29",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     16
+    ],
+    "regions": [
+     {
+      "page": 16,
+      "bbox": [
+       72.0,
+       168.3,
+       295.0,
+       246.5
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "DOOR SLIDE TRACK W/ STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "B/B PULLS",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "30",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     16
+    ],
+    "regions": [
+     {
+      "page": 16,
+      "bbox": [
+       72.0,
+       260.9,
+       295.0,
+       326.4
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ALL HARDWARE BY DOOR SUPPLIER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "31",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     16
+    ],
+    "regions": [
+     {
+      "page": 16,
+      "bbox": [
+       72.0,
+       340.8,
+       306.9,
+       456.9
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "BB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PRIVACY LEVER SET W/ OCCUPANCY INDICATOR",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "32",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     16
+    ],
+    "regions": [
+     {
+      "page": 16,
+      "bbox": [
+       72.0,
+       471.2,
+       295.0,
+       638.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 8,
+     "qty_unit": "EA",
+     "description": "BB HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "STOREROOM LEVER LOCKSET",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER W/ OH STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "PR",
+     "description": "MANUAL FLUSHBOLTS (INACTIVE DOOR)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DUSTPROOF STRIKE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "33",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     16,
+     17
+    ],
+    "regions": [
+     {
+      "page": 16,
+      "bbox": [
+       72.0,
+       652.4,
+       295.0,
+       717.9
+      ]
+     },
+     {
+      "page": 17,
+      "bbox": [
+       72.0,
+       88.4,
+       540.0,
+       339.7
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "BB HINGE (NRP)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELECTRIC STOREROOM LEVER LOCKSET W/ CARD ACCESS (FOR BOTH DIRECTIONS) TO OPEN DOOR",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PULL",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "711",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CYLINDER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER W/ OH STOP",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "693",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "SEALS (THERMAL)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ADA THRESHOLD",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "AL",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "GRY",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "CARD READER (BY OWNER’S SECURITY CONTRACTOR)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "34",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     17
+    ],
+    "regions": [
+     {
+      "page": 17,
+      "bbox": [
+       72.0,
+       354.1,
+       295.0,
+       618.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "GATE SPRING HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "GATE HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "TRANSFER WIRE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "GATE MOUNTED ELECT EXIT DEVICE WITH MOUNTING PLATE & ADA PULLS",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CYLINDER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "ELECT SHEAR LOCK MOUNTED IN GATE HEAD",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PUSH TO EXIT BUTTON",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "GRY",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CARD READER (BY OWNER’S SECURITY CONTRACTOR)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "35",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     17,
+     18
+    ],
+    "regions": [
+     {
+      "page": 17,
+      "bbox": [
+       72.0,
+       632.4,
+       295.0,
+       693.9
+      ]
+     },
+     {
+      "page": 18,
+      "bbox": [
+       72.0,
+       88.4,
+       295.0,
+       225.9
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "GATE SPRING HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "TRANSFER WIRE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "GATE MOUNTED ELECT EXIT DEVICE WITH MOUNTING PLATE, LEVER AND STRIKE PLATE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CYLINDER",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "GRY",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CARD READER (BY OWNER’S SECURITY CONTRACTOR)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "36",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     18
+    ],
+    "regions": [
+     {
+      "page": 18,
+      "bbox": [
+       72.0,
+       240.2,
+       295.0,
+       403.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "GATE SPRING HINGE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BBLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "TRANSFER WIRE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "GATE MOUNTED ELECT STOREROOM LEVER LOCKSET",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CORE",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": "GRY",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CARD READER (BY OWNER’S SECURITY CONTRACTOR)",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  }
+ ]
+}

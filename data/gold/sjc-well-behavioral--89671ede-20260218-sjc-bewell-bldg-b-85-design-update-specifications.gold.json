@@ -1,0 +1,3454 @@
+{
+ "source_pdf": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
+ "gold_pages": "711-724",
+ "_annotator": "gold-3 (Claude agent), drafted from page images; spellings copied from hwsets tokens; struck-through text excluded",
+ "_final": true,
+ "sets": [
+  {
+   "set_number": "01",
+   "description": "Interior Single Bedroom - Classroom Lock/Ligature Resistant - No Closer - Rescue Hdw",
+   "status": "active",
+   "location": {
+    "pages": [
+     711
+    ],
+    "regions": [
+     {
+      "page": 711,
+      "bbox": [
+       60.0,
+       124.0,
+       590.0,
+       249.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge-Double Acting",
+     "catalog_number": "A508",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Mortise Lock-Classrm",
+     "catalog_number": "MRX-A-05",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Emergency Rescue Stop",
+     "catalog_number": "A509",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "02",
+   "description": "Interior Single - Office Lockset/Ligature Resistant - No Closer - Continuous Hinge",
+   "status": "active",
+   "location": {
+    "pages": [
+     711
+    ],
+    "regions": [
+     {
+      "page": 711,
+      "bbox": [
+       60.0,
+       259.0,
+       590.0,
+       371.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Cyl. Lock-Office",
+     "catalog_number": "CRX-A-81",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "02A",
+   "description": "Interior Single - Office Lock/Ligature Resistant - Surface Closer/Track-Arm - Cont Hinge",
+   "status": "active",
+   "location": {
+    "pages": [
+     711
+    ],
+    "regions": [
+     {
+      "page": 711,
+      "bbox": [
+       60.0,
+       381.0,
+       590.0,
+       507.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Cyl. Lock-Office",
+     "catalog_number": "CRX-A-81",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH Surface Closer - Track Arm",
+     "catalog_number": "4210T/4510T TRX mount on public side",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "03",
+   "description": "Interior Single - Storeroom Lock/Ligature Resistant - Surface Closer/Track-Arm - Cont Hng",
+   "status": "active",
+   "location": {
+    "pages": [
+     711
+    ],
+    "regions": [
+     {
+      "page": 711,
+      "bbox": [
+       60.0,
+       517.0,
+       590.0,
+       644.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Cyl. Lock-Storerm",
+     "catalog_number": "CRX-A-86",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH Surface Closer - Track Arm",
+     "catalog_number": "4040XPT TROX",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "04",
+   "description": "Interior Single - Storeroom Lockset/Ligature Resistant - Surface Closer - Continuous Hng",
+   "status": "active",
+   "location": {
+    "pages": [
+     712
+    ],
+    "regions": [
+     {
+      "page": 712,
+      "bbox": [
+       60.0,
+       85.0,
+       590.0,
+       212.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Cyl. Lock-Storerm",
+     "catalog_number": "CRX-A-86",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH Surface Closer",
+     "catalog_number": "4210T/4510T TBTRX mount public side",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "04A",
+   "description": "Interior Single - Storeroom Lockset/Ligature Resistant - Surface Closer - Continuous Hng",
+   "status": "active",
+   "location": {
+    "pages": [
+     712
+    ],
+    "regions": [
+     {
+      "page": 712,
+      "bbox": [
+       60.0,
+       220.0,
+       590.0,
+       334.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Cyl. Lock-Storerm",
+     "catalog_number": "CRX-A-86",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH Surface Closer",
+     "catalog_number": "4040XPT BUMP Torx",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "05",
+   "description": "Interior Single - Storeroom Lockset - Surface Closer - Butt Hinges",
+   "status": "active",
+   "location": {
+    "pages": [
+     712
+    ],
+    "regions": [
+     {
+      "page": 712,
+      "bbox": [
+       60.0,
+       343.0,
+       590.0,
+       470.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge-HT",
+     "catalog_number": "CB51 HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cyl. Lock-Storerm",
+     "catalog_number": "CDC-86-S",
+     "mfr": "TOW",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH Surface Closer",
+     "catalog_number": "4040XP/4040XP EDA",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "05A",
+   "description": "Interior Single - Storeroom Lockset - No Closer - Butt Hinges",
+   "status": "active",
+   "location": {
+    "pages": [
+     712
+    ],
+    "regions": [
+     {
+      "page": 712,
+      "bbox": [
+       60.0,
+       479.0,
+       590.0,
+       591.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge-HT",
+     "catalog_number": "CB51 HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cyl. Lock-Storerm",
+     "catalog_number": "CDC-86-S",
+     "mfr": "TOW",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "06",
+   "description": "Interior Single - Card Reader - Elec Fail-Secure Lock - Surface Closer - Butt Hinges",
+   "status": "active",
+   "location": {
+    "pages": [
+     713
+    ],
+    "regions": [
+     {
+      "page": 713,
+      "bbox": [
+       60.0,
+       85.0,
+       590.0,
+       343.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge-HT",
+     "catalog_number": "CB51 HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Hinge-Power Transfer",
+     "catalog_number": "CB51EL HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Fail Secure Cyl. Lock",
+     "catalog_number": "XCDC-86-S-RQE Fail Secure 24VDC",
+     "mfr": "TOW",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH Surface Closer",
+     "catalog_number": "4040XP/4040XP EDA",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Card Reader",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Position Switch",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Lock Power Supply",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "06A",
+   "description": null,
+   "status": "not_used",
+   "_uncertain": true,
+   "_uncertain_note": "moved stub: 'HW 06A Moved to Exterior Set HW E11'",
+   "location": {
+    "pages": [
+     713
+    ],
+    "regions": [
+     {
+      "page": 713,
+      "bbox": [
+       60.0,
+       352.0,
+       590.0,
+       369.0
+      ]
+     }
+    ]
+   },
+   "components": []
+  },
+  {
+   "set_number": "07",
+   "description": "Interior Single - Institutional Privacy/Occ Ind - Ligature Resistant - Self Closing Cont Hinge",
+   "status": "active",
+   "location": {
+    "pages": [
+     713
+    ],
+    "regions": [
+     {
+      "page": 713,
+      "bbox": [
+       60.0,
+       378.0,
+       590.0,
+       532.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Self Closing Continuous Hinge",
+     "catalog_number": "A507SC HT",
+     "mfr": "ABH",
+     "finish": "628",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res Mort Lock-Ins.Privacy/ID",
+     "catalog_number": "MRX-A-26-O",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "07A",
+   "description": "Interior Single - Storeroom Privacy w/ID&Override - Ligature Resistant - SRCL - Cont Hinge",
+   "status": "active",
+   "location": {
+    "pages": [
+     713
+    ],
+    "regions": [
+     {
+      "page": 713,
+      "bbox": [
+       60.0,
+       553.0,
+       590.0,
+       706.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Lig Res Mortise Lock-Strm Priv w/ID",
+     "catalog_number": "MRX-A-15-O (Storerm Prvy W/ID ORD)",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null,
+     "_uncertain": true,
+     "_uncertain_note": "parenthetical '(Storerm Prvy W/ID ORD)' in catalog cell moved to notes per guideline; could be considered part of catalog",
+     "_convention_fix": "parenthetical printed in the catalog cell kept in catalog (guideline v2)"
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH Surface Closer",
+     "catalog_number": "4210T/4510T TBTRX mount on public side",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "07B",
+   "description": "Interior Single - Institutional Privacy/Occ Ind - Ligature Resistant - OHCC - Cont Hinge",
+   "status": "active",
+   "location": {
+    "pages": [
+     714
+    ],
+    "regions": [
+     {
+      "page": 714,
+      "bbox": [
+       60.0,
+       85.0,
+       590.0,
+       239.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Self Closing Continuous Hinge",
+     "catalog_number": "A507SC HT",
+     "mfr": "ABH",
+     "finish": "628",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Lig Res Mortise Lock-Strm Priv w/ID",
+     "catalog_number": "MRX-A-15-O (Storerm Prvy W/ID ORD)",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null,
+     "_uncertain": true,
+     "_uncertain_note": "parenthetical '(Storerm Prvy W/ID ORD)' in catalog cell moved to notes per guideline; could be considered part of catalog",
+     "_convention_fix": "parenthetical printed in the catalog cell kept in catalog (guideline v2)"
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "08",
+   "description": "Interior Single - Hotel Lockset - Surface Closer - Butt Hinges",
+   "status": "active",
+   "location": {
+    "pages": [
+     714
+    ],
+    "regions": [
+     {
+      "page": 714,
+      "bbox": [
+       60.0,
+       260.0,
+       590.0,
+       387.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge-HT",
+     "catalog_number": "CB51 HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cyl. Lock-Hotel",
+     "catalog_number": "CDC-93-S",
+     "mfr": "TOW",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH Surface Closer",
+     "catalog_number": "4040XP/4040XP EDA",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "09",
+   "description": "Interior Single - Classroom Lockset/Ligature Resistant - No Closer - Continuous Hinge",
+   "status": "active",
+   "location": {
+    "pages": [
+     714
+    ],
+    "regions": [
+     {
+      "page": 714,
+      "bbox": [
+       60.0,
+       396.0,
+       590.0,
+       509.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Cyl. Lock-Classrm",
+     "catalog_number": "CRX-A-84",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "09A",
+   "description": "Interior Single - Classroom Lockset - No Closer - Butt Hinges",
+   "status": "active",
+   "location": {
+    "pages": [
+     714
+    ],
+    "regions": [
+     {
+      "page": 714,
+      "bbox": [
+       60.0,
+       518.0,
+       590.0,
+       631.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge-HT",
+     "catalog_number": "CB51 HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cyl. Lock-Classrm",
+     "catalog_number": "CDC-84-S",
+     "mfr": "TOW",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "09B",
+   "description": "Interior Single - Classroom Lockset/Ligature Resistant - No Closer - Continuous Hinge",
+   "status": "active",
+   "location": {
+    "pages": [
+     715
+    ],
+    "regions": [
+     {
+      "page": 715,
+      "bbox": [
+       60.0,
+       85.0,
+       590.0,
+       197.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Mortise Lock-Classrm",
+     "catalog_number": "MRX-A-05",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "10",
+   "description": "Interior Single - Card Reader - Elec Fail Secure/Fail-Safe Lock/Lig Res - Surface Closer",
+   "status": "active",
+   "location": {
+    "pages": [
+     715
+    ],
+    "regions": [
+     {
+      "page": 715,
+      "bbox": [
+       60.0,
+       206.0,
+       590.0,
+       436.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC TW8",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Lig Res. Mortise Lock-Fail Safe/Secure",
+     "catalog_number": "X-MRX-A-241/242C-RQE Fail Saf/Secure",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH Surface Closer",
+     "catalog_number": "4210T/4510T TBTRX mount on public side",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Card Reader",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Position Switch",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Lock Power Supply",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "10A",
+   "description": null,
+   "status": "not_used",
+   "_uncertain": true,
+   "_uncertain_note": "moved stub: 'HW 10A Moved to Exterior Set HW E12'",
+   "location": {
+    "pages": [
+     715
+    ],
+    "regions": [
+     {
+      "page": 715,
+      "bbox": [
+       60.0,
+       458.0,
+       590.0,
+       476.0
+      ]
+     }
+    ]
+   },
+   "components": []
+  },
+  {
+   "set_number": "10B",
+   "description": null,
+   "status": "not_used",
+   "_uncertain": true,
+   "_uncertain_note": "moved stub: 'HW 10B Moved to Exterior Set HW E13'",
+   "location": {
+    "pages": [
+     715
+    ],
+    "regions": [
+     {
+      "page": 715,
+      "bbox": [
+       60.0,
+       484.0,
+       590.0,
+       502.0
+      ]
+     }
+    ]
+   },
+   "components": []
+  },
+  {
+   "set_number": "10C",
+   "description": "Interior Single - Push/Pull-Ligature Resistant - Automatic Operator",
+   "status": "active",
+   "_uncertain": true,
+   "_uncertain_note": "two unstruck 'HW 10C' header lines: first 'Exterior doors only moved to Exterior Set HW E13; Door S100B is interior' (redirect note), then the real title; labelled as one active set with the second line as description",
+   "location": {
+    "pages": [
+     715
+    ],
+    "regions": [
+     {
+      "page": 715,
+      "bbox": [
+       60.0,
+       511.0,
+       590.0,
+       661.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Ligature Res. Push/Pull Set",
+     "catalog_number": "MRX-A-72",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Overhead Surface Auto Operator",
+     "catalog_number": "SW200i 115VAC",
+     "mfr": "BSM",
+     "finish": "628",
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Wave Sense Actuator",
+     "catalog_number": "MS31 / MS41",
+     "mfr": "BEA",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Threshold",
+     "catalog_number": "To Suit Sill Condition",
+     "mfr": "PEM",
+     "finish": "719",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "11",
+   "description": null,
+   "status": "not_used",
+   "_uncertain": true,
+   "_uncertain_note": "moved stub: 'HW 11 Moved to Exterior Set HW E14'",
+   "location": {
+    "pages": [
+     715
+    ],
+    "regions": [
+     {
+      "page": 715,
+      "bbox": [
+       60.0,
+       670.0,
+       590.0,
+       688.0
+      ]
+     }
+    ]
+   },
+   "components": []
+  },
+  {
+   "set_number": "12",
+   "description": "Interior Single - Passage Latchset/Ligature Resistant - OHC Closer - Cont Hng - Rescue",
+   "status": "active",
+   "location": {
+    "pages": [
+     716
+    ],
+    "regions": [
+     {
+      "page": 716,
+      "bbox": [
+       60.0,
+       85.0,
+       590.0,
+       239.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge-Double Acting",
+     "catalog_number": "A507",
+     "mfr": "ABH",
+     "finish": "628",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Mortise Lock-Classroom",
+     "catalog_number": "MRX-A-05",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Double Acting OH Concealed Closer",
+     "catalog_number": "KG35",
+     "mfr": "KSG",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Emergency Rescue Stop",
+     "catalog_number": "A509 L",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder (For Rescue Stop)",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "12A",
+   "description": "Interior Single - Passage Latchset/Ligature Resistant - No Closer - Continuous Hinge",
+   "status": "active",
+   "location": {
+    "pages": [
+     716
+    ],
+    "regions": [
+     {
+      "page": 716,
+      "bbox": [
+       60.0,
+       249.0,
+       590.0,
+       361.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Mortise Lock-Classroom",
+     "catalog_number": "MRX-A-05",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "12B",
+   "description": "Interior Single - Passage Latchset/Ligature Resistant - No Closer - Continuous Hinge",
+   "status": "active",
+   "location": {
+    "pages": [
+     716
+    ],
+    "regions": [
+     {
+      "page": 716,
+      "bbox": [
+       60.0,
+       370.0,
+       590.0,
+       482.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Mortise Lock-Classrm",
+     "catalog_number": "MRX-A-05",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "12C",
+   "description": "Interior Single - Passage Latchset/Ligature Resistant - Surface Closer - Continuous Hinge",
+   "status": "active",
+   "location": {
+    "pages": [
+     716
+    ],
+    "regions": [
+     {
+      "page": 716,
+      "bbox": [
+       60.0,
+       491.0,
+       590.0,
+       721.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Self-Closing Continuous Hinge",
+     "catalog_number": "A507 HT SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Mortise Lock-Classrm",
+     "catalog_number": "CRX-A-84",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Wall Stop*",
+     "catalog_number": "1841*",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Floor Stop**",
+     "catalog_number": "AB-446-RKW**",
+     "mfr": "ABH",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "13",
+   "description": null,
+   "status": "not_used",
+   "_uncertain": true,
+   "_uncertain_note": "moved stub: 'HW 13 Moved to Exterior Set HW E18'",
+   "location": {
+    "pages": [
+     717
+    ],
+    "regions": [
+     {
+      "page": 717,
+      "bbox": [
+       60.0,
+       98.0,
+       590.0,
+       116.0
+      ]
+     }
+    ]
+   },
+   "components": []
+  },
+  {
+   "set_number": "14",
+   "description": null,
+   "status": "not_used",
+   "_uncertain": true,
+   "_uncertain_note": "moved stub: 'HW 14 Moved to Exterior Set HW E15'",
+   "location": {
+    "pages": [
+     717
+    ],
+    "regions": [
+     {
+      "page": 717,
+      "bbox": [
+       60.0,
+       124.0,
+       590.0,
+       142.0
+      ]
+     }
+    ]
+   },
+   "components": []
+  },
+  {
+   "set_number": "14A",
+   "description": null,
+   "status": "not_used",
+   "_uncertain": true,
+   "_uncertain_note": "moved stub: 'HW 14A Moved to Exterior Set HW E17'",
+   "location": {
+    "pages": [
+     717
+    ],
+    "regions": [
+     {
+      "page": 717,
+      "bbox": [
+       60.0,
+       150.0,
+       590.0,
+       169.0
+      ]
+     }
+    ]
+   },
+   "components": []
+  },
+  {
+   "set_number": "14B",
+   "description": "Interior Pair - Ligature Resistant Push/Pulls - Automatic Operator- Continuous Hinge",
+   "status": "active",
+   "_uncertain": true,
+   "_uncertain_note": "p717 has an unstruck 'HW 14B NOT USED' line directly above the fully struck old 'HW 14B Exterior Single ...' set, then this unstruck 'HW 14B Interior Pair ...' set. The NOT USED line is read as retiring the struck exterior version; only this live definition is labelled (avoids a duplicate 14B)",
+   "location": {
+    "pages": [
+     717
+    ],
+    "regions": [
+     {
+      "page": 717,
+      "bbox": [
+       60.0,
+       337.0,
+       590.0,
+       474.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 2,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "SET",
+     "description": "Ligature Res. Push/Pull Set",
+     "catalog_number": "MRX-A-72",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "Overhead Surface Auto Operator",
+     "catalog_number": "SW200i 115VAC",
+     "mfr": "BSM",
+     "finish": "628",
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Wave Sense Actuator",
+     "catalog_number": "MS31 / MS41",
+     "mfr": "BEA",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Threshold",
+     "catalog_number": "To Suit Sill Condition",
+     "mfr": "PEM",
+     "finish": "719",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "15",
+   "description": null,
+   "status": "not_used",
+   "location": {
+    "pages": [
+     718
+    ],
+    "regions": [
+     {
+      "page": 718,
+      "bbox": [
+       60.0,
+       85.0,
+       590.0,
+       103.0
+      ]
+     }
+    ]
+   },
+   "components": []
+  },
+  {
+   "set_number": "15A",
+   "description": "Interior Single - Ligature Restant Push/Pulls - Magnetic Lock - Automatic Operator",
+   "status": "active",
+   "location": {
+    "pages": [
+     718
+    ],
+    "regions": [
+     {
+      "page": 718,
+      "bbox": [
+       60.0,
+       443.0,
+       590.0,
+       698.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Swing Clear Continuous Hinge",
+     "catalog_number": "A511 HT SEC (Not NYS OMH approved)",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null,
+     "_convention_fix": "parenthetical printed in the catalog cell kept in catalog (guideline v2)"
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Ligature Res. Push/Pull Set",
+     "catalog_number": "MRX-A-72",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Mag Lock",
+     "catalog_number": "1511",
+     "mfr": "SDC",
+     "finish": "628",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Push to Lock/Unlock Button",
+     "catalog_number": "CB402-AU (One Per Two Drs.)",
+     "mfr": "SDC",
+     "finish": "---",
+     "notes": null,
+     "_convention_fix": "parenthetical printed in the catalog cell kept in catalog (guideline v2)"
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Emergency Release Button",
+     "catalog_number": "CB402-B",
+     "mfr": "SDC",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Overhead Surface Auto Operator",
+     "catalog_number": "SW200i 115VAC",
+     "mfr": "BSM",
+     "finish": "628",
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Wave Sense Actuator",
+     "catalog_number": "MS31 / MS41",
+     "mfr": "BEA",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Threshold",
+     "catalog_number": "To Suit Sill Condition",
+     "mfr": "PEM",
+     "finish": "719",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "16",
+   "description": null,
+   "status": "not_used",
+   "_uncertain": true,
+   "_uncertain_note": "moved stub: 'HW 16 Moved to Exterior Set HW E19'",
+   "location": {
+    "pages": [
+     719
+    ],
+    "regions": [
+     {
+      "page": 719,
+      "bbox": [
+       60.0,
+       85.0,
+       590.0,
+       103.0
+      ]
+     }
+    ]
+   },
+   "components": []
+  },
+  {
+   "set_number": "17",
+   "description": null,
+   "status": "not_used",
+   "_uncertain": true,
+   "_uncertain_note": "moved stub: 'HW 17 Moved to Exterior Set HW E20'",
+   "location": {
+    "pages": [
+     719
+    ],
+    "regions": [
+     {
+      "page": 719,
+      "bbox": [
+       60.0,
+       111.0,
+       590.0,
+       129.0
+      ]
+     }
+    ]
+   },
+   "components": []
+  },
+  {
+   "set_number": "18",
+   "description": "Interior Single - Card Reader - Elec Fail-Secure Lock - Self-Closing Hinges",
+   "status": "active",
+   "location": {
+    "pages": [
+     719
+    ],
+    "regions": [
+     {
+      "page": 719,
+      "bbox": [
+       60.0,
+       137.0,
+       590.0,
+       382.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Spring Hinge-HT",
+     "catalog_number": "CP51 HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Hinge-Power Transfer",
+     "catalog_number": "CB51EL HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Fail Secure Cyl. Lock",
+     "catalog_number": "XCDC-86-S-RQE 24VDC",
+     "mfr": "TOW",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Card Reader",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Position Switch",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Lock Power Supply",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "19",
+   "description": "Interior Double Egress - Card Readers - Exit Devices/Exit Only - Automatic Operators",
+   "status": "active",
+   "location": {
+    "pages": [
+     720
+    ],
+    "regions": [
+     {
+      "page": 720,
+      "bbox": [
+       60.0,
+       85.0,
+       590.0,
+       407.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 2,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT TW8 SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "SET",
+     "description": "CVR-LBR Device-EO/Rite Doors/REX",
+     "catalog_number": "MLR-D3676/D8576-LBR-EO M2 SEC",
+     "mfr": "ADR",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Fire Bolt",
+     "catalog_number": "As Req @ Fire Door",
+     "mfr": "ADR",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Exit Device Power Supply",
+     "catalog_number": "PS-EXIT 120VDC",
+     "mfr": "ADR",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "Mag Lock/Delayed Egress",
+     "catalog_number": "1511S-NC-K-V-D-B-A-VI SEC",
+     "mfr": "SDC",
+     "finish": "628",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "Overhead Surface Auto Operator",
+     "catalog_number": "SW200i 115VAC SEC",
+     "mfr": "BSM",
+     "finish": "628",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "Card Reader",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "Door Position Switch",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Lock Power Supply",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "20",
+   "description": "Interior Automated Sliding Door",
+   "status": "active",
+   "_uncertain": true,
+   "_uncertain_note": "set has a column header row but no component rows, only 'Note: Hardware by Slider Dr. MFG'; labelled active with components []",
+   "location": {
+    "pages": [
+     720
+    ],
+    "regions": [
+     {
+      "page": 720,
+      "bbox": [
+       60.0,
+       415.0,
+       590.0,
+       486.0
+      ]
+     }
+    ]
+   },
+   "components": []
+  },
+  {
+   "set_number": "21",
+   "description": "Exterior Automated Sliding Door - Card Reader",
+   "status": "active",
+   "_uncertain": true,
+   "_uncertain_note": "set has a column header row but no component rows, only 'Note: Hardware by Slider Dr. MFG'; labelled active with components []",
+   "location": {
+    "pages": [
+     720
+    ],
+    "regions": [
+     {
+      "page": 720,
+      "bbox": [
+       60.0,
+       495.0,
+       590.0,
+       566.0
+      ]
+     }
+    ]
+   },
+   "components": []
+  },
+  {
+   "set_number": "22",
+   "description": "Interior Single - Institutional Privacy Lock/Occupancy Indicator - OHC Closer - Rescue",
+   "status": "active",
+   "location": {
+    "pages": [
+     721
+    ],
+    "regions": [
+     {
+      "page": 721,
+      "bbox": [
+       60.0,
+       85.0,
+       590.0,
+       239.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge-Double Acting",
+     "catalog_number": "A507",
+     "mfr": "ABH",
+     "finish": "628",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Cyl. Lock-Ins.Privay/I.D.",
+     "catalog_number": "MRX-A-26-O",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Double Acting OH Concealed Closer",
+     "catalog_number": "KG35",
+     "mfr": "KSG",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Emergency Rescue Stop",
+     "catalog_number": "A509 L",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder (For Rescue Stop)",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "23",
+   "description": "Interior Single - Classroom Lockset - Surface Closer - Butt Hinges",
+   "status": "active",
+   "location": {
+    "pages": [
+     721
+    ],
+    "regions": [
+     {
+      "page": 721,
+      "bbox": [
+       60.0,
+       249.0,
+       590.0,
+       375.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge-HT",
+     "catalog_number": "CB51 HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cyl. Lock-Classrm",
+     "catalog_number": "CDC-84-S",
+     "mfr": "TOW",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH Surface Closer",
+     "catalog_number": "4040XP/4040XP EDA",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "24",
+   "description": "Interior Single - Office Lockset - No Closer - Butt Hinges",
+   "status": "active",
+   "location": {
+    "pages": [
+     721
+    ],
+    "regions": [
+     {
+      "page": 721,
+      "bbox": [
+       60.0,
+       384.0,
+       590.0,
+       496.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge-HT",
+     "catalog_number": "CB51 HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cyl. Lock-Office",
+     "catalog_number": "CDC-81-S",
+     "mfr": "TOW",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "24A",
+   "description": "Interior Single - Office Lockset - Surface Closer - Butt Hinges",
+   "status": "active",
+   "location": {
+    "pages": [
+     721
+    ],
+    "regions": [
+     {
+      "page": 721,
+      "bbox": [
+       60.0,
+       505.0,
+       590.0,
+       632.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge-HT",
+     "catalog_number": "CB51 HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cyl. Lock-Office",
+     "catalog_number": "CDC-81-S",
+     "mfr": "TOW",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH Surface Closer",
+     "catalog_number": "4040XP/4040XP EDA",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "25",
+   "description": "Interior Single - Passage Latchset - Surface Closer - Butt Hinges",
+   "status": "active",
+   "location": {
+    "pages": [
+     722
+    ],
+    "regions": [
+     {
+      "page": 722,
+      "bbox": [
+       60.0,
+       85.0,
+       590.0,
+       197.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge-HT",
+     "catalog_number": "CB51 HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cyl. Lock-Passage",
+     "catalog_number": "CDC-75-S",
+     "mfr": "TOW",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH Surface Closer",
+     "catalog_number": "4040XP/4040XP EDA",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "25A",
+   "description": "Interior Single - Passage Latchset - No Closer - Butt Hinges",
+   "status": "active",
+   "location": {
+    "pages": [
+     722
+    ],
+    "regions": [
+     {
+      "page": 722,
+      "bbox": [
+       60.0,
+       206.0,
+       590.0,
+       304.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge-HT",
+     "catalog_number": "CB51 HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cyl. Lock-Passage",
+     "catalog_number": "CDC-75-S",
+     "mfr": "TOW",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "26",
+   "description": "Interior Single - Institutional Lockset/Ligature Resistant - No Closer - Continuous Hinge",
+   "status": "active",
+   "location": {
+    "pages": [
+     722
+    ],
+    "regions": [
+     {
+      "page": 722,
+      "bbox": [
+       60.0,
+       313.0,
+       590.0,
+       425.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Mortise Lock-Institution",
+     "catalog_number": "MRX-A-30",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "26A",
+   "description": "Interior Single - Institutional Lockset/Ligature Resistant - No Closer - Continuous Hinge",
+   "status": "active",
+   "location": {
+    "pages": [
+     722
+    ],
+    "regions": [
+     {
+      "page": 722,
+      "bbox": [
+       60.0,
+       435.0,
+       590.0,
+       547.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Cyl. Lock-Institution",
+     "catalog_number": "CRX-A-87",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "27",
+   "description": "Interior Single - Card Reader - Electrified Fail-Secure Lock/Ligature Resistant - No Closer",
+   "status": "active",
+   "location": {
+    "pages": [
+     723
+    ],
+    "regions": [
+     {
+      "page": 723,
+      "bbox": [
+       60.0,
+       85.0,
+       590.0,
+       302.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Continuous Hinge",
+     "catalog_number": "AC500 HT SEC TW8",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Mortise Lock-Fail Secure",
+     "catalog_number": "X-MRX-A-242C",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Card Reader",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Position Switch",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Lock Power Supply",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "28",
+   "description": "Interior Single - Card Reader - Elec Fail-Secure Lock/Ligature Resistant - Self Closing Hinge",
+   "status": "active",
+   "location": {
+    "pages": [
+     723
+    ],
+    "regions": [
+     {
+      "page": 723,
+      "bbox": [
+       60.0,
+       323.0,
+       590.0,
+       646.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Self Closing Continuous Hinge",
+     "catalog_number": "A507SC HT TW8 SEC",
+     "mfr": "ABH",
+     "finish": "628",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Ligature Res. Mortise Lock-Fail Secure",
+     "catalog_number": "X-MRX-A-242C",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "1841",
+     "mfr": "ABH",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "ANTI-LIG 5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Power Supply",
+     "catalog_number": "631RFUR-1 (One Per Two Drs.)",
+     "mfr": "SDC",
+     "finish": "---",
+     "notes": null,
+     "_convention_fix": "parenthetical printed in the catalog cell kept in catalog (guideline v2)"
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Card Reader",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Position Switch",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Lock Power Supply",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "29",
+   "description": "Interior Single - Classroom Lockset - Surface Closer - Butt Hinges",
+   "status": "active",
+   "location": {
+    "pages": [
+     724
+    ],
+    "regions": [
+     {
+      "page": 724,
+      "bbox": [
+       60.0,
+       85.0,
+       590.0,
+       212.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge-HT",
+     "catalog_number": "CB51 HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cyl. Lock-Classrm",
+     "catalog_number": "CDC-84-S",
+     "mfr": "TOW",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH Surface Closer",
+     "catalog_number": "4040XP/4040XP EDA",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "30",
+   "description": "Interior Single - Card Reader - Elec Fail-Secure Lock - Self Closing Hinge",
+   "status": "active",
+   "location": {
+    "pages": [
+     724
+    ],
+    "regions": [
+     {
+      "page": 724,
+      "bbox": [
+       60.0,
+       233.0,
+       590.0,
+       493.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge-HT",
+     "catalog_number": "CB51 HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Hinge-HT-Electrified",
+     "catalog_number": "CB51ELHT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Mortise Lock-Fail Secure @Both Sides",
+     "catalog_number": "MSS-242C-S",
+     "mfr": "TOW",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "Cylinder",
+     "catalog_number": "Per project",
+     "mfr": "TBD",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH Surface Closer",
+     "catalog_number": "4210T/4510T TBTRX mnt public side",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "5050 or Silencers@Non-rated Dr.",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "Card Reader",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Position Switch",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Lock Power Supply",
+     "catalog_number": "By Division 28",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "31A",
+   "description": "Interior Single - Privacy Lockset/Occupancy Indicator - Surface Closer",
+   "status": "active",
+   "location": {
+    "pages": [
+     724
+    ],
+    "regions": [
+     {
+      "page": 724,
+      "bbox": [
+       60.0,
+       515.0,
+       590.0,
+       627.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge-HT",
+     "catalog_number": "CB51 HT",
+     "mfr": "PBB",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Cyl. Lock-Privacy w/ID",
+     "catalog_number": "SLM-76-S",
+     "mfr": "TOW",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH Surface Closer",
+     "catalog_number": "4040XP/4040XP EDA",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "Door Stop",
+     "catalog_number": "Per Specification",
+     "mfr": "---",
+     "finish": "---",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "Gasketing",
+     "catalog_number": "5050",
+     "mfr": "NGP",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  }
+ ]
+}

@@ -76,8 +76,9 @@ Allowed tools (these show raw PDF text only, not extraction):
   book has no manufacturer column or the cell is blank. Do not expand codes.
 - **finish:** the finish code exactly as printed (`626`, `US26D`, `BLK`, `630-316`). Use null if blank or if
   there is no finish column.
-- **notes:** text in a dedicated notes column, or a note printed on that item's row (e.g. a parenthetical
-  that is not part of the catalog). Otherwise null.
+- **notes:** text in a dedicated notes column, or a separate `Note:` line printed under the item. Text
+  printed *inside* a description or catalog cell stays in that cell, parentheticals included (v2, see
+  DECISIONS.md). Otherwise null.
 - **Struck-through text** is deleted and never appears in any value. If a row shows `SCH ~~BES~~`, the mfr is
   whichever value is *not* struck.
 - **Uncertainty:** add `"_uncertain": true` to a component or set you are unsure about, plus

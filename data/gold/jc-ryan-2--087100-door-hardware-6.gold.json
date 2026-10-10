@@ -1,0 +1,3314 @@
+{
+ "source_pdf": "jc-ryan-2--087100-door-hardware-6",
+ "gold_pages": "24-46",
+ "_annotator": "gold-2 (agent), drafted from page images; exact strings from hwsets tokens",
+ "_final": true,
+ "sets": [
+  {
+   "set_number": "EX-1.0",
+   "description": "Balanced Door Assembly Opening",
+   "status": "active",
+   "location": {
+    "pages": [
+     24
+    ],
+    "regions": [
+     {
+      "page": 24,
+      "bbox": [
+       72.0,
+       358.0,
+       530.0,
+       580.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hanging Device",
+     "catalog_number": "By Balanced Door Manufacturer",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Panic Hardware Device (Blumcraft Style)",
+     "catalog_number": "By Balanced Door Manufacturer",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Gasketing, threshold, sweep, astragal",
+     "catalog_number": "By Balanced Door Manufacturer",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electric Strike",
+     "catalog_number": "By Balanced Door Manufacturer",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "EX-2.0",
+   "description": "Terrace Door Assembly",
+   "status": "active",
+   "location": {
+    "pages": [
+     24,
+     25
+    ],
+    "regions": [
+     {
+      "page": 24,
+      "bbox": [
+       72.0,
+       646.0,
+       410.0,
+       718.0
+      ]
+     },
+     {
+      "page": 25,
+      "bbox": [
+       72.0,
+       95.0,
+       410.0,
+       109.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hanging Device",
+     "catalog_number": "By Door Manufacturer",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Panic Hardware Device",
+     "catalog_number": "By Door Manufacturer",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Gasketing, threshold, sweep, astragal",
+     "catalog_number": "By Door Manufacturer",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "EX-3.0",
+   "description": "Single Opening – Exterior Stair Fan",
+   "status": "active",
+   "location": {
+    "pages": [
+     26
+    ],
+    "regions": [
+     {
+      "page": 26,
+      "bbox": [
+       72.0,
+       108.0,
+       490.0,
+       253.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Continuous Hinge",
+     "catalog_number": "FMHD1",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Storeroom Lock",
+     "catalog_number": "8204 LNL",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "UNI-7500",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Perimeter Gasket",
+     "catalog_number": "290 x 2891APK",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Shoe",
+     "catalog_number": "234AV",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "2005AT",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "EX-4.0",
+   "description": "Paired Opening – Exterior Access Controlled",
+   "status": "active",
+   "location": {
+    "pages": [
+     27
+    ],
+    "regions": [
+     {
+      "page": 27,
+      "bbox": [
+       72.0,
+       123.0,
+       530.0,
+       524.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Continuous Hinge x Power Transfer",
+     "catalog_number": "FMHD1 QC",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Continuous Hinge",
+     "catalog_number": "FMHD1",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Constant Latching Flush Bolt",
+     "catalog_number": "2845/ 2945(as required)",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Dust Proof Strike",
+     "catalog_number": "570",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electrified Mortise Lock, Fail Secure Key on interior side",
+     "catalog_number": "NAC-82271-24v LNL",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Coordinator x Filler Bar x Brackets",
+     "catalog_number": "2600 Series (Cutouts as Required)",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "UNI-7500",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Perimeter Gasket",
+     "catalog_number": "290 x 2891APK",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Astragals",
+     "catalog_number": "303AS",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Shoe",
+     "catalog_number": "234AV",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "2005AT",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door/Frame Harness",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "1.0",
+   "description": "Storeroom function with closer - single",
+   "status": "active",
+   "location": {
+    "pages": [
+     28
+    ],
+    "regions": [
+     {
+      "page": 28,
+      "bbox": [
+       72.0,
+       150.0,
+       490.0,
+       318.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Continuous Hinge",
+     "catalog_number": "CFMxxHD1-M (Length Required)",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Storeroom/Closet Lock",
+     "catalog_number": "8204 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Closer",
+     "catalog_number": "UNI7500",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Jamb Gasketing",
+     "catalog_number": "290_S (Finish to match door/frame color)",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Head Gasketing",
+     "catalog_number": "2891_S (Finish to match door/frame color)",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Bottom",
+     "catalog_number": "216AFG",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "To Suit Sill Condition",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "2.0",
+   "description": "Single Opening – Access Controlled, Stairwell, Fail Safe",
+   "status": "active",
+   "location": {
+    "pages": [
+     28
+    ],
+    "regions": [
+     {
+      "page": 28,
+      "bbox": [
+       72.0,
+       332.0,
+       530.0,
+       653.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "T4A3786",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electric Power Transfer",
+     "catalog_number": "EL-CEPT",
+     "mfr": "Securitron",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Fail Safe Exit Device, RX",
+     "catalog_number": "[12] 55 PE8875 ETMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer (Mounted on stairwell side of door)",
+     "catalog_number": "7500",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S44BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Sweep",
+     "catalog_number": "315CN",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "151A",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door/Frame Harness",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "2.5",
+   "description": "Single Opening – Access Controlled, Stairwell, Fail Secure",
+   "status": "active",
+   "location": {
+    "pages": [
+     29
+    ],
+    "regions": [
+     {
+      "page": 29,
+      "bbox": [
+       72.0,
+       134.0,
+       530.0,
+       466.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "T4A3786",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electric Power Transfer",
+     "catalog_number": "EL-CEPT",
+     "mfr": "Securitron",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Fail Secure Exit Device, RX",
+     "catalog_number": "[12] 55 PE8876 ETMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer (Mounted on stairwell side of door)",
+     "catalog_number": "7500",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S44BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Sweep",
+     "catalog_number": "315CN",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "151A",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door/Frame Harness",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "3.0",
+   "description": "Single Opening – Access Controlled, Stairwell, Fire Rated Aluminum Assembly",
+   "status": "active",
+   "location": {
+    "pages": [
+     30
+    ],
+    "regions": [
+     {
+      "page": 30,
+      "bbox": [
+       72.0,
+       174.0,
+       530.0,
+       465.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "By Fire Rated Door Manufacturer",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electric Power Transfer",
+     "catalog_number": "By Fire Rated Door Manufacturer",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Fail Safe Rim Exit Device with integrated request to exit switch",
+     "catalog_number": "[12] 55 PE8875 ETMI By Door Manufacturer",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null,
+     "_uncertain": true,
+     "_uncertain_note": "catalog cell has two stacked lines '[12] 55 PE8875 ETMI' / 'By Door Manufacturer' with Sargent in mfr column; joined as one catalog string per wrap rule"
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Closer x Regular Arm mounted on pull side of door",
+     "catalog_number": "By Fire Rated Door Manufacturer",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "By Fire Rated Door Manufacturer",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door/Frame Harness",
+     "catalog_number": "By Fire Rated Door Manufacturer",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "4.0",
+   "description": "Fail Secure exit device Pair - (Switchgear)",
+   "status": "active",
+   "location": {
+    "pages": [
+     31
+    ],
+    "regions": [
+     {
+      "page": 31,
+      "bbox": [
+       72.0,
+       197.0,
+       530.0,
+       491.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "T4A3786",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Electric Power Transfer",
+     "catalog_number": "EL-CEPT",
+     "mfr": "Securitron",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Fail Secure Exit Device, SVR",
+     "catalog_number": "[12] 55 PE8774 ETMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Vert Rod Exit",
+     "catalog_number": "[12 ] 55 PE8706 ETMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "UNI-7500",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Astragals",
+     "catalog_number": "303AS",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Door/Frame Harness",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "4.5",
+   "description": "Paired Opening - Corridor, Double Egress",
+   "status": "active",
+   "location": {
+    "pages": [
+     32
+    ],
+    "regions": [
+     {
+      "page": 32,
+      "bbox": [
+       72.0,
+       115.0,
+       490.0,
+       236.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "T4A3786",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Exit Devices, Exit Only",
+     "catalog_number": "[12] PE8610 NB",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "UNI-7500",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "5.0",
+   "description": "Single Opening – Access Controlled, Primary Electrical Room, Secondary Electrical Room, Switchgear, EO ATS Room",
+   "status": "active",
+   "location": {
+    "pages": [
+     32
+    ],
+    "regions": [
+     {
+      "page": 32,
+      "bbox": [
+       72.0,
+       324.0,
+       540.0,
+       627.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "T4A3786",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Continuous Hinge x Power Transfer at 48” Wide Doors",
+     "catalog_number": "A500 x TW",
+     "mfr": "ABH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electric Power Transfer",
+     "catalog_number": "EL-CEPT",
+     "mfr": "Securitron",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Fail Secure Exit Device",
+     "catalog_number": "[12] 55 PE8876 ETMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "7500",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S44BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door/Frame Harness",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "5.5",
+   "description": "Single Opening – Access Controlled, Fire Pump Room",
+   "status": "active",
+   "location": {
+    "pages": [
+     33
+    ],
+    "regions": [
+     {
+      "page": 33,
+      "bbox": [
+       72.0,
+       107.0,
+       530.0,
+       428.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "T4A3786",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Continuous Hinge x Power Transfer at 48” Wide Doors",
+     "catalog_number": "A500 x TW",
+     "mfr": "ABH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electric Power Transfer",
+     "catalog_number": "EL-CEPT",
+     "mfr": "Securitron",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Fail Secure Exit Device",
+     "catalog_number": "[12] 55 PE8876 ETMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "7500",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Shoe",
+     "catalog_number": "234AV",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Saddle",
+     "catalog_number": "2005AT",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door/Frame Harness",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "6.0",
+   "description": "Classroom function with closer - single (Break Room, Locker Room, Tenant Entry)",
+   "status": "active",
+   "location": {
+    "pages": [
+     33
+    ],
+    "regions": [
+     {
+      "page": 33,
+      "bbox": [
+       72.0,
+       479.0,
+       500.0,
+       620.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Classroom Lock",
+     "catalog_number": "8237 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "R 7500/ PR7500 (as required)",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Silencers",
+     "catalog_number": "SR64/ SR65",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "7.0",
+   "description": "Paired Opening – Access Controlled",
+   "status": "active",
+   "location": {
+    "pages": [
+     34
+    ],
+    "regions": [
+     {
+      "page": 34,
+      "bbox": [
+       72.0,
+       162.0,
+       530.0,
+       534.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electric Power Transfer",
+     "catalog_number": "EL-CEPT",
+     "mfr": "Securitron",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Constant Latching Flush Bolt",
+     "catalog_number": "2845/ 2945(as required)",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Dust Proof Strike",
+     "catalog_number": "570",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electrified Mortise Lock, Fail Secure",
+     "catalog_number": "NAC-82271-24v LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Coordinator x Filler Bar x Brackets",
+     "catalog_number": "2600 Series (Cutouts as Required)",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "R 7500/ PR7500 (as required)",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S44BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door/Frame Harness",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "7.5",
+   "description": "Paired Opening – Access Controlled, Mechanical Room",
+   "status": "active",
+   "location": {
+    "pages": [
+     35
+    ],
+    "regions": [
+     {
+      "page": 35,
+      "bbox": [
+       72.0,
+       95.0,
+       530.0,
+       492.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electric Power Transfer",
+     "catalog_number": "EL-CEPT",
+     "mfr": "Securitron",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Constant Latching Flush Bolt",
+     "catalog_number": "2845/ 2945(as required)",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Dust Proof Strike",
+     "catalog_number": "570",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electrified Mortise Lock, Fail Secure",
+     "catalog_number": "NAC-82271-24v LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Coordinator x Filler Bar x Brackets",
+     "catalog_number": "2600 Series (Cutouts as Required)",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "R 7500/ PR7500 (as required)",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Astragal",
+     "catalog_number": "303AS",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Door Sweeps",
+     "catalog_number": "315CN",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "151A",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door/Frame Harness",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "8.0",
+   "description": "Paired Opening – Access Controlled, Fail Safe, FSAE Lobby",
+   "status": "active",
+   "location": {
+    "pages": [
+     36
+    ],
+    "regions": [
+     {
+      "page": 36,
+      "bbox": [
+       72.0,
+       148.0,
+       530.0,
+       504.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electric Power Transfer",
+     "catalog_number": "EL-CEPT",
+     "mfr": "Securitron",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Constant Latching Flush Bolt",
+     "catalog_number": "2845/ 2945(as required)",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Dust Proof Strike",
+     "catalog_number": "570",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electrified Mortise Lock, Fail Safe",
+     "catalog_number": "NAC-82270-24v LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Coordinator x Filler Bar x Brackets",
+     "catalog_number": "2600 Series (Cutouts as Required)",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "UNI-7500 / R 7500/ PR7500 (as required)",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Kick Plates",
+     "catalog_number": "K1050 10” CSK 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Astragal Set",
+     "catalog_number": "178SA",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door/Frame Harness",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "9.0",
+   "description": "Single Opening – Access Controlled (Tech Room, Engineering Plan Room, IT Room,",
+   "status": "active",
+   "location": {
+    "pages": [
+     37
+    ],
+    "regions": [
+     {
+      "page": 37,
+      "bbox": [
+       72.0,
+       139.0,
+       530.0,
+       448.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electric Power Transfer",
+     "catalog_number": "EL-CEPT",
+     "mfr": "Securitron",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electrified Mortise Lock, Fail Secure",
+     "catalog_number": "NAC-82271-24v LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "UNI-7500 / 7500 Per Conditions",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S44BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door/Frame Harness",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "9.5",
+   "description": "Single Opening – Access Controlled (Elevator Control Room",
+   "status": "active",
+   "location": {
+    "pages": [
+     38
+    ],
+    "regions": [
+     {
+      "page": 38,
+      "bbox": [
+       72.0,
+       107.0,
+       530.0,
+       446.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electric Power Transfer",
+     "catalog_number": "EL-CEPT",
+     "mfr": "Securitron",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electrified Mortise Lock, Fail Secure",
+     "catalog_number": "NAC-82271 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "UNI-7500 / 7500 Per Conditions",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "290 x 2891APK",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Shoe",
+     "catalog_number": "234AV",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "18/1A",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door/Frame Harness",
+     "catalog_number": null,
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "10.0",
+   "description": "Storeroom function pair",
+   "status": "active",
+   "location": {
+    "pages": [
+     39
+    ],
+    "regions": [
+     {
+      "page": 39,
+      "bbox": [
+       72.0,
+       156.0,
+       510.0,
+       356.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Constant Latching Flush Bolt",
+     "catalog_number": "2845/ 2945(as required)",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Dust Proof Strike",
+     "catalog_number": "570",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Storeroom/Closet Lock",
+     "catalog_number": "8204 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Coordinator x Filler Bar x Brackets",
+     "catalog_number": "2600 Series (Cutouts as Required)",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "R 7500/ PR7500 (as required)",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S44BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "11.0",
+   "description": "Single Opening – Storeroom, Janitor",
+   "status": "active",
+   "location": {
+    "pages": [
+     39
+    ],
+    "regions": [
+     {
+      "page": 39,
+      "bbox": [
+       72.0,
+       518.0,
+       510.0,
+       688.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Storeroom/Closet Lock",
+     "catalog_number": "8204 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "R 7500/ PR7500 (as required)",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S44BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "12.0",
+   "description": "Passage function with closer - single",
+   "status": "active",
+   "location": {
+    "pages": [
+     40
+    ],
+    "regions": [
+     {
+      "page": 40,
+      "bbox": [
+       72.0,
+       110.0,
+       510.0,
+       252.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "8215 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "R 7500/ PR7500 (as required)",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S44BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "13.0",
+   "description": "Single Opening – Multi-Stall Toilet at non-anchor tenant levels",
+   "status": "active",
+   "location": {
+    "pages": [
+     40
+    ],
+    "regions": [
+     {
+      "page": 40,
+      "bbox": [
+       72.0,
+       267.0,
+       510.0,
+       423.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Push Plate",
+     "catalog_number": "70C-RKW",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Pull",
+     "catalog_number": "RM3301-48 Mtg-Type 12XHD",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "R 7500/ PR7500 (as required)",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S44BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "14.0",
+   "description": "Single Opening – Multi-Stall Toilet with Automatic Operator and touchless actuators at Anchor Tenant Levels",
+   "status": "active",
+   "location": {
+    "pages": [
+     41
+    ],
+    "regions": [
+     {
+      "page": 41,
+      "bbox": [
+       72.0,
+       125.0,
+       530.0,
+       347.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Push Plate",
+     "catalog_number": "70C-RKW",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Pull",
+     "catalog_number": "RM3301-48 Mtg-Type 12XHD",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Automatic Operator",
+     "catalog_number": "6400 mounted on pull side",
+     "mfr": "LCN",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Wave Plates",
+     "catalog_number": "8310-813j (hardwired)",
+     "mfr": "LCN",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S44BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "15.0",
+   "description": "Con-Ed Opening",
+   "status": "active",
+   "location": {
+    "pages": [
+     41
+    ],
+    "regions": [
+     {
+      "page": 41,
+      "bbox": [
+       72.0,
+       362.0,
+       340.0,
+       434.0
+      ]
+     }
+    ]
+   },
+   "components": []
+  },
+  {
+   "set_number": "16.0",
+   "description": "Single Opening – Temporary Opening",
+   "status": "active",
+   "location": {
+    "pages": [
+     41
+    ],
+    "regions": [
+     {
+      "page": 41,
+      "bbox": [
+       72.0,
+       488.0,
+       520.0,
+       589.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Classroom Lock",
+     "catalog_number": "8237 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "CPS-1601",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Silencers",
+     "catalog_number": "SR64/ SR65",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "16.5",
+   "description": "Paired Opening – Temporary Opening",
+   "status": "active",
+   "location": {
+    "pages": [
+     42
+    ],
+    "regions": [
+     {
+      "page": 42,
+      "bbox": [
+       72.0,
+       108.0,
+       520.0,
+       224.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Flush Bolt",
+     "catalog_number": "555",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Classroom Lock",
+     "catalog_number": "8237 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "CPS-1601",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Silencers",
+     "catalog_number": "SR64/ SR65",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "17.0",
+   "description": "Paired Opening – BOH Vestibule Paired Opening, FSAE Paired Closet",
+   "status": "active",
+   "location": {
+    "pages": [
+     42
+    ],
+    "regions": [
+     {
+      "page": 42,
+      "bbox": [
+       72.0,
+       304.0,
+       520.0,
+       463.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Flush Bolts",
+     "catalog_number": "555",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Dust Proof Strike",
+     "catalog_number": "570",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Storeroom Lock",
+     "catalog_number": "8204 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "R 7500/ PR7500 (as required)",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Astragal",
+     "catalog_number": "178SA",
+     "mfr": "NGP",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "18.0",
+   "description": "Single Opening – Office",
+   "status": "active",
+   "location": {
+    "pages": [
+     42
+    ],
+    "regions": [
+     {
+      "page": 42,
+      "bbox": [
+       72.0,
+       492.0,
+       510.0,
+       590.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Pivot Set",
+     "catalog_number": null,
+     "mfr": "Rixson",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Locking Ladder Pull",
+     "catalog_number": "LP3301 DBU",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "19.0",
+   "description": "Single Opening – Office",
+   "status": "active",
+   "location": {
+    "pages": [
+     43
+    ],
+    "regions": [
+     {
+      "page": 43,
+      "bbox": [
+       72.0,
+       108.0,
+       510.0,
+       221.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hanging Device",
+     "catalog_number": "By Door Manufacturer",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Office Lock",
+     "catalog_number": "By Door Manufacturer",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Closer",
+     "catalog_number": "By Door Manufacturer",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "20.0",
+   "description": "Single Opening – Stairwell, Passage",
+   "status": "active",
+   "location": {
+    "pages": [
+     43
+    ],
+    "regions": [
+     {
+      "page": 43,
+      "bbox": [
+       72.0,
+       250.0,
+       510.0,
+       406.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "T4A3786",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Rim Exit Device, Passage",
+     "catalog_number": "[12] PE8815 ETMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer (Mounted on stairwell side of door)",
+     "catalog_number": "UNI-7500",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S44BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Sweep",
+     "catalog_number": "315CN",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "151A",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "21.0",
+   "description": "Single Opening – Storeroom",
+   "status": "active",
+   "location": {
+    "pages": [
+     43
+    ],
+    "regions": [
+     {
+      "page": 43,
+      "bbox": [
+       72.0,
+       448.0,
+       510.0,
+       590.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Storeroom/Closet Lock",
+     "catalog_number": "8204 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "R 7500/ PR7500 (as required)",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S44BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "22.0",
+   "description": "Single Opening – ATS Closet",
+   "status": "active",
+   "location": {
+    "pages": [
+     44
+    ],
+    "regions": [
+     {
+      "page": 44,
+      "bbox": [
+       72.0,
+       108.0,
+       510.0,
+       210.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Storeroom/Closet Lock",
+     "catalog_number": "8204 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "UNI-7500",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "23.0",
+   "description": "Single Opening – ATS Room, UPS Room",
+   "status": "active",
+   "location": {
+    "pages": [
+     44
+    ],
+    "regions": [
+     {
+      "page": 44,
+      "bbox": [
+       72.0,
+       253.0,
+       510.0,
+       354.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "T4A3786",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Mortise Exit Device, Nightlatch",
+     "catalog_number": "[12] PE8904 ETL",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "UNI-7500",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "24.0",
+   "description": "Single Opening – Closet",
+   "status": "active",
+   "location": {
+    "pages": [
+     44
+    ],
+    "regions": [
+     {
+      "page": 44,
+      "bbox": [
+       72.0,
+       410.0,
+       510.0,
+       537.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Classroom Lock",
+     "catalog_number": "8237 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Silencers",
+     "catalog_number": "608",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "25.0",
+   "description": "Single Opening – Concierge Support",
+   "status": "active",
+   "location": {
+    "pages": [
+     45
+    ],
+    "regions": [
+     {
+      "page": 45,
+      "bbox": [
+       72.0,
+       108.0,
+       510.0,
+       250.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Classroom Lock",
+     "catalog_number": "8237 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Closer",
+     "catalog_number": "7500",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Silencers",
+     "catalog_number": "608",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "26.0",
+   "description": "Single Opening – Single Use Restroom, Ballistic Door",
+   "status": "active",
+   "location": {
+    "pages": [
+     45
+    ],
+    "regions": [
+     {
+      "page": 45,
+      "bbox": [
+       72.0,
+       306.0,
+       510.0,
+       433.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Privacy Set",
+     "catalog_number": "V01 8265 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Silencers",
+     "catalog_number": "608",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "27.0",
+   "description": "Single Opening – Single Use Restroom",
+   "status": "active",
+   "location": {
+    "pages": [
+     45
+    ],
+    "regions": [
+     {
+      "page": 45,
+      "bbox": [
+       72.0,
+       475.0,
+       510.0,
+       617.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Privacy Set",
+     "catalog_number": "V01 8265 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Closer",
+     "catalog_number": "7500",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Silencers",
+     "catalog_number": "608",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "28.0",
+   "description": "Corridor Pair",
+   "status": "active",
+   "location": {
+    "pages": [
+     46
+    ],
+    "regions": [
+     {
+      "page": 46,
+      "bbox": [
+       72.0,
+       123.0,
+       510.0,
+       323.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "McKinney",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Constant Latching Flush Bolt",
+     "catalog_number": "2845/ 2945(as required)",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Dust Proof Strike",
+     "catalog_number": "570",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Set",
+     "catalog_number": "8215 LNMI",
+     "mfr": "Sargent",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Coordinator x Filler Bar x Brackets",
+     "catalog_number": "2600 Series (Cutouts as Required)",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "R 7500/ PR7500 (as required)",
+     "mfr": "Norton",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050 x 10\" High x CSK x 4BE",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Stop",
+     "catalog_number": "RM860 / 446 / 9-ADJ Series Per Conditions",
+     "mfr": "Rockwood",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Astragal",
+     "catalog_number": "178SA",
+     "mfr": "Pemko",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  }
+ ]
+}

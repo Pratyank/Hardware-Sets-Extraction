@@ -1,0 +1,3914 @@
+{
+ "source_pdf": "hfh-dg-hospital--08-71-00-door-hardware",
+ "gold_pages": "20-40",
+ "_annotator": "gold-3 (agent), drafted from page images; exact strings from hwsets tokens; struck-through (redline-deleted) text excluded",
+ "_final": true,
+ "sets": [
+  {
+   "set_number": "001",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     20,
+     21
+    ],
+    "regions": [
+     {
+      "page": 20,
+      "bbox": [
+       72.0,
+       439.0,
+       540.0,
+       714.0
+      ]
+     },
+     {
+      "page": 21,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       492.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "PIVOT SET",
+     "catalog_number": "7226 SET",
+     "mfr": "IVE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "INTERMEDIATE PIVOT",
+     "catalog_number": "7226 INT",
+     "mfr": "IVE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "LXRX-LC-QEL-9849-EO W/CYL HOLE-CON-SNB 24 VDC",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "LXRX-LC-QEL-9849-EO-CON-SNB 24 VDC",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RIM CYLINDER",
+     "catalog_number": "IE72-PATD - AS REQUIRED - PROVIDE BRASS CONSTRUCTION CORE",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PERMANENT CORE - COMBINATED",
+     "catalog_number": "1C72",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "LONG DOOR PULL",
+     "catalog_number": "9264F 72\" O",
+     "mfr": "IVE",
+     "finish": "630-316",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "OH STOP",
+     "catalog_number": "100SE",
+     "mfr": "GLY",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": "EA",
+     "description": "AUTOMATIC OPERATOR",
+     "catalog_number": "BY RELATED SECTION 08 71 13",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": "EA",
+     "description": "WAVE ACTUATOR",
+     "catalog_number": "BY RELATED SECTION 08 71 13",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RAIN DRIP",
+     "catalog_number": "142AA - AS REQUIRED",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "SEALS",
+     "catalog_number": "BY DOOR / FRAME MANUFACTURER",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "657A-E-V3-NH-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "MULTITECH CREDENTIAL READER",
+     "catalog_number": "PROVIDED BY DIV 28 - MTB15 OR MTB11 AS REQUIRED",
+     "mfr": "SCE",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": "PS904 900-4RL-FA 900-BBK 120/240 VAC",
+     "mfr": "VON",
+     "finish": null,
+     "notes": "[BULLETIN 023, 251218]"
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "DIAGRAMS",
+     "catalog_number": "PROVIDE FACTORY POINT TO POINT WIRING DIAGRAMS",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "002",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     21,
+     22
+    ],
+    "regions": [
+     {
+      "page": 21,
+      "bbox": [
+       72.0,
+       503.0,
+       540.0,
+       689.0
+      ]
+     },
+     {
+      "page": 22,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       563.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "PIVOT SET",
+     "catalog_number": "7226 SET",
+     "mfr": "IVE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 4,
+     "qty_unit": "EA",
+     "description": "INTERMEDIATE PIVOT",
+     "catalog_number": "7226 INT",
+     "mfr": "IVE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "LXRX-LC-QEL-9849-EO W/CYL HOLE-CON-SNB 24 VDC",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "LXRX-LC-QEL-9849-EO-CON-SNB 24 VDC",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RIM CYLINDER",
+     "catalog_number": "IE72-PATD - AS REQUIRED - PROVIDE BRASS CONSTRUCTION CORE",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PERMANENT CORE - COMBINATED",
+     "catalog_number": "1C72",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "LONG DOOR PULL",
+     "catalog_number": "9264F 72\" O",
+     "mfr": "IVE",
+     "finish": "630-316",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "OH STOP",
+     "catalog_number": "100SE",
+     "mfr": "GLY",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": "EA",
+     "description": "AUTOMATIC OPERATOR",
+     "catalog_number": "BY RELATED SECTION 08 71 13",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": "EA",
+     "description": "WAVE ACTUATOR",
+     "catalog_number": "BY RELATED SECTION 08 71 13",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "SEALS",
+     "catalog_number": "BY DOOR / FRAME MANUFACTURER",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "MULTITECH CREDENTIAL READER",
+     "catalog_number": "PROVIDED BY DIV 28 - MTB15 OR MTB11 AS REQUIRED",
+     "mfr": "SCE",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": "PS904 900-4RL-FA 900-BBK 120/240 VAC",
+     "mfr": "VON",
+     "finish": null,
+     "notes": "[BULLETIN 023, 251218]"
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "DIAGRAMS",
+     "catalog_number": "PROVIDE FACTORY POINT TO POINT WIRING DIAGRAMS",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "003",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     22,
+     23
+    ],
+    "regions": [
+     {
+      "page": 22,
+      "bbox": [
+       72.0,
+       574.0,
+       540.0,
+       708.0
+      ]
+     },
+     {
+      "page": 23,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       546.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 NRP",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "STORE ROOM LOCK - RX",
+     "catalog_number": "9K37D 15D RQE - PROVIDE BRASS CONSTRUCTION CORE -",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null,
+     "_uncertain": true,
+     "_uncertain_note": "catalog cell ends with a lone '-' on its own 4th line; kept as printed"
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PERMANENT CORE - COMBINATED",
+     "catalog_number": "1C72",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP SCUSH SRI TBSRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PA MOUNTING PLATE - AS REQUIRED",
+     "catalog_number": "4040XP-18PA SRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CUSH SHOE SUPPORT - AS REQUIRED",
+     "catalog_number": "4040XP-30 SRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "STEEL COVER SCREWS",
+     "catalog_number": "4040XP-31",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "BLADE STOP SPACER - AS REQUIRED",
+     "catalog_number": "4040XP-61 SRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RAIN DRIP",
+     "catalog_number": "142AA - AS REQUIRED",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "SEALS",
+     "catalog_number": "BY DOOR / FRAME MANUFACTURER",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "655A-E-V3-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": "[BULLETIN 023, 251218]"
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "004",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     23,
+     24
+    ],
+    "regions": [
+     {
+      "page": 23,
+      "bbox": [
+       72.0,
+       557.0,
+       540.0,
+       691.0
+      ]
+     },
+     {
+      "page": 24,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       448.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 NRP",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "LD-WPRX-OUT-98-EO-EMB \"PUSH\"-WH-CON-SNB",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP REG TBSRT/ 4040XP EDA TBSRT - AS REQUIRED",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": "WS401/402CCV",
+     "mfr": "IVE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RAIN DRIP",
+     "catalog_number": "142AA - AS REQUIRED",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "SEALS",
+     "catalog_number": "BY DOOR / FRAME MANUFACTURER",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "656A-E-V3-W/HOLES-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "MULTITECH CREDENTIAL READER",
+     "catalog_number": "PROVIDED BY DIV 28 - MTB15 OR MTB11 AS REQUIRED",
+     "mfr": "SCE",
+     "finish": "BLK",
+     "notes": "[BULLETIN 023, 251218]"
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CREDENTIAL POWER SUPPLY",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": "[BULLETIN 023, 251218]"
+    }
+   ]
+  },
+  {
+   "set_number": "006",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     24,
+     25
+    ],
+    "regions": [
+     {
+      "page": 24,
+      "bbox": [
+       72.0,
+       470.0,
+       540.0,
+       707.0
+      ]
+     },
+     {
+      "page": 25,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       434.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PIVOT SET",
+     "catalog_number": "7226 SET",
+     "mfr": "IVE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "INTERMEDIATE PIVOT",
+     "catalog_number": "7226 INT",
+     "mfr": "IVE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "LXRX-LC-QEL-98-NL-CON-SNB 24 VDC",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RIM CYLINDER",
+     "catalog_number": "IE72-PATD - AS REQUIRED - PROVIDE BRASS CONSTRUCTION CORE",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PERMANENT CORE - COMBINATED",
+     "catalog_number": "1C72",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP SCUSH SRI TBSRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PA MOUNTING PLATE - AS REQUIRED",
+     "catalog_number": "4040XP-18PA SRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CUSH SHOE SUPPORT - AS REQUIRED",
+     "catalog_number": "4040XP-30 SRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "STEEL COVER SCREWS",
+     "catalog_number": "4040XP-31",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "BLADE STOP SPACER - AS REQUIRED",
+     "catalog_number": "4040XP-61 SRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "SEALS",
+     "catalog_number": "BY DOOR / FRAME MANUFACTURER",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "656A-E-V3-W/HOLES-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "MULTITECH CREDENTIAL READER",
+     "catalog_number": "PROVIDED BY DIV 28 - MTB15 OR MTB11 AS REQUIRED",
+     "mfr": "SCE",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": "PS904 900-4RL-FA 900-BBK 120/240 VAC",
+     "mfr": "VON",
+     "finish": null,
+     "notes": "[BULLETIN 023, 251218]"
+    }
+   ]
+  },
+  {
+   "set_number": "008",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     25,
+     26
+    ],
+    "regions": [
+     {
+      "page": 25,
+      "bbox": [
+       72.0,
+       445.0,
+       540.0,
+       709.0
+      ]
+     },
+     {
+      "page": 26,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       284.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 NRP",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "INTEGRATED LOCK",
+     "catalog_number": "AD-300-CY-70-MT-RHO-B 12/24 VDC",
+     "mfr": "SCE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SFIC CONST. CORE - CONSTRUCTION PHASE",
+     "catalog_number": "80-035 GRN",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PERMANENT CORE - COMBINATED",
+     "catalog_number": "1C72",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP SCUSH SRI TBSRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ARMOR PLATE - AS REQUIRED",
+     "catalog_number": "8400/8402 34\" HIGH LDW B-CS",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RAIN DRIP",
+     "catalog_number": "142AA - AS REQUIRED",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "GASKETING SET",
+     "catalog_number": "188SBK PSA",
+     "mfr": "ZER",
+     "finish": "BK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "655A-E-V3-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "DIAGRAMS",
+     "catalog_number": "PROVIDE FACTORY POINT TO POINT WIRING DIAGRAMS",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "009",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     26,
+     27
+    ],
+    "regions": [
+     {
+      "page": 26,
+      "bbox": [
+       72.0,
+       295.0,
+       540.0,
+       709.0
+      ]
+     },
+     {
+      "page": 27,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       242.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 NRP",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "INTEGRATED LOCK",
+     "catalog_number": "AD-300-CY-70-MT-RHO-B 12/24 VDC",
+     "mfr": "SCE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SFIC CONST. CORE - CONSTRUCTION PHASE",
+     "catalog_number": "80-035 GRN",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PERMANENT CORE - COMBINATED",
+     "catalog_number": "1C72",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP REG TBSRT/ 4040XP EDA TBSRT - AS REQUIRED",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ARMOR PLATE - AS REQUIRED",
+     "catalog_number": "8400/8402 34\" HIGH LDW B-CS",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "GASKETING",
+     "catalog_number": "429AA-S",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "655A-E-V3-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "DIAGRAMS",
+     "catalog_number": "PROVIDE FACTORY POINT TO POINT WIRING DIAGRAMS",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "010",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     27
+    ],
+    "regions": [
+     {
+      "page": 27,
+      "bbox": [
+       72.0,
+       253.0,
+       540.0,
+       635.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 NRP",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "FAIL SECURE CYLINDRICAL LOCK, RX",
+     "catalog_number": "9K37DEU 15D RQE - PROVIDE BRASS CONSTRUCTION CORE",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PERMANENT CORE - COMBINATED",
+     "catalog_number": "1C72",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP SCUSH SRI TBSRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "KICK PLATE",
+     "catalog_number": "8400 10\" HIGH LDW B-CS",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RAIN DRIP",
+     "catalog_number": "142AA - AS REQUIRED",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "GASKETING",
+     "catalog_number": "429AA-S",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "655A-E-V3-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "MULTITECH CREDENTIAL READER",
+     "catalog_number": "PROVIDED BY DIV 28 - MTB15 OR MTB11 AS REQUIRED",
+     "mfr": "SCE",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "012",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     27,
+     28
+    ],
+    "regions": [
+     {
+      "page": 27,
+      "bbox": [
+       72.0,
+       646.0,
+       184.0,
+       658.0
+      ]
+     },
+     {
+      "page": 28,
+      "bbox": [
+       72.0,
+       43.0,
+       540.0,
+       484.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 NRP",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "RX-LC-98-EO-ALK-EMERG EXIT RSS-CON-SNB 9-VOLT BATTERY WITH HARDWIRED OPTION",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "MORTISE CYLINDER",
+     "catalog_number": "1E74-PATD X CAM - AS REQUIRED - PROVIDE BRASS CONSTRUCTION CORE",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PERMANENT CORE - COMBINATED",
+     "catalog_number": "1C72",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP SCUSH SRI TBSRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RAIN DRIP",
+     "catalog_number": "142AA - AS REQUIRED",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "GASKETING",
+     "catalog_number": "429AA-S",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "656A-E-V3-W/HOLES-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "013",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     28,
+     29
+    ],
+    "regions": [
+     {
+      "page": 28,
+      "bbox": [
+       72.0,
+       495.0,
+       540.0,
+       711.0
+      ]
+     },
+     {
+      "page": 29,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       271.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 NRP",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "LD-LXRX-LC-98-EO-CON-SNB",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP SHCUSH ST-2468 TBSRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "KICK PLATE",
+     "catalog_number": "8400 10\" HIGH LDW B-CS",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RAIN DRIP",
+     "catalog_number": "142AA - AS REQUIRED",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "GASKETING",
+     "catalog_number": "429AA-S",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "655A-EL-V3-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "014",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     29,
+     30
+    ],
+    "regions": [
+     {
+      "page": 29,
+      "bbox": [
+       72.0,
+       282.0,
+       540.0,
+       709.0
+      ]
+     },
+     {
+      "page": 30,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       159.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 NRP",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "LXRX-LC-QEL-98-EO W/CYL HOLE-CON-SNB 24 VDC",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RIM CYLINDER",
+     "catalog_number": "IE72-PATD - AS REQUIRED - PROVIDE BRASS CONSTRUCTION CORE",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PERMANENT CORE - COMBINATED",
+     "catalog_number": "1C72",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR PULL",
+     "catalog_number": "VR910 NL",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP SCUSH SRI TBSRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "KICK PLATE",
+     "catalog_number": "8400 10\" HIGH LDW B-CS",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RAIN DRIP",
+     "catalog_number": "142AA - AS REQUIRED",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "GASKETING",
+     "catalog_number": "429AA-S",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "656A-E-V3-W/HOLES-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "MULTITECH CREDENTIAL READER",
+     "catalog_number": "PROVIDED BY DIV 28 - MTB15 OR MTB11 AS REQUIRED",
+     "mfr": "SCE",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": "PS904 900-4RL-FA 900-BBK 120/240 VAC",
+     "mfr": "VON",
+     "finish": null,
+     "notes": "[BULLETIN 023, 251218]"
+    }
+   ]
+  },
+  {
+   "set_number": "015",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     30
+    ],
+    "regions": [
+     {
+      "page": 30,
+      "bbox": [
+       72.0,
+       170.0,
+       540.0,
+       700.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 NRP",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "LD-WPRX-OUT-98-L-M996-06SS-FSE-WH-CON-SNB",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RIM CYLINDER",
+     "catalog_number": "IE72-PATD - AS REQUIRED - PROVIDE BRASS CONSTRUCTION CORE",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH STOP",
+     "catalog_number": "100S",
+     "mfr": "GLY",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP REG TBSRT/ 4040XP EDA TBSRT - AS REQUIRED",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RAIN DRIP",
+     "catalog_number": "142AA - AS REQUIRED",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "GASKETING SET",
+     "catalog_number": "188SBK PSA",
+     "mfr": "ZER",
+     "finish": "BK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "GASKETING",
+     "catalog_number": "429AA-S",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "656A-E-V3-W/HOLES-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "MULTITECH CREDENTIAL READER",
+     "catalog_number": "PROVIDED BY DIV 28 - MTB15 OR MTB11 AS REQUIRED",
+     "mfr": "SCE",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "016",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     31
+    ],
+    "regions": [
+     {
+      "page": 31,
+      "bbox": [
+       72.0,
+       43.0,
+       540.0,
+       633.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 6,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 NRP",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "CONST LATCHING BOLT",
+     "catalog_number": "FB51T/FB61T - AS REQUIRED",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "INTEGRATED LOCK",
+     "catalog_number": "AD-300-CY-70-MT-RHO-B 12/24 VDC",
+     "mfr": "SCE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SFIC CONST. CORE - CONSTRUCTION PHASE",
+     "catalog_number": "80-035 GRN",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PERMANENT CORE - COMBINATED",
+     "catalog_number": "1C72",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "COORDINATOR",
+     "catalog_number": "COR X FL X MB - AS REQUIRED",
+     "mfr": "IVE",
+     "finish": "713",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "OH STOP & HOLDER",
+     "catalog_number": "100H",
+     "mfr": "GLY",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4041 DEL H SRI ST-2468 TBSRT - HEX KEYED",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "ARMOR PLATE - AS REQUIRED",
+     "catalog_number": "8400/8402 34\" HIGH LDW B-CS",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "GASKETING",
+     "catalog_number": "429AA-S",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ASTRAGAL - LENGTH AS REQUIRED",
+     "catalog_number": "41AA",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "655A-E-V3-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "017",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     31,
+     32,
+     33
+    ],
+    "regions": [
+     {
+      "page": 31,
+      "bbox": [
+       72.0,
+       644.0,
+       263.0,
+       716.0
+      ]
+     },
+     {
+      "page": 32,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       705.0
+      ]
+     },
+     {
+      "page": 33,
+      "bbox": [
+       72.0,
+       43.0,
+       514.0,
+       67.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 6,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 NRP",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "ELEC FIRE EXIT HARDWARE",
+     "catalog_number": "LXRX-LC-QEL-9849-L-BE-F-06SS-CON 24 VDC",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": "[BULLETIN 023, 251218]",
+     "_uncertain": true,
+     "_uncertain_note": "redline row: qty '2 (1)' with '(1)' struck -> 2 (hwsets tokens flags the whole token as struck but image shows bold 2 unstruck); struck description/catalog alternates '(ELEC PANIC HARDWARE)' and '(LXRX-LC-QEL-9849-EO W/CYL HOLE-CON-SNB 24 VDC)' excluded"
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "AUTOMATIC OPERATOR",
+     "catalog_number": "BY RELATED SECTION 08 71 13",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "WAVE ACTUATOR",
+     "catalog_number": "BY RELATED SECTION 08 71 13",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": "[BULLETIN 023, 251218]",
+     "_uncertain": true,
+     "_uncertain_note": "qty printed '3 (2)' with '(2)' struck -> 3 (tokens flag both struck; image shows bold 3 unstruck); bulletin tag printed in qty cell"
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "ARMOR PLATE - AS REQUIRED",
+     "catalog_number": "8400/8402 34\" HIGH LDW B-CS",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "GASKETING",
+     "catalog_number": "429AA-S",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "SET",
+     "description": "ASTRAGAL SET",
+     "catalog_number": "8193AA-S",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "657A-E-V3-NH-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "MULTITECH CREDENTIAL READER",
+     "catalog_number": "PROVIDED BY DIV 28 - MTB15 OR MTB11 AS REQUIRED",
+     "mfr": "SCE",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": "PS904 900-4RL-FA 900-BBK 120/240 VAC",
+     "mfr": "VON",
+     "finish": null,
+     "notes": "[BULLETIN 023, 251218]"
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "DIAGRAMS",
+     "catalog_number": "PROVIDE FACTORY POINT TO POINT WIRING DIAGRAMS",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "018",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     33
+    ],
+    "regions": [
+     {
+      "page": 33,
+      "bbox": [
+       72.0,
+       78.0,
+       540.0,
+       351.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 - NRP AT OUTSWINGING LOCKING DOORS",
+     "mfr": "IVE",
+     "finish": "652",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PANIC HARDWARE",
+     "catalog_number": "LD-98-L-BE-06SS-SNB",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP REG TBSRT/ 4040XP EDA TBSRT - AS REQUIRED",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "KICK PLATE",
+     "catalog_number": "8400 10\" HIGH LDW B-CS",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": "WS401/402CCV",
+     "mfr": "IVE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "GASKETING SET",
+     "catalog_number": "188SBK PSA",
+     "mfr": "ZER",
+     "finish": "BK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "019",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     33,
+     34
+    ],
+    "regions": [
+     {
+      "page": 33,
+      "bbox": [
+       72.0,
+       380.0,
+       540.0,
+       715.0
+      ]
+     },
+     {
+      "page": 34,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       93.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 - NRP AT OUTSWINGING LOCKING DOORS",
+     "mfr": "IVE",
+     "finish": "652",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "FIRE EXIT HARDWARE",
+     "catalog_number": "98-L-BE-F-06SS-SNB",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP REG TBSRT/ 4040XP EDA TBSRT - AS REQUIRED",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "KICK PLATE",
+     "catalog_number": "8400 10\" HIGH LDW B-CS",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": "WS401/402CCV",
+     "mfr": "IVE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "GASKETING SET",
+     "catalog_number": "188SBK PSA",
+     "mfr": "ZER",
+     "finish": "BK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "655A-EL-V3-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "021",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     34,
+     35
+    ],
+    "regions": [
+     {
+      "page": 34,
+      "bbox": [
+       72.0,
+       134.0,
+       540.0,
+       699.0
+      ]
+     },
+     {
+      "page": 35,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       319.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 - NRP AT OUTSWINGING LOCKING DOORS",
+     "mfr": "IVE",
+     "finish": "652",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC FIRE EXIT HARDWARE",
+     "catalog_number": "LXRX-LC-98-L-F-M996-06SS-FS-CON-SNB",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RIM CYLINDER",
+     "catalog_number": "IE72-PATD - AS REQUIRED - PROVIDE BRASS CONSTRUCTION CORE",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PERMANENT CORE - COMBINATED",
+     "catalog_number": "1C72",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP REG TBSRT/ 4040XP EDA TBSRT - AS REQUIRED",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "KICK PLATE",
+     "catalog_number": "8400 10\" HIGH LDW B-CS",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": "WS401/402CCV",
+     "mfr": "IVE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "GASKETING SET",
+     "catalog_number": "188SBK PSA",
+     "mfr": "ZER",
+     "finish": "BK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "655A-EL-V3-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "MULTITECH CREDENTIAL READER",
+     "catalog_number": "PROVIDED BY DIV 28 - MTB15 OR MTB11 AS REQUIRED",
+     "mfr": "SCE",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "022",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     35,
+     36
+    ],
+    "regions": [
+     {
+      "page": 35,
+      "bbox": [
+       72.0,
+       330.0,
+       540.0,
+       711.0
+      ]
+     },
+     {
+      "page": 36,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       305.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 6,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 NRP",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "RX-LC-QEL-9849-EO-CON-SNB 24 VDC",
+     "mfr": "VON",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "RX-LC-QEL-9849-TP-CON-SNB 24 VDC",
+     "mfr": "VON",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "LONG DOOR PULL",
+     "catalog_number": "9264F 72\" O",
+     "mfr": "IVE",
+     "finish": "630-316",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "OH STOP",
+     "catalog_number": "100SE",
+     "mfr": "GLY",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "AUTOMATIC OPERATOR",
+     "catalog_number": "BY RELATED SECTION 08 71 13",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "WAVE ACTUATOR",
+     "catalog_number": "BY RELATED SECTION 08 71 13",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WAVE ACTUATOR",
+     "catalog_number": "BY RELATED SECTION 08 71 13",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "ARMOR PLATE - AS REQUIRED",
+     "catalog_number": "8400/8402 34\" HIGH LDW B-CS",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RAIN DRIP",
+     "catalog_number": "142AA - AS REQUIRED",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "GASKETING SET",
+     "catalog_number": "188SBK PSA",
+     "mfr": "ZER",
+     "finish": "BK",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "SET",
+     "description": "ASTRAGAL SET",
+     "catalog_number": "8193AA-S",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "657A-E-V3-NH-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": "PS904 900-4RL-FA 900-BBK 120/240 VAC",
+     "mfr": "VON",
+     "finish": null,
+     "notes": "[BULLETIN 023, 251218]"
+    }
+   ]
+  },
+  {
+   "set_number": "023",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     36,
+     37
+    ],
+    "regions": [
+     {
+      "page": 36,
+      "bbox": [
+       72.0,
+       316.0,
+       540.0,
+       714.0
+      ]
+     },
+     {
+      "page": 37,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       255.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 - NRP AT OUTSWINGING LOCKING DOORS",
+     "mfr": "IVE",
+     "finish": "652",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "INTEGRATED LOCK",
+     "catalog_number": "AD-300-CY-70-MT-RHO-B 12/24 VDC",
+     "mfr": "SCE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SFIC CONST. CORE - CONSTRUCTION PHASE",
+     "catalog_number": "80-035 GRN",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PERMANENT CORE - COMBINATED",
+     "catalog_number": "1C72",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP REG TBSRT/ 4040XP EDA TBSRT - AS REQUIRED",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ARMOR PLATE - AS REQUIRED",
+     "catalog_number": "8400/8402 34\" HIGH LDW B-CS",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": "WS401/402CCV",
+     "mfr": "IVE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "GASKETING SET",
+     "catalog_number": "188SBK PSA",
+     "mfr": "ZER",
+     "finish": "BK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "DIAGRAMS",
+     "catalog_number": "PROVIDE FACTORY POINT TO POINT WIRING DIAGRAMS",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "025",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     37
+    ],
+    "regions": [
+     {
+      "page": 37,
+      "bbox": [
+       72.0,
+       266.0,
+       540.0,
+       576.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 - NRP AT OUTSWINGING LOCKING DOORS",
+     "mfr": "IVE",
+     "finish": "652",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "STOREROOM LOCK",
+     "catalog_number": "9K37D 15D",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PERMANENT CORE - COMBINATED",
+     "catalog_number": "1C72",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP REG TBSRT/ 4040XP EDA TBSRT - AS REQUIRED",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "KICK PLATE",
+     "catalog_number": "8400 10\" HIGH LDW B-CS",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WALL STOP",
+     "catalog_number": "WS401/402CCV",
+     "mfr": "IVE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "GASKETING SET",
+     "catalog_number": "188SBK PSA",
+     "mfr": "ZER",
+     "finish": "BK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "026",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     37,
+     38
+    ],
+    "regions": [
+     {
+      "page": 37,
+      "bbox": [
+       72.0,
+       605.0,
+       262.0,
+       691.0
+      ]
+     },
+     {
+      "page": 38,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       184.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "GLASS/ALUM SLIDING DOOR",
+     "catalog_number": "BY RELATED SECTION 08 42 29",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "MORTISE CYLINDER",
+     "catalog_number": "1E74-PATD X CAM - AS REQUIRED - PROVIDE BRASS CONSTRUCTION CORE",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "PERMANENT CORE - COMBINATED",
+     "catalog_number": "1C72",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "027",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     38
+    ],
+    "regions": [
+     {
+      "page": 38,
+      "bbox": [
+       72.0,
+       195.0,
+       540.0,
+       368.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": null,
+     "catalog_number": "ALL HARDWARE BY DOOR MANUFACTURER",
+     "mfr": null,
+     "finish": null,
+     "notes": null,
+     "_uncertain": true,
+     "_uncertain_note": "only row of the set: text sits in the catalog column with no qty, unit, description or mfr; labelled as a by-others component"
+    }
+   ]
+  },
+  {
+   "set_number": "028",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     38,
+     39
+    ],
+    "regions": [
+     {
+      "page": 38,
+      "bbox": [
+       72.0,
+       398.0,
+       540.0,
+       698.0
+      ]
+     },
+     {
+      "page": 39,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       371.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "PIVOT SET",
+     "catalog_number": "7226 SET",
+     "mfr": "IVE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "INTERMEDIATE PIVOT",
+     "catalog_number": "7226 INT",
+     "mfr": "IVE",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "LXRX-LC-QEL-9849-EO W/CYL HOLE-CON-SNB 24 VDC",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "LXRX-LC-QEL-9849-EO-CON-SNB 24 VDC",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RIM CYLINDER",
+     "catalog_number": "IE72-PATD - AS REQUIRED - PROVIDE BRASS CONSTRUCTION CORE",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP SCUSH SRI TBSRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "PA MOUNTING PLATE - AS REQUIRED",
+     "catalog_number": "4040XP-18PA SRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "CUSH SHOE SUPPORT - AS REQUIRED",
+     "catalog_number": "4040XP-30 SRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "STEEL COVER SCREWS",
+     "catalog_number": "4040XP-31",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "BLADE STOP SPACER - AS REQUIRED",
+     "catalog_number": "4040XP-61 SRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": null,
+     "qty_unit": null,
+     "description": "SEALS",
+     "catalog_number": "BY DOOR / FRAME MANUFACTURER",
+     "mfr": null,
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "656A-E-V3-W/HOLES-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "MULTITECH CREDENTIAL READER",
+     "catalog_number": "PROVIDED BY DIV 28 - MTB15 OR MTB11 AS REQUIRED",
+     "mfr": "SCE",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": "PS904 900-4RL-FA 900-BBK 120/240 VAC",
+     "mfr": "VON",
+     "finish": null,
+     "notes": "[BULLETIN 023, 251218]"
+    }
+   ]
+  },
+  {
+   "set_number": "029",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     39,
+     40
+    ],
+    "regions": [
+     {
+      "page": 39,
+      "bbox": [
+       72.0,
+       382.0,
+       540.0,
+       711.0
+      ]
+     },
+     {
+      "page": 40,
+      "bbox": [
+       72.0,
+       46.0,
+       540.0,
+       246.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 NRP",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "LXRX-LC-QEL-98-NL-CON-SNB 24 VDC",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RIM CYLINDER",
+     "catalog_number": "IE72-PATD - AS REQUIRED - PROVIDE BRASS CONSTRUCTION CORE",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR PULL",
+     "catalog_number": "VR910 NL",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "SURFACE CLOSER",
+     "catalog_number": "4040XP SCUSH SRI TBSRT",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "KICK PLATE",
+     "catalog_number": "8400 10\" HIGH LDW B-CS",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RAIN DRIP",
+     "catalog_number": "142AA - AS REQUIRED",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "GASKETING",
+     "catalog_number": "429AA-S",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "656A-E-V3-W/HOLES-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "MULTITECH CREDENTIAL READER",
+     "catalog_number": "PROVIDED BY DIV 28 - MTB15 OR MTB11 AS REQUIRED",
+     "mfr": "SCE",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": "PS904 900-4RL-FA 900-BBK 120/240 VAC",
+     "mfr": "VON",
+     "finish": null,
+     "notes": "[BULLETIN 023, 251218]"
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "INTERCOM / VIDEO PHONE - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28 - AS REQUIRED",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "030",
+   "description": null,
+   "status": "active",
+   "location": {
+    "pages": [
+     40,
+     41
+    ],
+    "regions": [
+     {
+      "page": 40,
+      "bbox": [
+       72.0,
+       257.0,
+       540.0,
+       709.0
+      ]
+     },
+     {
+      "page": 41,
+      "bbox": [
+       72.0,
+       43.0,
+       525.0,
+       90.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": "EA",
+     "description": "HEAVYWEIGHT HINGE",
+     "catalog_number": "5BB1HW 4.5 X 4.5 NRP",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER TRANSFER",
+     "catalog_number": "EPT10 CON",
+     "mfr": "VON",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "ELEC PANIC HARDWARE",
+     "catalog_number": "LXRX-LC-QEL-98-NL-CON-SNB 24 VDC",
+     "mfr": "VON",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RIM CYLINDER",
+     "catalog_number": "IE72-PATD - AS REQUIRED - PROVIDE BRASS CONSTRUCTION CORE",
+     "mfr": "BES",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "OH STOP",
+     "catalog_number": "100S",
+     "mfr": "GLY",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "FIRE/LIFE CLOSER",
+     "catalog_number": "4040SE X MTG & VOLTAGE AS REQ",
+     "mfr": "LCN",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "KICK PLATE",
+     "catalog_number": "8400 10\" HIGH LDW B-CS",
+     "mfr": "IVE",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "RAIN DRIP",
+     "catalog_number": "142AA - AS REQUIRED",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "SET",
+     "description": "GASKETING",
+     "catalog_number": "429AA-S",
+     "mfr": "ZER",
+     "finish": "AA",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR SWEEP",
+     "catalog_number": "39A",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "THRESHOLD",
+     "catalog_number": "656A-E-V3-W/HOLES-226",
+     "mfr": "ZER",
+     "finish": "A",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS - IN DOOR",
+     "catalog_number": "CON - LENGTH AS REQUIRED - FROM LOCK TO EPT",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "WIRE HARNESS CONNECTOR - IN FRAME",
+     "catalog_number": "CON - 6W - FROM CON TO POWER SUPPLY",
+     "mfr": "SCH",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "MULTITECH CREDENTIAL READER",
+     "catalog_number": "PROVIDED BY DIV 28 - MTB15 OR MTB11 AS REQUIRED",
+     "mfr": "SCE",
+     "finish": "BLK",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "DOOR POSITION SWITCH - AS REQUIRED",
+     "catalog_number": "BY DIVISION 28",
+     "mfr": "B/O",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": "EA",
+     "description": "POWER SUPPLY",
+     "catalog_number": "PS904 900-4RL-FA 900-BBK 120/240 VAC",
+     "mfr": "VON",
+     "finish": null,
+     "notes": "[BULLETIN 023, 251218]"
+    }
+   ]
+  }
+ ]
+}
