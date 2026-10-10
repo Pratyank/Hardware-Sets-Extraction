@@ -36,9 +36,14 @@ Other targets:
 | `uv run hwsets extract <doc_id> --flat` | Extract one book into `data/results/` |
 | `make eval` | Score against gold; writes `eval/report.md` |
 | `make test` | Run the test suite |
-| `docker compose up` | Run everything in a single image, with Tesseract included |
+| `docker compose up` | Run everything in a single image, with Tesseract included (see the note below) |
 
 Specbook PDFs are not committed. Put them under `data/raw/`; each book's `doc_id` is derived from its path.
+
+**Docker:** the Dockerfile and docker-compose file are written and lint-checked, but the image has not been built
+here: Docker Desktop's WSL integration was not running on the build machine. Run `make docker` to verify it on a
+machine with a Docker daemon. The review UI also accepts new PDFs via **Upload PDF**, which runs
+`POST /api/docs/upload` to ingest and extract the file.
 
 ## Architecture
 
@@ -197,7 +202,7 @@ books below are the honest generalization number.**
 **Held-out books** (never opened during development; gold drafted at the end by a separate agent):
 HELDOUT_RESULTS
 
-**Confidence** (`calibration.py`): per-field isotonic calibration fitted on gold. In-sample, fields scored ≥ 0.9
+**Confidence** (`calibration.py`): per-field isotonic calibration fitted on gold. Measured accuracy is very high, so most fields calibrate close to 1.0 and the set badges spread little. The relative ordering still drives the UI's review queue. In-sample, fields scored ≥ 0.9
 are 99.7% exact and fields scored 0.8–0.9 are 93.5% exact. The UI's `n` key jumps to the low-confidence fields
 first.
 
