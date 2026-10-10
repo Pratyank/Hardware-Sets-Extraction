@@ -292,6 +292,8 @@ def _closer_to_next(
         return False
     nxt_tokens = [toks[i] for i in nxt.token_ids]
     nxt_roles = [model.role_of(t) for t in nxt_tokens]
+    if nxt_tokens and not model.has("qty") and _INT_RE.match(nxt_tokens[0].text):
+        nxt_roles[0] = "qty"  # quantity sharing the description cell ("1 | 7500 | Norton")
     if not _starts_row(nxt_roles, nxt_tokens, model):
         return False
     # The fragment's cells must be empty on the next row's line: in a centred layout that line

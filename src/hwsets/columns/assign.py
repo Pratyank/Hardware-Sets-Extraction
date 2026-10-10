@@ -64,6 +64,19 @@ def assign_roles(
     roles = ["ignore"] * n
     for r, c in zip(rows, cols, strict=True):
         roles[r] = slots[c]
+    # Ragged or centred cells (manufacturer names centred in their column) split one column into
+    # two nearby anchors. An unassigned column next to a role column that it strongly resembles
+    # takes the same role.
+    for c in range(n):
+        if roles[c] not in MULTI_ROLES:
+            continue
+        for nb in (c - 1, c + 1):
+            if 0 <= nb < n and roles[nb] in ("mfr", "finish", "catalog", "description"):
+                role = roles[nb]
+                best_other = max(v for k, v in scores[c].items() if k not in (role, "ignore"))
+                if scores[c][role] >= 0.5 and scores[c][role] >= best_other:
+                    roles[c] = role
+                    break
     margins = []
     for c in range(n):
         own = scores[c][roles[c]]
