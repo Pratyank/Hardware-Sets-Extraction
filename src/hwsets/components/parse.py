@@ -209,13 +209,13 @@ def assemble_rows(
             and desc_text
             and desc_text in model.known_items
             and len(value_roles) >= 2
-            and not rules.has_rules(ln.page)
+            and not rules.row_ruled(ln.page)
         )
         notes_only = set(roles) - {"ignore", "left"} == {"notes"}
         if (
             rows
             and notes_only
-            and rules.has_rules(ln.page)
+            and rules.row_ruled(ln.page)
             and rules.separated(rows[-1].lines[-1], ln)
         ):
             set_notes.extend(ln.token_ids)  # a ruled row holding only a remark: set-level note
@@ -457,7 +457,12 @@ def build_component(row: Row, model: ColumnModel, legend: Legend) -> tuple[Compo
     # Revision tags ("[BULLETIN 023, 251218]") annotate the row; they are not part of a value.
     desc, tag_d = _pop_revision_tags(desc)
     cat, tag_c = _pop_revision_tags(cat)
-    notes = cells.get("notes", []) + tag_d + tag_c + row.note_tokens
+    # A revision tag on a newly revised item (the item's own text is emphasised, i.e. bold)
+    # stays with it; a tag next to an unchanged item is left over from a struck revision.
+    body = desc + cat
+    revised = bool(body) and sum(t.bold for t in body) * 2 > len(body)
+    tags = (tag_d + tag_c) if revised else []
+    notes = cells.get("notes", []) + tags + row.note_tokens
 
     mfr_text = _join(mfr) if mfr else None
     mfr_resolved = None

@@ -9,6 +9,7 @@ No I/O here: callers (``cli.py``, ``api/``) load tokens and write results.
 
 from __future__ import annotations
 
+import dataclasses
 import re
 import statistics
 from collections.abc import Mapping, Sequence
@@ -342,6 +343,12 @@ def extract(
         model, diag = _layout_model(lay, spans, doc, legend)
         model_by_layout[li] = model
         column_roles.update(diag)
+    # The item vocabulary is document-wide: an item printed with a quantity on any page tells
+    # every page that this description starts an item.
+    vocabulary = frozenset().union(*(m.known_items for m in model_by_layout.values()))
+    model_by_layout = {
+        k: dataclasses.replace(m, known_items=vocabulary) for k, m in model_by_layout.items()
+    }
     models: dict[int, ColumnModel] = {}
     empty = ColumnModel(xs=(), roles=(), margins=())
     for p in section.pages:

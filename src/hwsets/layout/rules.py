@@ -14,6 +14,7 @@ from collections.abc import Mapping, Sequence
 from hwsets.models import Line, Rule
 
 _MIN_OVERLAP = 0.3  # the rule must run under this share of the narrower line
+_MIN_ROW_RULES = 6
 
 
 class RuleIndex:
@@ -25,6 +26,15 @@ class RuleIndex:
 
     def has_rules(self, page: int) -> bool:
         return bool(self._hz.get(page))
+
+    def row_ruled(self, page: int) -> bool:
+        """A ruled table: many long horizontal rules (row borders), not a few boxes or strikes."""
+        hz = self._hz.get(page, ())
+        if not hz:
+            return False
+        span = max(r.bbox[2] for r in hz) - min(r.bbox[0] for r in hz)
+        wide = sum(1 for r in hz if r.bbox[2] - r.bbox[0] >= 0.5 * span and span > 100)
+        return wide >= _MIN_ROW_RULES
 
     def separated(self, upper: Line, lower: Line) -> bool:
         """True when a horizontal rule runs between ``upper`` and ``lower`` (same page)."""
