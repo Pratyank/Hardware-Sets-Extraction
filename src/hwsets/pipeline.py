@@ -115,7 +115,7 @@ def _location(lines: Sequence[Line]) -> Location:
     for ln in lines:
         by_page.setdefault(ln.page, []).append(ln)
     regions = [
-        PageRegion(page=p, bbox=tuple(round(v, 1) for v in union_bbox(ln.bbox for ln in ls)))  # type: ignore[arg-type]
+        PageRegion(page=p, bbox=tuple(round(v, 1) for v in union_bbox(ln.bbox for ln in ls)))
         for p, ls in sorted(by_page.items())
     ]
     return Location(regions=regions, line_range=(lines[0].id, lines[-1].id))
@@ -174,7 +174,7 @@ def _build_set(
             confidence=0.95,
         ),
         description=_field_from(desc_ids, doc, 0.85),
-        status=status,  # type: ignore[arg-type]
+        status=status,
         status_text=status_text,
         location=_location(sp.lines),
         components=components,
