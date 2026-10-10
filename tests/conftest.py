@@ -12,7 +12,7 @@ from hypothesis import HealthCheck, settings
 settings.register_profile(
     "hwsets",
     deadline=None,
-    max_examples=60,
+    max_examples=100,
     derandomize=True,
     suppress_health_check=[HealthCheck.too_slow],
 )
