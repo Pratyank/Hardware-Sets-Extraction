@@ -261,6 +261,11 @@ def _closer_to_next(
     nxt_roles = [model.role_of(t) for t in nxt_tokens]
     if not _starts_row(nxt_roles, nxt_tokens, model):
         return False
+    # The fragment's cells must be empty on the next row's line: in a centred layout that line
+    # lacks exactly the cell the fragment belongs to; in a top-aligned table it has its own text.
+    frag_roles = {model.role_of(toks[i]) for i in ln.token_ids} - {"ignore", "left"}
+    if frag_roles & set(nxt_roles):
+        return False
     gap_prev = max(ln.bbox[1] - last_bottom, 0.0)
     gap_next = max(nxt.bbox[1] - ln.bbox[3], 0.0)
     return gap_next < 0.5 * gap_prev
