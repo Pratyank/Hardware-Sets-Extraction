@@ -15,6 +15,7 @@ from hwsets.ingest import render
 from hwsets.ingest.pdf import extract_document
 from hwsets.ingest.store import TokenStore, doc_id_for, sha256_file
 from hwsets.layout.pages import PageScore, score_page
+from hwsets.models import FlatDocument, Token
 
 app = typer.Typer(add_completion=False, no_args_is_help=True)
 log = logging.getLogger("hwsets")
@@ -145,6 +146,46 @@ def render_cmd(
         typer.echo(f"p{n}: {path}")
         if text:
             typer.echo(" ".join(t.text for t in store.page_tokens(meta["sha256"], n)))
+
+
+@app.command("tokens")
+def tokens_cmd(
+    doc_id: str,
+    page: int,
+    grep: Annotated[str | None, typer.Option(help="Only lines containing this text")] = None,
+) -> None:
+    """Print a page's raw ingest tokens grouped by PyMuPDF line, with bboxes (PDF points).
+
+    Raw ingest output only (no extraction), so it is safe to use while drafting gold labels.
+    Struck-through tokens are marked with ``~``.
+    """
+    store = TokenStore(TOKENS)
+    sha = store.resolve(doc_id)["sha256"]
+    rows: dict[tuple[int, int], list[Token]] = {}
+    for t in store.page_tokens(sha, page):
+        rows.setdefault((t.block, t.line), []).append(t)
+    for toks in sorted(rows.values(), key=lambda ts: (round(ts[0].bbox[1]), ts[0].bbox[0])):
+        text = " ".join(("~" if t.strike else "") + t.text for t in toks)
+        if grep and grep.lower() not in text.lower():
+            continue
+        x0 = min(t.bbox[0] for t in toks)
+        y0 = min(t.bbox[1] for t in toks)
+        x1 = max(t.bbox[2] for t in toks)
+        y1 = max(t.bbox[3] for t in toks)
+        typer.echo(f"{toks[0].id:>10} [{x0:6.1f},{y0:6.1f},{x1:6.1f},{y1:6.1f}] {text}")
+
+
+@app.command("gold-check")
+def gold_check(path: Path) -> None:
+    """Validate a gold file against the flat schema and print a summary."""
+    doc = FlatDocument.model_validate_json(path.read_text("utf-8"))
+    n_comp = sum(len(s.components) for s in doc.sets)
+    not_used = sum(1 for s in doc.sets if s.status == "not_used")
+    nums = [s.set_number for s in doc.sets]
+    dups = sorted({n for n in nums if nums.count(n) > 1})
+    typer.echo(f"OK {path}: sets={len(doc.sets)} components={n_comp} not_used={not_used}")
+    if dups:
+        typer.echo(f"  duplicate set numbers: {dups}")
 
 
 def _parse_pages(spec: str, n_pages: int) -> list[int]:

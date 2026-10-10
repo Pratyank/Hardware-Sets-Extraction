@@ -158,4 +158,5 @@ class FlatDocument(BaseModel):
     model_config = ConfigDict(extra="allow")
 
     source_pdf: str
+    gold_pages: str | None = None  # gold files only: page window covered, e.g. "20-40"
     sets: list[FlatSet]
