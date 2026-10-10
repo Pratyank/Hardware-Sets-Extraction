@@ -5,6 +5,8 @@ from __future__ import annotations
 from collections.abc import Sequence
 from typing import Any
 
+import pytest
+
 from helpers.synth import make_page
 from hwsets.models import Line, Token
 from hwsets.segment.headers import HeaderParse, parse_header
@@ -151,3 +153,49 @@ def test_span_kinds_are_stored() -> None:
     span: Span = split_spans(lines, headers)[0]
     classify(span, toks)
     assert span.kinds == [Kind.HEADER, Kind.ROW]
+
+
+# ---------------------------------------------------------------------------
+# Known bugs (xfail, strict): description-first layouts.
+# ---------------------------------------------------------------------------
+
+_DESC_FIRST = (60.0, 150.0, 240.0, 340.0, 450.0, 530.0)  # description, qty, unit, cat, fin, mfr
+
+
+@pytest.mark.xfail(
+    strict=True,
+    reason="BUG: sets._SET_LEVEL_RE matches '^doors?\\b' on the line text, so in a layout whose "
+    "first column is the description, a 'DOOR SWEEP' / 'DOOR CLOSER' row becomes set-level text",
+)
+def test_door_item_row_in_description_first_layout_is_a_row() -> None:
+    sp = make_page(
+        1,
+        [
+            ("HARDWARE SET NO. 1", H),
+            "HINGE|3|EA|5BB1 4.5 X 4.5|652|IVE",
+            "DOOR SWEEP|1|EA|315CN|626|IVE",
+        ],
+        _DESC_FIRST,
+    )
+    lines = sp.lines()
+    headers = {ln.id: h for ln in lines if (h := parse_header(ln, sp.toks)) is not None}
+    (span,) = split_spans(lines, headers)
+    assert classify(span, sp.toks) == [Kind.HEADER, Kind.ROW, Kind.ROW]
+
+
+@pytest.mark.xfail(
+    strict=True,
+    reason="BUG: sets.classify takes the first line after a header as the set DESCRIPTION when it "
+    "is upper case with no lexicon hits; a description-first row whose codes are all collisions "
+    "('THRESHOLD 1 EA 171A AL PE') is swallowed as the set description",
+)
+def test_first_row_with_only_collision_codes_is_not_a_description() -> None:
+    sp = make_page(
+        1,
+        [("HARDWARE SET NO. 1", H), "THRESHOLD|1|EA|171A|AL|PE", "HINGE|3|EA|5BB1|652|IVE"],
+        _DESC_FIRST,
+    )
+    lines = sp.lines()
+    headers = {ln.id: h for ln in lines if (h := parse_header(ln, sp.toks)) is not None}
+    (span,) = split_spans(lines, headers)
+    assert classify(span, sp.toks) == [Kind.HEADER, Kind.ROW, Kind.ROW]

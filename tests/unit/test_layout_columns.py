@@ -55,7 +55,7 @@ def test_ragged_starts_cluster_to_the_left_edge() -> None:
 
 
 def test_low_support_positions_are_not_anchors() -> None:
-    rows = [*ROWS, *ROWS, ("ODD CELL", {"x": 330})]
+    rows: list[str | tuple[str, dict[str, float]]] = [*ROWS, *ROWS, ("ODD CELL", {"x": 330})]
     sp = make_page(1, rows)
     xs = [a.x for a in cluster_anchors(sp.lines(), sp.toks)]
     assert 330 not in xs  # 1 of 11 lines: below 15% support
