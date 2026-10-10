@@ -3,6 +3,7 @@
 from hwsets.eval.convert import gold_to_result
 from hwsets.eval.metrics import aggregate, evaluate_document
 from hwsets.eval.normalize import normalize_set_number, parse_page_window
+from hwsets.eval.report import write_report
 from hwsets.eval.schema import DocEval, EvalSummary
 
 __all__ = [
@@ -13,4 +14,5 @@ __all__ = [
     "gold_to_result",
     "normalize_set_number",
     "parse_page_window",
+    "write_report",
 ]
