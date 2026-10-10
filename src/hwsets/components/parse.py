@@ -51,6 +51,15 @@ class ColumnModel:
     xs: tuple[float, ...]
     roles: tuple[str, ...]
     margins: tuple[float, ...]
+    # The description column also holds model numbers (no catalog column of its own), so a row's
+    # description cell is split at its first model-like token.
+    split_merged: bool = False
+
+    def x_of(self, role: str) -> float | None:
+        for x, r in zip(self.xs, self.roles, strict=True):
+            if r == role:
+                return x
+        return None
 
     def role_of(self, tok: Token) -> str:
         col = column_of(tok.bbox[0], self.xs)
@@ -125,7 +134,14 @@ def assemble_rows(
         roles0 = [model.role_of(t) for t in tokens]
         if _NOTE_RE.match(ln.text):
             # Numbered notes ("Note: 1. ...") are set-level; a plain note belongs to the row above.
-            note_to_set = not rows or bool(_NUMBERED_NOTE_RE.match(ln.text))
+            # A note aligned with (or left of) the description column is about the whole set;
+            # only a note indented under an item belongs to that item.
+            desc_x = model.x_of("description")
+            note_to_set = (
+                not rows
+                or bool(_NUMBERED_NOTE_RE.match(ln.text))
+                or (desc_x is not None and x0 <= desc_x + 4)
+            )
             note_x = x0
             if note_to_set:
                 set_notes.extend(ln.token_ids)
@@ -185,14 +201,21 @@ def _continuation_ok(prev: Row, roles: Sequence[str]) -> bool:
 
 
 def _join(tokens: Sequence[Token]) -> str:
+    """Join cell tokens with single spaces, except a code broken across a line wrap at a hyphen
+    ("630-" on one line, "316" on the next -> "630-316"). Tokens on the same line always keep
+    their space ("W/ KEYFOB", "CORE - COMBINATED")."""
     out = ""
+    prev: Token | None = None
     for t in tokens:
-        if not out:
+        if prev is None:
             out = t.text
-        elif out.endswith(("-", "/")) and t.text[:1].isalnum():
-            out += t.text  # "630-" + "316" (a wrapped code)
         else:
-            out += " " + t.text
+            wrapped = t.bbox[1] >= prev.bbox[3] - 0.25 * (prev.bbox[3] - prev.bbox[1])
+            if wrapped and len(prev.text) > 1 and prev.text.endswith("-") and t.text[:1].isalnum():
+                out += t.text
+            else:
+                out += " " + t.text
+        prev = t
     return out.strip()
 
 
@@ -224,6 +247,31 @@ def _parse_qty(cell: list[Token]) -> tuple[int | None, str | None, list[Token], 
             unit = unit_code(t.text)
             u_used.append(t)
     return qty, unit, q_used, u_used
+
+
+_REV_TAG_RE = re.compile(
+    r"^\[(?:BULLETIN|ADDENDUM|ADD|REV(?:ISION)?|ASI|CCD|PR|RFI|ISSUE)\b[^\]]*\]$", re.IGNORECASE
+)
+
+
+def _pop_revision_tags(tokens: list[Token]) -> tuple[list[Token], list[Token]]:
+    """Split off bracketed revision tags (which may span several tokens)."""
+    keep: list[Token] = []
+    tags: list[Token] = []
+    i = 0
+    while i < len(tokens):
+        if tokens[i].text.startswith("["):
+            j = i
+            while j < len(tokens) and not tokens[j].text.endswith("]"):
+                j += 1
+            group = tokens[i : j + 1]
+            if j < len(tokens) and _REV_TAG_RE.match(" ".join(t.text for t in group)):
+                tags.extend(group)
+                i = j + 1
+                continue
+        keep.append(tokens[i])
+        i += 1
+    return keep, tags
 
 
 def _split_desc_catalog(tokens: list[Token]) -> tuple[list[Token], list[Token]]:
@@ -258,7 +306,7 @@ def build_component(row: Row, model: ColumnModel, legend: Legend) -> tuple[Compo
 
     desc = cells.get("description", [])
     cat = cells.get("catalog", [])
-    if desc and not cat and not model.has("catalog"):
+    if desc and not cat and not model.has("catalog") and model.split_merged:
         desc, cat = _split_desc_catalog(desc)
     elif cat and not desc and not model.has("description"):
         desc, cat = _split_desc_catalog(cat)
@@ -276,7 +324,10 @@ def build_component(row: Row, model: ColumnModel, legend: Legend) -> tuple[Compo
                 mfr, cat = cat[:n_left], [t for t in cat[n_left:] if t.text not in {"-", "\u2013"}]
 
     finish = cells.get("finish", [])
-    notes = cells.get("notes", []) + row.note_tokens
+    # Revision tags ("[BULLETIN 023, 251218]") annotate the row; they are not part of a value.
+    desc, tag_d = _pop_revision_tags(desc)
+    cat, tag_c = _pop_revision_tags(cat)
+    notes = cells.get("notes", []) + tag_d + tag_c + row.note_tokens
 
     mfr_text = _join(mfr) if mfr else None
     mfr_resolved = None

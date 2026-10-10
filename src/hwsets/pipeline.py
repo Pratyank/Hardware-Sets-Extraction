@@ -102,7 +102,15 @@ def _layout_model(
         f"p{layout.pages[0]}-{layout.pages[-1]} x≈{x:.0f}": f"{role} (margin {m:.2f})"
         for x, role, m in zip(xs, ra.roles, ra.margins, strict=True)
     }
-    return ColumnModel(xs=xs, roles=ra.roles, margins=ra.margins), diag
+    split_merged = (
+        any(
+            role == "description" and f.catalog >= 0.5
+            for role, f in zip(ra.roles, feats, strict=True)
+        )
+        and "catalog" not in ra.roles
+    )
+    model = ColumnModel(xs=xs, roles=ra.roles, margins=ra.margins, split_merged=split_merged)
+    return model, diag
 
 
 def _field_from(tokens: Sequence[str], doc: _Doc, conf: float) -> Field[str]:
