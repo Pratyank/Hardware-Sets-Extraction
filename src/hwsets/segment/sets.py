@@ -35,11 +35,13 @@ class Kind(StrEnum):
 _SET_LEVEL_RE = re.compile(
     r"^(?:doors?\b|door\s*(?:no|numbers?|#)|openings?\b|for\s+use\s+on|provide\s+each|"
     r"each\s+(?:to\s+have|opening|door|pair|single|leaf)|opening\s+(?:description|type)|"
-    r"operation(?:al)?\b|notes?\s*[:\-.]|remarks?\s*:|location\s*:|item\s*#|heading\s+notes|"
+    r"operation(?:al)?\b|remarks?\s*:|location\s*:|item\s*#|heading\s+notes|"
     r"legend\s*:|link\s+to\s+catalog|electrified\s+opening|hardware\s+sets?\s*:|"
     r"mode\s+of\s+operation|sequence\s+of\s+operation|keying\s*:|frame\s*:|door\s+type)",
     re.IGNORECASE,
 )
+# Notes before the first row describe the set; after a row they belong to that row (parse.py).
+_NOTES_RE = re.compile(r"^(?:notes?|properties)\s*[:\-.]", re.IGNORECASE)
 _DESCRIPTION_RE = re.compile(r"^description\s*:\s*", re.IGNORECASE)
 _DOOR_TOKEN_RE = re.compile(r"^(?:[A-Z]{0,3}-?\d{1,4}(?:\.\d{1,2})?[A-Z]{0,3}[,;]?|&|and|thru|to)$",
                             re.IGNORECASE)  # fmt: skip
@@ -108,8 +110,16 @@ def classify(span: Span, toks: Mapping[str, Token]) -> list[Kind]:
             kinds.append(Kind.SET_LEVEL)  # auto-numbering residue such as "PART 59 -"
         elif header_row_roles(words):
             kinds.append(Kind.COLUMN_HEADER)
-        elif not seen_row and NOT_USED_RE.fullmatch(text.strip(" .:-()")):
+        elif (
+            kinds[-1] in (Kind.HEADER, Kind.DESCRIPTION)
+            and not seen_row
+            and NOT_USED_RE.fullmatch(text.strip(" .:-()"))
+        ):
+            # Only the header's own line or the first line after it can mark a set NOT USED;
+            # elsewhere "N/A" is ordinary text (e.g. the tail of a wrapped door description).
             kinds.append(Kind.NOT_USED)
+        elif _NOTES_RE.match(text):
+            kinds.append(Kind.ROW if seen_row else Kind.SET_LEVEL)
         elif _DESCRIPTION_RE.match(text):
             kinds.append(Kind.DESCRIPTION)
         elif (

@@ -94,7 +94,9 @@ def _layout_model(
                     cells.setdefault(col, []).append(t.text)
             for col, words in cells.items():
                 per_col[col].append(" ".join(words))
-    feats = [column_features(vals, n_rows, legend.mfr_codes) for vals in per_col]
+    feats = [
+        column_features(vals, n_rows, legend.mfr_codes, legend.finish_codes) for vals in per_col
+    ]
     ra = assign_roles(feats, prior)
     diag = {
         f"p{layout.pages[0]}-{layout.pages[-1]} x≈{x:.0f}": f"{role} (margin {m:.2f})"

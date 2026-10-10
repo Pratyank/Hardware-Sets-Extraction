@@ -36,7 +36,7 @@ def role_scores(f: ColumnFeatures, position: int, n_cols: int) -> dict[str, floa
     fill = min(1.0, f.fill / 0.5)  # sparse columns are weaker evidence
     leftish = 1.0 - position / max(n_cols - 1, 1)
     return {
-        "qty": f.qty * (1.0 - f.unit) * fill * (0.85 + 0.15 * leftish),
+        "qty": f.qty * (1.0 - f.unit) * (1.0 - f.finish) * fill * (0.85 + 0.15 * leftish),
         "unit": f.unit * fill,
         "mfr": f.mfr * (0.4 + 0.6 * fill) * (1.0 - 0.5 * f.finish),
         "finish": f.finish * (0.4 + 0.6 * fill) * (1.0 - 0.5 * f.mfr),

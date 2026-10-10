@@ -20,8 +20,8 @@ from hwsets.layout.chrome import header_row_roles
 from hwsets.models import Line, Token
 
 _ENTRY_RE = re.compile(
-    r"^(?:\d{1,2}[.)]\s*)?(?P<code>[A-Z](?:[A-Z0-9/&]|-(?=[A-Z0-9])){0,5}|\d{3}[A-Z]{0,3}|US\d{1,2}[A-Z]?)"
-    r"\s*(?:[-\u2013\u2014=:]\s*|\s+)(?P<name>[A-Z][A-Za-z0-9.,&'/()\- ]{2,60})$"
+    r"^(?:\d{1,2}[.)]\s*)?(?P<code>[A-Z](?:[A-Z0-9/&]|-(?=[A-Z0-9])){0,5}|\d{2,3}[A-Z]{0,4}|US\d{1,2}[A-Z]?)"
+    r"\s*(?:[-\u2013\u2014=:]\s*|\s+)(?P<name>[A-Z][A-Za-z0-9.,&'/()\-\u2013\u2014 ]{2,80})$"
 )
 _INLINE_RE = re.compile(
     r"(?P<name>[A-Z][A-Za-z.&'\-]+(?:\s+[A-Z][A-Za-z.&'\-]+){0,3})\s*\((?P<code>[A-Z]{2,4})\)"
@@ -50,6 +50,10 @@ class Legend:
     @property
     def mfr_codes(self) -> frozenset[str]:
         return frozenset(self.mfr)
+
+    @property
+    def finish_codes(self) -> frozenset[str]:
+        return frozenset(self.finish)
 
 
 def _known_mfr(name: str) -> bool:

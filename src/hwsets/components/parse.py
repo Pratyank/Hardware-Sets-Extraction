@@ -24,7 +24,7 @@ import re
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, field
 
-from hwsets.columns.features import QTY_RE, is_catalog_value
+from hwsets.columns.features import QTY_RE, is_catalog_token
 from hwsets.columns.legend import Legend
 from hwsets.columns.lexicon import (
     COLLISIONS,
@@ -39,6 +39,7 @@ from hwsets.layout.columns import cell_gap, column_of
 from hwsets.models import Component, Field, Line, Token
 
 _NOTE_RE = re.compile(r"^(?:notes?|properties|note\s*\d*)\s*[:\-]", re.IGNORECASE)
+_NUMBERED_NOTE_RE = re.compile(r"^notes?\s*[:\-]?\s*\d+[.)]", re.IGNORECASE)
 _INT_RE = re.compile(r"^(\d{1,5})(?:\.0+)?$")
 _MFR_SPLIT_RE = re.compile(r"\s[-\u2013]\s")
 
@@ -96,8 +97,11 @@ def _is_prose(line: Line, toks: Mapping[str, Token], model: ColumnModel) -> bool
 
 
 def _starts_row(roles: Sequence[str], tokens: Sequence[Token], model: ColumnModel) -> bool:
-    if "qty" in roles:
-        return True
+    qty_text = " ".join(t.text for t, r in zip(tokens, roles, strict=True) if r == "qty")
+    if qty_text:
+        # The quantity position must hold a quantity ("3", "1 Ea.", "As Req", "--"), not the
+        # tail of a prose sentence that happens to start at the same x.
+        return bool(QTY_RE.match(qty_text))
     if not model.has("qty") and tokens and QTY_RE.match(tokens[0].text):
         return bool(_INT_RE.match(tokens[0].text)) and len(tokens) >= 2
     return False
@@ -111,17 +115,35 @@ def assemble_rows(
     set_notes: list[str] = []
     last_bottom = 0.0
     last_page = -1
+    note_x: float | None = None  # left edge of the note being continued, if any
+    note_to_set = False
     for ln in lines:
         tokens = [toks[i] for i in ln.token_ids]
         if not tokens:
             continue
+        x0 = tokens[0].bbox[0]
+        roles0 = [model.role_of(t) for t in tokens]
         if _NOTE_RE.match(ln.text):
-            if rows:
+            # Numbered notes ("Note: 1. ...") are set-level; a plain note belongs to the row above.
+            note_to_set = not rows or bool(_NUMBERED_NOTE_RE.match(ln.text))
+            note_x = x0
+            if note_to_set:
+                set_notes.extend(ln.token_ids)
+            else:
                 rows[-1].note_tokens.extend(tokens)
                 rows[-1].lines.append(ln)
-            else:
-                set_notes.extend(ln.token_ids)
+            last_bottom, last_page = ln.bbox[3], ln.page
             continue
+        if note_x is not None:
+            if not _starts_row(roles0, tokens, model) and x0 >= note_x - 3:
+                if note_to_set or not rows:
+                    set_notes.extend(ln.token_ids)
+                else:
+                    rows[-1].note_tokens.extend(tokens)
+                    rows[-1].lines.append(ln)
+                last_bottom, last_page = ln.bbox[3], ln.page
+                continue
+            note_x = None
         if _is_prose(ln, toks, model):
             set_notes.extend(ln.token_ids)
             continue
@@ -207,7 +229,7 @@ def _parse_qty(cell: list[Token]) -> tuple[int | None, str | None, list[Token], 
 def _split_desc_catalog(tokens: list[Token]) -> tuple[list[Token], list[Token]]:
     """One cell holding both: the catalog starts at the first model-like token."""
     for i, t in enumerate(tokens):
-        if i > 0 and is_catalog_value(t.text):
+        if i > 0 and is_catalog_token(t.text):
             return tokens[:i], tokens[i:]
     return tokens, []
 
@@ -297,6 +319,11 @@ def parse_rows(
     comps: list[Component] = []
     warnings: list[str] = []
     for row in rows:
+        desc_text = " ".join(t.text for t in row.cells.get("description", [])).strip(" :.")
+        if desc_text.upper() in {"NOTE", "NOTES"}:
+            # "1  NOTE  BALANCE OF HARDWARE BY DOOR MFR": a note printed in row form.
+            set_notes.extend(t.id for ln in row.lines for t in (toks[i] for i in ln.token_ids))
+            continue
         if not any(row.cells.get(r) for r in ("description", "catalog", "qty", "mfr")):
             set_notes.extend(t.id for ln in row.lines for t in (toks[i] for i in ln.token_ids))
             continue

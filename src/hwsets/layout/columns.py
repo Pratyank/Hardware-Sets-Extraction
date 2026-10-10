@@ -25,7 +25,7 @@ MIN_SUPPORT_FRACTION = 0.15
 _MERGE_PT = 7.0  # cell starts closer than this belong to the same anchor
 _ASSIGN_TOL = 5.0  # a token may start this far left of its anchor
 _PAGE_MATCH_PT = 9.0
-_PAGE_MATCH_SHARE = 0.6
+_PAGE_MATCH_SHARE = 0.8
 
 
 @dataclass(frozen=True, slots=True)

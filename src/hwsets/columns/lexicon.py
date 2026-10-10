@@ -190,6 +190,10 @@ _US = [
     "USP",
 ]
 _OTHER = [
+    # anodized aluminium finishes seen in dev books (morris-bank p232: 313; shubie-center p174: 315)
+    "313",
+    "315",
+    "335",
     "AL",
     "ALUM",
     "ALU",

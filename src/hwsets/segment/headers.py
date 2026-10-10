@@ -53,6 +53,7 @@ NOT_USED_RE = re.compile(
     r"(?<![A-Z])(?:NOT\s+USED|N/?A|OMITTED|DELETED|VOID|NOT\s+IN\s+CONTRACT|MOVED\s+TO)(?![A-Z])",
     re.IGNORECASE,
 )
+_EVIDENCE_WINDOW = 14
 _QTY_START_RE = re.compile(r"^\d{1,4}(?:\.0+)?$")
 
 
@@ -199,11 +200,24 @@ def induce_headers(
     parsed: list[tuple[HeaderParse, float]] = []
     sizes = [toks[i].font_size for ln in lines for i in ln.token_ids]
     body = statistics.median(sizes) if sizes else 10.0
-    for ln in lines:
+    is_comp = [looks_like_component(ln, toks) for ln in lines]
+    for i, ln in enumerate(lines):
         h = parse_header(ln, toks)
         if h is None:
             continue
-        parsed.append((h, _candidate_score(h, ln, body, looks_like_component(ln, toks))))
+        score = _candidate_score(h, ln, body, is_comp[i])
+        # A real set header is followed by component rows (or says NOT USED); spec prose that
+        # happens to start with "Group 1" or "Set 2" is not.
+        window = lines[i + 1 : i + 1 + _EVIDENCE_WINDOW]
+        evidence = sum(is_comp[i + 1 : i + 1 + _EVIDENCE_WINDOW])
+        not_used = NOT_USED_RE.search(" ".join(toks[t].text for t in h.desc_token_ids)) or any(
+            NOT_USED_RE.fullmatch(w.text.strip(" .:-()")) for w in window[:2]
+        )
+        if evidence >= 2:
+            score += 0.5
+        elif evidence == 0 and not not_used:
+            score -= 0.75
+        parsed.append((h, score))
     out = HeaderInduction(signature=None, candidates=len(parsed))
     if not parsed:
         return out

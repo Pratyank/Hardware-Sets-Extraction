@@ -49,8 +49,19 @@ def is_mfr_value(text: str, legend: frozenset[str] = frozenset()) -> bool:
     return whole in legend or is_mfr_code(text) or (len(toks) == 1 and norm_code(toks[0]) in legend)
 
 
+def is_catalog_token(tok: str) -> bool:
+    """Model-number-like: has a digit, and is either 3+ characters or mixes letters and digits
+    (a bare "2" or "10" is a count, not a model)."""
+    if not _CATALOG_TOKEN.match(tok):
+        return False
+    return len(tok) >= 3 or any(c.isalpha() for c in tok)
+
+
 def is_catalog_value(text: str) -> bool:
-    return any(_CATALOG_TOKEN.match(t) for t in text.split())
+    toks = text.split()
+    if toks and re.fullmatch(r"\d{1,4}", toks[0]):
+        toks = toks[1:]  # a leading count shares the cell in some layouts ("2 Continuous Hinge")
+    return any(is_catalog_token(t) for t in toks)
 
 
 def is_wordy(text: str) -> bool:
@@ -60,8 +71,22 @@ def is_wordy(text: str) -> bool:
     return sum(bool(_WORD.match(t)) and len(t) > 1 for t in toks) / len(toks) >= 0.6
 
 
+def _qty_share(vals: Sequence[str]) -> float:
+    """Share of values shaped like quantities, discounted when the numbers are implausibly large
+    for a per-opening count (BHMA finish numbers such as 626 or 313 also match the shape)."""
+    hits = [v for v in vals if QTY_RE.match(v)]
+    nums = [int(m.group()) for v in hits if (m := re.match(r"\d+", v))]
+    share = len(hits) / len(vals)
+    if nums and sorted(nums)[len(nums) // 2] > 100:
+        share *= 0.4
+    return share
+
+
 def column_features(
-    values: Sequence[str], n_rows: int, legend: frozenset[str] = frozenset()
+    values: Sequence[str],
+    n_rows: int,
+    legend: frozenset[str] = frozenset(),
+    finish_legend: frozenset[str] = frozenset(),
 ) -> ColumnFeatures:
     vals = [v.strip() for v in values if v.strip()]
     n = len(vals)
@@ -70,11 +95,15 @@ def column_features(
     collide = [v for v in vals if norm_code(v) in COLLISIONS and norm_code(v) not in legend]
     decisive = n - len(collide)  # ambiguous codes are evidence for neither role
     mfr = sum(is_mfr_value(v, legend) for v in vals if v not in collide)
-    fin = sum(is_finish_value(v) for v in vals if v not in collide)
+    fin = sum(
+        is_finish_value(v) or norm_code(v.split()[0]) in finish_legend
+        for v in vals
+        if v not in collide
+    )
     return ColumnFeatures(
         n_rows=n_rows,
         fill=n / max(n_rows, 1),
-        qty=sum(bool(QTY_RE.match(v)) for v in vals) / n,
+        qty=_qty_share(vals),
         unit=sum(unit_code(v) is not None for v in vals) / n,
         mfr=mfr / decisive if decisive else 0.0,
         finish=fin / decisive if decisive else 0.0,
