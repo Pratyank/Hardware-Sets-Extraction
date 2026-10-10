@@ -123,3 +123,19 @@ def test_doc_id_is_slug(tmp_path: Path) -> None:
     p = raw / "Valor Acres  Bldg E" / "087100-DOOR HARDWARE_Rev 2.pdf"
     p.write_bytes(b"%PDF-1.4")
     assert doc_id_for(p, raw) == "valor-acres-bldg-e--087100-door-hardware-rev-2"
+
+
+def test_strikethrough_detected(tmp_path: Path) -> None:
+    """A redline deletion (text with a strike line through it) is flagged, others are not."""
+    path = tmp_path / "strike.pdf"
+    doc = pymupdf.open()
+    page = doc.new_page(width=612, height=792)
+    page.insert_text((72, 100), "SCH", fontname="helv", fontsize=10)
+    page.insert_text((120, 100), "BES", fontname="helv", fontsize=10)
+    # strike through "SCH" only
+    page.draw_line((70, 96.5), (95, 96.5), color=(0, 0, 0), width=0.8)
+    doc.save(path)
+    doc.close()
+    _, pages = extract_document(path)
+    flags = {t.text: t.strike for t in pages[0]}
+    assert flags == {"SCH": True, "BES": False}

@@ -30,6 +30,7 @@ class Token(_Frozen):
     block: int
     line: int  # PyMuPDF block/line indices (hints only)
     ocr: bool = False
+    strike: bool = False  # struck-through (redline deletion): evidence only, never extracted
 
 
 class PageInfo(_Frozen):

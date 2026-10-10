@@ -23,7 +23,7 @@ from typing import Any
 
 from hwsets.models import PageInfo, Token
 
-INGEST_VERSION = 1
+INGEST_VERSION = 2
 _SLUG_RE = re.compile(r"[^a-z0-9]+")
 
 
@@ -43,11 +43,11 @@ def doc_id_for(pdf: Path, raw_root: Path) -> str:
 
 
 def _token_row(t: Token) -> list[Any]:
-    return [t.text, *t.bbox, t.font_size, int(t.bold), t.block, t.line, int(t.ocr)]
+    return [t.text, *t.bbox, t.font_size, int(t.bold), t.block, t.line, int(t.ocr), int(t.strike)]
 
 
 def _row_token(page: int, i: int, row: Sequence[Any]) -> Token:
-    text, x0, y0, x1, y1, size, bold, block, line, is_ocr = row
+    text, x0, y0, x1, y1, size, bold, block, line, is_ocr, strike = row
     return Token(
         id=f"p{page}_w{i}",
         page=page,
@@ -58,6 +58,7 @@ def _row_token(page: int, i: int, row: Sequence[Any]) -> Token:
         block=block,
         line=line,
         ocr=bool(is_ocr),
+        strike=bool(strike),
     )
 
 

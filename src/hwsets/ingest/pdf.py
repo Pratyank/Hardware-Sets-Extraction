@@ -23,7 +23,10 @@ log = logging.getLogger(__name__)
 _TEXT_FLAGS = (
     pymupdf.TEXT_PRESERVE_LIGATURES | pymupdf.TEXT_PRESERVE_WHITESPACE | pymupdf.TEXT_MEDIABOX_CLIP
 )
+# Styles are collected only for "dict": it marks strikeout per span (char_flags bit 0).
+_DICT_FLAGS = _TEXT_FLAGS | pymupdf.TEXT_COLLECT_STYLES
 _BOLD_FLAG = 16  # span["flags"] bit 4
+_STRIKEOUT_FLAG = 1  # span["char_flags"] bit 0 (MuPDF FZ_STEXT_STRIKEOUT)
 OCR_MIN_WORDS = 5
 
 
@@ -32,6 +35,7 @@ class _Span:
     bbox: BBox
     size: float
     bold: bool
+    strike: bool
 
 
 def _overlap(a: BBox, b: BBox) -> float:
@@ -42,7 +46,7 @@ def _overlap(a: BBox, b: BBox) -> float:
 
 def _spans_by_line(page: pymupdf.Page) -> dict[tuple[int, int], list[_Span]]:
     out: dict[tuple[int, int], list[_Span]] = {}
-    data = page.get_text("dict", flags=_TEXT_FLAGS)
+    data = page.get_text("dict", flags=_DICT_FLAGS)
     for b_no, block in enumerate(data["blocks"]):
         if block.get("type", 0) != 0:
             continue
@@ -50,8 +54,14 @@ def _spans_by_line(page: pymupdf.Page) -> dict[tuple[int, int], list[_Span]]:
             for span in line["spans"]:
                 font = str(span.get("font", ""))
                 bold = bool(int(span.get("flags", 0)) & _BOLD_FLAG) or "bold" in font.lower()
+                strike = bool(int(span.get("char_flags", 0)) & _STRIKEOUT_FLAG)
                 out.setdefault((b_no, l_no), []).append(
-                    _Span(bbox=tuple(span["bbox"]), size=float(span["size"]), bold=bold)
+                    _Span(
+                        bbox=tuple(span["bbox"]),
+                        size=float(span["size"]),
+                        bold=bold,
+                        strike=strike,
+                    )
                 )
     return out
 
@@ -101,6 +111,7 @@ def page_tokens(
                 bbox=_display_bbox(raw, page),
                 font_size=round(span.size, 2) if span else round(raw[3] - raw[1], 2),
                 bold=span.bold if span else False,
+                strike=span.strike if span else False,
                 block=int(b_no),
                 line=int(l_no),
                 ocr=is_ocr,
