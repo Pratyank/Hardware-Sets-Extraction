@@ -73,3 +73,81 @@ Checkpoint reports are kept here too.
   works only from page images and never reads extractor output, so its labels are unaffected. As a fix, the
   CLI now refuses gold books until their gold file has `"_final": true`, and refuses held-out books without
   `--allow-holdout`.
+
+## 2026-10-10: Gold labels (Checkpoint 6a)
+
+- **Gold labels:** four labelling agents produced gold for 8 books, 279 sets and 2,184 components in total. Each
+  agent transcribed from page images and then cross-checked its JSON against the raw tokens with a throwaway
+  script; no extractor code was involved. I spot-checked valor p10 (a redline) and roselle p16 (a ruled
+  grid) against the rendered images, and both match exactly. All 8 files are marked `"_final": true`.
+- **Uncertain cells** (`_uncertain` in the files), by book:
+  - **gerrard (4):** note lines under rows, such as "Active Leaf" and "Shared with D147A".
+  - **jc-ryan (1):** a two-line catalog cell.
+  - **lyons (2):** parentheticals.
+  - **hfh (4):** the struck alternates `2 (1)` and `3 (2)`; a trailing lone "-"; a row whose only text is
+    "ALL HARDWARE BY DOOR MANUFACTURER".
+  - **bridgeport (4):** instruction lines inside the catalog column.
+  - **sjc:** nine "Moved to …" stubs are marked not_used and uncertain. The redline duplicates 14B and 10C are
+    resolved to the live set. The parentheticals in 07A and 07B are also marked.
+- **Convention fix:** the agents disagreed about parentheticals printed inside a cell. Two moved them to
+  notes; the others kept them in the cell. I standardized on keeping them in the cell, because that is
+  objective and grounded in the cell boundary. Seven gold cells were fixed mechanically and tagged
+  `_convention_fix`, and the guideline was updated. This is a labelling-convention decision, not one driven by
+  the extractor.
+
+## 2026-10-10: Evaluation and error analysis (Checkpoint 6b)
+
+The first `hwsets eval` was blind: the extractor had never been run on a gold book, apart from the logged
+lyons incident, and no rule had been tuned on gold.
+
+| metric | blind baseline | now |
+|---|---|---|
+| set recall / precision | 88.2% / 99.2% | **100% / 99.3%** |
+| component F1 | 97.4% | 98.6% |
+| description exact | 91.4% | 98.6% |
+| catalog exact | 94.0% | ≈97.5% |
+| manufacturer exact | 97.0% | ≈97.3% (jc-ryan 59.6% is the outlier) |
+| finish exact | 99.9% | 99.9% |
+| qty exact | 99.7% | 99.8% |
+| mfr↔finish confusions | **0** | **0** |
+| set_fully_correct | 31.2% | **75.6%** |
+
+**Error categories found, and the general fix for each.** Each fix was checked against the dev books and the
+negatives (still 0 sets) to make sure nothing regressed.
+
+1. **Segmentation.** Roselle had zero recall because its set ids sit in a table SET column with no keyword.
+   Fix: bare-id header induction. Ids must be unique and ascending at one left x, and the lines must carry
+   manufacturer or finish codes. The SET column gets the `set_no` role, and its stacked text becomes the set
+   description.
+2. **Text joining.** Same-line tokens were glued together ("W/KEYFOB"). Now only a hyphen broken across a line
+   wrap is joined without a space.
+3. **Description/catalog split.** The split was applied even in books that have no catalog column (valor). It
+   now runs only when the description column demonstrably also holds model numbers.
+4. **Column roles.** A column-header row repeated at the top of every page was being removed as chrome before
+   it could serve as evidence. Header rows are now read before chrome removal, as the plan says.
+   Manufacturer–catalog merged cells ("VON DUPRIN - 6200 SERIES") are now split based on a document-level
+   majority.
+5. **Row assembly.**
+   - Ruled tables: drawn horizontal rules are now captured at ingest (INGEST_VERSION 3) and act as exact row
+     boundaries.
+   - Vertically centred cells (jc-ryan): a fragment much closer to the next row whose matching cells are
+     empty attaches forward.
+   - A line that fills three value columns starts a new row.
+   - Door-size lines ("965 x 2134 …") are set-level.
+   - When a quantity column exists, quantities come only from it.
+6. **Notes.** A note aligned with the description column is set-level, matching the gold convention; only an
+   indented note belongs to its item. Revision tags (`[BULLETIN …]`) go to notes. Prose blocks after
+   "Operational Description:" and similar intros are set-level until a quantity-led row starts.
+7. **Redlines.** A strike drawn as a vector line through a token's middle band now marks the token struck, in
+   addition to MuPDF's strikeout flag.
+8. **Test-suite bugs.** The property and unit suite (245 tests) found 8 bugs, each pinned by a strict xfail
+   test and then fixed; the tests now pass as regression tests. They covered collision codes counted as
+   words, 4-digit model numbers read as counts, sparse first pages, a sparse quantity column, "DOOR …" rows
+   taken as set-level lines, first rows taken as titles, and hyphen joining (2 bugs).
+
+**Still open**, in order of how many errors each would remove:
+- jc-ryan manufacturer column (59.6%).
+- hfh (36% fully correct): struck rows that carry no strike flag and no drawing, and leftover revision tags.
+- Spurious components in lyons (90% precision).
+- Roselle notes column.
+- sjc location IoU (0.78).
