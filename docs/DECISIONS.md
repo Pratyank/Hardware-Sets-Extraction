@@ -151,3 +151,33 @@ negatives (still 0 sets) to make sure nothing regressed.
 - Spurious components in lyons (90% precision).
 - Roselle notes column.
 - sjc location IoU (0.78).
+
+## 2026-10-10: After Checkpoint 6b
+
+- **More general fixes, each verified on the dev books and the negatives:**
+  - A document-wide item vocabulary: a quantity-less line whose description is printed elsewhere as its own item
+    starts a new row. This applies only on pages without row rules.
+  - Row-ruled page detection: at least 6 wide horizontal rules.
+  - Revision tags are kept only on revised rows, meaning rows whose own text is bold.
+  - Ragged or centred cells keep their column role: an adjacent look-alike column gets the same role (jc-ryan's
+    manufacturer column).
+  - The set preamble before the item table is set-level (lyons door grids with room names).
+  - Gold set_fully_correct is now **87.1%**: lyons 100%, sjc 96%, valor 95%, gerrard 91%, bridgeport 87%,
+    roselle 76%, jc-ryan 74%, hfh 72%.
+- **Positional template** (`columns/template.py`) is wired in, but only for layouts with at most 3 column
+  anchors that have neither a manufacturer nor a finish column, i.e. genuinely unaligned lists. On
+  starhardware's table it was splitting continuation lines, so tables keep the column model.
+- **Confidence calibration:** a per-field isotonic map (pool-adjacent-violators, blocks of at least 20) fitted
+  on the gold books (`hwsets calibrate` → `data/calibration.json`), with raw scores reduced per wrapped line.
+  The fit is in-sample on gold. The held-out reliability table is the out-of-sample check.
+- **Lookup codes:** blocks of at least 2 key legend lines on the set's own pages resolve components whose
+  description or catalog is only a key. The legend tokens are cited in the new
+  `Component.resolved_from_code_tokens` field (schema updated). No surveyed book uses this format; it is
+  covered by synthetic tests.
+- **Golden gate** (`tests/golden`): fails when set recall or set_fully_correct drops by more than 1 point
+  against `tests/golden/snapshot.json`. Run `make snapshot` to refresh it after an intended change.
+- **LLM layer is not built.** After the error analysis no cluster of rule-resistant errors is left. The
+  remaining errors are individual ambiguities (a struck-quantity glyph, unlabelled wraps). This is explained in
+  the README.
+- **Process:** two commits went in with a hidden failure because exit codes were piped through `tail`. Both
+  were fixed immediately. All commits now go through `make check` (lint, types and the full test suite).
