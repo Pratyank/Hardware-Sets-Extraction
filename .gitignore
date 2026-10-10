@@ -1,0 +1,30 @@
+# Ruflo / agent tooling runtime (local only)
+.env
+.env.local
+.env.*.local
+.claude-flow/
+.swarm/
+.agents/
+.claude/
+.mcp.json
+ruvector.db
+CLAUDE.md
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+dist/
+build/
+*.egg-info/
+
+# Data (large / derived)
+data/raw/
+data/tokens/
+data/pages/
+data/corrections/
+data/llm_cache/*.tmp
