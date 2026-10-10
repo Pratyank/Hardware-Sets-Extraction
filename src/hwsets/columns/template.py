@@ -70,6 +70,7 @@ def infer_template(
         return None
     pairs = {k: v for k, v in orders.items() if len(k) == 2}
     total = sum(orders.values())
+    order: tuple[str, ...]
     if pairs:
         order, support = max(pairs.items(), key=lambda kv: kv[1])
     else:
