@@ -28,3 +28,4 @@ data/tokens/
 data/pages/
 data/corrections/
 data/llm_cache/*.tmp
+data/results/
