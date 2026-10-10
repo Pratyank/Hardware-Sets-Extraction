@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import bisect
 from collections.abc import Iterable, Mapping, Sequence
+from pathlib import Path
 
 from pydantic import BaseModel, ConfigDict
 
@@ -46,6 +47,13 @@ class Calibration(BaseModel):
 
     fields: dict[str, FieldMap]
     source: str = ""  # what it was fitted on
+
+
+def load(path: Path) -> Calibration | None:
+    """Read a calibration table if present (callers in the I/O layer pass the path)."""
+    if not path.exists():
+        return None
+    return Calibration.model_validate_json(path.read_text("utf-8"))
 
 
 def isotonic(points: Sequence[tuple[float, bool]], min_block: int = _MIN_BLOCK) -> FieldMap:

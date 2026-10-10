@@ -25,6 +25,7 @@ from pathlib import Path
 import pymupdf
 
 from hwsets.api.storage import atomic_write_text
+from hwsets.calibration import load as load_calibration
 from hwsets.cli import RenderMode, _ingest_one
 from hwsets.ingest import render
 from hwsets.ingest.store import TokenStore, doc_id_for, sha256_file
@@ -84,7 +85,8 @@ def prepare(data: Path, doc_id: str, pdf: Path | None) -> int | None:
         return None
 
     source_pdf, pages_info, tokens = store.load_all(doc_id)
-    result = extract(source_pdf, pages_info, tokens, store.load_rules(doc_id))
+    calibration = load_calibration(data / "calibration.json")
+    result = extract(source_pdf, pages_info, tokens, store.load_rules(doc_id), calibration)
     atomic_write_text(data / "results" / f"{doc_id}.json", result.model_dump_json(indent=1))
     if pdf is not None and result.hardware_pages:
         sha = store.resolve(doc_id)["sha256"]

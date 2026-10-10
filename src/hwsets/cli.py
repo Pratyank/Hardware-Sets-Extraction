@@ -14,6 +14,7 @@ import typer
 from hwsets.calibration import FIELDS as CAL_FIELDS
 from hwsets.calibration import Calibration
 from hwsets.calibration import fit as fit_calibration
+from hwsets.calibration import load as load_calibration
 from hwsets.eval import aggregate, evaluate_document, write_report
 from hwsets.export import to_flat
 from hwsets.ingest import render
@@ -185,9 +186,7 @@ CALIBRATION = DATA / "calibration.json"
 
 
 def _load_calibration() -> Calibration | None:
-    if not CALIBRATION.exists():
-        return None
-    return Calibration.model_validate_json(CALIBRATION.read_text("utf-8"))
+    return load_calibration(CALIBRATION)
 
 
 def _extract_one(doc_id: str, *, calibrated: bool = True) -> DocumentResult:

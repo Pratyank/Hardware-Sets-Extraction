@@ -22,6 +22,7 @@ from pathlib import Path
 from typing import BinaryIO
 
 from hwsets.api.storage import atomic_write_text
+from hwsets.calibration import load as load_calibration
 from hwsets.ingest import render
 from hwsets.ingest.pdf import extract_document_with_rules
 from hwsets.ingest.store import TokenStore
@@ -137,7 +138,8 @@ def ingest_and_extract(data_dir: Path, saved: SavedUpload, filename: str | None)
     pages = store.pages(saved.sha256)
     tokens_by_page = {p.page: store.page_tokens(saved.sha256, p.page) for p in pages}
     rules_by_page = {p.page: store.page_rules(saved.sha256, p.page) for p in pages}
-    result = extract(source_pdf, pages, tokens_by_page, rules_by_page)
+    calibration = load_calibration(data_dir / "calibration.json")
+    result = extract(source_pdf, pages, tokens_by_page, rules_by_page, calibration)
 
     candidates = [p.page for p in pages if score_page(p.page, tokens_by_page[p.page]).is_candidate]
     to_render = sorted(set(result.hardware_pages) | set(candidates))[:_MAX_RENDER_PAGES]
