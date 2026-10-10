@@ -266,7 +266,7 @@ Where AI output was not trusted:
   from extractor code and output, and the CLI refuses to run gold books until labels are final. Labels were
   spot-checked against page images, and a labelling-convention disagreement was resolved explicitly and logged.
 - **Every rule is tested.**
-  - 298 tests: unit tests, Hypothesis property tests and golden regression tests.
+  - 315 tests: unit tests, Hypothesis property tests and golden regression tests.
   - The property tests check:
     - role assignment does not change when columns are permuted;
     - collision codes take their column's role;
