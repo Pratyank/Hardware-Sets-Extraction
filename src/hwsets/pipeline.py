@@ -143,6 +143,7 @@ def _layout_model(
         )
         and "catalog" not in ra.roles
     )
+    known_items = _known_items(spans, doc, pages, xs, ra.roles)
     mfr_prefix = False
     if "mfr" not in ra.roles and "catalog" in ra.roles:
         cat_vals = per_col[ra.roles.index("catalog")]
@@ -153,9 +154,40 @@ def _layout_model(
         )
         mfr_prefix = bool(cat_vals) and with_prefix >= 0.5 * len(cat_vals)
     model = ColumnModel(
-        xs=xs, roles=ra.roles, margins=ra.margins, split_merged=split_merged, mfr_prefix=mfr_prefix
+        xs=xs,
+        roles=ra.roles,
+        margins=ra.margins,
+        split_merged=split_merged,
+        mfr_prefix=mfr_prefix,
+        known_items=known_items,
     )
     return model, diag
+
+
+def _known_items(
+    spans: Sequence[Span],
+    doc: _Doc,
+    pages: set[int],
+    xs: tuple[float, ...],
+    roles: tuple[str, ...],
+) -> frozenset[str]:
+    """Descriptions of quantity-led rows in this layout (document-level item vocabulary)."""
+    if "qty" not in roles or "description" not in roles:
+        return frozenset()
+    out: set[str] = set()
+    for sp in spans:
+        for ln, kind in zip(sp.lines, sp.kinds, strict=True):
+            if kind != Kind.ROW or ln.page not in pages:
+                continue
+            by_role: dict[str, list[str]] = {}
+            for i in ln.token_ids:
+                col = column_of(doc.toks[i].bbox[0], xs)
+                if col >= 0:
+                    by_role.setdefault(roles[col], []).append(doc.toks[i].text)
+            qty = " ".join(by_role.get("qty", []))
+            if qty[:1].isdigit() and by_role.get("description"):
+                out.add(" ".join(w.upper() for w in by_role["description"]).strip(" .,:"))
+    return frozenset(out)
 
 
 def _field_from(tokens: Sequence[str], doc: _Doc, conf: float) -> Field[str]:

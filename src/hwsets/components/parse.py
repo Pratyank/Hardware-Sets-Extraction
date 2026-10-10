@@ -21,7 +21,7 @@ from __future__ import annotations
 
 import itertools
 import re
-from collections.abc import Mapping, Sequence
+from collections.abc import Iterable, Mapping, Sequence
 from dataclasses import dataclass, field
 
 from hwsets.columns.features import QTY_RE, is_catalog_token
@@ -58,6 +58,9 @@ class ColumnModel:
     # Most catalog cells read "MANUFACTURER - PRODUCT" (no manufacturer column): split every
     # such cell at its first " - ", a document-level decision rather than a per-row guess.
     mfr_prefix: bool = False
+    # Item descriptions printed on quantity-led rows anywhere in this layout ("SEALS"). A
+    # quantity-less line whose description is one of them is a new item, not a wrapped cell.
+    known_items: frozenset[str] = frozenset()
 
     def x_of(self, role: str) -> float | None:
         for x, r in zip(self.xs, self.roles, strict=True):
@@ -196,10 +199,33 @@ def assemble_rows(
         ruled_break = bool(
             rows and value_roles and rows[-1].lines and rules.separated(rows[-1].lines[-1], ln)
         )
+        desc_text = _norm_desc(
+            t.text for t, r in zip(tokens, roles, strict=True) if r == "description"
+        )
+        # Ruled tables already mark row boundaries exactly, so the vocabulary heuristic is only
+        # used where no rules are drawn.
+        known_item = bool(
+            rows
+            and desc_text
+            and desc_text in model.known_items
+            and len(value_roles) >= 2
+            and not rules.has_rules(ln.page)
+        )
+        notes_only = set(roles) - {"ignore", "left"} == {"notes"}
+        if (
+            rows
+            and notes_only
+            and rules.has_rules(ln.page)
+            and rules.separated(rows[-1].lines[-1], ln)
+        ):
+            set_notes.extend(ln.token_ids)  # a ruled row holding only a remark: set-level note
+            last_bottom, last_page = ln.bbox[3], ln.page
+            continue
         if (
             _starts_row(roles, tokens, model)
             or (rows and len(value_roles) >= 3)
             or ruled_break  # a drawn table border closes the previous row
+            or known_item  # a description this document prints as its own item elsewhere
         ):
             # A line filling three value columns is a new item even without a quantity
             # ("GASKETING / SWEEP | PEMKO - ... | BLACK"); wrapped cells rarely span three.
@@ -227,6 +253,10 @@ def assemble_rows(
         for frag in pending:
             _add_line(rows[-1], frag, toks, model)
     return rows, set_notes
+
+
+def _norm_desc(words: Iterable[str]) -> str:
+    return " ".join(w.upper() for w in words).strip(" .,:")
 
 
 def _add_line(row: Row, ln: Line, toks: Mapping[str, Token], model: ColumnModel) -> None:
