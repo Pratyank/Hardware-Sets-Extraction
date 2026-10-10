@@ -67,7 +67,10 @@ class ColumnModel:
 
     def role_of(self, tok: Token) -> str:
         col = column_of(tok.bbox[0], self.xs)
-        return "left" if col < 0 else self.roles[col]
+        if col < 0:
+            # Left of every anchor: a sparse quantity column (too few values to form an anchor).
+            return "qty" if _INT_RE.match(tok.text) and "qty" not in self.roles else "left"
+        return self.roles[col]
 
     def margin_of(self, role: str) -> float:
         for r, m in zip(self.roles, self.margins, strict=True):
@@ -103,7 +106,7 @@ def _is_prose(line: Line, toks: Mapping[str, Token], model: ColumnModel) -> bool
     if not tokens:
         return False
     if model.xs and tokens[0].bbox[0] < model.xs[0] - 6 and len(tokens) >= 3:
-        return True
+        return model.role_of(tokens[0]) != "qty"
     gap = cell_gap(tokens)
     gaps = sum(1 for a, b in itertools.pairwise(tokens) if b.bbox[0] - a.bbox[2] > gap)
     cols = {column_of(t.bbox[0], model.xs) for t in tokens}

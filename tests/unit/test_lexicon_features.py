@@ -71,11 +71,6 @@ def test_catalog_tokens() -> None:
     assert not is_catalog_value("3 HINGES")
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="BUG: features.is_catalog_value strips any leading 1-4 digit number as a count, so a "
-    "4-digit model number followed by sizes ('8400 10 X 34', Ives kick plate) is not a catalog",
-)
 def test_four_digit_model_number_is_catalog_not_a_count() -> None:
     assert is_catalog_value("8400 10 X 34")
 

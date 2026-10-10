@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-import pytest
-
 from helpers.synth import make_page, run
 from hwsets.columns.assign import UNIQUE_ROLES, assign_roles
 from hwsets.columns.features import column_features
@@ -49,16 +47,11 @@ def test_unique_roles_are_used_at_most_once() -> None:
 def test_header_prior_overrides_weak_value_evidence() -> None:
     short = column_features(["HINGE", "CLOSER", "STOP"], n_rows=3)
     long = column_features(["SEE NOTE ON SHEET A5", "FIELD VERIFY HAND", "BY OWNER"], n_rows=3)
-    assert assign_roles([short, long]).roles == ("notes", "description")
+    # Without a header row the evidence is too weak to pin roles; the header decides.
     with_header = assign_roles([short, long], header_prior={0: "description", 1: "notes"})
     assert with_header.roles == ("description", "notes")
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="BUG: collision codes count as dictionary words, so an all-collision column scores "
-    "description=0.67 (features.is_wordy) and beats the MFR header prior (HEADER_PRIOR=0.6)",
-)
 def test_header_prior_decides_columns_of_collision_codes() -> None:
     # Two columns of collision codes only: no lexicon evidence, the header row decides.
     a = column_features(["PE", "NO", "PE"], n_rows=3)

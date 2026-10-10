@@ -120,15 +120,26 @@ def infer_layouts(
     page_anchors = {p: [a.x for a in cluster_anchors(lines_by_page[p], toks)] for p in pages}
     groups: list[list[int]] = []
     group_xs: list[list[float]] = []
+    sparse: list[int] = []  # pages with too few rows to estimate their own anchors
     for p in pages:
         xs = page_anchors[p]
+        if len(lines_by_page[p]) < 3:
+            sparse.append(p)
+            continue
         for gi, gxs in enumerate(group_xs):
-            if _compatible(xs, gxs) or len(lines_by_page[p]) < 3:
+            if _compatible(xs, gxs):
                 groups[gi].append(p)
                 break
         else:
             groups.append([p])
             group_xs.append(xs)
+    if not groups:
+        groups = [sparse]
+    else:
+        for p in sparse:  # join the nearest page's layout
+            nearest = min(range(len(groups)), key=lambda gi: min(abs(q - p) for q in groups[gi]))
+            groups[nearest].append(p)
+    groups = [sorted(g) for g in groups]
     layouts: list[Layout] = []
     for g in groups:
         lines = [ln for p in g for ln in lines_by_page[p]]

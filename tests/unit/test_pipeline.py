@@ -214,15 +214,10 @@ def test_normalize_set_number(raw: str, display: str) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Known bugs (xfail, strict): each documents a component silently lost.
+# Regression tests: each once documented a component silently lost (fixed).
 # ---------------------------------------------------------------------------
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="BUG: layout.columns.infer_layouts: a first hardware page with a single component row "
-    "gets no anchors (support < 2) and forms its own empty layout, so its row is dropped to notes",
-)
 def test_single_row_first_page_keeps_its_component() -> None:
     p1 = make_page(1, [("HARDWARE SET NO. 1", H), "3|EA|HINGE|5BB1 4.5 X 4.5|652|IVE"])
     p2 = make_page(
@@ -238,11 +233,6 @@ def test_single_row_first_page_keeps_its_component() -> None:
     assert [len(s.components) for s in out.sets] == [2, 2]
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="BUG: a quantity column with < 2 values gets no anchor; the row's qty token then sits "
-    "left of every anchor and parse._is_prose sends the whole row to set notes",
-)
 def test_sparse_quantity_column_keeps_its_component() -> None:
     page = make_page(
         1,

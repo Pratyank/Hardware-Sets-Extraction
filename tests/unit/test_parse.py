@@ -5,8 +5,6 @@ from __future__ import annotations
 from collections.abc import Sequence
 from typing import Any
 
-import pytest
-
 from helpers.synth import COL_X, make_page
 from hwsets.columns.legend import Legend, LegendEntry
 from hwsets.components.parse import ColumnModel, ParsedRows, parse_rows
@@ -70,8 +68,8 @@ def test_note_sub_lines_attach_to_the_component_above() -> None:
     parsed, text = _parse(
         [
             "1|EA|LOCKSET|ND50PD RHO|626|SCH",
-            ("Note: provide with construction core", {"x": 140}),
-            ("Properties: fire rated", {"x": 140}),
+            ("Note: provide with construction core", {"x": 152}),
+            ("Properties: fire rated", {"x": 152}),
             "1|EA|CLOSER|4040XP|689|LCN",
         ]
     )
@@ -80,6 +78,20 @@ def test_note_sub_lines_attach_to_the_component_above() -> None:
     assert _words(lock.notes.token_ids, text) == lock.notes.value
     assert closer.notes.value is None
     assert parsed.set_note_tokens == []
+
+
+def test_notes_aligned_with_the_description_column_are_set_notes() -> None:
+    """Only a note indented under an item belongs to it; one aligned with the description
+    column is about the whole set (gold convention, see DECISIONS.md)."""
+    parsed, text = _parse(
+        [
+            "1|EA|LOCKSET|ND50PD RHO|626|SCH",
+            ("NOTE: FURNISH SEALS AT RATED DOORS", {"x": 140}),
+        ]
+    )
+    (lock,) = parsed.components
+    assert lock.notes.value is None
+    assert _words(parsed.set_note_tokens, text) == "NOTE: FURNISH SEALS AT RATED DOORS"
 
 
 def test_numbered_notes_are_set_notes() -> None:
@@ -150,22 +162,12 @@ def test_merged_manufacturer_and_catalog_split_without_mfr_column() -> None:
     assert c.finish.value == "652"
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="BUG: parse._join glues a standalone '-' token to the next token ('IVES -5BB1'), so "
-    "_MFR_SPLIT_RE (needs whitespace on both sides) never matches an ASCII-hyphen separator",
-)
 def test_merged_manufacturer_split_with_ascii_hyphen_token() -> None:
     parsed, _ = _parse(["3|HINGES|IVES - 5BB1 4.5 x 4.5|652"], MODEL_NO_MFR)
     (c,) = parsed.components
     assert (c.mfr.value, c.catalog_number.value) == ("IVES", "5BB1 4.5 x 4.5")
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="BUG: parse._join treats a standalone '-' token as a wrapped code ('630-' + '316') "
-    "and drops the space after it, changing the printed text ('KICK -8400')",
-)
 def test_standalone_hyphen_token_keeps_its_spacing() -> None:
     parsed, _ = _parse(["1|PLATE|KICK - 8400 10 x 34|630"], MODEL_NO_MFR)
     assert parsed.components[0].catalog_number.value == "KICK - 8400 10 x 34"
@@ -194,7 +196,7 @@ def test_note_rows_become_set_notes() -> None:
 
 def test_description_and_catalog_split_when_one_column_holds_both() -> None:
     model = ColumnModel(xs=(72.0, 110.0, 460.0), roles=("qty", "description", "mfr"),
-                        margins=(0.8,) * 3)  # fmt: skip
+                        margins=(0.8,) * 3, split_merged=True)  # fmt: skip
     parsed, _ = _parse(["1|DOOR CLOSER 4040XP REG ARM|LCN"], model)
     (c,) = parsed.components
     assert c.description.value == "DOOR CLOSER"

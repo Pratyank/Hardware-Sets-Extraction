@@ -59,8 +59,10 @@ def is_catalog_token(tok: str) -> bool:
 
 def is_catalog_value(text: str) -> bool:
     toks = text.split()
-    if toks and re.fullmatch(r"\d{1,4}", toks[0]):
-        toks = toks[1:]  # a leading count shares the cell in some layouts ("2 Continuous Hinge")
+    if len(toks) > 1 and re.fullmatch(r"\d{1,3}", toks[0]) and toks[1][:1].isalpha():
+        # A leading count shares the cell in some layouts ("2 Continuous Hinge"); a number
+        # followed by sizes is a model ("8400 10 X 34").
+        toks = toks[1:]
     return any(is_catalog_token(t) for t in toks)
 
 
@@ -68,7 +70,18 @@ def is_wordy(text: str) -> bool:
     toks = text.split()
     if not toks:
         return False
-    return sum(bool(_WORD.match(t)) and len(t) > 1 for t in toks) / len(toks) >= 0.6
+
+    def word(t: str) -> bool:
+        # Ambiguous codes (PE, NO, AL) and lexicon codes are not dictionary words.
+        return (
+            bool(_WORD.match(t))
+            and len(t) > 1
+            and norm_code(t) not in COLLISIONS
+            and not is_mfr_code(t)
+            and not is_finish_value(t)
+        )
+
+    return sum(word(t) for t in toks) / len(toks) >= 0.6
 
 
 def _qty_share(vals: Sequence[str]) -> float:

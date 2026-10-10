@@ -31,7 +31,7 @@ DESCRIPTIONS = (
     "COORDINATOR",
 )
 # "8400 10 X 34" is left out: a book whose whole catalog column is that one value loses it (see
-# test_four_digit_model_number_is_catalog_not_a_count, an xfail bug test).
+# test_four_digit_model_number_is_catalog_not_a_count, a regression test).
 CATALOGS = ("5BB1 4.5 X 4.5", "ND50PD RHO", "4040XP", "8400 B4E", "WS406", "SR64", "171A",
             "315CN", "99L-F", "COR72")  # fmt: skip
 FINISHES = ("626", "630", "652", "689", "US26D", "613")
