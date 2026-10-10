@@ -11,10 +11,13 @@ from pathlib import Path
 from statistics import fmean
 
 from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi.concurrency import run_in_threadpool
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
+from starlette.datastructures import UploadFile
 
+from hwsets.api import upload
 from hwsets.api.storage import DataStore, DocMeta, InvalidCorrectionError, NotFoundError
 from hwsets.ingest import render
 from hwsets.models import DocumentResult, FlatDocument, HardwareSet, PageInfo, Token
@@ -43,7 +46,18 @@ class SaveResponse(BaseModel):
     set: HardwareSet
 
 
-def create_app(data_dir: Path) -> FastAPI:
+class UploadResponse(BaseModel):
+    doc_id: str
+    n_sets: int
+    n_pages: int
+    hardware_pages: list[int]
+
+
+# Multipart framing around the file part; Content-Length above limit + slack is refused early.
+_MULTIPART_SLACK = 64 * 1024
+
+
+def create_app(data_dir: Path, *, max_upload_bytes: int = upload.MAX_UPLOAD_BYTES) -> FastAPI:
     store = DataStore(data_dir)
     app = FastAPI(title="hwsets review", version="0.1.0")
 
@@ -54,6 +68,10 @@ def create_app(data_dir: Path) -> FastAPI:
     @app.exception_handler(InvalidCorrectionError)
     async def _invalid(_: Request, exc: InvalidCorrectionError) -> JSONResponse:
         return JSONResponse(status_code=422, content={"detail": str(exc)})
+
+    @app.exception_handler(upload.UploadError)
+    async def _upload_error(_: Request, exc: upload.UploadError) -> JSONResponse:
+        return JSONResponse(status_code=exc.status_code, content={"detail": exc.detail})
 
     def _doc(doc_id: str) -> DocMeta:
         return store.doc(doc_id)
@@ -79,6 +97,37 @@ def create_app(data_dir: Path) -> FastAPI:
                 )
             )
         return out
+
+    @app.post("/api/docs/upload", response_model=UploadResponse)
+    async def upload_doc(request: Request) -> UploadResponse:
+        """Multipart field ``file``: a PDF up to the size limit. Ingests and extracts it."""
+        length = request.headers.get("content-length")
+        if length and length.isdigit() and int(length) > max_upload_bytes + _MULTIPART_SLACK:
+            raise upload.UploadError(413, "upload exceeds the size limit")
+        ctype = request.headers.get("content-type", "")
+        if not ctype.lower().startswith("multipart/form-data"):
+            raise upload.UploadError(415, "expected multipart/form-data with a 'file' field")
+        form = await request.form(max_files=1, max_fields=4)
+        try:
+            item = form.get("file")
+            if not isinstance(item, UploadFile):
+                raise upload.UploadError(422, "missing 'file' field")
+            upload.check_content_type(item.content_type)
+            saved = await run_in_threadpool(
+                upload.save_upload,
+                item.file,
+                store.raw_dir / upload.UPLOAD_PREFIX,
+                max_upload_bytes,
+            )
+            res = await run_in_threadpool(upload.ingest_and_extract, data_dir, saved, item.filename)
+        finally:
+            await form.close()
+        return UploadResponse(
+            doc_id=res.doc_id,
+            n_sets=res.n_sets,
+            n_pages=res.n_pages,
+            hardware_pages=res.hardware_pages,
+        )
 
     @app.get("/api/docs/{doc_id}/result", response_model=DocumentResult)
     def get_result(doc_id: str) -> DocumentResult:
