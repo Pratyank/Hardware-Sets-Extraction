@@ -3,8 +3,9 @@
 import json
 import sys
 from collections import Counter
+from pathlib import Path
 
-r = json.load(open("eval/report.json"))
+r = json.loads(Path("eval/report.json").read_text())
 want = sys.argv[1] if len(sys.argv) > 1 else None
 n_show = int(sys.argv[2]) if len(sys.argv) > 2 else 6
 for d in r["docs"]:

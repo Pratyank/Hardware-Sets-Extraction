@@ -2,9 +2,10 @@
 
 import json
 import sys
+from pathlib import Path
 
 doc, page = sys.argv[1], int(sys.argv[2])
-d = json.load(open(f"data/gold/{doc}.gold.json"))
+d = json.loads(Path(f"data/gold/{doc}.gold.json").read_text())
 for s in d["sets"]:
     if page not in s["location"]["pages"]:
         continue
