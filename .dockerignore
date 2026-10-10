@@ -1,0 +1,27 @@
+# Environments and caches
+.venv
+**/__pycache__
+**/*.pyc
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.hypothesis
+.git
+.claude
+.claude-flow
+.swarm
+node_modules
+
+# Large / derived data: mounted at runtime instead
+data/raw
+data/tokens
+data/pages
+data/results
+data/corrections
+data/llm_cache
+**/*.pdf
+
+# Not needed in the image
+tests
+eval
+docs
