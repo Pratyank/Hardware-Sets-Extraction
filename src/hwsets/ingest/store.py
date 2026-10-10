@@ -133,6 +133,13 @@ class TokenStore:
         wanted = [p.page for p in self.pages(sha256)] if pages is None else sorted(set(pages))
         return [t for p in wanted for t in self.page_tokens(sha256, p)]
 
+    def load_all(self, doc_id: str) -> tuple[str, list[PageInfo], dict[int, list[Token]]]:
+        """(source_pdf, pages, tokens_by_page) for one ingested document."""
+        meta = self.resolve(doc_id)
+        sha = meta["sha256"]
+        pages = self.pages(sha)
+        return meta["source_pdf"], pages, {p.page: self.page_tokens(sha, p.page) for p in pages}
+
     def resolve(self, doc_id: str) -> dict[str, Any]:
         try:
             return self.index()[doc_id]

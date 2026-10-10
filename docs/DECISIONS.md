@@ -37,3 +37,39 @@ Checkpoint reports are kept here too.
 - **Gold labelling runs in parallel:** 4 agents with 2 books each. They work from page images, are allowed the
   raw `hwsets tokens` dump for exact spellings, and are forbidden from extractor code or output. The
   conventions are in `docs/gold-guidelines.md`.
+
+## 2026-10-10: Core pipeline (Phases 2–5b), built on dev books only
+
+- **Header-driven section detection replaces lexicon page scoring.** The survey showed the lexicon score misses
+  about 30% of set pages, for example jc-ryan, where headers read "Set:" and no finish codes are printed.
+  Hardware pages are now the pages holding headers of the induced signature, plus continuation pages, ending
+  at `END OF SECTION`. Lexicon scoring is kept only as a diagnostic (`hwsets pages`).
+- **Header induction:** one permissive grammar parses every header candidate, and the signature with the most
+  support wins. A candidate followed by component rows gains score; one with nothing after it, and no NOT USED,
+  loses score. This keeps spec prose ("Group 1 …", "Set 2 …") out. It fixed usi and forest-park, which have a
+  single set each.
+- **Chrome zone widened from 8% to 12%.** The shubie running header is 4 lines deep and ends at y=72 of 792.
+  Set-header lines are protected from being treated as chrome, so digit normalization cannot collapse them.
+- **Column roles are per layout cluster,** not per document. One PDF (morris-bank) binds two schedules with
+  different column x positions. Two pages share a layout when at least 80% of their anchors align within 9 pt.
+- **Finish legends are role evidence too.** `10BE`, `EB` and `313` (morris-bank) are not in the BHMA lexicon,
+  but the book's own finish legend defines them. Quantity evidence is discounted when the column's median
+  number is above 100, because BHMA finish numbers look like counts.
+- **Multi-set headers** ("#B1 and #B2"): one set per id. They share the same lines and components, and only
+  the first id owns the header tokens.
+- **Rows printed as `1 NOTE …`** go to the set's notes, not to components.
+- **NOT USED** is recognized only on the header line or on the first line after it, as the plan specifies.
+  "N/A" elsewhere is ordinary text; morris-bank wraps "x N/A" inside door descriptions.
+- **Parenthetical text stays in its cell.** It is not moved to notes, because whether a parenthetical is a note
+  or part of a catalog is subjective. Notes come from note columns, `Note:` / `Properties:` sub-lines and
+  set-level lines.
+- **Set numbers are normalized for display** ("001" → "1"), as the plan says. The raw tokens stay in
+  `token_ids`.
+- **Dev results** (the 10 dev books and 21 negatives): all 21 negatives give 0 sets. Set counts match the
+  survey on 9 of 10 dev books. starhardware gives 70 against about 74, missing its multi-set and
+  sentence-form headers; its ruled-grid layout is the weakest case.
+- **Incident:** I ran `hwsets extract` once on lyons, a gold book, while its gold file was still being drafted.
+  I saw only the summary counts (29 sets, 156 components) and deleted the result immediately. The gold agent
+  works only from page images and never reads extractor output, so its labels are unaffected. As a fix, the
+  CLI now refuses gold books until their gold file has `"_final": true`, and refuses held-out books without
+  `--allow-holdout`.

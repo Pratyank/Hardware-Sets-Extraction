@@ -7,15 +7,18 @@ import logging
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from enum import StrEnum
 from pathlib import Path
-from typing import Annotated
+from typing import Annotated, Any
 
 import typer
 
+from hwsets.eval import aggregate, evaluate_document, write_report
+from hwsets.export import to_flat
 from hwsets.ingest import render
 from hwsets.ingest.pdf import extract_document
 from hwsets.ingest.store import TokenStore, doc_id_for, sha256_file
 from hwsets.layout.pages import PageScore, score_page
-from hwsets.models import FlatDocument, Token
+from hwsets.models import DocumentResult, FlatDocument, Token
+from hwsets.pipeline import extract
 
 app = typer.Typer(add_completion=False, no_args_is_help=True)
 log = logging.getLogger("hwsets")
@@ -124,6 +127,131 @@ def pages(
             f"{flag} p{s.page:<5} score={s.score:<6} kw={s.keyword_hits:<3} "
             f"mfr={s.mfr_hits:<3} fin={s.finish_hits:<3} tokens={s.n_tokens}"
         )
+
+
+SPLITS = DATA / "splits.json"
+RESULTS = DATA / "results"
+GOLD = DATA / "gold"
+
+
+class Split(StrEnum):
+    dev = "dev"
+    gold = "gold"
+    holdout = "holdout"
+    all = "all"
+
+
+def _splits() -> dict[str, Any]:
+    data: dict[str, Any] = json.loads(SPLITS.read_text("utf-8"))
+    return data
+
+
+def _docs_for(split: Split) -> list[str]:
+    sp = _splits()
+    groups = {
+        Split.dev: list(sp["dev"]) + list(sp["negatives"]),
+        Split.gold: list(sp["gold"]),
+        Split.holdout: list(sp["holdout"]),
+    }
+    if split is Split.all:
+        return [d for g in (Split.dev, Split.gold, Split.holdout) for d in groups[g]]
+    return groups[split]
+
+
+def _guard(doc_id: str, allow_holdout: bool) -> None:
+    """Hold-out discipline and gold independence, enforced rather than remembered."""
+    sp = _splits()
+    if doc_id in sp["holdout"] and not allow_holdout:
+        raise typer.BadParameter(f"{doc_id} is a held-out book; pass --allow-holdout (final eval)")
+    if doc_id in sp["gold"] and not _gold_final(doc_id):
+        raise typer.BadParameter(
+            f'{doc_id} is a gold book whose gold file is not final yet (needs "_final": true)'
+        )
+
+
+def _gold_final(doc_id: str) -> bool:
+    """Gold labels are drafted independently of the extractor; a book may only be extracted
+    once its gold file has been reviewed and marked final."""
+    path = GOLD / f"{doc_id}.gold.json"
+    if not path.exists():
+        return False
+    return bool(json.loads(path.read_text("utf-8")).get("_final"))
+
+
+def _extract_one(doc_id: str) -> DocumentResult:
+    store = TokenStore(TOKENS)
+    source_pdf, pages_info, tokens = store.load_all(doc_id)
+    return extract(source_pdf, pages_info, tokens)
+
+
+def _write_result(doc_id: str, result: DocumentResult, flat: bool) -> Path:
+    RESULTS.mkdir(parents=True, exist_ok=True)
+    path = RESULTS / f"{doc_id}.json"
+    path.write_text(result.model_dump_json(indent=1), encoding="utf-8")
+    if flat:
+        (RESULTS / f"{doc_id}.flat.json").write_text(
+            to_flat(result).model_dump_json(indent=1), encoding="utf-8"
+        )
+    return path
+
+
+@app.command("extract")
+def extract_cmd(
+    doc_id: Annotated[str | None, typer.Argument(help="Document id (omit with --split)")] = None,
+    split: Annotated[Split | None, typer.Option(help="Extract every book of a split")] = None,
+    flat: Annotated[bool, typer.Option(help="Also write the brief's plain JSON shape")] = False,
+    allow_holdout: bool = False,
+    stdout: Annotated[bool, typer.Option(help="Print the JSON instead of writing it")] = False,
+) -> None:
+    """Extract hardware sets into ``data/results/<doc_id>.json``."""
+    if (doc_id is None) == (split is None):
+        raise typer.BadParameter("give exactly one of DOC_ID or --split")
+    docs = [doc_id] if doc_id is not None else _docs_for(split or Split.dev)
+    for d in docs:
+        try:
+            _guard(d, allow_holdout)
+        except typer.BadParameter as exc:
+            typer.echo(f"skip {d}: {exc.message}", err=True)
+            continue
+        result = _extract_one(d)
+        if stdout:
+            payload = to_flat(result) if flat else result
+            typer.echo(payload.model_dump_json(indent=1))
+            continue
+        path = _write_result(d, result, flat)
+        n_comp = sum(len(s.components) for s in result.sets)
+        typer.echo(f"{d}: sets={len(result.sets)} components={n_comp} -> {path}")
+
+
+@app.command("eval")
+def eval_cmd(
+    split: Annotated[
+        Split, typer.Option(help="Books to evaluate (must have gold files)")
+    ] = Split.gold,
+    out: Annotated[Path, typer.Option(help="Report directory")] = Path("eval"),
+    allow_holdout: bool = False,
+    ui_base: str = "http://localhost:8000",
+) -> None:
+    """Extract and score every book that has a gold file; writes report.md / report.json."""
+    docs = [d for d in _docs_for(split) if _gold_final(d)]
+    if not docs:
+        raise typer.BadParameter(f"no gold files for split {split.value}")
+    evals = []
+    for d in docs:
+        _guard(d, allow_holdout)
+        result = _extract_one(d)
+        _write_result(d, result, flat=False)
+        gold = FlatDocument.model_validate_json((GOLD / f"{d}.gold.json").read_text("utf-8"))
+        de = evaluate_document(result, gold, doc_id=d)
+        evals.append(de)
+        m = de.metrics
+        typer.echo(
+            f"{d[:48]:48} set_R={m.set_recall:.3f} set_P={m.set_precision:.3f} "
+            f"fully={m.set_fully_correct:.3f}"
+        )
+    summary = aggregate(evals)
+    write_report(summary, evals, out, ui_base=ui_base)
+    typer.echo(f"report: {out / 'report.md'}")
 
 
 @app.command("render")
