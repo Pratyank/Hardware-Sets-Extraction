@@ -1,4 +1,4 @@
-.PHONY: setup ingest test lint schema
+.PHONY: setup ingest test lint schema check
 
 setup:
 	uv sync
@@ -16,3 +16,5 @@ lint:
 
 schema:
 	uv run python -m hwsets.schema
+
+check: lint test

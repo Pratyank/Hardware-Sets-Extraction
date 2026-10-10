@@ -111,13 +111,58 @@ def split_spans(stream: Sequence[Line], headers: Mapping[str, HeaderParse]) -> l
     return spans
 
 
+_INTRO_RE = re.compile(
+    r"^(?:provide\s+each|each\s+(?:to\s+have|opening\s+to\s+receive))", re.IGNORECASE
+)
+_INTRO_WINDOW = 30
+
+
+def _table_intro_index(span: Span, toks: Mapping[str, Token]) -> int | None:
+    for i, ln in enumerate(span.lines[1 : 1 + _INTRO_WINDOW], start=1):
+        text = _content_text(ln).strip()
+        if _INTRO_RE.match(text) or header_row_roles([toks[t].text for t in ln.token_ids]):
+            return i
+        if _QTY_LEAD_RE.match(text) and looks_like_row(ln, toks):
+            return None  # rows started before any intro: no preamble to skip
+    return None
+
+
+def looks_like_row(ln: Line, toks: Mapping[str, Token]) -> bool:
+    words = [toks[t].text for t in ln.token_ids]
+    return len(words) >= 3 and any(
+        is_mfr_code(w) or is_finish_code(w) or unit_code(w) for w in words
+    )
+
+
+def _is_title(text: str, words: Sequence[str]) -> bool:
+    """An upper-case set title ("ENTRANCE DOORS"), not a row: no codes, units or model numbers."""
+    return (
+        bool(words)
+        and text.isupper()
+        and not any(is_mfr_code(w) or is_finish_code(w) for w in words)
+        and not words[0][:1].isdigit()
+        and not any(unit_code(w) or is_catalog_token(w) for w in words)
+    )
+
+
 def classify(span: Span, toks: Mapping[str, Token]) -> list[Kind]:
     kinds: list[Kind] = [Kind.HEADER]
     seen_row = False
     in_block = False  # inside a prose block introduced by "Operational Description:" etc.
+    # Lines between the set header and the item-table intro ("Provide each ... with the
+    # following:" or a column-header row) are the set's preamble: door grids, room names, notes.
+    intro = _table_intro_index(span, toks)
     for i, ln in enumerate(span.lines[1:], start=1):
         text = _content_text(ln).strip()
         words = [toks[t].text for t in ln.token_ids]
+        if intro is not None and i < intro:
+            if i == 1 and NOT_USED_RE.fullmatch(text.strip(" .:-()")):
+                kinds.append(Kind.NOT_USED)
+            elif i == 1 and (_DESCRIPTION_RE.match(text) or _is_title(text, words)):
+                kinds.append(Kind.DESCRIPTION)
+            else:
+                kinds.append(Kind.SET_LEVEL)
+            continue
         if in_block:
             if _QTY_LEAD_RE.match(text) or header_row_roles(words):
                 in_block = False  # a quantity-led row ends the block
@@ -149,15 +194,7 @@ def classify(span: Span, toks: Mapping[str, Token]) -> list[Kind]:
             or (not seen_row and (is_door_list(ln, toks) or bool(_DIMENSION_RE.match(text))))
         ):
             kinds.append(Kind.SET_LEVEL)
-        elif (
-            not seen_row
-            and i == 1
-            and text.isupper()
-            and not any(is_mfr_code(w) or is_finish_code(w) for w in words)
-            and not words[0][:1].isdigit()
-            # A row, not a title: it carries a unit or a model number.
-            and not any(unit_code(w) or is_catalog_token(w) for w in words)
-        ):
+        elif not seen_row and i == 1 and _is_title(text, words):
             kinds.append(Kind.DESCRIPTION)
         else:
             kinds.append(Kind.ROW)
