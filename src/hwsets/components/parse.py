@@ -19,6 +19,7 @@ Pure functions.
 
 from __future__ import annotations
 
+import dataclasses
 import itertools
 import re
 from collections.abc import Iterable, Mapping, Sequence
@@ -61,6 +62,8 @@ class ColumnModel:
     # Item descriptions printed on quantity-led rows anywhere in this layout ("SEALS"). A
     # quantity-less line whose description is one of them is a new item, not a wrapped cell.
     known_items: frozenset[str] = frozenset()
+    # Positional-template roles per token id (list format without aligned columns, template.py).
+    overrides: Mapping[str, str] = dataclasses.field(default_factory=dict)
 
     def x_of(self, role: str) -> float | None:
         for x, r in zip(self.xs, self.roles, strict=True):
@@ -69,6 +72,8 @@ class ColumnModel:
         return None
 
     def role_of(self, tok: Token) -> str:
+        if tok.id in self.overrides:
+            return self.overrides[tok.id]
         col = column_of(tok.bbox[0], self.xs)
         if col < 0:
             # Left of every anchor: a sparse quantity column (too few values to form an anchor).
@@ -82,7 +87,7 @@ class ColumnModel:
         return 0.0
 
     def has(self, role: str) -> bool:
-        return role in self.roles
+        return role in self.roles or (bool(self.overrides) and role in {"qty", "mfr", "finish"})
 
 
 @dataclass(slots=True)

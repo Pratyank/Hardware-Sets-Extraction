@@ -20,7 +20,14 @@ from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 
 from hwsets.columns.features import is_catalog_token
-from hwsets.columns.lexicon import COLLISIONS, is_finish_value, is_mfr_code, norm_code, unit_code
+from hwsets.columns.lexicon import (
+    COLLISIONS,
+    FINISH_CODES,
+    is_finish_value,
+    is_mfr_code,
+    norm_code,
+    unit_code,
+)
 from hwsets.models import Line, Token
 
 _INT_RE = re.compile(r"^\d{1,5}(?:\.0+)?$")
@@ -98,9 +105,12 @@ def apply_template(
             fit = False
             break
         t = tokens[end - 1]
-        ok = (role == "finish" and (is_finish_value(t.text) or norm_code(t.text).isdigit())) or (
-            role == "mfr" and t.text[:1].isalpha() and len(t.text) <= 12
-        )
+        # The slot decides ambiguous codes: "AL" in the finish slot is a finish, "PE" in the
+        # manufacturer slot is a manufacturer (collisions are accepted here, by position).
+        code = norm_code(t.text)
+        ok = (
+            role == "finish" and (is_finish_value(t.text) or code in FINISH_CODES or code.isdigit())
+        ) or (role == "mfr" and t.text[:1].isalpha() and len(t.text) <= 12)
         if not ok:
             fit = False
             continue  # slot left empty (e.g. no finish printed for this item)

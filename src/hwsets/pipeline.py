@@ -18,6 +18,7 @@ from dataclasses import dataclass
 from hwsets.columns.assign import assign_roles
 from hwsets.columns.features import column_features
 from hwsets.columns.legend import Legend, find_legend
+from hwsets.columns.template import apply_template, infer_template
 from hwsets.components.parse import ColumnModel, is_mfr_prefix, parse_rows
 from hwsets.layout.chrome import chrome_keys, header_row_roles, is_chrome
 from hwsets.layout.columns import Layout, column_of, infer_layouts, layout_for_page
@@ -42,6 +43,7 @@ from hwsets.validate import validate_document
 
 _MFR_SPLIT = re.compile(r"\s[-\u2013]\s")
 _CHROME_CONTEXT_PAGES = 3
+_TEMPLATE_MAX_ANCHORS = 3
 _LEGEND_LOOKBACK_PAGES = 6
 
 
@@ -154,6 +156,24 @@ def _layout_model(
             if (m := _MFR_SPLIT.search(v)) and is_mfr_prefix(v[: m.start()], legend.mfr_codes)
         )
         mfr_prefix = bool(cat_vals) and with_prefix >= 0.5 * len(cat_vals)
+    overrides: dict[str, str] = {}
+    if "mfr" not in ra.roles and "finish" not in ra.roles and len(xs) <= _TEMPLATE_MAX_ANCHORS:
+        # No aligned code columns and hardly any column structure at all: a free-flowing list.
+        # Try one document-level positional template (tables keep their column model).
+        row_lines = [
+            ln
+            for sp in spans
+            for ln, kind in zip(sp.lines, sp.kinds, strict=True)
+            if kind == Kind.ROW and ln.page in pages
+        ]
+        template = infer_template(row_lines, doc.toks, legend.mfr_codes, legend.finish_codes)
+        if template is not None:
+            for ln in row_lines:
+                roles_by_tok, _fit = apply_template(template, ln, doc.toks)
+                overrides.update(roles_by_tok)
+            diag[f"p{layout.pages[0]}-{layout.pages[-1]} template"] = (
+                f"[qty] desc catalog {' '.join(template.trailing)} (support {template.support})"
+            )
     model = ColumnModel(
         xs=xs,
         roles=ra.roles,
@@ -161,6 +181,7 @@ def _layout_model(
         split_merged=split_merged,
         mfr_prefix=mfr_prefix,
         known_items=known_items,
+        overrides=overrides,
     )
     return model, diag
 
