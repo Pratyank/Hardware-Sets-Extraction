@@ -46,6 +46,8 @@ _DESCRIPTION_RE = re.compile(r"^description\s*:\s*", re.IGNORECASE)
 _DOOR_TOKEN_RE = re.compile(r"^(?:[A-Z]{0,3}-?\d{1,4}(?:\.\d{1,2})?[A-Z]{0,3}[,;]?|&|and|thru|to)$",
                             re.IGNORECASE)  # fmt: skip
 _DOORS_HASH_RE = re.compile(r"\bdoors?\s*#", re.IGNORECASE)
+# Door/opening sizes: "965 x 2134 x 44 - HM DR x HM FR", "3'-0\" x 7'-0\"", "965, 965 x 2147".
+_DIMENSION_RE = re.compile(r"^[\d'\"\-.,/ ]{1,14}\s*[x\u00d7]\s*\d", re.IGNORECASE)
 _ARTICLE_RE = re.compile(r"^(?:SECTION\s+\d|PART\s+\d\s+[A-Z]|\d+\.\d+\s+[A-Z][A-Z \-/&,]{3,}$)")
 
 
@@ -125,7 +127,7 @@ def classify(span: Span, toks: Mapping[str, Token]) -> list[Kind]:
         elif (
             _SET_LEVEL_RE.match(text)
             or _DOORS_HASH_RE.search(text)
-            or (not seen_row and is_door_list(ln, toks))
+            or (not seen_row and (is_door_list(ln, toks) or bool(_DIMENSION_RE.match(text))))
         ):
             kinds.append(Kind.SET_LEVEL)
         elif (

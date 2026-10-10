@@ -376,7 +376,12 @@ def build_component(row: Row, model: ColumnModel, legend: Legend) -> tuple[Compo
     # Quantity: the quantity column, or the leading token of the row when qty shares a cell.
     qty_cell = cells.pop("qty", [])
     first_role = next((r for r in ("description", "catalog") if cells.get(r)), None)
-    if not qty_cell and first_role and _INT_RE.match(cells[first_role][0].text):
+    if (
+        not qty_cell
+        and not model.has("qty")  # with a quantity column, quantities come only from it
+        and first_role
+        and _INT_RE.match(cells[first_role][0].text)
+    ):
         qty_cell = [cells[first_role].pop(0)]
         if cells[first_role] and unit_code(cells[first_role][0].text):
             qty_cell.append(cells[first_role].pop(0))
