@@ -1,0 +1,39 @@
+{
+ "set_recall": 1.0,
+ "set_fully_correct": 0.871,
+ "component_f1": 0.9933,
+ "per_book": {
+  "valor-acres-building-e--087100-door-hardware-rev-2": {
+   "set_recall": 1.0,
+   "set_fully_correct": 0.9459
+  },
+  "roselle-public-library--087100-fl-door-hardware-ifb-revised": {
+   "set_recall": 1.0,
+   "set_fully_correct": 0.7576
+  },
+  "jc-ryan-2--087100-door-hardware-6": {
+   "set_recall": 1.0,
+   "set_fully_correct": 0.7368
+  },
+  "2353-gerrard-street-shelter--hdw-spec-sch-ift-5": {
+   "set_recall": 1.0,
+   "set_fully_correct": 0.9143
+  },
+  "lyons-township-hs--project-manual-1": {
+   "set_recall": 1.0,
+   "set_fully_correct": 1.0
+  },
+  "hfh-dg-hospital--08-71-00-door-hardware": {
+   "set_recall": 1.0,
+   "set_fully_correct": 0.72
+  },
+  "81-85-bridgeport--08-70-00-hardware-schedule": {
+   "set_recall": 1.0,
+   "set_fully_correct": 0.871
+  },
+  "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications": {
+   "set_recall": 1.0,
+   "set_fully_correct": 0.9608
+  }
+ }
+}

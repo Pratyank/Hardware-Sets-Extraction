@@ -18,3 +18,7 @@ schema:
 	uv run python -m hwsets.schema
 
 check: lint test
+
+snapshot:
+	uv run hwsets eval
+	uv run python scripts/update_snapshot.py
