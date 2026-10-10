@@ -21,6 +21,7 @@ from hwsets.columns.assign import assign_roles
 from hwsets.columns.features import column_features
 from hwsets.columns.legend import Legend, find_legend
 from hwsets.columns.template import apply_template, infer_template
+from hwsets.components.lookup import find_lookup_legend, resolve_codes
 from hwsets.components.parse import ColumnModel, is_mfr_prefix, parse_rows
 from hwsets.layout.chrome import chrome_keys, header_row_roles, is_chrome
 from hwsets.layout.columns import Layout, column_of, infer_layouts, layout_for_page
@@ -285,6 +286,11 @@ def _build_set(
                 desc_ids.extend(i for i in parsed.set_desc_tokens if i not in id_tokens)
             warnings.extend(f"set {sp.set_id}: {w}" for w in parsed.warnings)
 
+    if components:
+        # Same-page lookup codes: a key legend on the set's own pages resolves "A"-style items.
+        set_pages = {ln.page for ln in sp.lines}
+        page_lines = [ln for p in sorted(set_pages) for ln in doc.lines_by_page.get(p, [])]
+        resolve_codes(components, find_lookup_legend(page_lines, doc.toks))
     comp_conf = [_component_conf(c) for c in components]
     header_strength = 1.0 if h.bold or h.keyword else 0.9
     conf = (statistics.fmean(comp_conf) if comp_conf else 0.75) * header_strength

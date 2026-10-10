@@ -57,6 +57,13 @@
             ],
             "default": null,
             "title": "Resolved From Code"
+          },
+          "resolved_from_code_tokens": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Resolved From Code Tokens",
+            "type": "array"
           }
         },
         "required": [
@@ -558,6 +565,18 @@
       "source_pdf": {
         "title": "Source Pdf",
         "type": "string"
+      },
+      "gold_pages": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Gold Pages"
       },
       "sets": {
         "items": {

@@ -89,6 +89,7 @@ class Component(BaseModel):
     finish: Field[str]  # raw code, e.g. "626"
     notes: Field[str]
     resolved_from_code: str | None = None  # lookup-code bonus: "A" -> full item
+    resolved_from_code_tokens: list[TokenId] = PydField(default_factory=list)  # legend tokens
 
 
 class PageRegion(_Frozen):
