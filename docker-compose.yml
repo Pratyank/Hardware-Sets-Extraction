@@ -1,0 +1,13 @@
+services:
+  hwsets:
+    build: .
+    image: hwsets
+    ports:
+      - "8000:8000"
+    volumes:
+      # Results, tokens, page PNGs, corrections and (optionally) the raw PDFs under data/raw.
+      # If the demo PDFs are present, the container preloads them at startup.
+      - ./data:/app/data
+    environment:
+      HWSETS_DEMO: "1"
+    restart: unless-stopped

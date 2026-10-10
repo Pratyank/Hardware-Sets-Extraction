@@ -1,0 +1,5726 @@
+{
+ "source_pdf": "livelle-mulholland-life-plan-community--2025-12-12-livelle-bid-set-project-manual-vol1-rev1",
+ "gold_pages": "643-662",
+ "_annotator": "gold-holdout, drafted from page images",
+ "sets": [
+  {
+   "set_number": "1.0",
+   "description": "Unit Entry Door (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     643
+    ],
+    "regions": [
+     {
+      "page": 643,
+      "bbox": [
+       72.0,
+       446.0,
+       540.0,
+       702.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer Cush Stop",
+     "catalog_number": "CA1601 P",
+     "mfr": "NO",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Viewer",
+     "catalog_number": "626",
+     "mfr": "RO",
+     "finish": "DCRM",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Sound Gasketing",
+     "catalog_number": "S773BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Bottom",
+     "catalog_number": "2113AV",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "2.0",
+   "description": "Unit Entry Fire Glazed Storefront Door (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     644
+    ],
+    "regions": [
+     {
+      "page": 644,
+      "bbox": [
+       72.0,
+       51.0,
+       540.0,
+       279.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise, Hvy Wt",
+     "catalog_number": "T4A3786",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer Cush Stop",
+     "catalog_number": "CA1601 P",
+     "mfr": "NO",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Viewer",
+     "catalog_number": "626",
+     "mfr": "RO",
+     "finish": "DCRM",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Sound Gasketing",
+     "catalog_number": "S773BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Bottom",
+     "catalog_number": "2113AV",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "3.0",
+   "description": "Villa Custom Door (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     644
+    ],
+    "regions": [
+     {
+      "page": 644,
+      "bbox": [
+       72.0,
+       310.0,
+       540.0,
+       566.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Pivot Set",
+     "catalog_number": "195",
+     "mfr": "RF",
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Intermediate Pivot",
+     "catalog_number": "M19",
+     "mfr": "RF",
+     "finish": "622",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Mort Lock",
+     "catalog_number": "IN100-82277-BIPS LNMW LC",
+     "mfr": "SA",
+     "finish": "BSP",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Mortise Cylinder",
+     "catalog_number": "72 43 verify cam",
+     "mfr": "SA",
+     "finish": "BSP",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US4",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "RM850",
+     "mfr": "RO",
+     "finish": "BSP",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Sweep",
+     "catalog_number": "18062BSPNB",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Viewer",
+     "catalog_number": "627",
+     "mfr": "RO",
+     "finish": "BLK",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "4.0",
+   "description": "Unit Garage Door U1F",
+   "status": "active",
+   "location": {
+    "pages": [
+     644,
+     645
+    ],
+    "regions": [
+     {
+      "page": 644,
+      "bbox": [
+       72.0,
+       585.0,
+       540.0,
+       707.0
+      ]
+     },
+     {
+      "page": 645,
+      "bbox": [
+       72.0,
+       51.0,
+       540.0,
+       95.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Turn Bolt",
+     "catalog_number": "V04 468",
+     "mfr": "SA",
+     "finish": "US26D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "12 28 DLU15 COMB",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "1601 P (mount inside room)",
+     "mfr": "NO",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Bottom",
+     "catalog_number": "2113AV",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "5.0",
+   "description": "Unit Bath, Bedroom Door U1C",
+   "status": "active",
+   "location": {
+    "pages": [
+     645
+    ],
+    "regions": [
+     {
+      "page": 645,
+      "bbox": [
+       72.0,
+       114.0,
+       540.0,
+       264.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "RC TA2714 4\" x 4\"",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Privacy Lock",
+     "catalog_number": "14 DLU65 COMB",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "519",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Hinge Pin Door Stop",
+     "catalog_number": "76306",
+     "mfr": "MK",
+     "finish": "US26D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "6.0",
+   "description": "Unit Bedroom, Powder Room Door U1",
+   "status": "active",
+   "location": {
+    "pages": [
+     645
+    ],
+    "regions": [
+     {
+      "page": 645,
+      "bbox": [
+       72.0,
+       283.0,
+       540.0,
+       389.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "RC TA2714 4\" x 4\"",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Privacy Lock",
+     "catalog_number": "14 DLU65 COMB",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "409",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "519",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "7.0",
+   "description": "Unit Den Doors U5",
+   "status": "active",
+   "location": {
+    "pages": [
+     645
+    ],
+    "regions": [
+     {
+      "page": 645,
+      "bbox": [
+       72.0,
+       408.0,
+       540.0,
+       546.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "RC TA2714 4\" x 4\"",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "14 DLU15 COMB",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "409",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "519",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "8.0",
+   "description": "Unit Closet Door U8",
+   "status": "active",
+   "location": {
+    "pages": [
+     645
+    ],
+    "regions": [
+     {
+      "page": 645,
+      "bbox": [
+       72.0,
+       564.0,
+       540.0,
+       687.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "RC T2714 3-1/2\" x 3-1/2\"",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "13 14 DLU15 COMB",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Hinge Pin Door Stop",
+     "catalog_number": "76306",
+     "mfr": "MK",
+     "finish": "US26D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "9.0",
+   "description": "Unit Closet Door U1A, U1B, UIE",
+   "status": "active",
+   "location": {
+    "pages": [
+     645,
+     646
+    ],
+    "regions": [
+     {
+      "page": 645,
+      "bbox": [
+       72.0,
+       705.0,
+       540.0,
+       718.0
+      ]
+     },
+     {
+      "page": 646,
+      "bbox": [
+       72.0,
+       51.0,
+       540.0,
+       127.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "RC T2714 4\" x 4\"",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "14 DLU15 COMB",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Hinge Pin Door Stop",
+     "catalog_number": "76306",
+     "mfr": "MK",
+     "finish": "US26D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "10.0",
+   "description": "Unit HVAC Closet Doors U4A, U4B",
+   "status": "active",
+   "location": {
+    "pages": [
+     646
+    ],
+    "regions": [
+     {
+      "page": 646,
+      "bbox": [
+       72.0,
+       145.0,
+       540.0,
+       236.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "RC T2714 4\" x 4\"",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "14 DLU15 COMB",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Hinge Pin Door Stop",
+     "catalog_number": "76306",
+     "mfr": "MK",
+     "finish": "US26D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "11.0",
+   "description": "Unit HVAC Closet DoorU4C",
+   "status": "active",
+   "location": {
+    "pages": [
+     646
+    ],
+    "regions": [
+     {
+      "page": 646,
+      "bbox": [
+       72.0,
+       254.0,
+       540.0,
+       346.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "RC TA2714 4\" x 4\"",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "14 DLU15 COMB",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Hinge Pin Door Stop",
+     "catalog_number": "76306",
+     "mfr": "MK",
+     "finish": "US26D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "12.0",
+   "description": "Unit HVAC Closet Doors U9, U9A, U9B",
+   "status": "active",
+   "location": {
+    "pages": [
+     646
+    ],
+    "regions": [
+     {
+      "page": 646,
+      "bbox": [
+       72.0,
+       364.0,
+       540.0,
+       455.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "RC T2714 3-1/2\" x 3-1/2\"",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "13 14 DLU15 COMB",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Hinge Pin Door Stop",
+     "catalog_number": "76306",
+     "mfr": "MK",
+     "finish": "US26D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "13.0",
+   "description": "Unit Laundry Closet Doors U3, U3A",
+   "status": "active",
+   "location": {
+    "pages": [
+     646
+    ],
+    "regions": [
+     {
+      "page": 646,
+      "bbox": [
+       72.0,
+       473.0,
+       540.0,
+       581.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "RC T2714 4\" x 4\"",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Roller Latch",
+     "catalog_number": "911RC",
+     "mfr": "RO",
+     "finish": "US26D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Half Dummy Trim",
+     "catalog_number": "DLU93 COMB",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Hinge Pin Door Stop",
+     "catalog_number": "76306",
+     "mfr": "MK",
+     "finish": "US26D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "14.0",
+   "description": "Unit Laundry Closet Doors U3B",
+   "status": "active",
+   "location": {
+    "pages": [
+     646
+    ],
+    "regions": [
+     {
+      "page": 646,
+      "bbox": [
+       72.0,
+       599.0,
+       540.0,
+       706.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "RC TA2714 4\" x 4\"",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Roller Latch",
+     "catalog_number": "911RC",
+     "mfr": "RO",
+     "finish": "US26D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Half Dummy Trim",
+     "catalog_number": "DLU93 COMB",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Hinge Pin Door Stop",
+     "catalog_number": "76306",
+     "mfr": "MK",
+     "finish": "US26D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "15.0",
+   "description": "Unit Closet Door Pairs U21, U21A, U21B, U21C, U21D, U21E, U21F, U21G, U21H, U21I, U23. U23A, U23B, U23C, U23D, U27G, U27H",
+   "status": "active",
+   "location": {
+    "pages": [
+     647
+    ],
+    "regions": [
+     {
+      "page": 647,
+      "bbox": [
+       72.0,
+       67.0,
+       540.0,
+       218.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 6,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "RC T2714 4\" x 4\"",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Roller Latch",
+     "catalog_number": "911RC",
+     "mfr": "RO",
+     "finish": "US26D",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Half Dummy Trim",
+     "catalog_number": "DLU93 COMB",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Hinge Pin Door Stop",
+     "catalog_number": "76306",
+     "mfr": "MK",
+     "finish": "US26D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "16.0",
+   "description": "Unit Closet Door Pairs U27A, U27B, U27C, U27D, U27E",
+   "status": "active",
+   "location": {
+    "pages": [
+     647
+    ],
+    "regions": [
+     {
+      "page": 647,
+      "bbox": [
+       72.0,
+       236.0,
+       540.0,
+       343.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "RC T2714 3-1/2\" x 3-1/2\"",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Roller Latch",
+     "catalog_number": "911RC",
+     "mfr": "RO",
+     "finish": "US26D",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Half Dummy Trim",
+     "catalog_number": "DLU93 COMB",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "519",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "17.0",
+   "description": "Unit Sliding Pocket Doors U2, U2A, U10",
+   "status": "active",
+   "location": {
+    "pages": [
+     647
+    ],
+    "regions": [
+     {
+      "page": 647,
+      "bbox": [
+       72.0,
+       361.0,
+       540.0,
+       468.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Hardware Set",
+     "catalog_number": "LP200A 6'",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Pocket Door Latch",
+     "catalog_number": "1074-1 Stockholm",
+     "mfr": "TC",
+     "finish": "630",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "18.0",
+   "description": "Sliding Pocket Door",
+   "status": "active",
+   "location": {
+    "pages": [
+     647
+    ],
+    "regions": [
+     {
+      "page": 647,
+      "bbox": [
+       72.0,
+       511.0,
+       540.0,
+       603.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Hardware Set",
+     "catalog_number": "LP200A 6'",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Pocket Door Latch @ Privacy",
+     "catalog_number": "1074-1 Stockholm",
+     "mfr": "TC",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Pull",
+     "catalog_number": "RM5270-12 Mtg-Type 5HD",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "19.0",
+   "description": "Unit Bi-Pass Doors U26",
+   "status": "active",
+   "location": {
+    "pages": [
+     647
+    ],
+    "regions": [
+     {
+      "page": 647,
+      "bbox": [
+       72.0,
+       621.0,
+       540.0,
+       697.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Sliding Door Hdwe",
+     "catalog_number": "HBP200A length as required",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Flush Pull",
+     "catalog_number": "860",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "20.0",
+   "description": "Staff (Passage)",
+   "status": "active",
+   "location": {
+    "pages": [
+     648
+    ],
+    "regions": [
+     {
+      "page": 648,
+      "bbox": [
+       72.0,
+       51.0,
+       540.0,
+       221.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "10XU15 LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 H",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "21.0",
+   "description": "Staff (Passage)",
+   "status": "active",
+   "location": {
+    "pages": [
+     648
+    ],
+    "regions": [
+     {
+      "page": 648,
+      "bbox": [
+       72.0,
+       239.0,
+       540.0,
+       377.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "10XU15 LP",
+     "mfr": "SA",
+     "finish": "US26D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 P9",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "22.0",
+   "description": "MC Unit Entry (Passage)",
+   "status": "active",
+   "location": {
+    "pages": [
+     648
+    ],
+    "regions": [
+     {
+      "page": 648,
+      "bbox": [
+       72.0,
+       395.0,
+       540.0,
+       565.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "10XU15 LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Bottom",
+     "catalog_number": "2113AV",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "23.0",
+   "description": "Auditorium (Passage)",
+   "status": "active",
+   "location": {
+    "pages": [
+     648,
+     649
+    ],
+    "regions": [
+     {
+      "page": 648,
+      "bbox": [
+       72.0,
+       583.0,
+       540.0,
+       706.0
+      ]
+     },
+     {
+      "page": 649,
+      "bbox": [
+       72.0,
+       51.0,
+       540.0,
+       80.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "10XU15 LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 O",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "406",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Sound Gasketing",
+     "catalog_number": "S773BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Bottom",
+     "catalog_number": "420APKL @ HM / 434APKL@ WD",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "151A MSES25",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "24.0",
+   "description": "Passage",
+   "status": "active",
+   "location": {
+    "pages": [
+     649
+    ],
+    "regions": [
+     {
+      "page": 649,
+      "bbox": [
+       72.0,
+       98.0,
+       540.0,
+       205.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "10XU15 LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "25.0",
+   "description": "Exam, Intake, Speech",
+   "status": "active",
+   "location": {
+    "pages": [
+     649
+    ],
+    "regions": [
+     {
+      "page": 649,
+      "bbox": [
+       72.0,
+       223.0,
+       540.0,
+       330.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "10XU15 LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "26.0",
+   "description": "Lockers",
+   "status": "active",
+   "location": {
+    "pages": [
+     649
+    ],
+    "regions": [
+     {
+      "page": 649,
+      "bbox": [
+       72.0,
+       348.0,
+       540.0,
+       502.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "10XU15 LP",
+     "mfr": "SA",
+     "finish": "US26D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Conc Overhead Stop",
+     "catalog_number": "2-336",
+     "mfr": "RF",
+     "finish": "652",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 O",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "27.0",
+   "description": "Res Lockers (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     649
+    ],
+    "regions": [
+     {
+      "page": 649,
+      "bbox": [
+       72.0,
+       520.0,
+       540.0,
+       690.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise, Hvy Wt",
+     "catalog_number": "T4A3786",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "10XU15 LP",
+     "mfr": "SA",
+     "finish": "US26D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 UO",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "406",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "28.0",
+   "description": "Trash",
+   "status": "active",
+   "location": {
+    "pages": [
+     650
+    ],
+    "regions": [
+     {
+      "page": 650,
+      "bbox": [
+       72.0,
+       51.0,
+       540.0,
+       205.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "10XU15 LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 O",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "29.0",
+   "description": "Trash",
+   "status": "active",
+   "location": {
+    "pages": [
+     650
+    ],
+    "regions": [
+     {
+      "page": 650,
+      "bbox": [
+       72.0,
+       223.0,
+       540.0,
+       377.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "10XU15 LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Sweep",
+     "catalog_number": "18062CNB",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "30.0",
+   "description": "Pantry (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     650
+    ],
+    "regions": [
+     {
+      "page": 650,
+      "bbox": [
+       72.0,
+       395.0,
+       540.0,
+       583.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LP",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 O",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Mop Plate (@ in-swing door)",
+     "catalog_number": "K1050 4\" high BEV CSK",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "406",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "31.0",
+   "description": "Employee Restroom",
+   "status": "active",
+   "location": {
+    "pages": [
+     650,
+     651
+    ],
+    "regions": [
+     {
+      "page": 650,
+      "bbox": [
+       72.0,
+       601.0,
+       540.0,
+       708.0
+      ]
+     },
+     {
+      "page": 651,
+      "bbox": [
+       72.0,
+       51.0,
+       540.0,
+       127.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Pull Plate",
+     "catalog_number": "111x70C",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Push Plate",
+     "catalog_number": "70C-RKW",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 O",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Mop Plate (@ in-swing door)",
+     "catalog_number": "K1050 4\" high BEV CSK",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "406",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "32.0",
+   "description": "Mother's Room",
+   "status": "active",
+   "location": {
+    "pages": [
+     651
+    ],
+    "regions": [
+     {
+      "page": 651,
+      "bbox": [
+       72.0,
+       145.0,
+       540.0,
+       315.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Indicator Privacy",
+     "catalog_number": "10X G65 VSLL V33",
+     "mfr": "SA",
+     "finish": "US26D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 O",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Mop Plate (@ in-swing door)",
+     "catalog_number": "K1050 4\" high BEV CSK",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "409",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "33.0",
+   "description": "Changing",
+   "status": "active",
+   "location": {
+    "pages": [
+     651
+    ],
+    "regions": [
+     {
+      "page": 651,
+      "bbox": [
+       72.0,
+       333.0,
+       540.0,
+       455.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Indicator Bolt",
+     "catalog_number": "D292 V21",
+     "mfr": "YA",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Pull",
+     "catalog_number": "RM5270-12 Mtg-Type 5HD",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Coat Hook",
+     "catalog_number": "RM801",
+     "mfr": "RO",
+     "finish": "US26D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "34.0",
+   "description": "Sng Occupant Staff Restroom",
+   "status": "active",
+   "location": {
+    "pages": [
+     651
+    ],
+    "regions": [
+     {
+      "page": 651,
+      "bbox": [
+       72.0,
+       473.0,
+       540.0,
+       659.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Indicator Privacy",
+     "catalog_number": "10X G65 VSLL V33",
+     "mfr": "SA",
+     "finish": "US26D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 O",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Mop Plate (@ in-swing door)",
+     "catalog_number": "K1050 4\" high BEV CSK",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "409",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Coat Hook",
+     "catalog_number": "RM801",
+     "mfr": "RO",
+     "finish": "US26D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "35.0",
+   "description": "Sng Occupant Bath",
+   "status": "active",
+   "location": {
+    "pages": [
+     651,
+     652
+    ],
+    "regions": [
+     {
+      "page": 651,
+      "bbox": [
+       72.0,
+       677.0,
+       540.0,
+       706.0
+      ]
+     },
+     {
+      "page": 652,
+      "bbox": [
+       72.0,
+       67.0,
+       540.0,
+       142.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Privacy Lock",
+     "catalog_number": "LB V21 8265 LNMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Coat Hook",
+     "catalog_number": "RM801",
+     "mfr": "RO",
+     "finish": "US26D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "36.0",
+   "description": "Sng Occupant Restroom (ADO-PP Pulls)",
+   "status": "active",
+   "location": {
+    "pages": [
+     652
+    ],
+    "regions": [
+     {
+      "page": 652,
+      "bbox": [
+       72.0,
+       160.0,
+       540.0,
+       365.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Indicator Bolt",
+     "catalog_number": "D292 V21",
+     "mfr": "YA",
+     "finish": "626",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Pull",
+     "catalog_number": "RM5270-12 Mtg-Type 5HD",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Automatic Opener",
+     "catalog_number": "6211 120V",
+     "mfr": "NO",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "ADO Bathroom Accessory Kit",
+     "catalog_number": "776",
+     "mfr": "NO",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Coat Hook",
+     "catalog_number": "RM801",
+     "mfr": "RO",
+     "finish": "US26D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "37.0",
+   "description": "Sng Occupant Restroom (ADO-PP ES)",
+   "status": "active",
+   "location": {
+    "pages": [
+     652
+    ],
+    "regions": [
+     {
+      "page": 652,
+      "bbox": [
+       72.0,
+       384.0,
+       540.0,
+       624.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Privacy Lock",
+     "catalog_number": "LB V21 8265 LNMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electric Strike",
+     "catalog_number": "1500C-LMS",
+     "mfr": "HS",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "SMART Pac Bridge Rectifier",
+     "catalog_number": "2005M3",
+     "mfr": "HS",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Automatic Opener",
+     "catalog_number": "6211 120V",
+     "mfr": "NO",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "ADO Bathroom Accessory Kit",
+     "catalog_number": "776",
+     "mfr": "NO",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Mop Plate (@ in-swing door)",
+     "catalog_number": "K1050 4\" high BEV CSK",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Coat Hook",
+     "catalog_number": "RM801",
+     "mfr": "RO",
+     "finish": "US26D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "38.0",
+   "description": "Restroom (ADO-PP)",
+   "status": "active",
+   "location": {
+    "pages": [
+     652,
+     653
+    ],
+    "regions": [
+     {
+      "page": 652,
+      "bbox": [
+       72.0,
+       642.0,
+       540.0,
+       718.0
+      ]
+     },
+     {
+      "page": 653,
+      "bbox": [
+       72.0,
+       52.0,
+       540.0,
+       162.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Pull",
+     "catalog_number": "RM5270-12 Mtg-Type 5HD",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Automatic Opener",
+     "catalog_number": "6211 / 6231 @ rev-bevel door 120V",
+     "mfr": "NO",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "ADO Bathroom Accessory Kit",
+     "catalog_number": "776",
+     "mfr": "NO",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Mop Plate (@ in-swing door)",
+     "catalog_number": "K1050 4\" high BEV CSK",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "39.0",
+   "description": "Exterior Restroom (ADO)",
+   "status": "active",
+   "location": {
+    "pages": [
+     653
+    ],
+    "regions": [
+     {
+      "page": 653,
+      "bbox": [
+       72.0,
+       180.0,
+       540.0,
+       405.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2314",
+     "mfr": "MK",
+     "finish": "BSP",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Privacy Lock",
+     "catalog_number": "LB V21 8265 LNMW",
+     "mfr": "SA",
+     "finish": "BSP",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electric Strike",
+     "catalog_number": "1500C-LMS",
+     "mfr": "HS",
+     "finish": "BSP",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "SMART Pac Bridge Rectifier",
+     "catalog_number": "2005M3",
+     "mfr": "HS",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Conc Overhead Stop",
+     "catalog_number": "6-336",
+     "mfr": "RF",
+     "finish": "BSP",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Automatic Opener",
+     "catalog_number": "6231 120V",
+     "mfr": "NO",
+     "finish": "BSP",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "ADO Bathroom Accessory Kit",
+     "catalog_number": "776",
+     "mfr": "NO",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Sweep",
+     "catalog_number": "18062BSPNB",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 2,
+     "qty_unit": null,
+     "description": "Coat Hook",
+     "catalog_number": "RM801",
+     "mfr": "RO",
+     "finish": "BSP",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "40.0",
+   "description": "Locker, Fitness, Vestibule",
+   "status": "active",
+   "location": {
+    "pages": [
+     653
+    ],
+    "regions": [
+     {
+      "page": 653,
+      "bbox": [
+       72.0,
+       423.0,
+       540.0,
+       589.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise, Hvy Wt",
+     "catalog_number": "T4A3786",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Pull",
+     "catalog_number": "RM5270-12 Mtg-Type 8HD no clear coat",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Push Plate",
+     "catalog_number": "RM1010H",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 UO",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "41.0",
+   "description": "Private Dining (CR ES)",
+   "status": "active",
+   "location": {
+    "pages": [
+     653,
+     654
+    ],
+    "regions": [
+     {
+      "page": 653,
+      "bbox": [
+       72.0,
+       608.0,
+       540.0,
+       718.0
+      ]
+     },
+     {
+      "page": 654,
+      "bbox": [
+       72.0,
+       51.0,
+       540.0,
+       305.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2314",
+     "mfr": "MK",
+     "finish": "BSP",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Exit Lock",
+     "catalog_number": "8213 LNP",
+     "mfr": "SA",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electric Strike",
+     "catalog_number": "1500C-LMS",
+     "mfr": "HS",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "SMART Pac Bridge Rectifier",
+     "catalog_number": "2005M3",
+     "mfr": "HS",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Pull",
+     "catalog_number": "RM4010-48 Mtg-Type 12XHD",
+     "mfr": "RO",
+     "finish": "BSP",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 P10",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "ElectroLynx Frame Harness",
+     "catalog_number": "QC-C1500P",
+     "mfr": "MK",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Position Switch",
+     "catalog_number": "DPS-W-GY",
+     "mfr": "SU",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Card Reader",
+     "catalog_number": "Furnished by Security Contractor",
+     "mfr": "HD",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "PIR Detector",
+     "catalog_number": "Furnished by Security Contractor",
+     "mfr": "AK",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Power Supply",
+     "catalog_number": "Furnished by Security Contractor",
+     "mfr": "SU",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "42.0",
+   "description": "Massage",
+   "status": "active",
+   "location": {
+    "pages": [
+     654
+    ],
+    "regions": [
+     {
+      "page": 654,
+      "bbox": [
+       72.0,
+       323.0,
+       540.0,
+       521.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Indicator",
+     "catalog_number": "D292 V21 Less: bolt latch",
+     "mfr": "YA",
+     "finish": "619",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Push Plate",
+     "catalog_number": "RM5598B",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Pull",
+     "catalog_number": "RM5270-12 Mtg-Type 8HD no clear coat",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 UO",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Sound Gasketing",
+     "catalog_number": "S773BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Bottom",
+     "catalog_number": "STC411APK",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "43.0",
+   "description": "BOH Dry Storage",
+   "status": "active",
+   "location": {
+    "pages": [
+     654
+    ],
+    "regions": [
+     {
+      "page": 654,
+      "bbox": [
+       72.0,
+       539.0,
+       540.0,
+       693.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714 NRP",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "10XU15 LP",
+     "mfr": "SA",
+     "finish": "US26D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 H / PH9 @ rev-bevel",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Sweep",
+     "catalog_number": "18062CNB",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "44.0",
+   "description": "BOH Storage (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     655
+    ],
+    "regions": [
+     {
+      "page": 655,
+      "bbox": [
+       72.0,
+       64.0,
+       540.0,
+       264.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714 NRP",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LP",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 UO",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "45.0",
+   "description": "BOH Janitor, Maint Storage (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     655
+    ],
+    "regions": [
+     {
+      "page": 655,
+      "bbox": [
+       72.0,
+       282.0,
+       540.0,
+       482.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise, Hvy Wt",
+     "catalog_number": "T4A3786",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LP",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 O",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Armor Plate",
+     "catalog_number": "K1050 F =34\" high BEV CSK (F @ rated)",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "406",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "46.0",
+   "description": "Locker Exercise, HVAC, Storage (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     655
+    ],
+    "regions": [
+     {
+      "page": 655,
+      "bbox": [
+       72.0,
+       500.0,
+       540.0,
+       640.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714 NRP",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Conc Overhead Stop",
+     "catalog_number": "2-336",
+     "mfr": "RF",
+     "finish": "652",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "47.0",
+   "description": "Storage",
+   "status": "active",
+   "location": {
+    "pages": [
+     655,
+     656
+    ],
+    "regions": [
+     {
+      "page": 655,
+      "bbox": [
+       72.0,
+       696.0,
+       540.0,
+       710.0
+      ]
+     },
+     {
+      "page": 656,
+      "bbox": [
+       72.0,
+       51.0,
+       540.0,
+       174.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714 NRP",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "10XU15 LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 UO",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "47.1",
+   "description": "BOH Laundry",
+   "status": "active",
+   "location": {
+    "pages": [
+     656
+    ],
+    "regions": [
+     {
+      "page": 656,
+      "bbox": [
+       72.0,
+       192.0,
+       540.0,
+       390.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise, Hvy Wt",
+     "catalog_number": "T4A3786",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Storeroom/Closet Lock",
+     "catalog_number": "72 10XG04 LP",
+     "mfr": "SA",
+     "finish": "US26D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 O",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Armor Plate",
+     "catalog_number": "K1050 F =34\" high BEV CSK (F @ rated)",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "406",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Sweep",
+     "catalog_number": "18062CNB",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Protector Bar",
+     "catalog_number": "R111LPB",
+     "mfr": "RO",
+     "finish": "10BE",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "48.0",
+   "description": "Closet, Records Storage (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     656
+    ],
+    "regions": [
+     {
+      "page": 656,
+      "bbox": [
+       72.0,
+       408.0,
+       540.0,
+       577.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714 NRP",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 UO",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "48.1",
+   "description": "Corridor Closet (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     656,
+     657
+    ],
+    "regions": [
+     {
+      "page": 656,
+      "bbox": [
+       72.0,
+       595.0,
+       540.0,
+       704.0
+      ]
+     },
+     {
+      "page": 657,
+      "bbox": [
+       72.0,
+       51.0,
+       540.0,
+       111.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714 NRP",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "1601 P (mount inside room)",
+     "mfr": "NO",
+     "finish": "689",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "49.0",
+   "description": "HR Closet",
+   "status": "active",
+   "location": {
+    "pages": [
+     657
+    ],
+    "regions": [
+     {
+      "page": 657,
+      "bbox": [
+       72.0,
+       142.0,
+       540.0,
+       233.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "10XU15 LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "50.0",
+   "description": "Records, Recept (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     657
+    ],
+    "regions": [
+     {
+      "page": 657,
+      "bbox": [
+       72.0,
+       251.0,
+       540.0,
+       423.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 UO",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "51.0",
+   "description": "Storage (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     657
+    ],
+    "regions": [
+     {
+      "page": 657,
+      "bbox": [
+       72.0,
+       441.0,
+       540.0,
+       670.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714 NRP",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 UO",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "52.0",
+   "description": "Wine Bar Kitchen (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     657,
+     658
+    ],
+    "regions": [
+     {
+      "page": 657,
+      "bbox": [
+       72.0,
+       688.0,
+       540.0,
+       716.0
+      ]
+     },
+     {
+      "page": 658,
+      "bbox": [
+       72.0,
+       67.0,
+       540.0,
+       191.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise, Hvy Wt",
+     "catalog_number": "T4A3786 NRP",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 O",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "53.0",
+   "description": "BOH Staff, Storage (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     658
+    ],
+    "regions": [
+     {
+      "page": 658,
+      "bbox": [
+       72.0,
+       222.0,
+       540.0,
+       438.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LP",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 UO",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "406",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "441H",
+     "mfr": "RO",
+     "finish": "US26D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "54.0",
+   "description": "BOH Maint Storage (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     658
+    ],
+    "regions": [
+     {
+      "page": 658,
+      "bbox": [
+       72.0,
+       456.0,
+       540.0,
+       640.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise, Hvy Wt",
+     "catalog_number": "T4A3786",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LP",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 O",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Armor Plate",
+     "catalog_number": "K1050 F =34\" high BEV CSK (F @ rated)",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "406",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "55.0",
+   "description": "Janitor (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     658,
+     659
+    ],
+    "regions": [
+     {
+      "page": 658,
+      "bbox": [
+       72.0,
+       658.0,
+       540.0,
+       718.0
+      ]
+     },
+     {
+      "page": 659,
+      "bbox": [
+       72.0,
+       52.0,
+       540.0,
+       191.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 UO",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "56.0",
+   "description": "Janitor",
+   "status": "active",
+   "location": {
+    "pages": [
+     659
+    ],
+    "regions": [
+     {
+      "page": 659,
+      "bbox": [
+       72.0,
+       209.0,
+       540.0,
+       348.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Passage Latch",
+     "catalog_number": "10XU15 LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 UO",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "57.0",
+   "description": "BOH Hallway (CR EL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     659,
+     660
+    ],
+    "regions": [
+     {
+      "page": 659,
+      "bbox": [
+       72.0,
+       366.0,
+       540.0,
+       711.0
+      ]
+     },
+     {
+      "page": 660,
+      "bbox": [
+       72.0,
+       51.0,
+       540.0,
+       115.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Fail Secure Elec Lock",
+     "catalog_number": "RX 70 10XG71 LP",
+     "mfr": "SA",
+     "finish": "US26D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 UO",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Kick Plate",
+     "catalog_number": "K1050=10\" high CSK BEV",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "Per Detail / Type as Req",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Electric Power Transfer",
+     "catalog_number": "EL-CEPT",
+     "mfr": "SU",
+     "finish": "630",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "ElectroLynx Door Harness",
+     "catalog_number": "QC-C300",
+     "mfr": "MK",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "ElectroLynx Frame Harness",
+     "catalog_number": "QC-C1500P",
+     "mfr": "MK",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Position Switch",
+     "catalog_number": "DPS-W-GY",
+     "mfr": "SU",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Card Reader",
+     "catalog_number": "Furnished by Security Contractor",
+     "mfr": "HD",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Power Supply",
+     "catalog_number": "Furnished by Security Contractor",
+     "mfr": "SU",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "58.0",
+   "description": "Office, Director, (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     660
+    ],
+    "regions": [
+     {
+      "page": 660,
+      "bbox": [
+       72.0,
+       133.0,
+       540.0,
+       333.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 H",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Sound Gasketing",
+     "catalog_number": "S773BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Bottom",
+     "catalog_number": "STC411APK 36\"",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "59.0",
+   "description": "TV Room (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     660
+    ],
+    "regions": [
+     {
+      "page": 660,
+      "bbox": [
+       72.0,
+       351.0,
+       540.0,
+       523.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise @ 180 degrees",
+     "catalog_number": "TA2714 5\" x 5\"",
+     "mfr": "MK",
+     "finish": "US26D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 O",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "60.0",
+   "description": "AV Room (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     660,
+     661
+    ],
+    "regions": [
+     {
+      "page": 660,
+      "bbox": [
+       72.0,
+       541.0,
+       540.0,
+       712.0
+      ]
+     },
+     {
+      "page": 661,
+      "bbox": [
+       72.0,
+       51.0,
+       540.0,
+       108.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 4,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 4,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise, Hvy Wt",
+     "catalog_number": "T4A3786",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 O",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Sound Gasketing",
+     "catalog_number": "S773BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Bottom",
+     "catalog_number": "420APKL @ HM / 434APKL@ WD",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "175A MSES25",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "61.0",
+   "description": "BOH Laundry Maint (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     661
+    ],
+    "regions": [
+     {
+      "page": 661,
+      "bbox": [
+       72.0,
+       126.0,
+       540.0,
+       342.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise, Hvy Wt",
+     "catalog_number": "T4A3786",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LP",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "DA 351 O",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Armor Plate",
+     "catalog_number": "K1050 F =34\" high BEV CSK (F @ rated)",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "406",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Protector Bar",
+     "catalog_number": "R111LPB",
+     "mfr": "RO",
+     "finish": "10BE",
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "62.0",
+   "description": "Mech Room (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     661
+    ],
+    "regions": [
+     {
+      "page": 661,
+      "bbox": [
+       72.0,
+       360.0,
+       540.0,
+       594.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise, Hvy Wt",
+     "catalog_number": "T4A3786 NRP",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 P9",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "406",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S44BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Sound Gasketing",
+     "catalog_number": "312CR",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Bottom Gasketing",
+     "catalog_number": "ACP112BL/2",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Bottom",
+     "catalog_number": "420APKL @ HM / 434APKL@ WD",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "175A MSES25",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "63.0",
+   "description": "BOH Elev Mach, Mech Room (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     661,
+     662
+    ],
+    "regions": [
+     {
+      "page": 661,
+      "bbox": [
+       72.0,
+       612.0,
+       540.0,
+       706.0
+      ]
+     },
+     {
+      "page": 662,
+      "bbox": [
+       72.0,
+       51.0,
+       540.0,
+       158.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise, Hvy Wt",
+     "catalog_number": "T4A3786 NRP",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LP",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 P9",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Stop",
+     "catalog_number": "406",
+     "mfr": "RO",
+     "finish": "US32D",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S44BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Sound Gasketing",
+     "catalog_number": "312CR",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "175A MSES25",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "64.0",
+   "description": "BOH Elev Mach, Mech Room (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     662
+    ],
+    "regions": [
+     {
+      "page": 662,
+      "bbox": [
+       72.0,
+       176.0,
+       540.0,
+       395.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise, Hvy Wt",
+     "catalog_number": "T4A3786 NRP",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LP",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 CPS",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S44BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Sound Gasketing",
+     "catalog_number": "312CR",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Bottom Gasketing",
+     "catalog_number": "ACP112BL/2",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Bottom",
+     "catalog_number": "420APKL @ HM / 434APKL@ WD",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "175A MSES25",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "65.0",
+   "description": "IT / Elec Room (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     662
+    ],
+    "regions": [
+     {
+      "page": 662,
+      "bbox": [
+       72.0,
+       413.0,
+       540.0,
+       629.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714 NRP",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 P9",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Wall Stop",
+     "catalog_number": "430-RKW",
+     "mfr": "RO",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Door Bottom",
+     "catalog_number": "420APKL @ HM / 434APKL@ WD",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Threshold",
+     "catalog_number": "270A MSES25 or Per Detail",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "set_number": "66.0",
+   "description": "IT Room (WDL)",
+   "status": "active",
+   "location": {
+    "pages": [
+     662,
+     663
+    ],
+    "regions": [
+     {
+      "page": 662,
+      "bbox": [
+       72.0,
+       647.0,
+       540.0,
+       707.0
+      ]
+     },
+     {
+      "page": 663,
+      "bbox": [
+       72.0,
+       52.0,
+       540.0,
+       129.0
+      ]
+     }
+    ]
+   },
+   "components": [
+    {
+     "qty": 3,
+     "qty_unit": null,
+     "description": "Hinge, Full Mortise",
+     "catalog_number": "TA2714",
+     "mfr": "MK",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Access Control Cyl Lock",
+     "catalog_number": "70 IN100-10XG77-BIPS B LMW",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Small Format Inter Core",
+     "catalog_number": "7300B CKC GMK",
+     "mfr": "SA",
+     "finish": "US15",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Conc Overhead Stop",
+     "catalog_number": "2-336",
+     "mfr": "RF",
+     "finish": "652",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Surface Closer",
+     "catalog_number": "351 O",
+     "mfr": "SA",
+     "finish": "EN",
+     "notes": null
+    },
+    {
+     "qty": 1,
+     "qty_unit": null,
+     "description": "Gasketing",
+     "catalog_number": "S88BL",
+     "mfr": "PE",
+     "finish": null,
+     "notes": null
+    }
+   ]
+  }
+ ]
+}
