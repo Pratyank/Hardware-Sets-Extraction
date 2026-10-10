@@ -242,6 +242,11 @@ FINISH_CODES: Final[dict[str, str]] = {
     **{c: c for c in _OTHER},
 }
 
+# Full manufacturer names as printed in some books ("Pemko", "Von Duprin", "McKinney").
+for _name in set(MFR_CODES.values()):
+    MFR_CODES.setdefault(re.sub(r"[^A-Z0-9]", "", _name.upper()), _name)
+MFR_CODES.update({"BYOTHERS": "By Others", "BO": "By Others", "BYDOORMFR": "By Door Manufacturer"})
+
 # US <-> BHMA equivalences (used by eval normalization and finish resolution)
 US_TO_BHMA: Final[dict[str, str]] = {
     "US3": "605",
@@ -302,6 +307,28 @@ _COMMON_WORDS = {
 COLLISIONS: Final[frozenset[str]] = frozenset((set(MFR_CODES) & set(FINISH_CODES)) | _COMMON_WORDS)
 
 _NORM_RE = re.compile(r"[^A-Z0-9]")
+
+UNITS: Final[dict[str, str]] = {
+    "EA": "EA", "EACH": "EA", "EAR": "EA-R", "PR": "PR", "PRS": "PR", "PAIR": "PR",
+    "PAIRS": "PR", "SET": "SET", "SETS": "SET", "LOT": "LOT", "LS": "LOT", "FT": "FT",
+    "LF": "LF", "BOX": "BOX", "ROLL": "ROLL",
+}  # fmt: skip
+
+
+def unit_code(text: str) -> str | None:
+    """``"Ea."`` -> ``"EA"``, ``"Pair"`` -> ``"PR"``; None if not a unit."""
+    return UNITS.get(_NORM_RE.sub("", text.upper()))
+
+
+def is_finish_value(text: str) -> bool:
+    """A whole finish cell: ``626``, ``630-316``, ``626/622``, ``613 (OIL RUBBED BRONZE)``."""
+    first = text.split(maxsplit=1)[0] if text.split() else ""
+    parts = [p for p in re.split(r"[-/]", first) if p]
+    return (
+        bool(parts)
+        and all(is_finish_code(p) or p.isdigit() for p in parts)
+        and any(is_finish_code(p) for p in parts)
+    )
 
 
 def norm_code(text: str) -> str:

@@ -1,0 +1,133 @@
+"""Line stream -> set spans, and classification of lines inside a span.
+
+The stream is the hardware pages' lines in reading order with chrome removed, so **a page break
+is never a boundary**: a set runs from its header to the next header (or to an end-of-section
+marker). Inside a span, lines are classified as set-level text (door lists, "Provide each ...",
+"Notes:", column-header rows, ...) or candidate component rows. Row assembly happens later,
+once column roles are known.
+
+Pure functions of lines and tokens.
+"""
+
+from __future__ import annotations
+
+import re
+from collections.abc import Mapping, Sequence
+from dataclasses import dataclass, field
+from enum import StrEnum
+
+from hwsets.columns.lexicon import is_finish_code, is_mfr_code
+from hwsets.layout.chrome import header_row_roles
+from hwsets.models import Line, Token
+from hwsets.segment.headers import NOT_USED_RE, OUTLINE_RE, HeaderParse
+from hwsets.segment.section import END_OF_SECTION_RE
+
+
+class Kind(StrEnum):
+    HEADER = "header"
+    DESCRIPTION = "description"  # set description line(s)
+    SET_LEVEL = "set_level"  # doors, operation, notes, "provide each", risk level ...
+    COLUMN_HEADER = "column_header"
+    NOT_USED = "not_used"
+    ROW = "row"  # candidate component row or continuation (decided with column roles)
+
+
+_SET_LEVEL_RE = re.compile(
+    r"^(?:doors?\b|door\s*(?:no|numbers?|#)|openings?\b|for\s+use\s+on|provide\s+each|"
+    r"each\s+(?:to\s+have|opening|door|pair|single|leaf)|opening\s+(?:description|type)|"
+    r"operation(?:al)?\b|notes?\s*[:\-.]|remarks?\s*:|location\s*:|item\s*#|heading\s+notes|"
+    r"legend\s*:|link\s+to\s+catalog|electrified\s+opening|hardware\s+sets?\s*:|"
+    r"mode\s+of\s+operation|sequence\s+of\s+operation|keying\s*:|frame\s*:|door\s+type)",
+    re.IGNORECASE,
+)
+_DESCRIPTION_RE = re.compile(r"^description\s*:\s*", re.IGNORECASE)
+_DOOR_TOKEN_RE = re.compile(r"^(?:[A-Z]{0,3}-?\d{1,4}(?:\.\d{1,2})?[A-Z]{0,3}[,;]?|&|and|thru|to)$",
+                            re.IGNORECASE)  # fmt: skip
+_DOORS_HASH_RE = re.compile(r"\bdoors?\s*#", re.IGNORECASE)
+_ARTICLE_RE = re.compile(r"^(?:SECTION\s+\d|PART\s+\d\s+[A-Z]|\d+\.\d+\s+[A-Z][A-Z \-/&,]{3,}$)")
+
+
+@dataclass(slots=True)
+class Span:
+    header: HeaderParse
+    set_id: str
+    id_token_ids: tuple[str, ...]
+    lines: list[Line]  # header first
+    kinds: list[Kind] = field(default_factory=list)
+    terminated_by: str | None = None
+
+
+def _content_text(line: Line) -> str:
+    m = OUTLINE_RE.match(line.text)
+    return line.text[m.end() :] if m else line.text
+
+
+def is_door_list(line: Line, toks: Mapping[str, Token]) -> bool:
+    words = [toks[i].text for i in line.token_ids]
+    if not words or len(words) > 40:
+        return False
+    if any(is_mfr_code(w) or is_finish_code(w) for w in words) and len(words) < 3:
+        return False
+    return all(_DOOR_TOKEN_RE.match(w) for w in words) and any(c.isdigit() for c in line.text)
+
+
+def split_spans(stream: Sequence[Line], headers: Mapping[str, HeaderParse]) -> list[Span]:
+    """Split the stream at header lines. A header naming several sets yields one span per id
+    (sharing the same lines); the first id owns the header's tokens."""
+    spans: list[Span] = []
+    current: list[Span] = []
+    for ln in stream:
+        h = headers.get(ln.id)
+        if h is not None:
+            current = [
+                Span(header=h, set_id=sid, id_token_ids=h.id_token_ids[k], lines=[ln])
+                for k, sid in enumerate(h.set_ids)
+            ]
+            spans.extend(current)
+            continue
+        if not current or current[0].terminated_by:
+            continue
+        text = _content_text(ln).strip()
+        stop = END_OF_SECTION_RE.match(ln.text) or _ARTICLE_RE.match(ln.text.strip())
+        if stop:
+            for sp in current:
+                sp.terminated_by = text[:40]
+            continue
+        for sp in current:
+            sp.lines.append(ln)
+    return spans
+
+
+def classify(span: Span, toks: Mapping[str, Token]) -> list[Kind]:
+    kinds: list[Kind] = [Kind.HEADER]
+    seen_row = False
+    for i, ln in enumerate(span.lines[1:], start=1):
+        text = _content_text(ln).strip()
+        words = [toks[t].text for t in ln.token_ids]
+        if not text.strip(" -.:"):
+            kinds.append(Kind.SET_LEVEL)  # auto-numbering residue such as "PART 59 -"
+        elif header_row_roles(words):
+            kinds.append(Kind.COLUMN_HEADER)
+        elif not seen_row and NOT_USED_RE.fullmatch(text.strip(" .:-()")):
+            kinds.append(Kind.NOT_USED)
+        elif _DESCRIPTION_RE.match(text):
+            kinds.append(Kind.DESCRIPTION)
+        elif (
+            _SET_LEVEL_RE.match(text)
+            or _DOORS_HASH_RE.search(text)
+            or (not seen_row and is_door_list(ln, toks))
+        ):
+            kinds.append(Kind.SET_LEVEL)
+        elif (
+            not seen_row
+            and i == 1
+            and text.isupper()
+            and not any(is_mfr_code(w) or is_finish_code(w) for w in words)
+            and not words[0][:1].isdigit()
+        ):
+            kinds.append(Kind.DESCRIPTION)
+        else:
+            kinds.append(Kind.ROW)
+            seen_row = True
+    span.kinds = kinds
+    return kinds

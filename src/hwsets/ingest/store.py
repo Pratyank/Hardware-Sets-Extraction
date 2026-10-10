@@ -48,7 +48,9 @@ def _token_row(t: Token) -> list[Any]:
 
 def _row_token(page: int, i: int, row: Sequence[Any]) -> Token:
     text, x0, y0, x1, y1, size, bold, block, line, is_ocr, strike = row
-    return Token(
+    # The cache is written by ``write`` from validated Tokens, so skip re-validation (hot path:
+    # project manuals hold over a million tokens).
+    return Token.model_construct(
         id=f"p{page}_w{i}",
         page=page,
         text=text,
