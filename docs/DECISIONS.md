@@ -352,3 +352,18 @@ FUNCTION)`).
 - **Results.**
   - Gold: sjc 96.1% → 100%, and sjc set precision 96.2% → 100%. Total 95.0% → 95.7%.
   - Dev and negatives: 0 components and 0 set counts changed.
+
+### Fix 5: a word ending at a column's edge belongs to the cell on its left
+
+- **Rule.** A token may start up to 5 pt left of a column anchor, which allows for alignment jitter. A token
+  admitted only by that tolerance must also reach into the column. One that ends at the anchor is the tail
+  of the cell on its left: roselle's `…WARNING), A` ran up to the QTY column, so `A` was read as a
+  quantity and lost.
+- **Hanging bullets are exempt.** A `-` or `•` opens the next cell by definition.
+  - The first version had no exemption, and it moved starhardware's bullets into the description
+    (`Threshold - -`).
+- **Results.**
+  - Gold: roselle 90.9% → 97.0% (sets 4.4 and 4.6). Total 95.7% → 96.4%.
+  - Dev: only starhardware changed. Words return from code fields to their sentences (`a` out of the
+    manufacturer field, `x` out of the finish field, `#BAR 4` restored), all checked against the dev
+    diff.

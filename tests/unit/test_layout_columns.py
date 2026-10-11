@@ -104,3 +104,11 @@ def test_layout_for_page_falls_back_to_nearest_layout() -> None:
     assert layout_for_page(layouts, 2) is layouts[0]
     assert layout_for_page(layouts, 4) is layouts[1]
     assert layout_for_page([], 1) is None
+
+
+def test_token_must_reach_into_a_column_it_is_admitted_to_by_tolerance() -> None:
+    anchors = (154.0, 300.0)
+    assert column_of(296.5, anchors) == 1  # left edge alone: within the jitter tolerance
+    assert column_of(296.5, anchors, 300.1) == 0  # "A" ends at the anchor: tail of the cell left
+    assert column_of(297.0, anchors, 303.0) == 1  # starts a little early, runs into the column
+    assert column_of(301.0, anchors, 302.0) == 1

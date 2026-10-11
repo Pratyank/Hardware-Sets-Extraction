@@ -14,7 +14,7 @@ Documents: 8
 | component precision | 99.9% | - |
 | component F1 | 99.9% | - |
 | location IoU (mean) | 0.926 | 0.934 |
-| set_fully_correct | 95.7% | 95.4% |
+| set_fully_correct | 96.4% | 96.1% |
 
 Sets: 279 gold, 279 predicted, 279 matched (0 by IoU fallback). Components (in matched sets): 2183 gold, 2185 predicted, 2182 matched.
 
@@ -23,7 +23,7 @@ Sets: 279 gold, 279 predicted, 279 matched (0 by IoU fallback). Components (in m
 | doc | pages | gold | pred | matched | R | P | F1 | status | comp R | comp P | mfr | finish | qty | loc IoU | fully correct |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | valor-acres-building-e--087100-door-hardware-rev-2 | 7-18 | 37 | 37 | 37 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.981 | 100.0% |
-| roselle-public-library--087100-fl-door-hardware-ifb-revised | 15-17 | 33 | 33 | 33 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 99.5% | 100.0% | 100.0% | 0.925 | 90.9% |
+| roselle-public-library--087100-fl-door-hardware-ifb-revised | 15-17 | 33 | 33 | 33 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 99.5% | 100.0% | 100.0% | 0.925 | 97.0% |
 | jc-ryan-2--087100-door-hardware-6 | 24-46 | 38 | 38 | 38 | 100.0% | 100.0% | 100.0% | 100.0% | 99.6% | 100.0% | 100.0% | 100.0% | 100.0% | 0.933 | 97.4% |
 | 2353-gerrard-street-shelter--hdw-spec-sch-ift-5 | 19-36 | 35 | 35 | 35 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.970 | 91.4% |
 | lyons-township-hs--project-manual-1 | 285-294 | 29 | 29 | 29 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.974 | 100.0% |
@@ -38,7 +38,7 @@ Sets: 279 gold, 279 predicted, 279 matched (0 by IoU fallback). Components (in m
 | qty | 2182/2182 | 100.0% | - |
 | qty_unit | 2182/2182 | 100.0% | - |
 | description | 2175/2182 | 99.7% | 0.999 |
-| catalog_number | 2175/2182 | 99.7% | 0.999 |
+| catalog_number | 2177/2182 | 99.8% | 0.999 |
 | mfr | 2181/2182 | 100.0% | - |
 | finish | 2182/2182 | 100.0% | - |
 | notes | 2175/2182 | 99.7% | - |

@@ -90,11 +90,17 @@ def cluster_anchors(lines: Sequence[Line], toks: Mapping[str, Token]) -> list[An
     return out
 
 
-def column_of(x0: float, anchors: Sequence[float]) -> int:
-    """Index of the rightmost anchor at or left of ``x0`` (-1 when left of every anchor)."""
+def column_of(x0: float, anchors: Sequence[float], x1: float | None = None) -> int:
+    """Index of the rightmost anchor at or left of ``x0`` (-1 when left of every anchor).
+
+    A token may start up to ``_ASSIGN_TOL`` left of its anchor (alignment jitter). Given its right
+    edge ``x1``, a token admitted only by that tolerance must also reach into the column: one that
+    ends at the anchor is the tail of the cell to its left ("…WARNING), A" running up to QTY).
+    Callers pass ``x1=None`` for a hanging bullet ("-"), which opens the next cell by definition.
+    """
     col = -1
     for i, a in enumerate(anchors):
-        if x0 + _ASSIGN_TOL >= a:
+        if x0 >= a or (x0 + _ASSIGN_TOL >= a and (x1 is None or x1 > a + 1.0)):
             col = i
         else:
             break

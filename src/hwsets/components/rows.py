@@ -36,6 +36,7 @@ _REV_TAG_START_RE = re.compile(rf"^{REV_TAG_WORDS}", re.IGNORECASE)
 # An item name or a remark opens with a capital letter or a digit; a bullet ("- ...") or a
 # lower-case start continues the cell above (paragraph cells with spaced bullets).
 _ITEM_START_RE = re.compile(r"^[A-Z0-9]")
+_BULLETS = frozenset({"-", "\u2013", "\u2014", "\u2022", "*"})
 
 
 @dataclass(frozen=True, slots=True)
@@ -68,7 +69,8 @@ class ColumnModel:
     def role_of(self, tok: Token) -> str:
         if tok.id in self.overrides:
             return self.overrides[tok.id]
-        col = column_of(tok.bbox[0], self.xs)
+        x1 = None if tok.text in _BULLETS else tok.bbox[2]  # a hanging bullet opens its cell
+        col = column_of(tok.bbox[0], self.xs, x1)
         if col < 0:
             # Left of every anchor: a sparse quantity column (too few values to form an anchor).
             return "qty" if INT_RE.match(tok.text) and "qty" not in self.roles else "left"

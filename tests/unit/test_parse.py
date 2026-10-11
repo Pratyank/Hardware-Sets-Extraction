@@ -304,3 +304,13 @@ def test_lone_opening_bracket_joins_the_next_word() -> None:
     bracket opens the next line's word."""
     parsed, _ = _parse(["2|EA|EXIT DEVICE (|||711|", "||NIGHT LATCH FUNCTION)"], model=MODEL)
     assert parsed.components[0].description.value == "EXIT DEVICE (NIGHT LATCH FUNCTION)"
+
+
+def test_tail_word_ending_at_a_column_stays_in_its_cell_but_a_bullet_opens_the_next() -> None:
+    from helpers.synth import tok
+
+    # Catalog anchor at x=270: both start 4 pt early (within the alignment tolerance).
+    tail = tok("p1_w9", "A", (266.0, 100.0, 270.0, 109.0))  # ends at the anchor: tail of the cell
+    bullet = tok("p1_w8", "-", (266.0, 100.0, 269.0, 109.0))  # a hanging bullet
+    assert MODEL.role_of(tail) == "description"
+    assert MODEL.role_of(bullet) == "catalog"
