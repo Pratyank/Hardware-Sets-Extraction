@@ -45,6 +45,11 @@ preloads the three demo books if their PDFs are under `data/raw/`, then serves t
 This was verified end to end: the container reached `healthy`, listed the preloaded books, and extracted sets from
 an image-only PDF uploaded through **Upload PDF** (`POST /api/docs/upload`), which exercises OCR inside the image.
 
+**Deploy:** not deployed yet. The image is self-contained, so any Docker host works: on Render or Fly.io, create a
+web service from this Dockerfile with port 8000 and a persistent volume at `/app/data`. To bake in the demo
+results, copy `data/results`, `data/tokens` and `data/pages` for the demo books into that volume. No API key is
+needed.
+
 **CI** (`.github/workflows/ci.yml`) runs `make check` (ruff, mypy strict and the tests) and builds the image. The
 golden gate needs the specbook token cache, which is not committed, so it skips in CI and runs locally under
 `make check`.
