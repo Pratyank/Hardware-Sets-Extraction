@@ -303,6 +303,6 @@ misreads. The full list is in the handoff notes and in the user-facing summary.
 - **3d. A bold quantity marks a revised row.** This is the same "bold = revised" convention the tag rule
   already used for descriptions.
 - **Results.**
-  - Gold: hfh 84.0% → 92.0% (sets 016 and 017). Total 93.2% → 94.3%.
+  - Gold: hfh 84.0% → 92.0% (sets 016 and 017). Total 93.2% → 93.9%.
   - The quantity that the README listed as an ambiguous known failure is now extracted correctly.
   - Dev and negatives: 0 components changed.
