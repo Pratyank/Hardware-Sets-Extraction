@@ -60,8 +60,8 @@ Rows: the role of a gold code. Columns: where that code landed in the prediction
 | [0.2, 0.4) | 0 | - |
 | [0.4, 0.6) | 0 | - |
 | [0.6, 0.8) | 0 | - |
-| [0.8, 0.9) | 124 | 100.0% |
-| [0.9, 1.0] | 12974 | 99.9% |
+| [0.8, 0.9) | 0 | - |
+| [0.9, 1.0] | 13098 | 99.9% |
 
 ## 10 worst errors
 

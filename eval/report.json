@@ -104,16 +104,16 @@
         {
           "lo": 0.8,
           "hi": 0.9,
-          "count": 124,
-          "correct": 124,
-          "accuracy": 1.0
+          "count": 0,
+          "correct": 0,
+          "accuracy": null
         },
         {
           "lo": 0.9,
           "hi": 1.0,
-          "count": 12974,
-          "correct": 12956,
-          "accuracy": 0.9986126098350547
+          "count": 13098,
+          "correct": 13080,
+          "accuracy": 0.9986257443884563
         }
       ]
     },
@@ -257,15 +257,15 @@
           {
             "lo": 0.8,
             "hi": 0.9,
-            "count": 38,
-            "correct": 38,
-            "accuracy": 1.0
+            "count": 0,
+            "correct": 0,
+            "accuracy": null
           },
           {
             "lo": 0.9,
             "hi": 1.0,
-            "count": 1378,
-            "correct": 1378,
+            "count": 1416,
+            "correct": 1416,
             "accuracy": 1.0
           }
         ]
@@ -4574,16 +4574,16 @@
           {
             "lo": 0.8,
             "hi": 0.9,
-            "count": 3,
-            "correct": 3,
-            "accuracy": 1.0
+            "count": 0,
+            "correct": 0,
+            "accuracy": null
           },
           {
             "lo": 0.9,
             "hi": 1.0,
-            "count": 1173,
-            "correct": 1171,
-            "accuracy": 0.9982949701619779
+            "count": 1176,
+            "correct": 1174,
+            "accuracy": 0.9982993197278912
           }
         ]
       },
@@ -7161,7 +7161,7 @@
                   "field": "catalog_number",
                   "gold": "3000 SERIES",
                   "pred": "TRINE 3000 SERIES",
-                  "confidence": 0.985
+                  "confidence": 0.993
                 },
                 {
                   "field": "mfr",
@@ -8263,15 +8263,15 @@
           {
             "lo": 0.8,
             "hi": 0.9,
-            "count": 33,
-            "correct": 33,
-            "accuracy": 1.0
+            "count": 0,
+            "correct": 0,
+            "accuracy": null
           },
           {
             "lo": 0.9,
             "hi": 1.0,
-            "count": 1581,
-            "correct": 1581,
+            "count": 1614,
+            "correct": 1614,
             "accuracy": 1.0
           }
         ]
@@ -13688,13 +13688,13 @@
                   "field": "description",
                   "gold": "Overhead Stop(s)",
                   "pred": "Overhead Stop(s) Active Leaf",
-                  "confidence": 0.99
+                  "confidence": 0.98
                 },
                 {
                   "field": "notes",
                   "gold": "Active Leaf",
                   "pred": null,
-                  "confidence": 0.956
+                  "confidence": 0.977
                 }
               ]
             },
@@ -13716,13 +13716,13 @@
                   "field": "description",
                   "gold": "Closer(s)",
                   "pred": "Closer(s) Top Jamb Mount",
-                  "confidence": 0.99
+                  "confidence": 0.98
                 },
                 {
                   "field": "notes",
                   "gold": "Top Jamb Mount",
                   "pred": null,
-                  "confidence": 0.956
+                  "confidence": 0.977
                 }
               ]
             },
@@ -19830,13 +19830,13 @@
                   "field": "description",
                   "gold": "Push to Lock Button",
                   "pred": "Push to Lock Button Shared with D147A",
-                  "confidence": 0.99
+                  "confidence": 0.98
                 },
                 {
                   "field": "notes",
                   "gold": "Shared with D147A",
                   "pred": null,
-                  "confidence": 0.956
+                  "confidence": 0.977
                 }
               ]
             },
@@ -19903,7 +19903,7 @@
                   "field": "description",
                   "gold": "Wiring Diagrams",
                   "pred": "Wiring Diagrams Interlock with D147A.",
-                  "confidence": 0.99
+                  "confidence": 0.98
                 }
               ]
             }
@@ -20107,13 +20107,13 @@
                   "field": "description",
                   "gold": "Push to Lock Button",
                   "pred": "Push to Lock Button Shared with D14B",
-                  "confidence": 0.99
+                  "confidence": 0.98
                 },
                 {
                   "field": "notes",
                   "gold": "Shared with D14B",
                   "pred": null,
-                  "confidence": 0.956
+                  "confidence": 0.977
                 }
               ]
             },
@@ -20180,7 +20180,7 @@
                   "field": "description",
                   "gold": "Wiring Diagrams",
                   "pred": "Wiring Diagrams Interlock with D147B.",
-                  "confidence": 0.99
+                  "confidence": 0.98
                 }
               ]
             }
@@ -23788,15 +23788,15 @@
           {
             "lo": 0.8,
             "hi": 0.9,
-            "count": 50,
-            "correct": 50,
-            "accuracy": 1.0
+            "count": 0,
+            "correct": 0,
+            "accuracy": null
           },
           {
             "lo": 0.9,
             "hi": 1.0,
-            "count": 2026,
-            "correct": 2026,
+            "count": 2076,
+            "correct": 2076,
             "accuracy": 1.0
           }
         ]
@@ -30363,13 +30363,13 @@
                   "field": "catalog_number",
                   "gold": "B660 P6 626/626 KD C",
                   "pred": "B660 P6 626/626 KD C Final Keying By Canada Post",
-                  "confidence": 0.994
+                  "confidence": 0.999
                 },
                 {
                   "field": "notes",
                   "gold": "Final Keying By Canada Post",
                   "pred": null,
-                  "confidence": 0.956
+                  "confidence": 0.977
                 }
               ]
             },
@@ -32307,13 +32307,13 @@
                   "field": "catalog_number",
                   "gold": "4531-35-101-628 - LH",
                   "pred": "4531-35-101-628 - LH *Confirm Door Thickness",
-                  "confidence": 0.994
+                  "confidence": 0.999
                 },
                 {
                   "field": "notes",
                   "gold": "*Confirm Door Thickness",
                   "pred": null,
-                  "confidence": 0.956
+                  "confidence": 0.977
                 }
               ]
             },
@@ -32335,13 +32335,13 @@
                   "field": "catalog_number",
                   "gold": "4590-02-00-628",
                   "pred": "4590-02-00-628 *Confirm Door Thickness",
-                  "confidence": 0.994
+                  "confidence": 0.999
                 },
                 {
                   "field": "notes",
                   "gold": "*Confirm Door Thickness",
                   "pred": null,
-                  "confidence": 0.956
+                  "confidence": 0.977
                 }
               ]
             },

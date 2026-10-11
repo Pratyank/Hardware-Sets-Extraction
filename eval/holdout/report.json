@@ -11,51 +11,51 @@
         "total": 107
       },
       "n_gold_components": 821,
-      "n_pred_components": 820,
-      "n_matched_components": 820,
+      "n_pred_components": 821,
+      "n_matched_components": 821,
       "fields": {
         "qty": {
-          "correct": 819,
-          "total": 820
+          "correct": 821,
+          "total": 821
         },
         "qty_unit": {
-          "correct": 818,
-          "total": 820
+          "correct": 821,
+          "total": 821
         },
         "description": {
-          "correct": 815,
-          "total": 820
+          "correct": 821,
+          "total": 821
         },
         "catalog_number": {
-          "correct": 813,
-          "total": 820
+          "correct": 819,
+          "total": 821
         },
         "mfr": {
-          "correct": 819,
-          "total": 820
+          "correct": 821,
+          "total": 821
         },
         "finish": {
-          "correct": 820,
-          "total": 820
+          "correct": 821,
+          "total": 821
         },
         "notes": {
-          "correct": 820,
-          "total": 820
+          "correct": 821,
+          "total": 821
         }
       },
       "fuzzy": {
         "description": {
-          "sum": 819.0053283149757,
-          "count": 820
+          "sum": 821.0,
+          "count": 821
         },
         "catalog_number": {
-          "sum": 817.7109251859252,
-          "count": 820
+          "sum": 820.6,
+          "count": 821
         }
       },
       "confusion": {
         "mfr": {
-          "mfr": 813,
+          "mfr": 814,
           "finish": 0,
           "other": 0,
           "missing": 0
@@ -71,7 +71,7 @@
         "sum": 99.41105593378407,
         "count": 107
       },
-      "n_fully_correct": 101,
+      "n_fully_correct": 105,
       "reliability": [
         {
           "lo": 0.0,
@@ -104,16 +104,16 @@
         {
           "lo": 0.8,
           "hi": 0.9,
-          "count": 27,
-          "correct": 22,
-          "accuracy": 0.8148148148148148
+          "count": 0,
+          "correct": 0,
+          "accuracy": null
         },
         {
           "lo": 0.9,
           "hi": 1.0,
-          "count": 4893,
-          "correct": 4884,
-          "accuracy": 0.9981606376456161
+          "count": 4926,
+          "correct": 4924,
+          "accuracy": 0.9995939910678034
         }
       ]
     },
@@ -122,30 +122,30 @@
       "set_precision": 1.0,
       "set_f1": 1.0,
       "status_accuracy": 1.0,
-      "component_recall": 0.9987819732034104,
+      "component_recall": 1.0,
       "component_precision": 1.0,
-      "component_f1": 0.9993906154783668,
+      "component_f1": 1.0,
       "field_accuracy": {
-        "qty": 0.998780487804878,
-        "qty_unit": 0.9975609756097561,
-        "description": 0.9939024390243902,
-        "catalog_number": 0.9914634146341463,
-        "mfr": 0.998780487804878,
+        "qty": 1.0,
+        "qty_unit": 1.0,
+        "description": 1.0,
+        "catalog_number": 0.997563946406821,
+        "mfr": 1.0,
         "finish": 1.0,
         "notes": 1.0
       },
       "fuzzy": {
-        "description": 0.9987869857499704,
-        "catalog_number": 0.9972084453486894
+        "description": 1.0,
+        "catalog_number": 0.9995127892813642
       },
       "location_iou": 0.9290752891007857,
-      "set_fully_correct": 0.9439252336448598
+      "set_fully_correct": 0.9813084112149533
     },
     "macro": {
       "set_recall": 1.0,
       "set_precision": 1.0,
       "set_f1": 1.0,
-      "set_fully_correct": 0.9340120663650076,
+      "set_fully_correct": 0.9852941176470589,
       "location_iou": 0.9388512942226249
     }
   },
@@ -164,51 +164,51 @@
           "total": 39
         },
         "n_gold_components": 376,
-        "n_pred_components": 375,
-        "n_matched_components": 375,
+        "n_pred_components": 376,
+        "n_matched_components": 376,
         "fields": {
           "qty": {
-            "correct": 374,
-            "total": 375
+            "correct": 376,
+            "total": 376
           },
           "qty_unit": {
-            "correct": 373,
-            "total": 375
+            "correct": 376,
+            "total": 376
           },
           "description": {
-            "correct": 370,
-            "total": 375
+            "correct": 376,
+            "total": 376
           },
           "catalog_number": {
-            "correct": 370,
-            "total": 375
+            "correct": 376,
+            "total": 376
           },
           "mfr": {
-            "correct": 374,
-            "total": 375
+            "correct": 376,
+            "total": 376
           },
           "finish": {
-            "correct": 375,
-            "total": 375
+            "correct": 376,
+            "total": 376
           },
           "notes": {
-            "correct": 375,
-            "total": 375
+            "correct": 376,
+            "total": 376
           }
         },
         "fuzzy": {
           "description": {
-            "sum": 374.0053283149757,
-            "count": 375
+            "sum": 376.0,
+            "count": 376
           },
           "catalog_number": {
-            "sum": 373.1109251859252,
-            "count": 375
+            "sum": 376.0,
+            "count": 376
           }
         },
         "confusion": {
           "mfr": {
-            "mfr": 368,
+            "mfr": 369,
             "finish": 0,
             "other": 0,
             "missing": 0
@@ -224,7 +224,7 @@
           "sum": 38.02193390135255,
           "count": 39
         },
-        "n_fully_correct": 35,
+        "n_fully_correct": 39,
         "reliability": [
           {
             "lo": 0.0,
@@ -257,16 +257,16 @@
           {
             "lo": 0.8,
             "hi": 0.9,
-            "count": 21,
-            "correct": 16,
-            "accuracy": 0.7619047619047619
+            "count": 0,
+            "correct": 0,
+            "accuracy": null
           },
           {
             "lo": 0.9,
             "hi": 1.0,
-            "count": 2229,
-            "correct": 2222,
-            "accuracy": 0.996859578286227
+            "count": 2256,
+            "correct": 2256,
+            "accuracy": 1.0
           }
         ]
       },
@@ -275,24 +275,24 @@
         "set_precision": 1.0,
         "set_f1": 1.0,
         "status_accuracy": 1.0,
-        "component_recall": 0.9973404255319149,
+        "component_recall": 1.0,
         "component_precision": 1.0,
-        "component_f1": 0.9986684420772304,
+        "component_f1": 1.0,
         "field_accuracy": {
-          "qty": 0.9973333333333333,
-          "qty_unit": 0.9946666666666667,
-          "description": 0.9866666666666667,
-          "catalog_number": 0.9866666666666667,
-          "mfr": 0.9973333333333333,
+          "qty": 1.0,
+          "qty_unit": 1.0,
+          "description": 1.0,
+          "catalog_number": 1.0,
+          "mfr": 1.0,
           "finish": 1.0,
           "notes": 1.0
         },
         "fuzzy": {
-          "description": 0.9973475421732686,
-          "catalog_number": 0.9949624671624673
+          "description": 1.0,
+          "catalog_number": 1.0
         },
         "location_iou": 0.9749213820859628,
-        "set_fully_correct": 0.8974358974358975
+        "set_fully_correct": 1.0
       },
       "sets": [
         {
@@ -518,53 +518,22 @@
               "diffs": []
             },
             {
-              "gold_idx": 15,
+              "gold_idx": 14,
               "pred_idx": 14,
               "similarity": 100.0,
               "field_correct": {
-                "qty": false,
-                "qty_unit": false,
-                "description": false,
-                "catalog_number": false,
-                "mfr": false,
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "qty",
-                  "gold": null,
-                  "pred": 1,
-                  "confidence": 1.0
-                },
-                {
-                  "field": "qty_unit",
-                  "gold": null,
-                  "pred": "EA",
-                  "confidence": null
-                },
-                {
-                  "field": "description",
-                  "gold": "SEALS - AS TESTED BY DOOR MANUFACTURER",
-                  "pred": "MULLION SEAL SEALS - AS TESTED BY DOOR MANUFACTURER",
-                  "confidence": 0.888
-                },
-                {
-                  "field": "catalog_number",
-                  "gold": "BY DOOR / FRAME MANUFACTURER",
-                  "pred": "139N PSA BY DOOR / FRAME MANUFACTURER",
-                  "confidence": 0.98
-                },
-                {
-                  "field": "mfr",
-                  "gold": null,
-                  "pred": "ZER",
-                  "confidence": 1.0
-                }
-              ]
+              "diffs": []
             },
             {
-              "gold_idx": 16,
+              "gold_idx": 15,
               "pred_idx": 15,
               "similarity": 100.0,
               "field_correct": {
@@ -579,7 +548,7 @@
               "diffs": []
             },
             {
-              "gold_idx": 17,
+              "gold_idx": 16,
               "pred_idx": 16,
               "similarity": 100.0,
               "field_correct": {
@@ -594,7 +563,7 @@
               "diffs": []
             },
             {
-              "gold_idx": 18,
+              "gold_idx": 17,
               "pred_idx": 17,
               "similarity": 100.0,
               "field_correct": {
@@ -609,7 +578,7 @@
               "diffs": []
             },
             {
-              "gold_idx": 19,
+              "gold_idx": 18,
               "pred_idx": 18,
               "similarity": 100.0,
               "field_correct": {
@@ -624,50 +593,39 @@
               "diffs": []
             },
             {
-              "gold_idx": 20,
+              "gold_idx": 19,
               "pred_idx": 19,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
-                "qty_unit": false,
-                "description": false,
-                "catalog_number": false,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "qty_unit",
-                  "gold": "EA",
-                  "pred": "EA STRIKE",
-                  "confidence": null
-                },
-                {
-                  "field": "description",
-                  "gold": "POWER SUPPLY",
-                  "pred": "POWER SUPPLY NOTE",
-                  "confidence": 0.8
-                },
-                {
-                  "field": "catalog_number",
-                  "gold": "PS906 900-4RL 900-2RS 900-BBK 120/240 VAC",
-                  "pred": "PS906 900-4RL 900-2RS 900-BBK 120/240 VAC FURNISH ADDITIONAL PIVOTS AS REQUIRED FOR DOORS 7'6\" AND OVER",
-                  "confidence": 0.98
-                }
-              ]
+              "diffs": []
             },
             {
-              "gold_idx": 14,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "gold_idx": 20,
+              "pred_idx": 20,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             }
           ],
-          "n_missed_components": 1,
+          "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "03",
@@ -808,31 +766,18 @@
               "field_correct": {
                 "qty": true,
                 "qty_unit": true,
-                "description": false,
-                "catalog_number": false,
+                "description": true,
+                "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "description",
-                  "gold": "ASTRAGAL",
-                  "pred": "ASTRAGAL NOTE",
-                  "confidence": 0.8
-                },
-                {
-                  "field": "catalog_number",
-                  "gold": "MEETING STILE SEAL BY DOOR MANUFACTURER",
-                  "pred": "MEETING STILE SEAL BY DOOR MANUFACTURER FURNISH ADDITIONAL PIVOTS AS REQUIRED FOR DOORS 7'6\" AND OVER",
-                  "confidence": 0.98
-                }
-              ]
+              "diffs": []
             }
           ],
           "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "05",
@@ -1729,31 +1674,18 @@
               "field_correct": {
                 "qty": true,
                 "qty_unit": true,
-                "description": false,
-                "catalog_number": false,
+                "description": true,
+                "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "description",
-                  "gold": "ASTRAGAL",
-                  "pred": "ASTRAGAL NOTE",
-                  "confidence": 0.8
-                },
-                {
-                  "field": "catalog_number",
-                  "gold": "MEETING STILE SEAL BY DOOR MANUFACTURER",
-                  "pred": "MEETING STILE SEAL BY DOOR MANUFACTURER FURNISH ADDITIONAL PIVOTS AS REQUIRED FOR DOORS 7'6\" AND OVER",
-                  "confidence": 0.98
-                }
-              ]
+              "diffs": []
             }
           ],
           "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "10",
@@ -3960,31 +3892,18 @@
               "field_correct": {
                 "qty": true,
                 "qty_unit": true,
-                "description": false,
-                "catalog_number": false,
+                "description": true,
+                "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "description",
-                  "gold": "KEY SWITCH",
-                  "pred": "KEY SWITCH NOTE",
-                  "confidence": 0.888
-                },
-                {
-                  "field": "catalog_number",
-                  "gold": "653-0505 L2 36-079 12/24 VDC",
-                  "pred": "653-0505 L2 36-079 12/24 VDC REMAINDER OF HARDWARE BY DOOR MANUFACTURER",
-                  "confidence": 0.98
-                }
-              ]
+              "diffs": []
             }
           ],
           "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "39",
@@ -6680,203 +6599,7 @@
           "fully_correct": true
         }
       ],
-      "errors": [
-        {
-          "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-          "kind": "wrong_qty",
-          "severity": 2,
-          "set_number": "02",
-          "set_idx": 0,
-          "page": 418,
-          "line_id": "L418_2",
-          "field": "qty",
-          "gold": null,
-          "pred": 1,
-          "message": "component #15: qty"
-        },
-        {
-          "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "02",
-          "set_idx": 0,
-          "page": 418,
-          "line_id": "L418_2",
-          "field": "qty_unit",
-          "gold": null,
-          "pred": "EA",
-          "message": "component #15: qty_unit"
-        },
-        {
-          "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "02",
-          "set_idx": 0,
-          "page": 418,
-          "line_id": "L418_2",
-          "field": "description",
-          "gold": "SEALS - AS TESTED BY DOOR MANUFACTURER",
-          "pred": "MULLION SEAL SEALS - AS TESTED BY DOOR MANUFACTURER",
-          "message": "component #15: description"
-        },
-        {
-          "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "02",
-          "set_idx": 0,
-          "page": 418,
-          "line_id": "L418_2",
-          "field": "catalog_number",
-          "gold": "BY DOOR / FRAME MANUFACTURER",
-          "pred": "139N PSA BY DOOR / FRAME MANUFACTURER",
-          "message": "component #15: catalog_number"
-        },
-        {
-          "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-          "kind": "wrong_mfr",
-          "severity": 3,
-          "set_number": "02",
-          "set_idx": 0,
-          "page": 418,
-          "line_id": "L418_2",
-          "field": "mfr",
-          "gold": null,
-          "pred": "ZER",
-          "message": "component #15: mfr"
-        },
-        {
-          "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "02",
-          "set_idx": 0,
-          "page": 418,
-          "line_id": "L418_2",
-          "field": "qty_unit",
-          "gold": "EA",
-          "pred": "EA STRIKE",
-          "message": "component #20: qty_unit"
-        },
-        {
-          "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "02",
-          "set_idx": 0,
-          "page": 418,
-          "line_id": "L418_2",
-          "field": "description",
-          "gold": "POWER SUPPLY",
-          "pred": "POWER SUPPLY NOTE",
-          "message": "component #20: description"
-        },
-        {
-          "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "02",
-          "set_idx": 0,
-          "page": 418,
-          "line_id": "L418_2",
-          "field": "catalog_number",
-          "gold": "PS906 900-4RL 900-2RS 900-BBK 120/240 VAC",
-          "pred": "PS906 900-4RL 900-2RS 900-BBK 120/240 VAC FURNISH ADDITIONAL PIVOTS AS REQUIRED FOR DOORS 7'6\" AND OVER",
-          "message": "component #20: catalog_number"
-        },
-        {
-          "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "02",
-          "set_idx": 0,
-          "page": 418,
-          "line_id": "L418_2",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #14"
-        },
-        {
-          "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "03",
-          "set_idx": 1,
-          "page": 419,
-          "line_id": "L419_15",
-          "field": "description",
-          "gold": "ASTRAGAL",
-          "pred": "ASTRAGAL NOTE",
-          "message": "component #8: description"
-        },
-        {
-          "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "03",
-          "set_idx": 1,
-          "page": 419,
-          "line_id": "L419_15",
-          "field": "catalog_number",
-          "gold": "MEETING STILE SEAL BY DOOR MANUFACTURER",
-          "pred": "MEETING STILE SEAL BY DOOR MANUFACTURER FURNISH ADDITIONAL PIVOTS AS REQUIRED FOR DOORS 7'6\" AND OVER",
-          "message": "component #8: catalog_number"
-        },
-        {
-          "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "08",
-          "set_idx": 5,
-          "page": 423,
-          "line_id": "L423_1",
-          "field": "description",
-          "gold": "ASTRAGAL",
-          "pred": "ASTRAGAL NOTE",
-          "message": "component #9: description"
-        },
-        {
-          "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "08",
-          "set_idx": 5,
-          "page": 423,
-          "line_id": "L423_1",
-          "field": "catalog_number",
-          "gold": "MEETING STILE SEAL BY DOOR MANUFACTURER",
-          "pred": "MEETING STILE SEAL BY DOOR MANUFACTURER FURNISH ADDITIONAL PIVOTS AS REQUIRED FOR DOORS 7'6\" AND OVER",
-          "message": "component #9: catalog_number"
-        },
-        {
-          "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "38",
-          "set_idx": 19,
-          "page": 433,
-          "line_id": "L433_1",
-          "field": "description",
-          "gold": "KEY SWITCH",
-          "pred": "KEY SWITCH NOTE",
-          "message": "component #2: description"
-        },
-        {
-          "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "38",
-          "set_idx": 19,
-          "page": 433,
-          "line_id": "L433_1",
-          "field": "catalog_number",
-          "gold": "653-0505 L2 36-079 12/24 VDC",
-          "pred": "653-0505 L2 36-079 12/24 VDC REMAINDER OF HARDWARE BY DOOR MANUFACTURER",
-          "message": "component #2: catalog_number"
-        }
-      ]
+      "errors": []
     },
     {
       "doc_id": "livelle-mulholland-life-plan-community--2025-12-12-livelle-bid-set-project-manual-vol1-rev1",
@@ -6985,16 +6708,16 @@
           {
             "lo": 0.8,
             "hi": 0.9,
-            "count": 6,
-            "correct": 6,
-            "accuracy": 1.0
+            "count": 0,
+            "correct": 0,
+            "accuracy": null
           },
           {
             "lo": 0.9,
             "hi": 1.0,
-            "count": 2664,
-            "correct": 2662,
-            "accuracy": 0.9992492492492493
+            "count": 2670,
+            "correct": 2668,
+            "accuracy": 0.9992509363295881
           }
         ]
       },
@@ -8480,7 +8203,7 @@
                   "field": "catalog_number",
                   "gold": "LP200A 6'",
                   "pred": "LP200A",
-                  "confidence": 0.994
+                  "confidence": 0.999
                 }
               ]
             },
@@ -8534,7 +8257,7 @@
                   "field": "catalog_number",
                   "gold": "LP200A 6'",
                   "pred": "LP200A",
-                  "confidence": 0.994
+                  "confidence": 0.999
                 }
               ]
             },
@@ -14901,34 +14624,6 @@
   ],
   "worst_errors": [
     {
-      "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-      "kind": "wrong_mfr",
-      "severity": 3,
-      "set_number": "02",
-      "set_idx": 0,
-      "page": 418,
-      "line_id": "L418_2",
-      "field": "mfr",
-      "gold": null,
-      "pred": "ZER",
-      "message": "component #15: mfr",
-      "link": "http://localhost:8000/#doc=village-of-oswego-new-public-works-facility-copy--specifications-volume-1&set=0"
-    },
-    {
-      "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-      "kind": "wrong_qty",
-      "severity": 2,
-      "set_number": "02",
-      "set_idx": 0,
-      "page": 418,
-      "line_id": "L418_2",
-      "field": "qty",
-      "gold": null,
-      "pred": 1,
-      "message": "component #15: qty",
-      "link": "http://localhost:8000/#doc=village-of-oswego-new-public-works-facility-copy--specifications-volume-1&set=0"
-    },
-    {
       "doc_id": "livelle-mulholland-life-plan-community--2025-12-12-livelle-bid-set-project-manual-vol1-rev1",
       "kind": "wrong_field",
       "severity": 1,
@@ -14955,90 +14650,6 @@
       "pred": "LP200A",
       "message": "component #0: catalog_number",
       "link": "http://localhost:8000/#doc=livelle-mulholland-life-plan-community--2025-12-12-livelle-bid-set-project-manual-vol1-rev1&set=17"
-    },
-    {
-      "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-      "kind": "missed_component",
-      "severity": 1,
-      "set_number": "02",
-      "set_idx": 0,
-      "page": 418,
-      "line_id": "L418_2",
-      "field": null,
-      "gold": null,
-      "pred": null,
-      "message": "gold component #14",
-      "link": "http://localhost:8000/#doc=village-of-oswego-new-public-works-facility-copy--specifications-volume-1&set=0"
-    },
-    {
-      "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-      "kind": "wrong_field",
-      "severity": 1,
-      "set_number": "02",
-      "set_idx": 0,
-      "page": 418,
-      "line_id": "L418_2",
-      "field": "catalog_number",
-      "gold": "BY DOOR / FRAME MANUFACTURER",
-      "pred": "139N PSA BY DOOR / FRAME MANUFACTURER",
-      "message": "component #15: catalog_number",
-      "link": "http://localhost:8000/#doc=village-of-oswego-new-public-works-facility-copy--specifications-volume-1&set=0"
-    },
-    {
-      "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-      "kind": "wrong_field",
-      "severity": 1,
-      "set_number": "02",
-      "set_idx": 0,
-      "page": 418,
-      "line_id": "L418_2",
-      "field": "catalog_number",
-      "gold": "PS906 900-4RL 900-2RS 900-BBK 120/240 VAC",
-      "pred": "PS906 900-4RL 900-2RS 900-BBK 120/240 VAC FURNISH ADDITIONAL PIVOTS AS REQUIRED FOR DOORS 7'6\" AND OVER",
-      "message": "component #20: catalog_number",
-      "link": "http://localhost:8000/#doc=village-of-oswego-new-public-works-facility-copy--specifications-volume-1&set=0"
-    },
-    {
-      "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-      "kind": "wrong_field",
-      "severity": 1,
-      "set_number": "02",
-      "set_idx": 0,
-      "page": 418,
-      "line_id": "L418_2",
-      "field": "description",
-      "gold": "SEALS - AS TESTED BY DOOR MANUFACTURER",
-      "pred": "MULLION SEAL SEALS - AS TESTED BY DOOR MANUFACTURER",
-      "message": "component #15: description",
-      "link": "http://localhost:8000/#doc=village-of-oswego-new-public-works-facility-copy--specifications-volume-1&set=0"
-    },
-    {
-      "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-      "kind": "wrong_field",
-      "severity": 1,
-      "set_number": "02",
-      "set_idx": 0,
-      "page": 418,
-      "line_id": "L418_2",
-      "field": "description",
-      "gold": "POWER SUPPLY",
-      "pred": "POWER SUPPLY NOTE",
-      "message": "component #20: description",
-      "link": "http://localhost:8000/#doc=village-of-oswego-new-public-works-facility-copy--specifications-volume-1&set=0"
-    },
-    {
-      "doc_id": "village-of-oswego-new-public-works-facility-copy--specifications-volume-1",
-      "kind": "wrong_field",
-      "severity": 1,
-      "set_number": "02",
-      "set_idx": 0,
-      "page": 418,
-      "line_id": "L418_2",
-      "field": "qty_unit",
-      "gold": null,
-      "pred": "EA",
-      "message": "component #15: qty_unit",
-      "link": "http://localhost:8000/#doc=village-of-oswego-new-public-works-facility-copy--specifications-volume-1&set=0"
     }
   ]
 }

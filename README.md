@@ -11,9 +11,11 @@ Results:
 
 - **Gold books** (8 books, 279 sets, 2,184 components, labelled by hand from page images):
   - 100% set recall
-  - 99.3% component F1
-  - 87.1% of sets fully correct
+  - 100% component F1
+  - 97.8% of sets fully correct
   - zero manufacturer↔finish confusions
+- **Held-out books** (2 books, 107 sets, never used to develop rules): 100% set recall, 100% component F1,
+  98.1% of sets fully correct.
 - **Negative books:** zero false sets across 21 sections that contain no hardware sets.
 
 A review UI shows each page with the extraction overlaid. Hovering any field lights up its source words; any cell
@@ -175,29 +177,29 @@ every format cluster, 2 held-out books and 10 dev books. Full report: `eval/repo
 
 | Book (format cluster) | Sets | Set R / P | Components R / P | Fully correct |
 |---|---|---|---|---|
-| valor (minimal list, no manufacturer or catalog, redlines) | 37 | 100 / 100 | 100 / 99.6 | 94.6% |
-| roselle (ruled table, SET column, merged manufacturer-catalog) | 33 | 100 / 100 | 100 / 100 | 75.8% |
-| jc-ryan (`Set:` list, centred cells, no finish) | 38 | 100 / 100 | 98.5 / 100 | 73.7% |
+| valor (minimal list, no manufacturer or catalog, redlines) | 37 | 100 / 100 | 100 / 100 | 100% |
+| roselle (ruled table, SET column, merged manufacturer-catalog) | 33 | 100 / 100 | 100 / 100 | 97.0% |
+| jc-ryan (`Set:` list, centred cells, no finish) | 38 | 100 / 100 | 100 / 100 | 100% |
 | gerrard (`Set #` list with legends) | 35 | 100 / 100 | 100 / 100 | 91.4% |
 | lyons (`Hardware Group` template, NOT USED, door grids) | 29 | 100 / 100 | 100 / 100 | 100% |
-| hfh (Allegion table, redline V16→V17), pp 20–40 | 25 | 100 / 100 | 98.6 / 99.4 | 72.0% |
-| bridgeport (supplier submittal, `Heading #`), pp 3–18 | 31 | 100 / 100 | 100 / 98.9 | 87.1% |
-| sjc (`HW` redline, moved/retired stubs), pp 711–724 | 51 | 100 / 96.2 | 94.4 / 100 | 96.1% |
-| **Total (micro)** | **279** | **100 / 99.3** | **98.9 / 99.7** | **87.1%** |
+| hfh (Allegion table, redline V16→V17), pp 20–40 | 25 | 100 / 100 | 100 / 100 | 100% |
+| bridgeport (supplier submittal, `Heading #`), pp 3–18 | 31 | 100 / 100 | 100 / 100 | 93.5% |
+| sjc (`HW` redline, moved/retired stubs), pp 711–724 | 51 | 100 / 100 | 100 / 100 | 100% |
+| **Total (micro)** | **279** | **100 / 100** | **100 / 100** | **97.8%** |
 
 **Field accuracy** on matched components, as exact matches after normalization:
 
 | Field | Accuracy |
 |---|---|
-| qty | 99.7% |
+| qty | 100% |
 | unit | 100% |
-| description | 99.1% |
-| catalog | 99.6% |
+| description | 99.7% |
+| catalog | 99.8% |
 | manufacturer | 99.95% |
 | finish | 100% |
-| notes | 99.4% |
+| notes | 99.7% |
 
-**Location:** mean IoU against hand-drawn boxes is 0.92.
+**Location:** mean IoU against hand-drawn boxes is 0.93.
 
 **Blind baseline vs. now.** The first eval was run before any rule had seen a gold book. That baseline was:
 - set recall 88.2%
@@ -205,40 +207,43 @@ every format cluster, 2 held-out books and 10 dev books. Full report: `eval/repo
 - 31.2% of sets fully correct
 
 Every fix since then is a general rule, verified on the dev and negative books, and logged with its error
-category in `docs/DECISIONS.md` (Checkpoint 6b). Because the gold books then informed those fixes, **the held-out
+category in `docs/DECISIONS.md` (Checkpoint 6b, then "Root-cause analysis and fix plan", which took the gold books
+from 87.1% to 97.8% fully correct with one user-approved gold change, hfh set 027). Because the gold books then informed those fixes, **the held-out
 books below are the honest generalization number.**
 
-**Held-out books** (never opened during development; gold drafted at the end by a separate agent):
-Measured once, after development was frozen. Full report: `eval/holdout/report.md`.
+**Held-out books** (never opened during development; gold drafted at the end by a separate agent).
+They have been measured **twice**, and both results are reported. Full report: `eval/holdout/report.md`.
 
-| Book (format) | Sets | Set R / P | Components R / P | Fully correct |
-|---|---|---|---|---|
-| oswego (`Hardware Group No.` list, door lines, NOTE rows), pp 418–445 | 39 | 100 / 100 | 99.7 / 100 | 89.7% |
-| livelle (`Set: N.0` list, `Description:` titles, no unit), pp 643–662 | 68 | 100 / 100 | 100 / 100 | 97.1% |
-| **Total (micro)** | **107** | **100 / 100** | **99.9 / 100** | **94.4%** |
+| Book (format) | Sets | Set R / P | Components R / P | Fully correct, 1st look | Fully correct, 2nd look |
+|---|---|---|---|---|---|
+| oswego (`Hardware Group No.` list, door lines, NOTE rows), pp 418–445 | 39 | 100 / 100 | 100 / 100 | 89.7% | 100% |
+| livelle (`Set: N.0` list, `Description:` titles, no unit), pp 643–662 | 68 | 100 / 100 | 100 / 100 | 97.1% | 97.1% |
+| **Total (micro)** | **107** | **100 / 100** | **100 / 100** | **94.4%** | **98.1%** |
 
-- Field accuracy on held-out data: qty 99.9%, unit 99.8%, description 99.4%, catalog 99.1%, manufacturer 99.9%,
-  finish 100%, notes 100%. No manufacturer↔finish confusions. Mean location IoU 0.93.
-- Calibration fitted on gold still holds out of sample: fields scored ≥ 0.9 are 99.8% exact (4,893 fields), and
-  fields scored 0.8–0.9 are 81.5% exact (27 fields).
-- All 17 held-out errors fall into two classes, listed under known failures below. Neither was fixed, so the
-  held-out books stay clean for future measurement.
+- **1st look:** after the Checkpoint 6b fixes, when development was first frozen.
+- **2nd look:** after the root-cause fix round on the gold books. The held-out books were not opened, run or
+  inspected during that round; every fix was justified by gold and dev failures alone. Oswego's `NOTE:` rows,
+  a known failure at the 1st look, are now right because of the general notes-only-row and remark rules
+  (fixes 2 and 6 in `docs/DECISIONS.md`). Two looks is still a mild form of reuse, so treat 98.1% as slightly
+  optimistic; the next unseen book is the real test.
+- Field accuracy on held-out data (2nd look): catalog 99.8% (2 rows), every other field 100%. No
+  manufacturer↔finish confusions. Mean location IoU 0.93.
+- The only held-out errors left are the livelle trailing foot mark, listed under known failures below.
 
-**Confidence** (`calibration.py`): per-field isotonic calibration fitted on gold. Measured accuracy is very high, so most fields calibrate close to 1.0 and the set badges spread little. The relative ordering still drives the UI's review queue. In-sample, fields scored ≥ 0.9
-are 99.7% exact and fields scored 0.8–0.9 are 93.5% exact. The UI's `n` key jumps to the low-confidence fields
-first.
+**Confidence** (`calibration.py`): per-field isotonic calibration fitted on gold. After the last refit every field
+scores ≥ 0.9: 99.9% of them are exact in-sample (13,098 fields) and 99.96% on the held-out books (4,926 fields).
+The scores are honest, but because measured accuracy is this high they spread little; their relative order still
+drives the UI's review queue (the `n` key jumps to the lowest-confidence fields first).
 
 **Known failures** (honest examples):
-- **hfh, an `ELEC FIRE EXIT HARDWARE` qty `2 (1)` cell:** both the `2` and the struck `(1)` carry MuPDF's
-  strikeout flag, so the quantity comes out `null` (gold is 2).
-- **Wrapped "DIAGRAMS" rows printed without a quantity** directly under a complete row are sometimes merged into
-  it (hfh).
-- **Held-out oswego, `NOTE:` rows:** a row whose description cell is just `NOTE:` and whose text sits in the
-  catalog column ("FURNISH ADDITIONAL PIVOTS …") is merged into the component above instead of becoming a set
-  note (4 sets). The same set's unquantified `SEALS` row merges into the row above it, the same class as the
-  hfh "DIAGRAMS" rows.
+- **A line broken on purpose under an item** (gerrard sets 02, 31, 32; bridgeport sets 6, 19). Text on its own line
+  under an item that would have fitted on the line above is a note (a deliberate break), not more of the cell.
+  Telling a deliberate break from a wrap needs each column's wrap width. Two ways of estimating it from the page
+  were tried and both broke other books badly (details in `docs/DECISIONS.md`), so the rule is not implemented
+  and these five sets stay wrong.
+- **Roselle `TRINE 3000 SERIES`** (set 6.1): it is genuinely unclear from the page whether this is a separate item or
+  part of the one above.
 - **Held-out livelle, a trailing foot mark:** `LP200A 6'` comes out as `LP200A` (2 rows).
-- **Roselle notes column:** a few multi-line notes join a following remark line.
 - **starhardware (dev):** paragraph-long catalog cells with images and sentence-form headers ("For doors assigned
   Hardware Group/Set #103 …") are found only partially. About 70 of about 74 sets.
 
@@ -275,7 +280,7 @@ Where AI output was not trusted:
   from extractor code and output, and the CLI refuses to run gold books until labels are final. Labels were
   spot-checked against page images, and a labelling-convention disagreement was resolved explicitly and logged.
 - **Every rule is tested.**
-  - 315 tests: unit tests, Hypothesis property tests and golden regression tests.
+  - 349 tests: unit tests, Hypothesis property tests and golden regression tests.
   - The property tests check:
     - role assignment does not change when columns are permuted;
     - collision codes take their column's role;

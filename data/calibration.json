@@ -2,75 +2,65 @@
  "fields": {
   "qty": {
    "xs": [
-    0.8,
-    0.9491
+    0.942
    ],
    "ys": [
-    0.93,
     1.0
    ],
-   "n": 2161
+   "n": 2183
   },
   "description": {
    "xs": [
-    0.7897,
-    0.8754,
-    0.9338,
-    1.0
+    0.8588,
+    0.9924
    ],
    "ys": [
-    0.8,
-    0.9,
-    0.9958,
+    0.9571,
     1.0
    ],
-   "n": 2161
+   "n": 2183
   },
   "catalog_number": {
    "xs": [
-    0.5426,
-    0.6687,
-    0.9322,
-    1.0
+    0.648,
+    0.9933
    ],
    "ys": [
-    0.98,
-    0.9864,
-    0.9938,
+    0.9926,
     1.0
    ],
-   "n": 2161
+   "n": 2183
   },
   "mfr": {
    "xs": [
     0.5763,
-    0.8946
+    0.8939
    ],
    "ys": [
     0.995,
     1.0
    ],
-   "n": 2161
+   "n": 2183
   },
   "finish": {
    "xs": [
-    0.8894
+    0.8892
    ],
    "ys": [
     1.0
    ],
-   "n": 2161
+   "n": 2183
   },
   "notes": {
    "xs": [
-    0.5954,
-    0.6945
+    0.6008,
+    0.6947
    ],
    "ys": [
-    0.9,
+    0.95,
     1.0
    ],
-   "n": 2161
+   "n": 2183
   }
  },
  "source": "gold books: valor-acres-building-e--087100-door-hardware-rev-2, roselle-public-library--087100-fl-door-hardware-ifb-revised, jc-ryan-2--087100-door-hardware-6, 2353-gerrard-street-shelter--hdw-spec-sch-ift-5, lyons-township-hs--project-manual-1, hfh-dg-hospital--08-71-00-door-hardware, 81-85-bridgeport--08-70-00-hardware-schedule, sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications"

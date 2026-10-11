@@ -414,3 +414,43 @@ This came from the last jc-ryan failure, found after fixes 1–7.
   - Gold: jc-ryan 97.4% → 100%. Total 97.5% → 97.8%, and component F1 is now 100%.
   - Dev and negatives: 0 components changed.
   - The unit test fails on the previous code.
+
+### Deliberate line breaks (user decision (a)): attempted, dropped
+
+The rule: text on its own line under an item that *would have fit* on the line above is a note.
+This would fix the last five gold failures (gerrard 02, 31, 32 and bridgeport 6, 19).
+It could not be implemented reliably from geometry, so it was dropped. Nothing about it was committed.
+
+- **What "would have fit" needs.** It needs each column's wrap width. The gap to the next column
+  doesn't give it, because many tables wrap well short of the next column.
+- **Version 1: wrap width = the widest cell printed in the column.**
+  - Gerrard went to 100%.
+  - But hfh fell to 4%, valor to 78% and roselle to 82%. Those books wrap cells at varying widths,
+    so ordinary wraps read as deliberate breaks.
+- **Version 2: wrap width = the 10th percentile of overflow points.** An overflow point is where a
+  wrapped cell's next word would have ended on the line above.
+  - hfh fell to 20% and valor to 59.5%, and gerrard did not change.
+  - Gerrard has too few wrapped cells (fewer than 8) to estimate any width.
+  - In hfh and valor the estimate came out about 10 pt narrower than real cells (valor description
+    116 pt, against a 127 pt column).
+  - The method is circular: the overflow samples include the deliberate breaks it tries to detect.
+- **Conclusion.** Printed geometry alone cannot reliably tell a deliberate break from a wrap across
+  these books.
+  - The five sets stay failing, and the gold labels are unchanged. The gold changes planned under
+    this rule (bridgeport p4 `@ 42" Top Down`, hfh `- PROVIDE BRASS CONSTRUCTION CORE`) were not made,
+    since they would only be justified alongside the rule.
+  - They are listed as known failures in the README.
+
+### Close-out: calibration refit, held-out second look
+
+- **Calibration refit** on gold (`hwsets calibrate`). Every field now scores ≥ 0.9.
+  - In-sample, 99.9% of fields are exact (13,098 fields).
+  - On the held-out books, 99.96% are exact (4,926 fields).
+- **Held-out, second look.** Measured once, after this round was frozen. The held-out books were not run
+  or opened during the round.
+  - Oswego: 89.7% → 100%. Its `NOTE:` rows are now handled by the general fixes 2 and 6.
+  - Livelle: 97.1% (unchanged; the trailing foot mark `LP200A 6'`).
+  - Total: 94.4% → 98.1%, with set recall and component F1 at 100%.
+  - The README reports both looks and calls the second slightly optimistic.
+- **Gold final:** 97.8% fully correct (273/279), set recall 100%, component F1 100%.
+  - The six remaining failures are the five deliberate-break sets above and roselle 6.1 (ambiguous).
