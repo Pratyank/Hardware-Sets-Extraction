@@ -36,14 +36,18 @@ Other targets:
 | `uv run hwsets extract <doc_id> --flat` | Extract one book into `data/results/` |
 | `make eval` | Score against gold; writes `eval/report.md` |
 | `make test` | Run the test suite |
-| `docker compose up` | Run everything in a single image, with Tesseract included (see the note below) |
+| `docker compose up` | Run everything in a single image, with Tesseract included (see below) |
 
 Specbook PDFs are not committed. Put them under `data/raw/`; each book's `doc_id` is derived from its path.
 
-**Docker:** the Dockerfile and docker-compose file are written and lint-checked, but the image has not been built
-here: Docker Desktop's WSL integration was not running on the build machine. Run `make docker` to verify it on a
-machine with a Docker daemon. The review UI also accepts new PDFs via **Upload PDF**, which runs
-`POST /api/docs/upload` to ingest and extract the file.
+**Docker:** `docker compose up` builds the image (Python 3.12, Tesseract and ocrmypdf), mounts `./data`, and
+preloads the three demo books if their PDFs are under `data/raw/`, then serves the UI on http://localhost:8000.
+This was verified end to end: the container reached `healthy`, listed the preloaded books, and extracted sets from
+an image-only PDF uploaded through **Upload PDF** (`POST /api/docs/upload`), which exercises OCR inside the image.
+
+**CI** (`.github/workflows/ci.yml`) runs `make check` (ruff, mypy strict and the tests) and builds the image. The
+golden gate needs the specbook token cache, which is not committed, so it skips in CI and runs locally under
+`make check`.
 
 ## Architecture
 

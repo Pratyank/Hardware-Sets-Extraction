@@ -1,0 +1,26 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.10.9"
+      - run: uv python install 3.12
+      - run: uv sync --frozen
+      # Lint, strict types and the test suite. The golden gate (tests/golden) needs the specbook token
+      # cache, which is not in the repository, so it skips here and runs locally under `make check`.
+      - run: make check
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t hwsets .

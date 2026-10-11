@@ -195,3 +195,17 @@ negatives (still 0 sets) to make sure nothing regressed.
   in oswego, and a trailing foot mark dropped in `LP200A 6'` in livelle). Fixing them would tune on the hold-out
   and spoil it as a measurement. Both are listed as known failures in the README.
 - `eval/holdout/report.*` is committed next to `eval/report.*`.
+
+## 2026-10-10: Docker verified, CI added
+
+- **Docker verified.** With Docker Desktop running, `make docker` built the image. Under `docker compose up` the
+  container reached `healthy`, preloaded the 3 demo books, and served the UI and API on :8000. Uploading an
+  image-only PDF (Valor p8 rasterized, no text layer) went through OCR inside the image and returned 5 sets. OCR
+  output is noisier than a text layer: `04` came out as `4`, and one set's rows merged. The test upload's files
+  were removed afterwards.
+- **CI** (`.github/workflows/ci.yml`): `make check` plus a Docker build. Run in a clean clone, this gives
+  314 passed and 1 skipped (the golden gate, which needs the uncommitted token cache).
+- **Not done, because these need the user's accounts and are outward-facing:**
+  - pushing to GitHub (the `origin` remote has no `main` branch yet);
+  - deploying to Fly.io or Render. The deploy would also publish the specbook PDFs' extracted contents, which
+    is the user's call.
