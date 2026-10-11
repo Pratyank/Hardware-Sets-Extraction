@@ -367,3 +367,13 @@ FUNCTION)`).
   - Dev: only starhardware changed. Words return from code fields to their sentences (`a` out of the
     manufacturer field, `x` out of the finish field, `#BAR 4` restored), all checked against the dev
     diff.
+
+### Fix 7: a row tail split across columns is not a door reference
+
+- **Rule.** After a set's first item, a set-level phrase such as `Door 101A` must be one run of text.
+  `DOOR | 29`, split across two table columns, is the wrapped second line of
+  `GLASS/ALUM SLIDING DOOR | BY RELATED SECTION 08 42 29`, not a door reference.
+- **Results.**
+  - Gold: hfh 96.0% → 100% (set 026). Total 96.4% → 96.8%.
+  - Dev and negatives: 0 components changed.
+  - The unit test fails on the previous code.

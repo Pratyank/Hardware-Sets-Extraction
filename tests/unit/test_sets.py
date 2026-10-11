@@ -186,3 +186,15 @@ def test_first_row_with_only_collision_codes_is_not_a_description() -> None:
     headers = {ln.id: h for ln in lines if (h := parse_header(ln, sp.toks)) is not None}
     (span,) = split_spans(lines, headers)
     assert classify(span, sp.toks) == [Kind.HEADER, Kind.ROW, Kind.ROW]
+
+
+def test_wrapped_row_tail_split_across_columns_is_not_a_door_reference() -> None:
+    kinds = _kinds(
+        [
+            ("HARDWARE SET NO. 26", H),
+            "||GLASS/ALUM SLIDING|BY RELATED SECTION 08 42||B/O",
+            "||DOOR|29",  # second line of "GLASS/ALUM SLIDING DOOR" and "... 08 42 29"
+            "Door 101A",  # a real door reference: one run of text
+        ]
+    )
+    assert [k for _, k in kinds] == [Kind.HEADER, Kind.ROW, Kind.ROW, Kind.SET_LEVEL]

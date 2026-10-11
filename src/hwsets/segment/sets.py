@@ -19,6 +19,7 @@ from enum import StrEnum
 from hwsets.columns.features import is_catalog_token
 from hwsets.columns.lexicon import is_finish_code, is_mfr_code, unit_code
 from hwsets.layout.chrome import header_row_roles
+from hwsets.layout.columns import cell_starts
 from hwsets.models import Line, Token
 from hwsets.segment.headers import NOT_USED_RE, OUTLINE_RE, HeaderParse
 from hwsets.segment.section import END_OF_SECTION_RE
@@ -189,7 +190,9 @@ def classify(span: Span, toks: Mapping[str, Token]) -> list[Kind]:
         elif _DESCRIPTION_RE.match(text):
             kinds.append(Kind.DESCRIPTION)
         elif (
-            _SET_LEVEL_RE.match(text)
+            # After the first item, a set-level phrase must be a single run of text: "DOOR | 29"
+            # split across two table columns is the wrapped tail of a row, not a door reference.
+            (_SET_LEVEL_RE.match(text) and not (seen_row and len(cell_starts(ln, toks)) > 1))
             or _DOORS_HASH_RE.search(text)
             or (not seen_row and (is_door_list(ln, toks) or bool(_DIMENSION_RE.match(text))))
         ):
