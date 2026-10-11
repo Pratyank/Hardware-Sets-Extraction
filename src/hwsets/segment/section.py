@@ -69,6 +69,16 @@ def find_hardware_pages(
                 break
             pages.add(nxt)
             ended = _has_end(lines, after_last_header=False, toks=toks)
+    # A page between two header pages is inside the section even when it shows no component-like
+    # line: a set continuing past the break with only quantity-less rows ("Gasketing ... | By Door
+    # Manufacturer") would otherwise be cut off. Sets run contiguously through the section.
+    for gap_page in all_pages:
+        if header_pages[0] < gap_page < header_pages[-1] and gap_page not in pages:
+            prev = max(p for p in pages if p < gap_page)
+            if all_pages.index(gap_page) - all_pages.index(prev) == 1 and not _has_end(
+                lines_by_page[prev], after_last_header=True, toks=toks
+            ):
+                pages.add(gap_page)
     out.pages = sorted(pages)
     return out
 

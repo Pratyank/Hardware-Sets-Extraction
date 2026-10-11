@@ -395,3 +395,22 @@ FUNCTION)`).
   - Gold: bridgeport 87.1% → 93.5% (sets 2 and 24). Total 96.8% → 97.5%.
   - Dev: 3 starhardware components removed, each a junk fragment: a paragraph tail, a sentence tail, and
     the heading `Exterior Hardware Sets (Typically Two-Digit Set Numbers):`.
+
+### Fix 8: a page between two header pages is inside the section
+
+This came from the last jc-ryan failure, found after fixes 1–7.
+- **The failure.** Set EX-2.0 continues onto p25, which holds only the quantity-less item `Gasketing,
+  threshold, sweep, astragal | By Door Manufacturer`.
+- **First cause.** Continuation pages needed a component-like (quantity) line, so p25 was outside the
+  hardware section and the item was lost.
+- **First rule.** A page directly after a hardware page that sits before the last header page, with no
+  end-of-section marker in between, is included. Sets run contiguously through a section.
+- **Second cause.** In a spaced layout (fix 1), the page break was not a block boundary, so the item merged
+  into the one above with two catalogs.
+- **Second rule.** A page break now counts as a block boundary for whole items (two value cells starting
+  with an item name). It does not count for one-cell remarks, because a description can wrap onto the
+  next page.
+- **Results.**
+  - Gold: jc-ryan 97.4% → 100%. Total 97.5% → 97.8%, and component F1 is now 100%.
+  - Dev and negatives: 0 components changed.
+  - The unit test fails on the previous code.

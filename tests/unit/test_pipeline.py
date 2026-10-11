@@ -279,3 +279,26 @@ def test_distant_duplicates_are_flagged_not_dropped() -> None:
     result = run([p1, p5])
     assert [s.set_number.value for s in result.sets].count("7") == 2
     assert any("duplicate set number" in w for w in result.warnings)
+
+
+def test_page_between_header_pages_is_read_even_without_a_quantity_row() -> None:
+    """A set continues onto a page holding only a quantity-less item; the page lies between two
+    header pages, so it is inside the hardware section and its item is not lost."""
+    h: dict[str, Any] = {"bold": True}
+    p1 = make_page(
+        1,
+        [
+            ("HARDWARE SET NO. 1", h),
+            "3|EA|HINGE|5BB1|652|IVE",
+            ("HARDWARE SET NO. 2", h),
+            "1|EA|STOP|WS406|630|IVE",
+        ],
+    )
+    p2 = make_page(2, ["||GASKETING SET|BY DOOR MANUFACTURER"])
+    p3 = make_page(3, [("HARDWARE SET NO. 3", h), "1|EA|LOCK|ND50PD|626|SCH"])
+    result = run([p1, p2, p3])
+    assert 2 in result.hardware_pages
+    texts = " ".join(
+        f"{c.description.value} {c.catalog_number.value}" for c in result.sets[1].components
+    )
+    assert "GASKETING SET" in texts

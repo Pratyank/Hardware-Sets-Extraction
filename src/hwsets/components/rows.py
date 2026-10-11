@@ -225,6 +225,9 @@ def assemble_rows(
             in_deleted, tag_depth = False, 0
         # A full row pitch above this line (in a layout that spaces rows wider than wraps).
         block = opens_block(prev_ln, ln, model.rhythm)
+        # A page break is also a block boundary in a spaced layout (for whole items, not remarks:
+        # a description may wrap onto the next page).
+        page_block = model.rhythm is not None and prev_ln is not None and prev_ln.page != ln.page
         within = in_block(prev_ln, ln, model.rhythm)
         prev_ln = ln
         if in_remark and within and not line_starts_row(ln, toks, model):
@@ -331,7 +334,7 @@ def assemble_rows(
             continue
         elif (
             rows
-            and block
+            and (block or page_block)
             and model.rhythm is not None
             and not _REV_TAG_START_RE.match(ln.text)  # a revision tag annotates the row above
         ):
@@ -343,7 +346,7 @@ def assemble_rows(
                 starts_row=lambda x: line_starts_row(x, toks, model),
                 rhythm=model.rhythm,
             ) & {"description", "catalog", "finish", "mfr"}
-            if len(cols) < 2 and _ITEM_START_RE.match(tokens[0].text):
+            if block and len(cols) < 2 and _ITEM_START_RE.match(tokens[0].text):
                 # A one-cell block a full row below the item: a remark row, about the set.
                 set_notes.extend(ln.token_ids)
                 in_remark = True
@@ -356,7 +359,7 @@ def assemble_rows(
             ):
                 row = Row()  # an item printed without a quantity, in its own row
                 rows.append(row)
-            elif near and _continuation_ok(rows[-1], roles):
+            elif (near or new_page_cont) and _continuation_ok(rows[-1], roles):
                 row = rows[-1]  # not an item name (a bullet, a sentence's tail): keep wrapping
             else:
                 set_notes.extend(ln.token_ids)
