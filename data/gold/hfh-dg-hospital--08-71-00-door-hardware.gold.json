@@ -3329,19 +3329,8 @@
      }
     ]
    },
-   "components": [
-    {
-     "qty": null,
-     "qty_unit": null,
-     "description": null,
-     "catalog_number": "ALL HARDWARE BY DOOR MANUFACTURER",
-     "mfr": null,
-     "finish": null,
-     "notes": null,
-     "_uncertain": true,
-     "_uncertain_note": "only row of the set: text sits in the catalog column with no qty, unit, description or mfr; labelled as a by-others component"
-    }
-   ]
+   "components": [],
+   "_decision": "2026-10-10 user decision: 'ALL HARDWARE BY DOOR MANUFACTURER' is a remark about the set, not an item (previously labelled as an uncertain by-others component)"
   },
   {
    "set_number": "028",

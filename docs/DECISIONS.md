@@ -306,3 +306,12 @@ misreads. The full list is in the handoff notes and in the user-facing summary.
   - Gold: hfh 84.0% → 92.0% (sets 016 and 017). Total 93.2% → 93.9%.
   - The quantity that the README listed as an ambiguous known failure is now extracted correctly.
   - Dev and negatives: 0 components changed.
+
+### Gold change: hfh set 027 (user decision)
+
+- **Before:** one uncertain component, with catalog `ALL HARDWARE BY DOOR MANUFACTURER` and every other field
+  null.
+- **After:** no components; the line is a remark about the set.
+- This applies the user's decision. The extractor already printed no component here, so the set now counts
+  as correct (+1 hfh set). That gain comes from relabelling, not from any code change, and is reported as
+  such.
