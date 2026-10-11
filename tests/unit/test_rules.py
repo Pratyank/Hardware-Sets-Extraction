@@ -7,7 +7,7 @@ from pathlib import Path
 import pymupdf
 
 from hwsets.ingest.pdf import apply_drawn_strikes, extract_document_with_rules
-from hwsets.layout.rules import RuleIndex
+from hwsets.layout.rules import RuleIndex, drop_strike_strokes
 from hwsets.models import Line, Rule, Token
 
 
@@ -63,3 +63,12 @@ def test_ingest_captures_table_rules(tmp_path: Path) -> None:
     vt = [r for r in rules[0] if not r.horizontal]
     assert len(hz) == 1 and len(vt) == 1
     assert not tokens[0][0].strike  # the border under the word is not a strike
+
+
+def test_strike_strokes_are_not_table_borders() -> None:
+    struck = Token(id="p1_w0", page=1, text="NIGHT", bbox=(136.0, 446.6, 170.0, 457.6),
+                   font_size=10.0, bold=False, block=0, line=0, strike=True)  # fmt: skip
+    stroke = Rule(bbox=(136.0, 452.6, 170.0, 452.6), horizontal=True)
+    border = Rule(bbox=(72.0, 460.0, 540.0, 460.0), horizontal=True)
+    assert drop_strike_strokes([stroke, border], [struck]) == [border]
+    assert drop_strike_strokes([stroke], []) == [stroke]

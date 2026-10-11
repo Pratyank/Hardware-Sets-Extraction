@@ -43,8 +43,8 @@ class ParsedRows:
 
 def _join(tokens: Sequence[Token]) -> str:
     """Join cell tokens with single spaces, except a code broken across a line wrap at a hyphen
-    ("630-" on one line, "316" on the next -> "630-316"). Tokens on the same line always keep
-    their space ("W/ KEYFOB", "CORE - COMBINATED")."""
+    ("630-" on one line, "316" on the next -> "630-316") and an opening bracket left alone
+    before a wrap. Other tokens on the same line keep their space ("W/ KEYFOB")."""
     out = ""
     prev: Token | None = None
     for t in tokens:
@@ -53,6 +53,10 @@ def _join(tokens: Sequence[Token]) -> str:
         else:
             wrapped = t.bbox[1] >= prev.bbox[3] - 0.25 * (prev.bbox[3] - prev.bbox[1])
             if wrapped and len(prev.text) > 1 and prev.text.endswith("-") and t.text[:1].isalnum():
+                out += t.text
+            elif prev.text in {"(", "["} and (wrapped or t.bbox[0] - prev.bbox[2] < 1.0):
+                # An opening bracket left alone (the struck word after it was deleted) opens
+                # the next word: "(" + "NIGHT" -> "(NIGHT".
                 out += t.text
             else:
                 out += " " + t.text

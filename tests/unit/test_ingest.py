@@ -8,7 +8,7 @@ import pymupdf
 import pytest
 
 from hwsets.ingest import render
-from hwsets.ingest.pdf import extract_document, reconcile_strikes
+from hwsets.ingest.pdf import extract_document, reconcile_strikes, split_partial_strikes
 from hwsets.ingest.store import TokenStore, doc_id_for, sha256_file
 from hwsets.models import Token
 
@@ -185,3 +185,30 @@ def test_ingest_clears_neighbour_flag_end_to_end(tmp_path: Path) -> None:
     flags = {t.text: t.strike for t in pages[0]}
     assert flags["(1)"] is True
     assert flags["2"] is False
+
+
+def _chars(
+    text: str, x0: float, cw: float = 5.0
+) -> list[tuple[str, tuple[float, float, float, float]]]:
+    return [(c, (x0 + i * cw, 110.0, x0 + (i + 1) * cw, 121.2)) for i, c in enumerate(text)]
+
+
+def test_partly_struck_word_gives_back_its_unstruck_end() -> None:
+    word = _tok("(DOGGING,", 80.0, 125.0, strike=True)
+    chars = _chars("(DOGGING,", 80.0)
+    stroke = (85.0, 116.0, 125.0, 116.5)  # starts after "("
+    out = split_partial_strikes([word], [stroke], chars)
+    assert [(t.text, t.strike) for t in out] == [("(", False), ("DOGGING,", True)]
+    assert [t.id for t in out] == ["p1_w0", "p1_w1"]
+
+
+def test_unflagged_word_is_never_split() -> None:
+    word = _tok("Compact", 80.0, 115.0, strike=False)
+    stroke = (80.0, 116.0, 85.0, 116.5)  # a drawing line crossing the first letter
+    assert split_partial_strikes([word], [stroke], _chars("Compact", 80.0)) == [word]
+
+
+def test_no_split_between_two_letters() -> None:
+    word = _tok("with", 80.0, 100.0, strike=True)
+    stroke = (80.0, 116.0, 90.0, 116.5)  # stops after "wi": a short stroke, not a redline
+    assert split_partial_strikes([word], [stroke], _chars("with", 80.0))[0].text == "with"

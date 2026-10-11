@@ -230,6 +230,79 @@ def _strike_contradicted(t: Token, strokes: Sequence[BBox]) -> bool:
     return max(min(x1, b[2]) - max(x0, b[0]) for b in near) < 0.2 * w
 
 
+def _page_chars(page: pymupdf.Page) -> list[tuple[str, BBox]]:
+    """Every character with its displayed-page box."""
+    out: list[tuple[str, BBox]] = []
+    for block in page.get_text("rawdict", flags=_TEXT_FLAGS)["blocks"]:
+        for line in block.get("lines", ()):
+            for span in line["spans"]:
+                for ch in span["chars"]:
+                    out.append((ch["c"], _display_bbox(tuple(ch["bbox"]), page)))
+    return out
+
+
+def _band_cover(box: BBox, strokes: Sequence[BBox]) -> float:
+    """Share of ``box``'s width crossed by a stroke through its middle band."""
+    x0, y0, x1, y1 = box
+    h, w = y1 - y0, max(x1 - x0, 0.1)
+    lo, hi = y0 + 0.3 * h, y0 + 0.72 * h
+    best = 0.0
+    for b in strokes:
+        if lo <= (b[1] + b[3]) / 2 <= hi:
+            best = max(best, min(x1, b[2]) - max(x0, b[0]))
+    return best / w
+
+
+def split_partial_strikes(
+    tokens: Sequence[Token], strokes: Sequence[BBox], chars: Sequence[tuple[str, BBox]]
+) -> list[Token]:
+    """Split a struck word whose strike stroke covers only its start or its end.
+
+    A redline can strike part of a word: ``(DOGGING,`` with only ``DOGGING,`` struck keeps the
+    ``(`` that opens ``(NIGHT LATCH FUNCTION)``. Only words already flagged as struck are tested,
+    so this can give characters back but never strike a word that was not flagged (strokes from
+    drawings and form lines cross single letters of ordinary words). Characters are tested one by
+    one; when the struck ones form one run at one end, the word becomes two tokens, the struck
+    part flagged and the rest not. Token ids are renumbered in reading order.
+    """
+    out: list[Token] = []
+    for t in tokens:
+        if not t.strike:
+            out.append(t)
+            continue
+        cx = [
+            (c, b)
+            for c, b in chars
+            if t.bbox[0] - 0.5 <= (b[0] + b[2]) / 2 <= t.bbox[2] + 0.5
+            and t.bbox[1] - 0.5 <= (b[1] + b[3]) / 2 <= t.bbox[3] + 0.5
+            and not c.isspace()
+        ]
+        if len(cx) != len(t.text) or "".join(c for c, _ in cx) != t.text:
+            out.append(t)
+            continue
+        hit = [_band_cover(b, strokes) >= 0.5 for _, b in cx]
+        n = len(hit)
+        k = next((i for i in range(1, n) if hit[i] != hit[0]), n)
+        if k == n or any(h != hit[k] for h in hit[k:]) or (cx[k - 1][0] + cx[k][0]).isalpha():
+            # All, none, not one run at an end, or a cut between two letters (a stroke that
+            # stops short mid-word, not a partial redline): leave the word whole.
+            out.append(t)
+            continue
+        for part, flag in ((cx[:k], hit[0]), (cx[k:], hit[k])):
+            out.append(
+                t.model_copy(
+                    update={
+                        "text": "".join(c for c, _ in part),
+                        "bbox": (part[0][1][0], t.bbox[1], part[-1][1][2], t.bbox[3]),
+                        "strike": flag,
+                    }
+                )
+            )
+    if len(out) == len(tokens):
+        return list(tokens)
+    return [t.model_copy(update={"id": f"p{t.page}_w{i}"}) for i, t in enumerate(out)]
+
+
 def extract_document(path: Path) -> tuple[list[PageInfo], list[list[Token]]]:
     """Tokenize every page (see ``extract_document_with_rules``)."""
     pages, tokens, _rules = extract_document_with_rules(path)
@@ -248,8 +321,12 @@ def extract_document_with_rules(
         for page in doc:
             segments = _segments(page)
             rules = page_rules(page, segments)
-            tokens = apply_drawn_strikes(page_tokens(page), rules)
-            tokens = reconcile_strikes(tokens, strike_strokes(segments))
+            strokes = strike_strokes(segments)
+            tokens = page_tokens(page)
+            if strokes and any(t.strike for t in tokens):
+                tokens = split_partial_strikes(tokens, strokes, _page_chars(page))
+            tokens = apply_drawn_strikes(tokens, rules)
+            tokens = reconcile_strikes(tokens, strokes)
             has_images = bool(page.get_images(full=False))
             used_ocr = False
             if len(tokens) < OCR_MIN_WORDS and has_images:

@@ -297,3 +297,10 @@ def test_revision_tag_wrapped_down_the_quantity_column_is_not_a_quantity() -> No
     wave = parsed.components[0]
     assert wave.catalog_number.value == "BY RELATED SECTION 13"
     assert wave.notes.value == "[BULLETIN 023, 251218]"
+
+
+def test_lone_opening_bracket_joins_the_next_word() -> None:
+    """``(~~DOGGING,~~`` / ``NIGHT LATCH FUNCTION)``: after the struck word is deleted the
+    bracket opens the next line's word."""
+    parsed, _ = _parse(["2|EA|EXIT DEVICE (|||711|", "||NIGHT LATCH FUNCTION)"], model=MODEL)
+    assert parsed.components[0].description.value == "EXIT DEVICE (NIGHT LATCH FUNCTION)"

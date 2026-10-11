@@ -315,3 +315,28 @@ misreads. The full list is in the handoff notes and in the user-facing summary.
 - This applies the user's decision. The extractor already printed no component here, so the set now counts
   as correct (+1 hfh set). That gain comes from relabelling, not from any code change, and is reported as
   such.
+
+### Fix 3e: partly struck words, strike strokes as borders, and lone brackets
+
+The remaining valor errors come from redlines that strike part of a word (`(~~DOGGING,~~ NIGHT LATCH
+FUNCTION)`).
+- **Partly struck words are split, at ingest** (`split_partial_strikes`, `INGEST_VERSION` 5). Each
+  character of a flagged word is tested against the strokes. When the struck characters form one run at
+  one end, the word becomes a struck token and a live token.
+  - **Only already-flagged words are tested,** so the rule can give characters back but never strike a
+    word.
+  - **No cut between two letters.** A stroke that stops mid-word is not treated as a partial redline.
+  - **First version rejected after an audit of all 44 PDFs.** It also tested unflagged words, and strokes
+    from drawings crossed single letters (`Compact` → `~C` + `ompact`).
+  - **Audit of the shipped version.** Every remaining split restores punctuation or renumbering, such as
+    gerrard's `~1.3` + `1.4`, national's `~2.` + `1.` and valor's `(` + `~DOGGING,`. Others fall on
+    drawing pages that are never extracted.
+- **Strike strokes are not table borders.** Horizontal rules that run through struck words are removed
+  from the rule index used for row breaks. The stroke through a deleted line had been splitting the row
+  around it (valor set 13). This only affects the rule index; tokens are not touched.
+- **A lone opening bracket joins the next word.** After the struck word is deleted, `(` + `NIGHT` gives
+  `(NIGHT`.
+- **Results.**
+  - Gold: valor 94.6% → 100%.
+  - Total, including the hfh 027 gold change committed separately: 93.9% → 95.3%.
+  - Dev and negatives: 0 components changed.

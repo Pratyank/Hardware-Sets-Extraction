@@ -11,23 +11,23 @@ Documents: 8
 | set F1 | 99.6% | 99.8% |
 | not_used status accuracy | 99.6% | - |
 | component recall | 99.3% | - |
-| component precision | 99.8% | - |
-| component F1 | 99.5% | - |
+| component precision | 99.9% | - |
+| component F1 | 99.6% | - |
 | location IoU (mean) | 0.919 | 0.929 |
-| set_fully_correct | 93.9% | 93.7% |
+| set_fully_correct | 95.0% | 94.9% |
 
-Sets: 279 gold, 281 predicted, 279 matched (0 by IoU fallback). Components (in matched sets): 2184 gold, 2172 predicted, 2168 matched.
+Sets: 279 gold, 281 predicted, 279 matched (0 by IoU fallback). Components (in matched sets): 2183 gold, 2171 predicted, 2168 matched.
 
 ## Per book
 
 | doc | pages | gold | pred | matched | R | P | F1 | status | comp R | comp P | mfr | finish | qty | loc IoU | fully correct |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| valor-acres-building-e--087100-door-hardware-rev-2 | 7-18 | 37 | 37 | 37 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 99.6% | 100.0% | 100.0% | 100.0% | 0.976 | 94.6% |
+| valor-acres-building-e--087100-door-hardware-rev-2 | 7-18 | 37 | 37 | 37 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.981 | 100.0% |
 | roselle-public-library--087100-fl-door-hardware-ifb-revised | 15-17 | 33 | 33 | 33 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 99.5% | 100.0% | 100.0% | 0.925 | 90.9% |
 | jc-ryan-2--087100-door-hardware-6 | 24-46 | 38 | 38 | 38 | 100.0% | 100.0% | 100.0% | 100.0% | 99.6% | 100.0% | 100.0% | 100.0% | 100.0% | 0.933 | 97.4% |
 | 2353-gerrard-street-shelter--hdw-spec-sch-ift-5 | 19-36 | 35 | 35 | 35 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.970 | 91.4% |
 | lyons-township-hs--project-manual-1 | 285-294 | 29 | 29 | 29 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.974 | 100.0% |
-| hfh-dg-hospital--08-71-00-door-hardware | 20-40 | 25 | 25 | 25 | 100.0% | 100.0% | 100.0% | 100.0% | 99.7% | 100.0% | 100.0% | 100.0% | 100.0% | 0.961 | 92.0% |
+| hfh-dg-hospital--08-71-00-door-hardware | 20-40 | 25 | 25 | 25 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.961 | 96.0% |
 | 81-85-bridgeport--08-70-00-hardware-schedule | 3-18 | 31 | 31 | 31 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 98.9% | 100.0% | 100.0% | 100.0% | 0.909 | 87.1% |
 | sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications | 711-724 | 51 | 53 | 51 | 100.0% | 96.2% | 98.1% | 98.0% | 94.4% | 100.0% | 100.0% | 100.0% | 100.0% | 0.781 | 96.1% |
 
@@ -37,7 +37,7 @@ Sets: 279 gold, 281 predicted, 279 matched (0 by IoU fallback). Components (in m
 |---|---|---|---|
 | qty | 2168/2168 | 100.0% | - |
 | qty_unit | 2168/2168 | 100.0% | - |
-| description | 2159/2168 | 99.6% | 0.999 |
+| description | 2161/2168 | 99.7% | 0.999 |
 | catalog_number | 2161/2168 | 99.7% | 0.999 |
 | mfr | 2167/2168 | 100.0% | - |
 | finish | 2168/2168 | 100.0% | - |
@@ -60,7 +60,7 @@ Rows: the role of a gold code. Columns: where that code landed in the prediction
 | [0.2, 0.4) | 0 | - |
 | [0.4, 0.6) | 0 | - |
 | [0.6, 0.8) | 0 | - |
-| [0.8, 0.9) | 124 | 98.4% |
+| [0.8, 0.9) | 124 | 100.0% |
 | [0.9, 1.0] | 12884 | 99.8% |
 
 ## 10 worst errors

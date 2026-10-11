@@ -11,7 +11,7 @@ from __future__ import annotations
 
 from collections.abc import Mapping, Sequence
 
-from hwsets.models import Line, Rule
+from hwsets.models import Line, Rule, Token
 
 _MIN_OVERLAP = 0.3  # the rule must run under this share of the narrower line
 _MIN_ROW_RULES = 6
@@ -59,3 +59,27 @@ class RuleIndex:
 
 
 EMPTY_RULES = RuleIndex({})
+
+
+def drop_strike_strokes(rules: Sequence[Rule], tokens: Sequence[Token]) -> list[Rule]:
+    """Remove horizontal rules that run through the middle of words: those are strike-throughs of
+    deleted text, not table borders (borders run between lines). Left in, the stroke through a
+    struck-out line reads as a border and splits the row it sits in."""
+    struck = [t for t in tokens if t.strike]  # ingest flags every word a stroke crosses
+    if not struck:
+        return list(rules)
+    out: list[Rule] = []
+    for r in rules:
+        if r.horizontal and any(_strikes(r, t) for t in struck):
+            continue
+        out.append(r)
+    return out
+
+
+def _strikes(r: Rule, t: Token) -> bool:
+    x0, y0, x1, y1 = t.bbox
+    h = y1 - y0
+    ry = (r.bbox[1] + r.bbox[3]) / 2
+    if not (y0 + 0.3 * h <= ry <= y0 + 0.72 * h):
+        return False
+    return min(x1, r.bbox[2]) - max(x0, r.bbox[0]) >= 0.5 * (x1 - x0)

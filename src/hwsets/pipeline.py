@@ -28,7 +28,7 @@ from hwsets.components.rows import ColumnModel, line_starts_row
 from hwsets.layout.chrome import chrome_keys, header_row_roles, is_chrome
 from hwsets.layout.columns import Layout, column_of, infer_layouts, layout_for_page
 from hwsets.layout.lines import clean_tokens, deleted_row_tops, group_lines, union_bbox
-from hwsets.layout.rules import RuleIndex
+from hwsets.layout.rules import RuleIndex, drop_strike_strokes
 from hwsets.models import (
     Component,
     DocumentResult,
@@ -349,7 +349,12 @@ def extract(
     calibration: Calibration | None = None,
 ) -> DocumentResult:
     doc = _prepare(pages, tokens_by_page)
-    rules = RuleIndex(rules_by_page or {})
+    rules = RuleIndex(
+        {
+            p: drop_strike_strokes(rs, tokens_by_page.get(p, ()))
+            for p, rs in (rules_by_page or {}).items()
+        }
+    )
     section = find_hardware_pages(doc.lines_by_page, doc.toks)
     warnings = list(section.warnings)
     if not section.pages:

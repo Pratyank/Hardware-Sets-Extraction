@@ -10,8 +10,8 @@
         "correct": 278,
         "total": 279
       },
-      "n_gold_components": 2184,
-      "n_pred_components": 2172,
+      "n_gold_components": 2183,
+      "n_pred_components": 2171,
       "n_matched_components": 2168,
       "fields": {
         "qty": {
@@ -23,7 +23,7 @@
           "total": 2168
         },
         "description": {
-          "correct": 2159,
+          "correct": 2161,
           "total": 2168
         },
         "catalog_number": {
@@ -45,7 +45,7 @@
       },
       "fuzzy": {
         "description": {
-          "sum": 2165.3475175470153,
+          "sum": 2165.6741027265416,
           "count": 2168
         },
         "catalog_number": {
@@ -68,10 +68,10 @@
         }
       },
       "location": {
-        "sum": 256.305148914954,
+        "sum": 256.5024570112646,
         "count": 279
       },
-      "n_fully_correct": 262,
+      "n_fully_correct": 265,
       "reliability": [
         {
           "lo": 0.0,
@@ -105,8 +105,8 @@
           "lo": 0.8,
           "hi": 0.9,
           "count": 124,
-          "correct": 122,
-          "accuracy": 0.9838709677419355
+          "correct": 124,
+          "accuracy": 1.0
         },
         {
           "lo": 0.9,
@@ -122,31 +122,31 @@
       "set_precision": 0.9928825622775801,
       "set_f1": 0.9964285714285714,
       "status_accuracy": 0.996415770609319,
-      "component_recall": 0.9926739926739927,
-      "component_precision": 0.998158379373849,
-      "component_f1": 0.9954086317722682,
+      "component_recall": 0.9931287219422813,
+      "component_precision": 0.9986181483187471,
+      "component_f1": 0.9958658704639413,
       "field_accuracy": {
         "qty": 1.0,
         "qty_unit": 1.0,
-        "description": 0.9958487084870848,
+        "description": 0.9967712177121771,
         "catalog_number": 0.9967712177121771,
         "mfr": 0.9995387453874539,
         "finish": 1.0,
         "notes": 0.9967712177121771
       },
       "fuzzy": {
-        "description": 0.9987765302338631,
+        "description": 0.9989271691543089,
         "catalog_number": 0.9985311107519739
       },
-      "location_iou": 0.9186564477238494,
-      "set_fully_correct": 0.9390681003584229
+      "location_iou": 0.9193636452016652,
+      "set_fully_correct": 0.9498207885304659
     },
     "macro": {
       "set_recall": 1.0,
       "set_precision": 0.9952830188679245,
       "set_f1": 0.9975961538461539,
-      "set_fully_correct": 0.9368448544387324,
-      "location_iou": 0.9285571219100637
+      "set_fully_correct": 0.9486016111954891,
+      "location_iou": 0.9292237033165185
     }
   },
   "docs": [
@@ -164,7 +164,7 @@
           "total": 37
         },
         "n_gold_components": 236,
-        "n_pred_components": 237,
+        "n_pred_components": 236,
         "n_matched_components": 236,
         "fields": {
           "qty": {
@@ -176,7 +176,7 @@
             "total": 236
           },
           "description": {
-            "correct": 234,
+            "correct": 236,
             "total": 236
           },
           "catalog_number": {
@@ -198,7 +198,7 @@
         },
         "fuzzy": {
           "description": {
-            "sum": 235.67341482047365,
+            "sum": 236.0,
             "count": 236
           },
           "catalog_number": {
@@ -221,10 +221,10 @@
           }
         },
         "location": {
-          "sum": 36.11616446127628,
+          "sum": 36.31347255758691,
           "count": 37
         },
-        "n_fully_correct": 35,
+        "n_fully_correct": 37,
         "reliability": [
           {
             "lo": 0.0,
@@ -258,8 +258,8 @@
             "lo": 0.8,
             "hi": 0.9,
             "count": 38,
-            "correct": 36,
-            "accuracy": 0.9473684210526315
+            "correct": 38,
+            "accuracy": 1.0
           },
           {
             "lo": 0.9,
@@ -276,23 +276,23 @@
         "set_f1": 1.0,
         "status_accuracy": 1.0,
         "component_recall": 1.0,
-        "component_precision": 0.9957805907172996,
-        "component_f1": 0.9978858350951374,
+        "component_precision": 1.0,
+        "component_f1": 1.0,
         "field_accuracy": {
           "qty": 1.0,
           "qty_unit": 1.0,
-          "description": 0.9915254237288136,
+          "description": 1.0,
           "catalog_number": 1.0,
           "mfr": 1.0,
           "finish": 1.0,
           "notes": 1.0
         },
         "fuzzy": {
-          "description": 0.9986161644935324,
+          "description": 1.0,
           "catalog_number": 1.0
         },
-        "location_iou": 0.9761125530074669,
-        "set_fully_correct": 0.9459459459459459
+        "location_iou": 0.9814452042591058,
+        "set_fully_correct": 1.0
       },
       "sets": [
         {
@@ -1236,20 +1236,13 @@
               "field_correct": {
                 "qty": true,
                 "qty_unit": true,
-                "description": false,
+                "description": true,
                 "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "description",
-                  "gold": "CONCEALED VERT ROD ELECT. EXIT DEVICE (NIGHT LATCH FUNCTION)",
-                  "pred": "CONCEALED VERT ROD ELECT. EXIT DEVICE NIGHT LATCH FUNCTION)",
-                  "confidence": 0.8
-                }
-              ]
+              "diffs": []
             },
             {
               "gold_idx": 3,
@@ -1419,7 +1412,7 @@
           ],
           "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "13",
@@ -1455,24 +1448,17 @@
               "field_correct": {
                 "qty": true,
                 "qty_unit": true,
-                "description": false,
+                "description": true,
                 "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "description",
-                  "gold": "CONCEALED VERT ROD EXIT DEVICE (DUMMY OR PASSAGE FUNCTION)",
-                  "pred": "CONCEALED VERT ROD EXIT DEVICE",
-                  "confidence": 0.888
-                }
-              ]
+              "diffs": []
             },
             {
               "gold_idx": 2,
-              "pred_idx": 3,
+              "pred_idx": 2,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -1487,7 +1473,7 @@
             },
             {
               "gold_idx": 3,
-              "pred_idx": 4,
+              "pred_idx": 3,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -1502,7 +1488,7 @@
             },
             {
               "gold_idx": 4,
-              "pred_idx": 5,
+              "pred_idx": 4,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -1517,7 +1503,7 @@
             },
             {
               "gold_idx": 5,
-              "pred_idx": 6,
+              "pred_idx": 5,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -1532,7 +1518,7 @@
             },
             {
               "gold_idx": 6,
-              "pred_idx": 7,
+              "pred_idx": 6,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -1547,7 +1533,7 @@
             },
             {
               "gold_idx": 7,
-              "pred_idx": 8,
+              "pred_idx": 7,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -1559,18 +1545,11 @@
                 "notes": true
               },
               "diffs": []
-            },
-            {
-              "gold_idx": null,
-              "pred_idx": 2,
-              "similarity": null,
-              "field_correct": {},
-              "diffs": []
             }
           ],
           "n_missed_components": 0,
-          "n_spurious_components": 1,
-          "fully_correct": false
+          "n_spurious_components": 0,
+          "fully_correct": true
         },
         {
           "set_number": "14",
@@ -2571,7 +2550,7 @@
           "gold_status": "active",
           "pred_status": "active",
           "status_correct": true,
-          "location_iou": 0.9419104991394147,
+          "location_iou": 1.0,
           "components": [
             {
               "gold_idx": 0,
@@ -2785,7 +2764,7 @@
           "gold_status": "active",
           "pred_status": "active",
           "status_correct": true,
-          "location_iou": 0.8607814045499504,
+          "location_iou": 1.0,
           "components": [
             {
               "gold_idx": 0,
@@ -4486,47 +4465,7 @@
           "fully_correct": true
         }
       ],
-      "errors": [
-        {
-          "doc_id": "valor-acres-building-e--087100-door-hardware-rev-2",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "12",
-          "set_idx": 11,
-          "page": 9,
-          "line_id": "L9_34",
-          "field": "description",
-          "gold": "CONCEALED VERT ROD ELECT. EXIT DEVICE (NIGHT LATCH FUNCTION)",
-          "pred": "CONCEALED VERT ROD ELECT. EXIT DEVICE NIGHT LATCH FUNCTION)",
-          "message": "component #2: description"
-        },
-        {
-          "doc_id": "valor-acres-building-e--087100-door-hardware-rev-2",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "13",
-          "set_idx": 12,
-          "page": 10,
-          "line_id": "L10_24",
-          "field": "description",
-          "gold": "CONCEALED VERT ROD EXIT DEVICE (DUMMY OR PASSAGE FUNCTION)",
-          "pred": "CONCEALED VERT ROD EXIT DEVICE",
-          "message": "component #1: description"
-        },
-        {
-          "doc_id": "valor-acres-building-e--087100-door-hardware-rev-2",
-          "kind": "spurious_component",
-          "severity": 1,
-          "set_number": "13",
-          "set_idx": 12,
-          "page": 10,
-          "line_id": "L10_24",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "predicted component #2"
-        }
-      ]
+      "errors": []
     },
     {
       "doc_id": "roselle-public-library--087100-fl-door-hardware-ifb-revised",
@@ -23801,7 +23740,7 @@
           "correct": 25,
           "total": 25
         },
-        "n_gold_components": 347,
+        "n_gold_components": 346,
         "n_pred_components": 346,
         "n_matched_components": 346,
         "fields": {
@@ -23862,7 +23801,7 @@
           "sum": 24.02603671325198,
           "count": 25
         },
-        "n_fully_correct": 23,
+        "n_fully_correct": 24,
         "reliability": [
           {
             "lo": 0.0,
@@ -23913,9 +23852,9 @@
         "set_precision": 1.0,
         "set_f1": 1.0,
         "status_accuracy": 1.0,
-        "component_recall": 0.9971181556195965,
+        "component_recall": 1.0,
         "component_precision": 1.0,
-        "component_f1": 0.9985569985569985,
+        "component_f1": 1.0,
         "field_accuracy": {
           "qty": 1.0,
           "qty_unit": 1.0,
@@ -23930,7 +23869,7 @@
           "catalog_number": 0.9997697778533378
         },
         "location_iou": 0.9610414685300792,
-        "set_fully_correct": 0.92
+        "set_fully_correct": 0.96
       },
       "sets": [
         {
@@ -28724,18 +28663,10 @@
           "pred_status": "active",
           "status_correct": true,
           "location_iou": 0.9811936169161605,
-          "components": [
-            {
-              "gold_idx": 0,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
-              "diffs": []
-            }
-          ],
-          "n_missed_components": 1,
+          "components": [],
+          "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "028",
@@ -29595,19 +29526,6 @@
           "gold": "BY RELATED SECTION 08 42 29",
           "pred": "BY RELATED SECTION 08 42",
           "message": "component #0: catalog_number"
-        },
-        {
-          "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "027",
-          "set_idx": 21,
-          "page": 38,
-          "line_id": "L38_11",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #0"
         }
       ]
     },
