@@ -377,3 +377,21 @@ FUNCTION)`).
   - Gold: hfh 96.0% → 100% (set 026). Total 96.4% → 96.8%.
   - Dev and negatives: 0 components changed.
   - The unit test fails on the previous code.
+
+### Fix 6: sentences set apart from the table are set notes
+
+- **Rule.** In a table with its own quantity column, an unbroken run of six or more words that crosses
+  into the next column is a sentence, not a row, when all of the following hold:
+  - it starts after the quantity column;
+  - it sits outside the item table, above the first quantity row or below the last;
+  - it is set apart from the table by a gap of more than 1.5 line heights, or follows such a line.
+- **Example.** bridgeport's `Card Access Not Shown On Arch Drawings…` and `Door Opens Automatically…` are
+  set notes, not components.
+- **Two narrower versions were rejected after the dev diff.**
+  - The plain two-column rule changed 87 starhardware components. Its paragraph cells genuinely run across
+    the gutter inside the table.
+  - Adding only the "outside the table" condition still cut the last item's paragraph cell (25 changes).
+- **Results.**
+  - Gold: bridgeport 87.1% → 93.5% (sets 2 and 24). Total 96.8% → 97.5%.
+  - Dev: 3 starhardware components removed, each a junk fragment: a paragraph tail, a sentence tail, and
+    the heading `Exterior Hardware Sets (Typically Two-Digit Set Numbers):`.

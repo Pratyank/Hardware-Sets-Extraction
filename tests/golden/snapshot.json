@@ -1,7 +1,7 @@
 {
  "set_recall": 1.0,
- "set_fully_correct": 0.9677,
- "component_f1": 0.9991,
+ "set_fully_correct": 0.9749,
+ "component_f1": 0.9998,
  "per_book": {
   "valor-acres-building-e--087100-door-hardware-rev-2": {
    "set_recall": 1.0,
@@ -29,7 +29,7 @@
   },
   "81-85-bridgeport--08-70-00-hardware-schedule": {
    "set_recall": 1.0,
-   "set_fully_correct": 0.871
+   "set_fully_correct": 0.9355
   },
   "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications": {
    "set_recall": 1.0,

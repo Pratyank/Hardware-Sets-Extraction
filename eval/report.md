@@ -11,12 +11,12 @@ Documents: 8
 | set F1 | 100.0% | 100.0% |
 | not_used status accuracy | 100.0% | - |
 | component recall | 100.0% | - |
-| component precision | 99.9% | - |
-| component F1 | 99.9% | - |
+| component precision | 100.0% | - |
+| component F1 | 100.0% | - |
 | location IoU (mean) | 0.926 | 0.934 |
-| set_fully_correct | 96.8% | 96.6% |
+| set_fully_correct | 97.5% | 97.4% |
 
-Sets: 279 gold, 279 predicted, 279 matched (0 by IoU fallback). Components (in matched sets): 2183 gold, 2185 predicted, 2182 matched.
+Sets: 279 gold, 279 predicted, 279 matched (0 by IoU fallback). Components (in matched sets): 2183 gold, 2182 predicted, 2182 matched.
 
 ## Per book
 
@@ -28,7 +28,7 @@ Sets: 279 gold, 279 predicted, 279 matched (0 by IoU fallback). Components (in m
 | 2353-gerrard-street-shelter--hdw-spec-sch-ift-5 | 19-36 | 35 | 35 | 35 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.970 | 91.4% |
 | lyons-township-hs--project-manual-1 | 285-294 | 29 | 29 | 29 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.974 | 100.0% |
 | hfh-dg-hospital--08-71-00-door-hardware | 20-40 | 25 | 25 | 25 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.961 | 100.0% |
-| 81-85-bridgeport--08-70-00-hardware-schedule | 3-18 | 31 | 31 | 31 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 98.9% | 100.0% | 100.0% | 100.0% | 0.909 | 87.1% |
+| 81-85-bridgeport--08-70-00-hardware-schedule | 3-18 | 31 | 31 | 31 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.909 | 93.5% |
 | sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications | 711-724 | 51 | 51 | 51 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.815 | 100.0% |
 
 ## Field accuracy (matched components)

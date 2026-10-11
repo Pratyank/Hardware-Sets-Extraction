@@ -314,3 +314,29 @@ def test_tail_word_ending_at_a_column_stays_in_its_cell_but_a_bullet_opens_the_n
     bullet = tok("p1_w8", "-", (266.0, 100.0, 269.0, 109.0))  # a hanging bullet
     assert MODEL.role_of(tail) == "description"
     assert MODEL.role_of(bullet) == "catalog"
+
+
+def test_sentence_set_apart_below_the_table_is_a_set_note() -> None:
+    """A remark below the item table, set apart by a gap, running across the column gutter."""
+    parsed, text = _parse(
+        [
+            ("1|EA|CONTINUOUS HINGE|112XY-83 C28|C28|IVE", {}),
+            ("1|EA|DEAD LOCK|B660 P6 626|626|SCH", {}),
+            ("Door Opens Automatically With Auto Operator At All Times", {"x": 140.0, "gap": 14.0}),
+        ]
+    )
+    assert len(parsed.components) == 2
+    assert _words(parsed.set_note_tokens, text).startswith("Door Opens Automatically")
+
+
+def test_long_cell_inside_the_table_is_not_prose() -> None:
+    parsed, _ = _parse(
+        [
+            ("1|EA|POWER SUPPLY|FURNISH AND INSTALL|626|SCH", {}),
+            ("Furnish and install power drop located near door above ceiling line", {"x": 140.0}),
+            ("1|EA|CLOSER|4040XP|689|LCN", {}),
+        ]
+    )
+    assert "near door" in (parsed.components[0].description.value or "") + (
+        parsed.components[0].catalog_number.value or ""
+    )

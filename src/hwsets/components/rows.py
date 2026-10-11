@@ -99,7 +99,9 @@ class Row:
         self.cells.setdefault(role, []).append(tok)
 
 
-def _is_prose(line: Line, toks: Mapping[str, Token], model: ColumnModel) -> bool:
+def _is_prose(
+    line: Line, toks: Mapping[str, Token], model: ColumnModel, *, outside_table: bool = False
+) -> bool:
     tokens = [toks[i] for i in line.token_ids]
     if not tokens:
         return False
@@ -107,8 +109,27 @@ def _is_prose(line: Line, toks: Mapping[str, Token], model: ColumnModel) -> bool
         return model.role_of(tokens[0]) != "qty"
     gap = cell_gap(tokens)
     gaps = sum(1 for a, b in itertools.pairwise(tokens) if b.bbox[0] - a.bbox[2] > gap)
+    if gaps or len(tokens) < 6:
+        return False
     cols = {column_of(t.bbox[0], model.xs) for t in tokens}
-    return gaps == 0 and len(cols) >= 3 and len(tokens) >= 6
+    if len(cols) >= 3:
+        return True
+    # Above the first item or below the last, in a table with its own quantity column, one
+    # unbroken run of words crossing into the next column is a sentence, not a row ("Card Access
+    # Not Shown On Arch Drawings Or Door Schedule - Please Confirm"). Inside the table such runs
+    # are long cells (paragraph-cell layouts), so they stay.
+    return (
+        outside_table
+        and len(cols) == 2
+        and model.has("qty")
+        and model.role_of(tokens[0]) not in {"qty", "unit"}
+    )
+
+
+def _gap_above(prev: Line | None, ln: Line) -> float:
+    if prev is None or prev.page != ln.page:
+        return float("inf")
+    return ln.bbox[1] - prev.bbox[3]
 
 
 def _starts_row(roles: Sequence[str], tokens: Sequence[Token], model: ColumnModel) -> bool:
@@ -159,7 +180,11 @@ def assemble_rows(
     note_x: float | None = None  # left edge of the note being continued, if any
     note_to_set = False
     pending: list[Line] = []  # fragments of a vertically centred cell, held for the next row
+    starts = [k for k, x in enumerate(lines) if line_starts_row(x, toks, model)]
+    first_start, last_start = (starts[0], starts[-1]) if starts else (len(lines), -1)
     prev_ln: Line | None = None
+    prev_line: Line | None = None  # the previous line reaching the prose check
+    prev_prose = False
     in_remark = False  # inside a remark block (rhythm.py): its wrapped lines are remark too
     deleted = deleted_rows or {}
     in_deleted = False  # just below a struck-out row
@@ -236,7 +261,12 @@ def assemble_rows(
                 last_bottom, last_page = ln.bbox[3], ln.page
                 continue
             note_x = None
-        if _is_prose(ln, toks, model):
+        # Outside the item table, and set apart from it: a gap above, or prose directly above.
+        set_apart = prev_prose or _gap_above(prev_line, ln) > 1.5 * max(ln.bbox[3] - ln.bbox[1], 6)
+        outside = set_apart and not first_start <= idx <= last_start
+        prev_line, prev_prose = ln, False
+        if _is_prose(ln, toks, model, outside_table=outside):
+            prev_prose = True
             set_notes.extend(ln.token_ids)
             continue
         roles = [model.role_of(t) for t in tokens]

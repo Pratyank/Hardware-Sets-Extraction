@@ -11,7 +11,7 @@
         "total": 279
       },
       "n_gold_components": 2183,
-      "n_pred_components": 2185,
+      "n_pred_components": 2182,
       "n_matched_components": 2182,
       "fields": {
         "qty": {
@@ -71,7 +71,7 @@
         "sum": 258.2605540704392,
         "count": 279
       },
-      "n_fully_correct": 270,
+      "n_fully_correct": 272,
       "reliability": [
         {
           "lo": 0.0,
@@ -123,8 +123,8 @@
       "set_f1": 1.0,
       "status_accuracy": 1.0,
       "component_recall": 0.9995419147961521,
-      "component_precision": 0.9986270022883296,
-      "component_f1": 0.9990842490842492,
+      "component_precision": 1.0,
+      "component_f1": 0.9997709049255441,
       "field_accuracy": {
         "qty": 1.0,
         "qty_unit": 1.0,
@@ -139,13 +139,13 @@
         "catalog_number": 0.9985793937833534
       },
       "location_iou": 0.9256650683528286,
-      "set_fully_correct": 0.967741935483871
+      "set_fully_correct": 0.974910394265233
     },
     "macro": {
       "set_recall": 1.0,
       "set_precision": 1.0,
       "set_f1": 1.0,
-      "set_fully_correct": 0.9660793295555604,
+      "set_fully_correct": 0.9741438456845927,
       "location_iou": 0.9335327647360641
     }
   },
@@ -29463,7 +29463,7 @@
           "total": 31
         },
         "n_gold_components": 278,
-        "n_pred_components": 281,
+        "n_pred_components": 278,
         "n_matched_components": 278,
         "fields": {
           "qty": {
@@ -29523,7 +29523,7 @@
           "sum": 28.1863706883304,
           "count": 31
         },
-        "n_fully_correct": 27,
+        "n_fully_correct": 29,
         "reliability": [
           {
             "lo": 0.0,
@@ -29575,8 +29575,8 @@
         "set_f1": 1.0,
         "status_accuracy": 1.0,
         "component_recall": 1.0,
-        "component_precision": 0.9893238434163701,
-        "component_f1": 0.9946332737030411,
+        "component_precision": 1.0,
+        "component_f1": 1.0,
         "field_accuracy": {
           "qty": 1.0,
           "qty_unit": 1.0,
@@ -29591,7 +29591,7 @@
           "catalog_number": 0.9955097008366159
         },
         "location_iou": 0.9092377641396903,
-        "set_fully_correct": 0.8709677419354839
+        "set_fully_correct": 0.9354838709677419
       },
       "sets": [
         {
@@ -29730,7 +29730,7 @@
           "components": [
             {
               "gold_idx": 0,
-              "pred_idx": 1,
+              "pred_idx": 0,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29745,7 +29745,7 @@
             },
             {
               "gold_idx": 1,
-              "pred_idx": 2,
+              "pred_idx": 1,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29760,7 +29760,7 @@
             },
             {
               "gold_idx": 2,
-              "pred_idx": 3,
+              "pred_idx": 2,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29775,7 +29775,7 @@
             },
             {
               "gold_idx": 3,
-              "pred_idx": 4,
+              "pred_idx": 3,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29790,7 +29790,7 @@
             },
             {
               "gold_idx": 4,
-              "pred_idx": 5,
+              "pred_idx": 4,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29805,7 +29805,7 @@
             },
             {
               "gold_idx": 5,
-              "pred_idx": 6,
+              "pred_idx": 5,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29820,7 +29820,7 @@
             },
             {
               "gold_idx": 6,
-              "pred_idx": 7,
+              "pred_idx": 6,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29835,7 +29835,7 @@
             },
             {
               "gold_idx": 7,
-              "pred_idx": 8,
+              "pred_idx": 7,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29850,7 +29850,7 @@
             },
             {
               "gold_idx": 8,
-              "pred_idx": 9,
+              "pred_idx": 8,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29865,7 +29865,7 @@
             },
             {
               "gold_idx": 9,
-              "pred_idx": 10,
+              "pred_idx": 9,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29880,7 +29880,7 @@
             },
             {
               "gold_idx": 10,
-              "pred_idx": 11,
+              "pred_idx": 10,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29895,7 +29895,7 @@
             },
             {
               "gold_idx": 11,
-              "pred_idx": 12,
+              "pred_idx": 11,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29910,7 +29910,7 @@
             },
             {
               "gold_idx": 12,
-              "pred_idx": 13,
+              "pred_idx": 12,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29925,7 +29925,7 @@
             },
             {
               "gold_idx": 13,
-              "pred_idx": 14,
+              "pred_idx": 13,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29940,7 +29940,7 @@
             },
             {
               "gold_idx": 14,
-              "pred_idx": 15,
+              "pred_idx": 14,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29955,7 +29955,7 @@
             },
             {
               "gold_idx": 15,
-              "pred_idx": 16,
+              "pred_idx": 15,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29970,7 +29970,7 @@
             },
             {
               "gold_idx": 16,
-              "pred_idx": 17,
+              "pred_idx": 16,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -29985,7 +29985,7 @@
             },
             {
               "gold_idx": 17,
-              "pred_idx": 18,
+              "pred_idx": 17,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -30000,7 +30000,7 @@
             },
             {
               "gold_idx": 18,
-              "pred_idx": 19,
+              "pred_idx": 18,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -30015,7 +30015,7 @@
             },
             {
               "gold_idx": 19,
-              "pred_idx": 20,
+              "pred_idx": 19,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -30027,25 +30027,11 @@
                 "notes": true
               },
               "diffs": []
-            },
-            {
-              "gold_idx": null,
-              "pred_idx": 0,
-              "similarity": null,
-              "field_correct": {},
-              "diffs": []
-            },
-            {
-              "gold_idx": null,
-              "pred_idx": 21,
-              "similarity": null,
-              "field_correct": {},
-              "diffs": []
             }
           ],
           "n_missed_components": 0,
-          "n_spurious_components": 2,
-          "fully_correct": false
+          "n_spurious_components": 0,
+          "fully_correct": true
         },
         {
           "set_number": "3",
@@ -33259,18 +33245,11 @@
                 "notes": true
               },
               "diffs": []
-            },
-            {
-              "gold_idx": null,
-              "pred_idx": 10,
-              "similarity": null,
-              "field_correct": {},
-              "diffs": []
             }
           ],
           "n_missed_components": 0,
-          "n_spurious_components": 1,
-          "fully_correct": false
+          "n_spurious_components": 0,
+          "fully_correct": true
         },
         {
           "set_number": "25",
@@ -34355,32 +34334,6 @@
       "errors": [
         {
           "doc_id": "81-85-bridgeport--08-70-00-hardware-schedule",
-          "kind": "spurious_component",
-          "severity": 1,
-          "set_number": "2",
-          "set_idx": 1,
-          "page": 4,
-          "line_id": "L4_0",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "predicted component #0"
-        },
-        {
-          "doc_id": "81-85-bridgeport--08-70-00-hardware-schedule",
-          "kind": "spurious_component",
-          "severity": 1,
-          "set_number": "2",
-          "set_idx": 1,
-          "page": 4,
-          "line_id": "L4_0",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "predicted component #21"
-        },
-        {
-          "doc_id": "81-85-bridgeport--08-70-00-hardware-schedule",
           "kind": "wrong_field",
           "severity": 1,
           "set_number": "6",
@@ -34456,19 +34409,6 @@
           "gold": "*Confirm Door Thickness",
           "pred": null,
           "message": "component #2: notes"
-        },
-        {
-          "doc_id": "81-85-bridgeport--08-70-00-hardware-schedule",
-          "kind": "spurious_component",
-          "severity": 1,
-          "set_number": "24",
-          "set_idx": 23,
-          "page": 15,
-          "line_id": "L15_12",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "predicted component #10"
         }
       ]
     },
