@@ -10,8 +10,9 @@ import pytest
 
 from helpers.synth import COL_X, make_page, run
 from hwsets.columns.legend import Legend
-from hwsets.components.parse import ColumnModel, ParsedRows, line_starts_row, parse_rows
+from hwsets.components.parse import ParsedRows, parse_rows
 from hwsets.components.rhythm import Rhythm, estimate_rhythm, opens_block
+from hwsets.components.rows import ColumnModel, line_starts_row
 
 WRAP = 11.5
 PITCH = 14.5

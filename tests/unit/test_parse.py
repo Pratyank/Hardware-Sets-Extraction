@@ -7,7 +7,8 @@ from typing import Any
 
 from helpers.synth import COL_X, make_page
 from hwsets.columns.legend import Legend, LegendEntry
-from hwsets.components.parse import ColumnModel, ParsedRows, parse_rows
+from hwsets.components.parse import ParsedRows, parse_rows
+from hwsets.components.rows import ColumnModel
 
 ROLES6 = ("qty", "unit", "description", "catalog", "finish", "mfr")
 MODEL = ColumnModel(xs=COL_X, roles=ROLES6, margins=(0.8,) * 6)
