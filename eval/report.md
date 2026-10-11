@@ -7,16 +7,16 @@ Documents: 8
 | metric | micro | macro |
 |---|---|---|
 | set recall | 100.0% | 100.0% |
-| set precision | 99.3% | 99.5% |
-| set F1 | 99.6% | 99.8% |
-| not_used status accuracy | 99.6% | - |
-| component recall | 99.3% | - |
+| set precision | 100.0% | 100.0% |
+| set F1 | 100.0% | 100.0% |
+| not_used status accuracy | 100.0% | - |
+| component recall | 100.0% | - |
 | component precision | 99.9% | - |
-| component F1 | 99.6% | - |
-| location IoU (mean) | 0.919 | 0.929 |
-| set_fully_correct | 95.0% | 94.9% |
+| component F1 | 99.9% | - |
+| location IoU (mean) | 0.926 | 0.934 |
+| set_fully_correct | 95.7% | 95.4% |
 
-Sets: 279 gold, 281 predicted, 279 matched (0 by IoU fallback). Components (in matched sets): 2183 gold, 2171 predicted, 2168 matched.
+Sets: 279 gold, 279 predicted, 279 matched (0 by IoU fallback). Components (in matched sets): 2183 gold, 2185 predicted, 2182 matched.
 
 ## Per book
 
@@ -29,19 +29,19 @@ Sets: 279 gold, 281 predicted, 279 matched (0 by IoU fallback). Components (in m
 | lyons-township-hs--project-manual-1 | 285-294 | 29 | 29 | 29 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.974 | 100.0% |
 | hfh-dg-hospital--08-71-00-door-hardware | 20-40 | 25 | 25 | 25 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.961 | 96.0% |
 | 81-85-bridgeport--08-70-00-hardware-schedule | 3-18 | 31 | 31 | 31 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 98.9% | 100.0% | 100.0% | 100.0% | 0.909 | 87.1% |
-| sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications | 711-724 | 51 | 53 | 51 | 100.0% | 96.2% | 98.1% | 98.0% | 94.4% | 100.0% | 100.0% | 100.0% | 100.0% | 0.781 | 96.1% |
+| sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications | 711-724 | 51 | 51 | 51 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.815 | 100.0% |
 
 ## Field accuracy (matched components)
 
 | field | correct/total | exact | fuzzy |
 |---|---|---|---|
-| qty | 2168/2168 | 100.0% | - |
-| qty_unit | 2168/2168 | 100.0% | - |
-| description | 2161/2168 | 99.7% | 0.999 |
-| catalog_number | 2161/2168 | 99.7% | 0.999 |
-| mfr | 2167/2168 | 100.0% | - |
-| finish | 2168/2168 | 100.0% | - |
-| notes | 2161/2168 | 99.7% | - |
+| qty | 2182/2182 | 100.0% | - |
+| qty_unit | 2182/2182 | 100.0% | - |
+| description | 2175/2182 | 99.7% | 0.999 |
+| catalog_number | 2175/2182 | 99.7% | 0.999 |
+| mfr | 2181/2182 | 100.0% | - |
+| finish | 2182/2182 | 100.0% | - |
+| notes | 2175/2182 | 99.7% | - |
 
 ## Manufacturer vs finish confusion
 
@@ -49,8 +49,8 @@ Rows: the role of a gold code. Columns: where that code landed in the prediction
 
 | gold \ pred | mfr | finish | other | missing |
 |---|---|---|---|---|
-| mfr | 1482 | 0 | 1 | 0 |
-| finish | 0 | 1546 | 0 | 0 |
+| mfr | 1494 | 0 | 1 | 0 |
+| finish | 0 | 1556 | 0 | 0 |
 
 ## Reliability (predicted field confidence vs exact accuracy)
 
@@ -61,7 +61,7 @@ Rows: the role of a gold code. Columns: where that code landed in the prediction
 | [0.4, 0.6) | 0 | - |
 | [0.6, 0.8) | 0 | - |
 | [0.8, 0.9) | 124 | 100.0% |
-| [0.9, 1.0] | 12884 | 99.8% |
+| [0.9, 1.0] | 12968 | 99.8% |
 
 ## 10 worst errors
 

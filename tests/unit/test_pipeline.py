@@ -247,3 +247,35 @@ def test_sparse_quantity_column_keeps_its_component() -> None:
     )
     out = run([page])
     assert [c.qty.value for c in out.sets[0].components] == [None, None, 1]
+
+
+def test_empty_stub_superseded_by_the_full_set_printed_next_to_it() -> None:
+    """A redline retires a set ("NOT USED") and prints its new version right after under the same
+    number: one set, the full one, and the drop is reported."""
+    h: dict[str, Any] = {"bold": True}
+    page = make_page(
+        1,
+        [
+            ("HARDWARE SET NO. 13", h),
+            "3|EA|HINGE|5BB1 4.5 X 4.5|652|IVE",
+            ("HARDWARE SET NO. 14", h),
+            "NOT USED",
+            ("HARDWARE SET NO. 14", h),
+            "2|EA|HINGE|5BB1 4.5 X 4.5|630|IVE",
+            "1|EA|OPERATOR|SW200I|628|BSM",
+        ],
+    )
+    result = run([page])
+    assert [s.set_number.value for s in result.sets] == ["13", "14"]
+    assert len(result.sets[1].components) == 2
+    assert any("empty duplicate" in w for w in result.warnings)
+
+
+def test_distant_duplicates_are_flagged_not_dropped() -> None:
+    h: dict[str, Any] = {"bold": True}
+    p1 = make_page(1, [("HARDWARE SET NO. 7", h), "NOT USED", ("HARDWARE SET NO. 8", h),
+                       "1|EA|STOP|WS406|630|IVE"])  # fmt: skip
+    p5 = make_page(5, [("HARDWARE SET NO. 7", h), "1|EA|CLOSER|4040XP|689|LCN"])
+    result = run([p1, p5])
+    assert [s.set_number.value for s in result.sets].count("7") == 2
+    assert any("duplicate set number" in w for w in result.warnings)

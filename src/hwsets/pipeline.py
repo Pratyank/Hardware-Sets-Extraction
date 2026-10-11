@@ -335,6 +335,34 @@ def _build_set(
     return hw, warnings
 
 
+def _pages_of(hw: HardwareSet) -> set[int]:
+    return {r.page for r in hw.location.regions}
+
+
+def drop_superseded_stubs(sets: Sequence[HardwareSet]) -> tuple[list[HardwareSet], list[str]]:
+    """A set number printed twice close together, once as an empty stub ("HW 14B NOT USED",
+    "HW 10C ... moved to Exterior Set HW E13") and once as a full set, is one set: the full one
+    supersedes the stub (a redline retired the old version and printed the new one right after).
+    Only stubs within a page of the full set are dropped, and each drop is reported."""
+    by_number: dict[str, list[HardwareSet]] = {}
+    for hw in sets:
+        if hw.set_number.value:
+            by_number.setdefault(hw.set_number.value, []).append(hw)
+    drop: set[int] = set()
+    warnings: list[str] = []
+    for number, group in by_number.items():
+        full = [hw for hw in group if hw.components]
+        for stub in (hw for hw in group if not hw.components):
+            near = any(abs(p - q) <= 1 for f in full for p in _pages_of(f) for q in _pages_of(stub))
+            if near:
+                drop.add(id(stub))
+                warnings.append(
+                    f"set {number}: an empty duplicate on p{min(_pages_of(stub))} is superseded "
+                    "by the full set printed next to it; kept the full set"
+                )
+    return [hw for hw in sets if id(hw) not in drop], warnings
+
+
 def _component_conf(c: Component) -> float:
     fields = [c.description, c.catalog_number, c.mfr, c.finish]
     vals = [f.confidence for f in fields] + [c.qty.confidence]
@@ -421,6 +449,8 @@ def extract(
         hw, w = _build_set(sp, doc, models, legend, rules)
         sets.append(hw)
         warnings.extend(w)
+    sets, w = drop_superseded_stubs(sets)
+    warnings.extend(w)
     result = DocumentResult(
         source_pdf=source_pdf,
         hardware_pages=section.pages,

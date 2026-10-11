@@ -3,75 +3,75 @@
     "n_docs": 8,
     "totals": {
       "n_gold_sets": 279,
-      "n_pred_sets": 281,
+      "n_pred_sets": 279,
       "n_matched_sets": 279,
       "n_matched_by_iou": 0,
       "status": {
-        "correct": 278,
+        "correct": 279,
         "total": 279
       },
       "n_gold_components": 2183,
-      "n_pred_components": 2171,
-      "n_matched_components": 2168,
+      "n_pred_components": 2185,
+      "n_matched_components": 2182,
       "fields": {
         "qty": {
-          "correct": 2168,
-          "total": 2168
+          "correct": 2182,
+          "total": 2182
         },
         "qty_unit": {
-          "correct": 2168,
-          "total": 2168
+          "correct": 2182,
+          "total": 2182
         },
         "description": {
-          "correct": 2161,
-          "total": 2168
+          "correct": 2175,
+          "total": 2182
         },
         "catalog_number": {
-          "correct": 2161,
-          "total": 2168
+          "correct": 2175,
+          "total": 2182
         },
         "mfr": {
-          "correct": 2167,
-          "total": 2168
+          "correct": 2181,
+          "total": 2182
         },
         "finish": {
-          "correct": 2168,
-          "total": 2168
+          "correct": 2182,
+          "total": 2182
         },
         "notes": {
-          "correct": 2161,
-          "total": 2168
+          "correct": 2175,
+          "total": 2182
         }
       },
       "fuzzy": {
         "description": {
-          "sum": 2165.6741027265416,
-          "count": 2168
+          "sum": 2179.6741027265416,
+          "count": 2182
         },
         "catalog_number": {
-          "sum": 2164.8154481102792,
-          "count": 2168
+          "sum": 2178.8154481102792,
+          "count": 2182
         }
       },
       "confusion": {
         "mfr": {
-          "mfr": 1482,
+          "mfr": 1494,
           "finish": 0,
           "other": 1,
           "missing": 0
         },
         "finish": {
           "mfr": 0,
-          "finish": 1546,
+          "finish": 1556,
           "other": 0,
           "missing": 0
         }
       },
       "location": {
-        "sum": 256.5024570112646,
+        "sum": 258.2605540704392,
         "count": 279
       },
-      "n_fully_correct": 265,
+      "n_fully_correct": 267,
       "reliability": [
         {
           "lo": 0.0,
@@ -111,42 +111,42 @@
         {
           "lo": 0.9,
           "hi": 1.0,
-          "count": 12884,
-          "correct": 12862,
-          "accuracy": 0.998292455759081
+          "count": 12968,
+          "correct": 12946,
+          "accuracy": 0.9983035163479334
         }
       ]
     },
     "metrics": {
       "set_recall": 1.0,
-      "set_precision": 0.9928825622775801,
-      "set_f1": 0.9964285714285714,
-      "status_accuracy": 0.996415770609319,
-      "component_recall": 0.9931287219422813,
-      "component_precision": 0.9986181483187471,
-      "component_f1": 0.9958658704639413,
+      "set_precision": 1.0,
+      "set_f1": 1.0,
+      "status_accuracy": 1.0,
+      "component_recall": 0.9995419147961521,
+      "component_precision": 0.9986270022883296,
+      "component_f1": 0.9990842490842492,
       "field_accuracy": {
         "qty": 1.0,
         "qty_unit": 1.0,
-        "description": 0.9967712177121771,
-        "catalog_number": 0.9967712177121771,
-        "mfr": 0.9995387453874539,
+        "description": 0.9967919340054996,
+        "catalog_number": 0.9967919340054996,
+        "mfr": 0.9995417048579285,
         "finish": 1.0,
-        "notes": 0.9967712177121771
+        "notes": 0.9967919340054996
       },
       "fuzzy": {
-        "description": 0.9989271691543089,
-        "catalog_number": 0.9985311107519739
+        "description": 0.9989340525786167,
+        "catalog_number": 0.9985405353392663
       },
-      "location_iou": 0.9193636452016652,
-      "set_fully_correct": 0.9498207885304659
+      "location_iou": 0.9256650683528286,
+      "set_fully_correct": 0.956989247311828
     },
     "macro": {
       "set_recall": 1.0,
-      "set_precision": 0.9952830188679245,
-      "set_f1": 0.9975961538461539,
-      "set_fully_correct": 0.9486016111954891,
-      "location_iou": 0.9292237033165185
+      "set_precision": 1.0,
+      "set_f1": 1.0,
+      "set_fully_correct": 0.9535035719798028,
+      "location_iou": 0.9335327647360641
     }
   },
   "docs": [
@@ -34558,75 +34558,75 @@
       "gold_pages": "711-724",
       "totals": {
         "n_gold_sets": 51,
-        "n_pred_sets": 53,
+        "n_pred_sets": 51,
         "n_matched_sets": 51,
         "n_matched_by_iou": 0,
         "status": {
-          "correct": 50,
+          "correct": 51,
           "total": 51
         },
         "n_gold_components": 250,
-        "n_pred_components": 236,
-        "n_matched_components": 236,
+        "n_pred_components": 250,
+        "n_matched_components": 250,
         "fields": {
           "qty": {
-            "correct": 236,
-            "total": 236
+            "correct": 250,
+            "total": 250
           },
           "qty_unit": {
-            "correct": 236,
-            "total": 236
+            "correct": 250,
+            "total": 250
           },
           "description": {
-            "correct": 236,
-            "total": 236
+            "correct": 250,
+            "total": 250
           },
           "catalog_number": {
-            "correct": 236,
-            "total": 236
+            "correct": 250,
+            "total": 250
           },
           "mfr": {
-            "correct": 236,
-            "total": 236
+            "correct": 250,
+            "total": 250
           },
           "finish": {
-            "correct": 236,
-            "total": 236
+            "correct": 250,
+            "total": 250
           },
           "notes": {
-            "correct": 236,
-            "total": 236
+            "correct": 250,
+            "total": 250
           }
         },
         "fuzzy": {
           "description": {
-            "sum": 236.0,
-            "count": 236
+            "sum": 250.0,
+            "count": 250
           },
           "catalog_number": {
-            "sum": 236.0,
-            "count": 236
+            "sum": 250.0,
+            "count": 250
           }
         },
         "confusion": {
           "mfr": {
-            "mfr": 199,
+            "mfr": 211,
             "finish": 0,
             "other": 0,
             "missing": 0
           },
           "finish": {
             "mfr": 0,
-            "finish": 194,
+            "finish": 204,
             "other": 0,
             "missing": 0
           }
         },
         "location": {
-          "sum": 39.83038532904555,
+          "sum": 41.588482388220136,
           "count": 51
         },
-        "n_fully_correct": 49,
+        "n_fully_correct": 51,
         "reliability": [
           {
             "lo": 0.0,
@@ -34666,20 +34666,20 @@
           {
             "lo": 0.9,
             "hi": 1.0,
-            "count": 1416,
-            "correct": 1416,
+            "count": 1500,
+            "correct": 1500,
             "accuracy": 1.0
           }
         ]
       },
       "metrics": {
         "set_recall": 1.0,
-        "set_precision": 0.9622641509433962,
-        "set_f1": 0.9807692307692307,
-        "status_accuracy": 0.9803921568627451,
-        "component_recall": 0.944,
+        "set_precision": 1.0,
+        "set_f1": 1.0,
+        "status_accuracy": 1.0,
+        "component_recall": 1.0,
         "component_precision": 1.0,
-        "component_f1": 0.9711934156378601,
+        "component_f1": 1.0,
         "field_accuracy": {
           "qty": 1.0,
           "qty_unit": 1.0,
@@ -34693,8 +34693,8 @@
           "description": 1.0,
           "catalog_number": 1.0
         },
-        "location_iou": 0.7809879476283441,
-        "set_fully_correct": 0.9607843137254902
+        "location_iou": 0.8154604389847085,
+        "set_fully_correct": 1.0
       },
       "sets": [
         {
@@ -36540,70 +36540,126 @@
           "pred_idx": 20,
           "method": "number",
           "page": 715,
-          "line_id": "L715_27",
+          "line_id": "L715_28",
           "gold_status": "active",
           "pred_status": "active",
           "status_correct": true,
-          "location_iou": 0.06967672955974843,
+          "location_iou": 0.8724913207547172,
           "components": [
             {
               "gold_idx": 0,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 0,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             },
             {
               "gold_idx": 1,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 1,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             },
             {
               "gold_idx": 2,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 2,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             },
             {
               "gold_idx": 3,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 3,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             },
             {
               "gold_idx": 4,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 4,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             },
             {
               "gold_idx": 5,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 5,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             },
             {
               "gold_idx": 6,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 6,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             }
           ],
-          "n_missed_components": 7,
+          "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "11",
           "gold_idx": 21,
-          "pred_idx": 22,
+          "pred_idx": 21,
           "method": "number",
           "page": 715,
           "line_id": "L715_38",
@@ -36619,7 +36675,7 @@
         {
           "set_number": "12",
           "gold_idx": 22,
-          "pred_idx": 23,
+          "pred_idx": 22,
           "method": "number",
           "page": 716,
           "line_id": "L716_3",
@@ -36756,7 +36812,7 @@
         {
           "set_number": "12A",
           "gold_idx": 23,
-          "pred_idx": 24,
+          "pred_idx": 23,
           "method": "number",
           "page": 716,
           "line_id": "L716_14",
@@ -36848,7 +36904,7 @@
         {
           "set_number": "12B",
           "gold_idx": 24,
-          "pred_idx": 25,
+          "pred_idx": 24,
           "method": "number",
           "page": 716,
           "line_id": "L716_22",
@@ -36940,7 +36996,7 @@
         {
           "set_number": "12C",
           "gold_idx": 25,
-          "pred_idx": 26,
+          "pred_idx": 25,
           "method": "number",
           "page": 716,
           "line_id": "L716_30",
@@ -37047,7 +37103,7 @@
         {
           "set_number": "13",
           "gold_idx": 26,
-          "pred_idx": 27,
+          "pred_idx": 26,
           "method": "number",
           "page": 717,
           "line_id": "L717_3",
@@ -37063,7 +37119,7 @@
         {
           "set_number": "14",
           "gold_idx": 27,
-          "pred_idx": 28,
+          "pred_idx": 27,
           "method": "number",
           "page": 717,
           "line_id": "L717_4",
@@ -37079,7 +37135,7 @@
         {
           "set_number": "14A",
           "gold_idx": 28,
-          "pred_idx": 29,
+          "pred_idx": 28,
           "method": "number",
           "page": 717,
           "line_id": "L717_5",
@@ -37095,73 +37151,129 @@
         {
           "set_number": "14B",
           "gold_idx": 29,
-          "pred_idx": 30,
+          "pred_idx": 29,
           "method": "number",
           "page": 717,
-          "line_id": "L717_6",
+          "line_id": "L717_7",
           "gold_status": "active",
-          "pred_status": "not_used",
-          "status_correct": false,
-          "location_iou": 0.0,
+          "pred_status": "active",
+          "status_correct": true,
+          "location_iou": 0.9552824679796167,
           "components": [
             {
               "gold_idx": 0,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 0,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             },
             {
               "gold_idx": 1,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 1,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             },
             {
               "gold_idx": 2,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 2,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             },
             {
               "gold_idx": 3,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 3,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             },
             {
               "gold_idx": 4,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 4,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             },
             {
               "gold_idx": 5,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 5,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             },
             {
               "gold_idx": 6,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 6,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             }
           ],
-          "n_missed_components": 7,
+          "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "15",
           "gold_idx": 30,
-          "pred_idx": 32,
+          "pred_idx": 30,
           "method": "number",
           "page": 718,
           "line_id": "L718_3",
@@ -37177,7 +37289,7 @@
         {
           "set_number": "15A",
           "gold_idx": 31,
-          "pred_idx": 33,
+          "pred_idx": 31,
           "method": "number",
           "page": 718,
           "line_id": "L718_4",
@@ -37344,7 +37456,7 @@
         {
           "set_number": "16",
           "gold_idx": 32,
-          "pred_idx": 34,
+          "pred_idx": 32,
           "method": "number",
           "page": 719,
           "line_id": "L719_3",
@@ -37360,7 +37472,7 @@
         {
           "set_number": "17",
           "gold_idx": 33,
-          "pred_idx": 35,
+          "pred_idx": 33,
           "method": "number",
           "page": 719,
           "line_id": "L719_4",
@@ -37376,7 +37488,7 @@
         {
           "set_number": "18",
           "gold_idx": 34,
-          "pred_idx": 36,
+          "pred_idx": 34,
           "method": "number",
           "page": 719,
           "line_id": "L719_5",
@@ -37528,7 +37640,7 @@
         {
           "set_number": "19",
           "gold_idx": 35,
-          "pred_idx": 37,
+          "pred_idx": 35,
           "method": "number",
           "page": 720,
           "line_id": "L720_3",
@@ -37710,7 +37822,7 @@
         {
           "set_number": "20",
           "gold_idx": 36,
-          "pred_idx": 38,
+          "pred_idx": 36,
           "method": "number",
           "page": 720,
           "line_id": "L720_23",
@@ -37726,7 +37838,7 @@
         {
           "set_number": "21",
           "gold_idx": 37,
-          "pred_idx": 39,
+          "pred_idx": 37,
           "method": "number",
           "page": 720,
           "line_id": "L720_27",
@@ -37742,7 +37854,7 @@
         {
           "set_number": "22",
           "gold_idx": 38,
-          "pred_idx": 40,
+          "pred_idx": 38,
           "method": "number",
           "page": 721,
           "line_id": "L721_3",
@@ -37879,7 +37991,7 @@
         {
           "set_number": "23",
           "gold_idx": 39,
-          "pred_idx": 41,
+          "pred_idx": 39,
           "method": "number",
           "page": 721,
           "line_id": "L721_14",
@@ -37986,7 +38098,7 @@
         {
           "set_number": "24",
           "gold_idx": 40,
-          "pred_idx": 42,
+          "pred_idx": 40,
           "method": "number",
           "page": 721,
           "line_id": "L721_23",
@@ -38078,7 +38190,7 @@
         {
           "set_number": "24A",
           "gold_idx": 41,
-          "pred_idx": 43,
+          "pred_idx": 41,
           "method": "number",
           "page": 721,
           "line_id": "L721_31",
@@ -38185,7 +38297,7 @@
         {
           "set_number": "25",
           "gold_idx": 42,
-          "pred_idx": 44,
+          "pred_idx": 42,
           "method": "number",
           "page": 722,
           "line_id": "L722_3",
@@ -38277,7 +38389,7 @@
         {
           "set_number": "25A",
           "gold_idx": 43,
-          "pred_idx": 45,
+          "pred_idx": 43,
           "method": "number",
           "page": 722,
           "line_id": "L722_11",
@@ -38354,7 +38466,7 @@
         {
           "set_number": "26",
           "gold_idx": 44,
-          "pred_idx": 46,
+          "pred_idx": 44,
           "method": "number",
           "page": 722,
           "line_id": "L722_18",
@@ -38446,7 +38558,7 @@
         {
           "set_number": "26A",
           "gold_idx": 45,
-          "pred_idx": 47,
+          "pred_idx": 45,
           "method": "number",
           "page": 722,
           "line_id": "L722_26",
@@ -38538,7 +38650,7 @@
         {
           "set_number": "27",
           "gold_idx": 46,
-          "pred_idx": 48,
+          "pred_idx": 46,
           "method": "number",
           "page": 723,
           "line_id": "L723_3",
@@ -38675,7 +38787,7 @@
         {
           "set_number": "28",
           "gold_idx": 47,
-          "pred_idx": 49,
+          "pred_idx": 47,
           "method": "number",
           "page": 723,
           "line_id": "L723_16",
@@ -38827,7 +38939,7 @@
         {
           "set_number": "29",
           "gold_idx": 48,
-          "pred_idx": 50,
+          "pred_idx": 48,
           "method": "number",
           "page": 724,
           "line_id": "L724_3",
@@ -38934,7 +39046,7 @@
         {
           "set_number": "30",
           "gold_idx": 49,
-          "pred_idx": 51,
+          "pred_idx": 49,
           "method": "number",
           "page": 724,
           "line_id": "L724_12",
@@ -39101,7 +39213,7 @@
         {
           "set_number": "31A",
           "gold_idx": 50,
-          "pred_idx": 52,
+          "pred_idx": 50,
           "method": "number",
           "page": 724,
           "line_id": "L724_28",
@@ -39189,263 +39301,9 @@
           "n_missed_components": 0,
           "n_spurious_components": 0,
           "fully_correct": true
-        },
-        {
-          "set_number": "10C",
-          "gold_idx": null,
-          "pred_idx": 21,
-          "method": null,
-          "page": 715,
-          "line_id": "L715_28",
-          "gold_status": null,
-          "pred_status": "active",
-          "status_correct": null,
-          "location_iou": null,
-          "components": [],
-          "n_missed_components": 0,
-          "n_spurious_components": 0,
-          "fully_correct": false
-        },
-        {
-          "set_number": "14B",
-          "gold_idx": null,
-          "pred_idx": 31,
-          "method": null,
-          "page": 717,
-          "line_id": "L717_7",
-          "gold_status": null,
-          "pred_status": "active",
-          "status_correct": null,
-          "location_iou": null,
-          "components": [],
-          "n_missed_components": 0,
-          "n_spurious_components": 0,
-          "fully_correct": false
         }
       ],
-      "errors": [
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "10C",
-          "set_idx": 20,
-          "page": 715,
-          "line_id": "L715_27",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #0"
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "10C",
-          "set_idx": 20,
-          "page": 715,
-          "line_id": "L715_27",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #1"
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "10C",
-          "set_idx": 20,
-          "page": 715,
-          "line_id": "L715_27",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #2"
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "10C",
-          "set_idx": 20,
-          "page": 715,
-          "line_id": "L715_27",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #3"
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "10C",
-          "set_idx": 20,
-          "page": 715,
-          "line_id": "L715_27",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #4"
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "10C",
-          "set_idx": 20,
-          "page": 715,
-          "line_id": "L715_27",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #5"
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "10C",
-          "set_idx": 20,
-          "page": 715,
-          "line_id": "L715_27",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #6"
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "wrong_status",
-          "severity": 1,
-          "set_number": "14B",
-          "set_idx": 30,
-          "page": 717,
-          "line_id": "L717_6",
-          "field": null,
-          "gold": "active",
-          "pred": "not_used",
-          "message": ""
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "14B",
-          "set_idx": 30,
-          "page": 717,
-          "line_id": "L717_6",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #0"
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "14B",
-          "set_idx": 30,
-          "page": 717,
-          "line_id": "L717_6",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #1"
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "14B",
-          "set_idx": 30,
-          "page": 717,
-          "line_id": "L717_6",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #2"
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "14B",
-          "set_idx": 30,
-          "page": 717,
-          "line_id": "L717_6",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #3"
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "14B",
-          "set_idx": 30,
-          "page": 717,
-          "line_id": "L717_6",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #4"
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "14B",
-          "set_idx": 30,
-          "page": 717,
-          "line_id": "L717_6",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #5"
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "14B",
-          "set_idx": 30,
-          "page": 717,
-          "line_id": "L717_6",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #6"
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "spurious_set",
-          "severity": 1,
-          "set_number": "10C",
-          "set_idx": 21,
-          "page": 715,
-          "line_id": "L715_28",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "predicted set 10C not in gold"
-        },
-        {
-          "doc_id": "sjc-well-behavioral--89671ede-20260218-sjc-bewell-bldg-b-85-design-update-specifications",
-          "kind": "spurious_set",
-          "severity": 1,
-          "set_number": "14B",
-          "set_idx": 31,
-          "page": 717,
-          "line_id": "L717_7",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "predicted set 14B not in gold"
-        }
-      ]
+      "errors": []
     }
   ],
   "worst_errors": [

@@ -340,3 +340,15 @@ FUNCTION)`).
   - Gold: valor 94.6% → 100%.
   - Total, including the hfh 027 gold change committed separately: 93.9% → 95.0%.
   - Dev and negatives: 0 components changed.
+
+### Fix 4: an empty stub superseded by a full set printed next to it
+
+- **Rule.** When a set number appears twice within a page of itself, once as an empty stub (`HW 14B NOT USED`,
+  or `HW 10C … moved to Exterior Set HW E13`) and once as a full set, the full set supersedes the stub. A
+  redline retired the old version and printed the new one under the same number. The stub is dropped and a
+  warning names it.
+- **Scope.** Duplicates further apart are still only flagged by validation, never dropped or merged (unit
+  test).
+- **Results.**
+  - Gold: sjc 96.1% → 100%, and sjc set precision 96.2% → 100%. Total 95.0% → 95.7%.
+  - Dev and negatives: 0 components and 0 set counts changed.
