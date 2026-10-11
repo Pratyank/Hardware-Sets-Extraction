@@ -36,6 +36,7 @@ from hwsets.columns.lexicon import (
     norm_code,
     unit_code,
 )
+from hwsets.components.rhythm import Rhythm, block_cols, in_block, opens_block
 from hwsets.layout.columns import cell_gap, column_of
 from hwsets.layout.rules import EMPTY_RULES, RuleIndex
 from hwsets.models import Component, Field, Line, Token
@@ -43,6 +44,12 @@ from hwsets.models import Component, Field, Line, Token
 _NOTE_RE = re.compile(r"^(?:notes?|properties|note\s*\d*)\s*[:\-]", re.IGNORECASE)
 _NUMBERED_NOTE_RE = re.compile(r"^notes?\s*[:\-]?\s*\d+[.)]", re.IGNORECASE)
 _INT_RE = re.compile(r"^(\d{1,5})(?:\.0+)?$")
+_REV_TAG_WORDS = r"\[(?:BULLETIN|ADDENDUM|ADD|REV(?:ISION)?|ASI|CCD|PR|RFI|ISSUE)\b"
+_REV_TAG_RE = re.compile(rf"^{_REV_TAG_WORDS}[^\]]*\]$", re.IGNORECASE)
+_REV_TAG_START_RE = re.compile(rf"^{_REV_TAG_WORDS}", re.IGNORECASE)
+# An item name or a remark opens with a capital letter or a digit; a bullet ("- ...") or a
+# lower-case start continues the cell above (paragraph cells with spaced bullets).
+_ITEM_START_RE = re.compile(r"^[A-Z0-9]")
 _MFR_SPLIT_RE = re.compile(r"\s[-\u2013]\s")
 
 
@@ -64,6 +71,8 @@ class ColumnModel:
     known_items: frozenset[str] = frozenset()
     # Positional-template roles per token id (list format without aligned columns, template.py).
     overrides: Mapping[str, str] = dataclasses.field(default_factory=dict)
+    # Wrap leading vs row pitch when the layout separates rows by spacing alone (rhythm.py).
+    rhythm: Rhythm | None = None
 
     def x_of(self, role: str) -> float | None:
         for x, r in zip(self.xs, self.roles, strict=True):
@@ -132,6 +141,11 @@ def _starts_row(roles: Sequence[str], tokens: Sequence[Token], model: ColumnMode
     return False
 
 
+def line_starts_row(ln: Line, toks: Mapping[str, Token], model: ColumnModel) -> bool:
+    tokens = [toks[i] for i in ln.token_ids]
+    return bool(tokens) and _starts_row([model.role_of(t) for t in tokens], tokens, model)
+
+
 def assemble_rows(
     lines: Sequence[Line],
     toks: Mapping[str, Token],
@@ -159,10 +173,20 @@ def assemble_rows(
     note_x: float | None = None  # left edge of the note being continued, if any
     note_to_set = False
     pending: list[Line] = []  # fragments of a vertically centred cell, held for the next row
+    prev_ln: Line | None = None
+    in_remark = False  # inside a remark block (rhythm.py): its wrapped lines are remark too
     for idx, ln in enumerate(lines):
         tokens = [toks[i] for i in ln.token_ids]
         if not tokens:
             continue
+        # A full row pitch above this line (in a layout that spaces rows wider than wraps).
+        block = opens_block(prev_ln, ln, model.rhythm)
+        within = in_block(prev_ln, ln, model.rhythm)
+        prev_ln = ln
+        if in_remark and within and not line_starts_row(ln, toks, model):
+            set_notes.extend(ln.token_ids)
+            continue
+        in_remark = False
         x0 = tokens[0].bbox[0]
         roles0 = [model.role_of(t) for t in tokens]
         if _NOTE_RE.match(ln.text):
@@ -184,7 +208,7 @@ def assemble_rows(
             last_bottom, last_page = ln.bbox[3], ln.page
             continue
         if note_x is not None:
-            if not _starts_row(roles0, tokens, model) and x0 >= note_x - 3:
+            if not _starts_row(roles0, tokens, model) and x0 >= note_x - 3 and not block:
                 if note_to_set or not rows:
                     set_notes.extend(ln.token_ids)
                 else:
@@ -236,14 +260,55 @@ def assemble_rows(
             # ("GASKETING / SWEEP | PEMKO - ... | BLACK"); wrapped cells rarely span three.
             row = Row()
             rows.append(row)
+            lead_qty = (
+                bool(pending) and not model.has("qty") and bool(_INT_RE.match(tokens[0].text))
+            )
             for frag in pending:  # centred-cell fragments printed above this row's first line
                 _add_line(row, frag, toks, model)
             pending = []
+            if lead_qty:
+                # The quantity is centred on a wrapped description: printed alone, mid-cell.
+                row.add("qty", tokens[0])
+                _add_line(row, ln, toks, model, skip=1)
+                last_bottom, last_page = ln.bbox[3], ln.page
+                continue
         elif rows and _closer_to_next(
             ln, idx, lines=lines, toks=toks, model=model, last_bottom=last_bottom
         ):
             pending.append(ln)
             continue
+        elif (
+            rows
+            and block
+            and model.rhythm is not None
+            and not _REV_TAG_START_RE.match(ln.text)  # a revision tag annotates the row above
+        ):
+            cols = block_cols(
+                lines,
+                idx,
+                toks=toks,
+                role_of=model.role_of,
+                starts_row=lambda x: line_starts_row(x, toks, model),
+                rhythm=model.rhythm,
+            ) & {"description", "catalog", "finish", "mfr"}
+            if len(cols) < 2 and _ITEM_START_RE.match(tokens[0].text):
+                # A one-cell block a full row below the item: a remark row, about the set.
+                set_notes.extend(ln.token_ids)
+                in_remark = True
+                last_bottom, last_page = ln.bbox[3], ln.page
+                continue
+            if (
+                len(cols) >= 2
+                and roles[0] == "description"
+                and _ITEM_START_RE.match(tokens[0].text)
+            ):
+                row = Row()  # an item printed without a quantity, in its own row
+                rows.append(row)
+            elif near and _continuation_ok(rows[-1], roles):
+                row = rows[-1]  # not an item name (a bullet, a sentence's tail): keep wrapping
+            else:
+                set_notes.extend(ln.token_ids)
+                continue
         elif rows and (near or new_page_cont) and _continuation_ok(rows[-1], roles):
             row = rows[-1]
         elif sum(r in {"description", "catalog", "finish", "mfr"} for r in set(roles)) >= 2:
@@ -264,10 +329,12 @@ def _norm_desc(words: Iterable[str]) -> str:
     return " ".join(w.upper() for w in words).strip(" .,:")
 
 
-def _add_line(row: Row, ln: Line, toks: Mapping[str, Token], model: ColumnModel) -> None:
+def _add_line(
+    row: Row, ln: Line, toks: Mapping[str, Token], model: ColumnModel, skip: int = 0
+) -> None:
     tokens = [toks[i] for i in ln.token_ids]
-    known = 0
-    for tok in tokens:
+    known = skip
+    for tok in tokens[skip:]:
         role = model.role_of(tok)
         if role in {"ignore", "left"}:
             continue
@@ -368,11 +435,6 @@ def _parse_qty(cell: list[Token]) -> tuple[int | None, str | None, list[Token], 
             unit = unit_code(t.text)
             u_used.append(t)
     return qty, unit, q_used, u_used
-
-
-_REV_TAG_RE = re.compile(
-    r"^\[(?:BULLETIN|ADDENDUM|ADD|REV(?:ISION)?|ASI|CCD|PR|RFI|ISSUE)\b[^\]]*\]$", re.IGNORECASE
-)
 
 
 def _pop_revision_tags(tokens: list[Token]) -> tuple[list[Token], list[Token]]:

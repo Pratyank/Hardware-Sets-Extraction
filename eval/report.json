@@ -11,46 +11,46 @@
         "total": 279
       },
       "n_gold_components": 2184,
-      "n_pred_components": 2167,
-      "n_matched_components": 2161,
+      "n_pred_components": 2174,
+      "n_matched_components": 2168,
       "fields": {
         "qty": {
-          "correct": 2154,
-          "total": 2161
+          "correct": 2166,
+          "total": 2168
         },
         "qty_unit": {
-          "correct": 2161,
-          "total": 2161
+          "correct": 2168,
+          "total": 2168
         },
         "description": {
-          "correct": 2142,
-          "total": 2161
+          "correct": 2159,
+          "total": 2168
         },
         "catalog_number": {
-          "correct": 2152,
-          "total": 2161
+          "correct": 2161,
+          "total": 2168
         },
         "mfr": {
-          "correct": 2160,
-          "total": 2161
+          "correct": 2167,
+          "total": 2168
         },
         "finish": {
-          "correct": 2161,
-          "total": 2161
+          "correct": 2168,
+          "total": 2168
         },
         "notes": {
-          "correct": 2147,
-          "total": 2161
+          "correct": 2154,
+          "total": 2168
         }
       },
       "fuzzy": {
         "description": {
-          "sum": 2156.0174484102113,
-          "count": 2161
+          "sum": 2165.3475175470153,
+          "count": 2168
         },
         "catalog_number": {
-          "sum": 2156.962711238926,
-          "count": 2161
+          "sum": 2164.8154481102792,
+          "count": 2168
         }
       },
       "confusion": {
@@ -71,7 +71,7 @@
         "sum": 256.305148914954,
         "count": 279
       },
-      "n_fully_correct": 243,
+      "n_fully_correct": 255,
       "reliability": [
         {
           "lo": 0.0,
@@ -105,15 +105,15 @@
           "lo": 0.8,
           "hi": 0.9,
           "count": 124,
-          "correct": 116,
-          "accuracy": 0.9354838709677419
+          "correct": 122,
+          "accuracy": 0.9838709677419355
         },
         {
           "lo": 0.9,
           "hi": 1.0,
-          "count": 12842,
-          "correct": 12800,
-          "accuracy": 0.9967294813891917
+          "count": 12884,
+          "correct": 12853,
+          "accuracy": 0.9975939149332506
         }
       ]
     },
@@ -122,30 +122,30 @@
       "set_precision": 0.9928825622775801,
       "set_f1": 0.9964285714285714,
       "status_accuracy": 0.996415770609319,
-      "component_recall": 0.9894688644688645,
-      "component_precision": 0.9972311952007383,
-      "component_f1": 0.9933348655481499,
+      "component_recall": 0.9926739926739927,
+      "component_precision": 0.9972401103955841,
+      "component_f1": 0.9949518127581459,
       "field_accuracy": {
-        "qty": 0.996760758907913,
+        "qty": 0.9990774907749077,
         "qty_unit": 1.0,
-        "description": 0.991207774178621,
-        "catalog_number": 0.995835261453031,
-        "mfr": 0.999537251272559,
+        "description": 0.9958487084870848,
+        "catalog_number": 0.9967712177121771,
+        "mfr": 0.9995387453874539,
         "finish": 1.0,
-        "notes": 0.993521517815826
+        "notes": 0.9935424354243543
       },
       "fuzzy": {
-        "description": 0.9976943305924162,
-        "catalog_number": 0.9981317497635013
+        "description": 0.9987765302338631,
+        "catalog_number": 0.9985311107519739
       },
       "location_iou": 0.9186564477238494,
-      "set_fully_correct": 0.8709677419354839
+      "set_fully_correct": 0.9139784946236559
     },
     "macro": {
       "set_recall": 1.0,
       "set_precision": 0.9952830188679245,
       "set_f1": 0.9975961538461539,
-      "set_fully_correct": 0.8633001973414437,
+      "set_fully_correct": 0.9079054604993384,
       "location_iou": 0.9285571219100637
     }
   },
@@ -8371,46 +8371,46 @@
           "total": 38
         },
         "n_gold_components": 269,
-        "n_pred_components": 265,
-        "n_matched_components": 265,
+        "n_pred_components": 268,
+        "n_matched_components": 268,
         "fields": {
           "qty": {
-            "correct": 260,
-            "total": 265
+            "correct": 268,
+            "total": 268
           },
           "qty_unit": {
-            "correct": 265,
-            "total": 265
+            "correct": 268,
+            "total": 268
           },
           "description": {
-            "correct": 255,
-            "total": 265
+            "correct": 268,
+            "total": 268
           },
           "catalog_number": {
-            "correct": 263,
-            "total": 265
+            "correct": 268,
+            "total": 268
           },
           "mfr": {
-            "correct": 265,
-            "total": 265
+            "correct": 268,
+            "total": 268
           },
           "finish": {
-            "correct": 265,
-            "total": 265
+            "correct": 268,
+            "total": 268
           },
           "notes": {
-            "correct": 265,
-            "total": 265
+            "correct": 268,
+            "total": 268
           }
         },
         "fuzzy": {
           "description": {
-            "sum": 262.669930863196,
-            "count": 265
+            "sum": 268.0,
+            "count": 268
           },
           "catalog_number": {
-            "sum": 264.14726312864684,
-            "count": 265
+            "sum": 268.0,
+            "count": 268
           }
         },
         "confusion": {
@@ -8431,7 +8431,7 @@
           "sum": 35.46158421305542,
           "count": 38
         },
-        "n_fully_correct": 28,
+        "n_fully_correct": 37,
         "reliability": [
           {
             "lo": 0.0,
@@ -8465,15 +8465,15 @@
             "lo": 0.8,
             "hi": 0.9,
             "count": 33,
-            "correct": 27,
-            "accuracy": 0.8181818181818182
+            "correct": 33,
+            "accuracy": 1.0
           },
           {
             "lo": 0.9,
             "hi": 1.0,
-            "count": 1557,
-            "correct": 1546,
-            "accuracy": 0.9929351316634554
+            "count": 1575,
+            "correct": 1575,
+            "accuracy": 1.0
           }
         ]
       },
@@ -8482,24 +8482,24 @@
         "set_precision": 1.0,
         "set_f1": 1.0,
         "status_accuracy": 1.0,
-        "component_recall": 0.9851301115241635,
+        "component_recall": 0.9962825278810409,
         "component_precision": 1.0,
-        "component_f1": 0.9925093632958801,
+        "component_f1": 0.9981378026070763,
         "field_accuracy": {
-          "qty": 0.9811320754716981,
+          "qty": 1.0,
           "qty_unit": 1.0,
-          "description": 0.9622641509433962,
-          "catalog_number": 0.9924528301886792,
+          "description": 1.0,
+          "catalog_number": 1.0,
           "mfr": 1.0,
           "finish": 1.0,
           "notes": 1.0
         },
         "fuzzy": {
-          "description": 0.9912072862762112,
-          "catalog_number": 0.9967821250137616
+          "description": 1.0,
+          "catalog_number": 1.0
         },
         "location_iou": 0.9331995845540899,
-        "set_fully_correct": 0.7368421052631579
+        "set_fully_correct": 0.9736842105263158
       },
       "sets": [
         {
@@ -8515,35 +8515,22 @@
           "location_iou": 0.9571995357803218,
           "components": [
             {
-              "gold_idx": 1,
+              "gold_idx": 0,
               "pred_idx": 0,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
                 "qty_unit": true,
-                "description": false,
-                "catalog_number": false,
+                "description": true,
+                "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "description",
-                  "gold": "Panic Hardware Device (Blumcraft Style)",
-                  "pred": "Hanging Device Panic Hardware Device (Blumcraft Style) Gasketing, threshold, sweep, astragal",
-                  "confidence": 0.8
-                },
-                {
-                  "field": "catalog_number",
-                  "gold": "By Balanced Door Manufacturer",
-                  "pred": "By Balanced Door Manufacturer By Balanced Door Manufacturer By Balanced Door Manufacturer",
-                  "confidence": 0.989
-                }
-              ]
+              "diffs": []
             },
             {
-              "gold_idx": 3,
+              "gold_idx": 1,
               "pred_idx": 1,
               "similarity": 100.0,
               "field_correct": {
@@ -8558,23 +8545,39 @@
               "diffs": []
             },
             {
-              "gold_idx": 0,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "gold_idx": 2,
+              "pred_idx": 2,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             },
             {
-              "gold_idx": 2,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "gold_idx": 3,
+              "pred_idx": 3,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             }
           ],
-          "n_missed_components": 2,
+          "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "EX-2.0",
@@ -8589,38 +8592,33 @@
           "location_iou": 0.4061974030243257,
           "components": [
             {
-              "gold_idx": 1,
+              "gold_idx": 0,
               "pred_idx": 0,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
                 "qty_unit": true,
-                "description": false,
-                "catalog_number": false,
+                "description": true,
+                "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "description",
-                  "gold": "Panic Hardware Device",
-                  "pred": "Hanging Device Panic Hardware Device",
-                  "confidence": 0.99
-                },
-                {
-                  "field": "catalog_number",
-                  "gold": "By Door Manufacturer",
-                  "pred": "By Door Manufacturer By Door Manufacturer",
-                  "confidence": 0.994
-                }
-              ]
+              "diffs": []
             },
             {
-              "gold_idx": 0,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "gold_idx": 1,
+              "pred_idx": 1,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             },
             {
@@ -8631,7 +8629,7 @@
               "diffs": []
             }
           ],
-          "n_missed_components": 2,
+          "n_missed_components": 1,
           "n_spurious_components": 0,
           "fully_correct": false
         },
@@ -8834,28 +8832,15 @@
               "pred_idx": 4,
               "similarity": 100.0,
               "field_correct": {
-                "qty": false,
+                "qty": true,
                 "qty_unit": true,
-                "description": false,
+                "description": true,
                 "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "qty",
-                  "gold": 1,
-                  "pred": null,
-                  "confidence": 0.93
-                },
-                {
-                  "field": "description",
-                  "gold": "Electrified Mortise Lock, Fail Secure Key on interior side",
-                  "pred": "Electrified Mortise Lock, Fail Secure 1 Key on interior side",
-                  "confidence": 0.888
-                }
-              ]
+              "diffs": []
             },
             {
               "gold_idx": 5,
@@ -8995,7 +8980,7 @@
           ],
           "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "1.0",
@@ -9181,28 +9166,15 @@
               "pred_idx": 3,
               "similarity": 100.0,
               "field_correct": {
-                "qty": false,
+                "qty": true,
                 "qty_unit": true,
-                "description": false,
+                "description": true,
                 "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "qty",
-                  "gold": 1,
-                  "pred": null,
-                  "confidence": 0.93
-                },
-                {
-                  "field": "description",
-                  "gold": "Surface Closer (Mounted on stairwell side of door)",
-                  "pred": "Surface Closer (Mounted on stairwell 1 side of door)",
-                  "confidence": 0.888
-                }
-              ]
+              "diffs": []
             },
             {
               "gold_idx": 4,
@@ -9297,7 +9269,7 @@
           ],
           "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "2.5",
@@ -9361,28 +9333,15 @@
               "pred_idx": 3,
               "similarity": 100.0,
               "field_correct": {
-                "qty": false,
+                "qty": true,
                 "qty_unit": true,
-                "description": false,
+                "description": true,
                 "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "qty",
-                  "gold": 1,
-                  "pred": null,
-                  "confidence": 0.93
-                },
-                {
-                  "field": "description",
-                  "gold": "Surface Closer (Mounted on stairwell side of door)",
-                  "pred": "Surface Closer (Mounted on stairwell 1 side of door)",
-                  "confidence": 0.888
-                }
-              ]
+              "diffs": []
             },
             {
               "gold_idx": 4,
@@ -9477,7 +9436,7 @@
           ],
           "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "3.0",
@@ -9573,20 +9532,13 @@
               "field_correct": {
                 "qty": true,
                 "qty_unit": true,
-                "description": false,
+                "description": true,
                 "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "description",
-                  "gold": "Door/Frame Harness",
-                  "pred": "Door/Frame Harness provided by Section 08 71 00",
-                  "confidence": 0.99
-                }
-              ]
+              "diffs": []
             },
             {
               "gold_idx": 6,
@@ -9606,7 +9558,7 @@
           ],
           "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "4.0",
@@ -10021,28 +9973,15 @@
               "pred_idx": 1,
               "similarity": 100.0,
               "field_correct": {
-                "qty": false,
+                "qty": true,
                 "qty_unit": true,
-                "description": false,
+                "description": true,
                 "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "qty",
-                  "gold": 1,
-                  "pred": null,
-                  "confidence": 0.93
-                },
-                {
-                  "field": "description",
-                  "gold": "Continuous Hinge x Power Transfer at 48” Wide Doors",
-                  "pred": "Continuous Hinge x Power Transfer at 1 48” Wide Doors",
-                  "confidence": 0.888
-                }
-              ]
+              "diffs": []
             },
             {
               "gold_idx": 2,
@@ -10167,7 +10106,7 @@
           ],
           "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "6.0",
@@ -10884,25 +10823,18 @@
               "field_correct": {
                 "qty": true,
                 "qty_unit": true,
-                "description": false,
+                "description": true,
                 "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "description",
-                  "gold": "Door/Frame Harness",
-                  "pred": "Door/Frame Harness Key on FSAE Lobby side",
-                  "confidence": 0.99
-                }
-              ]
+              "diffs": []
             }
           ],
           "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "9.0",
@@ -12356,28 +12288,15 @@
               "pred_idx": 2,
               "similarity": 100.0,
               "field_correct": {
-                "qty": false,
+                "qty": true,
                 "qty_unit": true,
-                "description": false,
+                "description": true,
                 "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "qty",
-                  "gold": 1,
-                  "pred": null,
-                  "confidence": 0.93
-                },
-                {
-                  "field": "description",
-                  "gold": "Surface Closer (Mounted on stairwell side of door)",
-                  "pred": "Surface Closer (Mounted on stairwell 1 side of door)",
-                  "confidence": 0.888
-                }
-              ]
+              "diffs": []
             },
             {
               "gold_idx": 3,
@@ -12442,7 +12361,7 @@
           ],
           "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "21.0",
@@ -12968,25 +12887,18 @@
               "field_correct": {
                 "qty": true,
                 "qty_unit": true,
-                "description": false,
+                "description": true,
                 "catalog_number": true,
                 "mfr": true,
                 "finish": true,
                 "notes": true
               },
-              "diffs": [
-                {
-                  "field": "description",
-                  "gold": "Silencers",
-                  "pred": "Silencers Hinges and closer by ballistic door manufacturer",
-                  "confidence": 0.99
-                }
-              ]
+              "diffs": []
             }
           ],
           "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "27.0",
@@ -13266,97 +13178,6 @@
       "errors": [
         {
           "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "EX-1.0",
-          "set_idx": 0,
-          "page": 24,
-          "line_id": "L24_12",
-          "field": "description",
-          "gold": "Panic Hardware Device (Blumcraft Style)",
-          "pred": "Hanging Device Panic Hardware Device (Blumcraft Style) Gasketing, threshold, sweep, astragal",
-          "message": "component #1: description"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "EX-1.0",
-          "set_idx": 0,
-          "page": 24,
-          "line_id": "L24_12",
-          "field": "catalog_number",
-          "gold": "By Balanced Door Manufacturer",
-          "pred": "By Balanced Door Manufacturer By Balanced Door Manufacturer By Balanced Door Manufacturer",
-          "message": "component #1: catalog_number"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "EX-1.0",
-          "set_idx": 0,
-          "page": 24,
-          "line_id": "L24_12",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #0"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "EX-1.0",
-          "set_idx": 0,
-          "page": 24,
-          "line_id": "L24_12",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #2"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "EX-2.0",
-          "set_idx": 1,
-          "page": 24,
-          "line_id": "L24_28",
-          "field": "description",
-          "gold": "Panic Hardware Device",
-          "pred": "Hanging Device Panic Hardware Device",
-          "message": "component #1: description"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "EX-2.0",
-          "set_idx": 1,
-          "page": 24,
-          "line_id": "L24_28",
-          "field": "catalog_number",
-          "gold": "By Door Manufacturer",
-          "pred": "By Door Manufacturer By Door Manufacturer",
-          "message": "component #1: catalog_number"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "EX-2.0",
-          "set_idx": 1,
-          "page": 24,
-          "line_id": "L24_28",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #0"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
           "kind": "missed_component",
           "severity": 1,
           "set_number": "EX-2.0",
@@ -13367,175 +13188,6 @@
           "gold": null,
           "pred": null,
           "message": "gold component #2"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_qty",
-          "severity": 2,
-          "set_number": "EX-4.0",
-          "set_idx": 3,
-          "page": 27,
-          "line_id": "L27_2",
-          "field": "qty",
-          "gold": 1,
-          "pred": null,
-          "message": "component #4: qty"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "EX-4.0",
-          "set_idx": 3,
-          "page": 27,
-          "line_id": "L27_2",
-          "field": "description",
-          "gold": "Electrified Mortise Lock, Fail Secure Key on interior side",
-          "pred": "Electrified Mortise Lock, Fail Secure 1 Key on interior side",
-          "message": "component #4: description"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_qty",
-          "severity": 2,
-          "set_number": "2.0",
-          "set_idx": 5,
-          "page": 28,
-          "line_id": "L28_16",
-          "field": "qty",
-          "gold": 1,
-          "pred": null,
-          "message": "component #3: qty"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "2.0",
-          "set_idx": 5,
-          "page": 28,
-          "line_id": "L28_16",
-          "field": "description",
-          "gold": "Surface Closer (Mounted on stairwell side of door)",
-          "pred": "Surface Closer (Mounted on stairwell 1 side of door)",
-          "message": "component #3: description"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_qty",
-          "severity": 2,
-          "set_number": "2.5",
-          "set_idx": 6,
-          "page": 29,
-          "line_id": "L29_2",
-          "field": "qty",
-          "gold": 1,
-          "pred": null,
-          "message": "component #3: qty"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "2.5",
-          "set_idx": 6,
-          "page": 29,
-          "line_id": "L29_2",
-          "field": "description",
-          "gold": "Surface Closer (Mounted on stairwell side of door)",
-          "pred": "Surface Closer (Mounted on stairwell 1 side of door)",
-          "message": "component #3: description"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "3.0",
-          "set_idx": 7,
-          "page": 30,
-          "line_id": "L30_2",
-          "field": "description",
-          "gold": "Door/Frame Harness",
-          "pred": "Door/Frame Harness provided by Section 08 71 00",
-          "message": "component #5: description"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_qty",
-          "severity": 2,
-          "set_number": "5.5",
-          "set_idx": 11,
-          "page": 33,
-          "line_id": "L33_2",
-          "field": "qty",
-          "gold": 1,
-          "pred": null,
-          "message": "component #1: qty"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "5.5",
-          "set_idx": 11,
-          "page": 33,
-          "line_id": "L33_2",
-          "field": "description",
-          "gold": "Continuous Hinge x Power Transfer at 48” Wide Doors",
-          "pred": "Continuous Hinge x Power Transfer at 1 48” Wide Doors",
-          "message": "component #1: description"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "8.0",
-          "set_idx": 15,
-          "page": 36,
-          "line_id": "L36_2",
-          "field": "description",
-          "gold": "Door/Frame Harness",
-          "pred": "Door/Frame Harness Key on FSAE Lobby side",
-          "message": "component #11: description"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_qty",
-          "severity": 2,
-          "set_number": "20.0",
-          "set_idx": 29,
-          "page": 43,
-          "line_id": "L43_11",
-          "field": "qty",
-          "gold": 1,
-          "pred": null,
-          "message": "component #2: qty"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "20.0",
-          "set_idx": 29,
-          "page": 43,
-          "line_id": "L43_11",
-          "field": "description",
-          "gold": "Surface Closer (Mounted on stairwell side of door)",
-          "pred": "Surface Closer (Mounted on stairwell 1 side of door)",
-          "message": "component #2: description"
-        },
-        {
-          "doc_id": "jc-ryan-2--087100-door-hardware-6",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "26.0",
-          "set_idx": 35,
-          "page": 45,
-          "line_id": "L45_12",
-          "field": "description",
-          "gold": "Silencers",
-          "pred": "Silencers Hinges and closer by ballistic door manufacturer",
-          "message": "component #3: description"
         }
       ]
     },
@@ -24250,46 +23902,46 @@
           "total": 25
         },
         "n_gold_components": 347,
-        "n_pred_components": 344,
-        "n_matched_components": 342,
+        "n_pred_components": 348,
+        "n_matched_components": 346,
         "fields": {
           "qty": {
-            "correct": 340,
-            "total": 342
+            "correct": 344,
+            "total": 346
           },
           "qty_unit": {
-            "correct": 342,
-            "total": 342
+            "correct": 346,
+            "total": 346
           },
           "description": {
-            "correct": 341,
-            "total": 342
+            "correct": 345,
+            "total": 346
           },
           "catalog_number": {
-            "correct": 341,
-            "total": 342
+            "correct": 345,
+            "total": 346
           },
           "mfr": {
-            "correct": 342,
-            "total": 342
+            "correct": 346,
+            "total": 346
           },
           "finish": {
-            "correct": 342,
-            "total": 342
+            "correct": 346,
+            "total": 346
           },
           "notes": {
-            "correct": 340,
-            "total": 342
+            "correct": 344,
+            "total": 346
           }
         },
         "fuzzy": {
           "description": {
-            "sum": 341.8780487804878,
-            "count": 342
+            "sum": 345.8780487804878,
+            "count": 346
           },
           "catalog_number": {
-            "sum": 341.92034313725486,
-            "count": 342
+            "sum": 345.92034313725486,
+            "count": 346
           }
         },
         "confusion": {
@@ -24310,7 +23962,7 @@
           "sum": 24.02603671325198,
           "count": 25
         },
-        "n_fully_correct": 18,
+        "n_fully_correct": 21,
         "reliability": [
           {
             "lo": 0.0,
@@ -24350,9 +24002,9 @@
           {
             "lo": 0.9,
             "hi": 1.0,
-            "count": 2002,
-            "correct": 1996,
-            "accuracy": 0.997002997002997
+            "count": 2026,
+            "correct": 2020,
+            "accuracy": 0.9970384995064165
           }
         ]
       },
@@ -24361,24 +24013,24 @@
         "set_precision": 1.0,
         "set_f1": 1.0,
         "status_accuracy": 1.0,
-        "component_recall": 0.9855907780979827,
-        "component_precision": 0.9941860465116279,
-        "component_f1": 0.9898697539797395,
+        "component_recall": 0.9971181556195965,
+        "component_precision": 0.9942528735632183,
+        "component_f1": 0.99568345323741,
         "field_accuracy": {
-          "qty": 0.9941520467836257,
+          "qty": 0.9942196531791907,
           "qty_unit": 1.0,
-          "description": 0.9970760233918129,
-          "catalog_number": 0.9970760233918129,
+          "description": 0.9971098265895953,
+          "catalog_number": 0.9971098265895953,
           "mfr": 1.0,
           "finish": 1.0,
-          "notes": 0.9941520467836257
+          "notes": 0.9942196531791907
         },
         "fuzzy": {
-          "description": 0.9996434174868064,
-          "catalog_number": 0.9997670851966517
+          "description": 0.9996475398279995,
+          "catalog_number": 0.9997697778533378
         },
         "location_iou": 0.9610414685300792,
-        "set_fully_correct": 0.72
+        "set_fully_correct": 0.84
       },
       "sets": [
         {
@@ -26010,15 +25662,23 @@
             },
             {
               "gold_idx": 13,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 13,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             }
           ],
-          "n_missed_components": 1,
+          "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "009",
@@ -26244,15 +25904,23 @@
             },
             {
               "gold_idx": 14,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 14,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             }
           ],
-          "n_missed_components": 1,
+          "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "010",
@@ -27933,9 +27601,17 @@
             },
             {
               "gold_idx": 15,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 16,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             },
             {
@@ -27946,7 +27622,7 @@
               "diffs": []
             }
           ],
-          "n_missed_components": 1,
+          "n_missed_components": 0,
           "n_spurious_components": 1,
           "fully_correct": false
         },
@@ -28962,15 +28638,23 @@
             },
             {
               "gold_idx": 13,
-              "pred_idx": null,
-              "similarity": null,
-              "field_correct": {},
+              "pred_idx": 13,
+              "similarity": 100.0,
+              "field_correct": {
+                "qty": true,
+                "qty_unit": true,
+                "description": true,
+                "catalog_number": true,
+                "mfr": true,
+                "finish": true,
+                "notes": true
+              },
               "diffs": []
             }
           ],
-          "n_missed_components": 1,
+          "n_missed_components": 0,
           "n_spurious_components": 0,
-          "fully_correct": false
+          "fully_correct": true
         },
         {
           "set_number": "025",
@@ -30028,32 +29712,6 @@
       "errors": [
         {
           "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "008",
-          "set_idx": 5,
-          "page": 25,
-          "line_id": "L25_30",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #13"
-        },
-        {
-          "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "009",
-          "set_idx": 6,
-          "page": 26,
-          "line_id": "L26_19",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #14"
-        },
-        {
-          "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
           "kind": "spurious_component",
           "severity": 1,
           "set_number": "016",
@@ -30119,19 +29777,6 @@
         },
         {
           "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "017",
-          "set_idx": 13,
-          "page": 31,
-          "line_id": "L31_40",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #15"
-        },
-        {
-          "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
           "kind": "spurious_component",
           "severity": 1,
           "set_number": "017",
@@ -30142,19 +29787,6 @@
           "gold": null,
           "pred": null,
           "message": "predicted component #5"
-        },
-        {
-          "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
-          "kind": "missed_component",
-          "severity": 1,
-          "set_number": "023",
-          "set_idx": 18,
-          "page": 36,
-          "line_id": "L36_21",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "gold component #13"
         },
         {
           "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
@@ -40160,76 +39792,6 @@
       "link": "http://localhost:8000/#doc=hfh-dg-hospital--08-71-00-door-hardware&set=13"
     },
     {
-      "doc_id": "jc-ryan-2--087100-door-hardware-6",
-      "kind": "wrong_qty",
-      "severity": 2,
-      "set_number": "EX-4.0",
-      "set_idx": 3,
-      "page": 27,
-      "line_id": "L27_2",
-      "field": "qty",
-      "gold": 1,
-      "pred": null,
-      "message": "component #4: qty",
-      "link": "http://localhost:8000/#doc=jc-ryan-2--087100-door-hardware-6&set=3"
-    },
-    {
-      "doc_id": "jc-ryan-2--087100-door-hardware-6",
-      "kind": "wrong_qty",
-      "severity": 2,
-      "set_number": "2.0",
-      "set_idx": 5,
-      "page": 28,
-      "line_id": "L28_16",
-      "field": "qty",
-      "gold": 1,
-      "pred": null,
-      "message": "component #3: qty",
-      "link": "http://localhost:8000/#doc=jc-ryan-2--087100-door-hardware-6&set=5"
-    },
-    {
-      "doc_id": "jc-ryan-2--087100-door-hardware-6",
-      "kind": "wrong_qty",
-      "severity": 2,
-      "set_number": "2.5",
-      "set_idx": 6,
-      "page": 29,
-      "line_id": "L29_2",
-      "field": "qty",
-      "gold": 1,
-      "pred": null,
-      "message": "component #3: qty",
-      "link": "http://localhost:8000/#doc=jc-ryan-2--087100-door-hardware-6&set=6"
-    },
-    {
-      "doc_id": "jc-ryan-2--087100-door-hardware-6",
-      "kind": "wrong_qty",
-      "severity": 2,
-      "set_number": "5.5",
-      "set_idx": 11,
-      "page": 33,
-      "line_id": "L33_2",
-      "field": "qty",
-      "gold": 1,
-      "pred": null,
-      "message": "component #1: qty",
-      "link": "http://localhost:8000/#doc=jc-ryan-2--087100-door-hardware-6&set=11"
-    },
-    {
-      "doc_id": "jc-ryan-2--087100-door-hardware-6",
-      "kind": "wrong_qty",
-      "severity": 2,
-      "set_number": "20.0",
-      "set_idx": 29,
-      "page": 43,
-      "line_id": "L43_11",
-      "field": "qty",
-      "gold": 1,
-      "pred": null,
-      "message": "component #2: qty",
-      "link": "http://localhost:8000/#doc=jc-ryan-2--087100-door-hardware-6&set=29"
-    },
-    {
       "doc_id": "2353-gerrard-street-shelter--hdw-spec-sch-ift-5",
       "kind": "wrong_field",
       "severity": 1,
@@ -40256,6 +39818,76 @@
       "pred": "Closer(s) Top Jamb Mount",
       "message": "component #13: description",
       "link": "http://localhost:8000/#doc=2353-gerrard-street-shelter--hdw-spec-sch-ift-5&set=2"
+    },
+    {
+      "doc_id": "2353-gerrard-street-shelter--hdw-spec-sch-ift-5",
+      "kind": "wrong_field",
+      "severity": 1,
+      "set_number": "02",
+      "set_idx": 2,
+      "page": 20,
+      "line_id": "L20_2",
+      "field": "notes",
+      "gold": "Active Leaf",
+      "pred": null,
+      "message": "component #12: notes",
+      "link": "http://localhost:8000/#doc=2353-gerrard-street-shelter--hdw-spec-sch-ift-5&set=2"
+    },
+    {
+      "doc_id": "2353-gerrard-street-shelter--hdw-spec-sch-ift-5",
+      "kind": "wrong_field",
+      "severity": 1,
+      "set_number": "02",
+      "set_idx": 2,
+      "page": 20,
+      "line_id": "L20_2",
+      "field": "notes",
+      "gold": "Top Jamb Mount",
+      "pred": null,
+      "message": "component #13: notes",
+      "link": "http://localhost:8000/#doc=2353-gerrard-street-shelter--hdw-spec-sch-ift-5&set=2"
+    },
+    {
+      "doc_id": "2353-gerrard-street-shelter--hdw-spec-sch-ift-5",
+      "kind": "wrong_field",
+      "severity": 1,
+      "set_number": "31",
+      "set_idx": 30,
+      "page": 34,
+      "line_id": "L34_18",
+      "field": "description",
+      "gold": "Push to Lock Button",
+      "pred": "Push to Lock Button Shared with D147A",
+      "message": "component #11: description",
+      "link": "http://localhost:8000/#doc=2353-gerrard-street-shelter--hdw-spec-sch-ift-5&set=30"
+    },
+    {
+      "doc_id": "2353-gerrard-street-shelter--hdw-spec-sch-ift-5",
+      "kind": "wrong_field",
+      "severity": 1,
+      "set_number": "31",
+      "set_idx": 30,
+      "page": 34,
+      "line_id": "L34_18",
+      "field": "description",
+      "gold": "Wiring Diagrams",
+      "pred": "Wiring Diagrams Interlock with D147A.",
+      "message": "component #15: description",
+      "link": "http://localhost:8000/#doc=2353-gerrard-street-shelter--hdw-spec-sch-ift-5&set=30"
+    },
+    {
+      "doc_id": "2353-gerrard-street-shelter--hdw-spec-sch-ift-5",
+      "kind": "wrong_field",
+      "severity": 1,
+      "set_number": "31",
+      "set_idx": 30,
+      "page": 34,
+      "line_id": "L34_18",
+      "field": "notes",
+      "gold": "Shared with D147A",
+      "pred": null,
+      "message": "component #11: notes",
+      "link": "http://localhost:8000/#doc=2353-gerrard-street-shelter--hdw-spec-sch-ift-5&set=30"
     }
   ]
 }

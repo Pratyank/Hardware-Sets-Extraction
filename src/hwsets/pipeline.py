@@ -22,7 +22,8 @@ from hwsets.columns.features import column_features
 from hwsets.columns.legend import Legend, find_legend
 from hwsets.columns.template import apply_template, infer_template
 from hwsets.components.lookup import find_lookup_legend, resolve_codes
-from hwsets.components.parse import ColumnModel, is_mfr_prefix, parse_rows
+from hwsets.components.parse import ColumnModel, is_mfr_prefix, line_starts_row, parse_rows
+from hwsets.components.rhythm import estimate_rhythm
 from hwsets.layout.chrome import chrome_keys, header_row_roles, is_chrome
 from hwsets.layout.columns import Layout, column_of, infer_layouts, layout_for_page
 from hwsets.layout.lines import clean_tokens, group_lines, union_bbox
@@ -186,6 +187,21 @@ def _layout_model(
         known_items=known_items,
         overrides=overrides,
     )
+    rhythm = estimate_rhythm(
+        [
+            [ln for ln, kind in zip(sp.lines, sp.kinds, strict=True)
+             if kind == Kind.ROW and ln.page in pages]
+            for sp in spans
+        ],
+        doc.toks,
+        model.role_of,
+        lambda ln: line_starts_row(ln, doc.toks, model),
+    )  # fmt: skip
+    if rhythm is not None:
+        model = dataclasses.replace(model, rhythm=rhythm)
+        diag[f"p{layout.pages[0]}-{layout.pages[-1]} rhythm"] = (
+            f"wrap {rhythm.leading:.1f} pt, row {rhythm.pitch:.1f} pt"
+        )
     return model, diag
 
 

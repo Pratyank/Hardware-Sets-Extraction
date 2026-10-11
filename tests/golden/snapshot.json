@@ -1,7 +1,7 @@
 {
  "set_recall": 1.0,
- "set_fully_correct": 0.871,
- "component_f1": 0.9933,
+ "set_fully_correct": 0.914,
+ "component_f1": 0.995,
  "per_book": {
   "valor-acres-building-e--087100-door-hardware-rev-2": {
    "set_recall": 1.0,
@@ -13,7 +13,7 @@
   },
   "jc-ryan-2--087100-door-hardware-6": {
    "set_recall": 1.0,
-   "set_fully_correct": 0.7368
+   "set_fully_correct": 0.9737
   },
   "2353-gerrard-street-shelter--hdw-spec-sch-ift-5": {
    "set_recall": 1.0,
@@ -25,7 +25,7 @@
   },
   "hfh-dg-hospital--08-71-00-door-hardware": {
    "set_recall": 1.0,
-   "set_fully_correct": 0.72
+   "set_fully_correct": 0.84
   },
   "81-85-bridgeport--08-70-00-hardware-schedule": {
    "set_recall": 1.0,

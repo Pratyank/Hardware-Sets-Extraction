@@ -209,3 +209,59 @@ negatives (still 0 sets) to make sure nothing regressed.
   - pushing to GitHub (the `origin` remote has no `main` branch yet);
   - deploying to Fly.io or Render. The deploy would also publish the specbook PDFs' extracted contents, which
     is the user's call.
+
+## 2026-10-10: Root-cause analysis and fix plan (user approved)
+
+All 36 gold sets that are not fully correct were traced to a cause before any code changed. The causes:
+row spacing (rows are told apart only by line pitch), notes-only remark rows, strikethrough flags,
+duplicate set numbers, cells that run into the next column, prose across the gutter, and door-number
+misreads. The full list is in the handoff notes and in the user-facing summary.
+
+**User decisions:**
+- **Text on its own line under an item:** if it would have fit on the line above (a deliberate break, not a
+  wrap), it is a **note** on that item. A genuine wrap stays in its cell. The gold labels disagreed
+  with each other on this. They will be re-checked against the page images under this rule, and every
+  change will be listed here.
+- **hfh set 027**, `ALL HARDWARE BY DOOR MANUFACTURER`: a **remark**, not an item. The set has no components.
+
+**Honesty rules for this round** (the user asked for an honest and reliable system, no cheating):
+- No rule keys on a book, a file name or a specific string from a gold book. Each fix is a layout rule
+  that can be stated without naming a book.
+- Gold labels change only to apply a written guideline, checked against the page image, never to match
+  the extractor's output. Each change is listed below with its before and after values.
+- After each fix: the gold eval, the dev books and the 21 negative books (which must still give 0 sets).
+  A fix that helps gold but hurts dev is dropped.
+- The held-out books are not opened while fixing. They are measured once at the end, and that measurement
+  is reported as their second look at the system.
+
+### Fix 1: row rhythm (`components/rhythm.py`)
+
+- **Rule.** In unruled layouts where wrapped lines sit closer together than rows do, a line about one row
+  pitch below the previous one opens a new block:
+  - a block with two or more value cells that starts with an item name (a capital letter or digit in the
+    description column) is an item, even with no quantity;
+  - a one-cell block that starts with a capital letter or digit is a set-level remark, and its own wrapped
+    lines go with it;
+  - anything else (a bullet, or a lower-case continuation) keeps wrapping into the cell above, as before.
+- **Centred quantity.** In a layout with no quantity column, a lone integer printed mid-cell next to a
+  wrapped description is that row's quantity, not description text.
+- **Measured per layout, not tuned.** Both spacings are medians from the document itself: the row pitch from
+  adjacent quantity rows, and the wrap leading from consecutive same-column lines inside item tables.
+  - The rule applies only when the pitch is at least 1.12 times the leading.
+  - A gap above 1.5 pitches is treated as a hole, because removed struck lines leave holes.
+  - Revision-tag lines (`[BULLETIN …`) are exempt, because they annotate the row above.
+- **Paragraph-cell gate (a tuned value, disclosed).** The rule is off for layouts that average more than
+  2.2 lines per row. Paragraph spacing inside a cell matches the row pitch there, so spacing cannot
+  separate rows. The value 2.2 sits between hfh's 1.90 (the densest table that benefits) and
+  starhardware's 2.34 (paragraph cells, a dev book). It was read from those two layouts.
+- **Results.**
+  - Gold: jc-ryan 73.7% → 97.4%, hfh 72.0% → 84.0%. No other gold book changed. Total 87.1% → 91.4%.
+  - Dev and negatives: 3 components changed, all checked against the page and all improvements:
+    - ami X4: `REPLACE EO PANIC HW` instructions were no longer glued to a door-switch description;
+    - sat-tdp 103K.1: an alarm sentence was removed from `KEY SWITCH`;
+    - the-door-company 764ADZ: `SEALS PROVIDED WITH STOREFRONT FRAME SYSTEM` became a set remark.
+  - No set counts changed, and the negatives still give 0 sets.
+- **First attempt, rejected.** Without the item-name and remark start conditions and the paragraph gate,
+  gold was the same but dev changed 46 components. Many of those were new one-word "components" made from
+  operational text, and starhardware's paragraphs were chopped up. The conditions above were added to fix
+  that, judged on the dev books, not on gold.
