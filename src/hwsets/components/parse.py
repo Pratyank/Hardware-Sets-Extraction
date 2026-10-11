@@ -180,9 +180,13 @@ def build_component(row: Row, model: ColumnModel, legend: Legend) -> tuple[Compo
     # A revision tag on a newly revised item (the item's own text is emphasised, i.e. bold)
     # stays with it; a tag next to an unchanged item is left over from a struck revision.
     body = desc + cat
-    revised = bool(body) and sum(t.bold for t in body) * 2 > len(body)
+    # A bold quantity is a revised quantity ("2 (1)": the new value bold, the old one struck).
+    revised = (bool(body) and sum(t.bold for t in body) * 2 > len(body)) or any(
+        t.bold for t in q_used
+    )
     tags = (tag_d + tag_c) if revised else []
     notes = cells.get("notes", []) + tags + row.note_tokens
+    col_tag = row.tag_tokens if revised else []
 
     mfr_text = _join(mfr) if mfr else None
     mfr_resolved = None
@@ -216,9 +220,23 @@ def build_component(row: Row, model: ColumnModel, legend: Legend) -> tuple[Compo
         mfr=_field(mfr, mfr_conf if mfr else 0.7),
         mfr_resolved=mfr_resolved,
         finish=_field(finish, fin_conf if finish else 0.7),
-        notes=_field(notes, 0.7 * wrap),
+        notes=_notes_field(notes, col_tag, 0.7 * wrap),
     )
     return comp, warnings
+
+
+def _notes_field(notes: Sequence[Token], col_tag: Sequence[Token], conf: float) -> Field[str]:
+    """Notes, plus a revision tag re-flowed from a narrow column ("[BUL" "LETI" "N" "023,"
+    "2512" "18]" -> "[BULLETIN 023, 251218]": the column broke words, not the tag's spacing)."""
+    if not col_tag:
+        return _field(notes, conf)
+    tag = "".join(t.text for t in col_tag)
+    tag = re.sub(r"(?<=[A-Za-z])(?=\d)", " ", tag)
+    tag = re.sub(r",(?=\S)", ", ", tag)
+    text = " ".join(x for x in (_join(notes) if notes else "", tag) if x)
+    return Field[str](
+        value=text, token_ids=[t.id for t in [*notes, *col_tag]], confidence=round(conf, 3)
+    )
 
 
 def parse_rows(
@@ -227,9 +245,11 @@ def parse_rows(
     model: ColumnModel,
     legend: Legend,
     rules: RuleIndex = EMPTY_RULES,
+    *,
+    deleted_rows: Mapping[int, Sequence[float]] | None = None,
 ) -> ParsedRows:
     set_desc: list[str] = []
-    rows, set_notes = assemble_rows(lines, toks, model, set_desc, rules)
+    rows, set_notes = assemble_rows(lines, toks, model, set_desc, rules, deleted_rows=deleted_rows)
     comps: list[Component] = []
     warnings: list[str] = []
     for row in rows:

@@ -11,11 +11,11 @@
         "total": 279
       },
       "n_gold_components": 2184,
-      "n_pred_components": 2174,
+      "n_pred_components": 2172,
       "n_matched_components": 2168,
       "fields": {
         "qty": {
-          "correct": 2166,
+          "correct": 2168,
           "total": 2168
         },
         "qty_unit": {
@@ -39,7 +39,7 @@
           "total": 2168
         },
         "notes": {
-          "correct": 2159,
+          "correct": 2161,
           "total": 2168
         }
       },
@@ -71,7 +71,7 @@
         "sum": 256.305148914954,
         "count": 279
       },
-      "n_fully_correct": 260,
+      "n_fully_correct": 262,
       "reliability": [
         {
           "lo": 0.0,
@@ -112,8 +112,8 @@
           "lo": 0.9,
           "hi": 1.0,
           "count": 12884,
-          "correct": 12858,
-          "accuracy": 0.9979819931698231
+          "correct": 12862,
+          "accuracy": 0.998292455759081
         }
       ]
     },
@@ -123,29 +123,29 @@
       "set_f1": 0.9964285714285714,
       "status_accuracy": 0.996415770609319,
       "component_recall": 0.9926739926739927,
-      "component_precision": 0.9972401103955841,
-      "component_f1": 0.9949518127581459,
+      "component_precision": 0.998158379373849,
+      "component_f1": 0.9954086317722682,
       "field_accuracy": {
-        "qty": 0.9990774907749077,
+        "qty": 1.0,
         "qty_unit": 1.0,
         "description": 0.9958487084870848,
         "catalog_number": 0.9967712177121771,
         "mfr": 0.9995387453874539,
         "finish": 1.0,
-        "notes": 0.9958487084870848
+        "notes": 0.9967712177121771
       },
       "fuzzy": {
         "description": 0.9987765302338631,
         "catalog_number": 0.9985311107519739
       },
       "location_iou": 0.9186564477238494,
-      "set_fully_correct": 0.931899641577061
+      "set_fully_correct": 0.9390681003584229
     },
     "macro": {
       "set_recall": 1.0,
       "set_precision": 0.9952830188679245,
       "set_f1": 0.9975961538461539,
-      "set_fully_correct": 0.9268448544387324,
+      "set_fully_correct": 0.9368448544387324,
       "location_iou": 0.9285571219100637
     }
   },
@@ -23802,11 +23802,11 @@
           "total": 25
         },
         "n_gold_components": 347,
-        "n_pred_components": 348,
+        "n_pred_components": 346,
         "n_matched_components": 346,
         "fields": {
           "qty": {
-            "correct": 344,
+            "correct": 346,
             "total": 346
           },
           "qty_unit": {
@@ -23830,7 +23830,7 @@
             "total": 346
           },
           "notes": {
-            "correct": 344,
+            "correct": 346,
             "total": 346
           }
         },
@@ -23862,7 +23862,7 @@
           "sum": 24.02603671325198,
           "count": 25
         },
-        "n_fully_correct": 21,
+        "n_fully_correct": 23,
         "reliability": [
           {
             "lo": 0.0,
@@ -23903,8 +23903,8 @@
             "lo": 0.9,
             "hi": 1.0,
             "count": 2026,
-            "correct": 2020,
-            "accuracy": 0.9970384995064165
+            "correct": 2024,
+            "accuracy": 0.9990128331688055
           }
         ]
       },
@@ -23914,23 +23914,23 @@
         "set_f1": 1.0,
         "status_accuracy": 1.0,
         "component_recall": 0.9971181556195965,
-        "component_precision": 0.9942528735632183,
-        "component_f1": 0.99568345323741,
+        "component_precision": 1.0,
+        "component_f1": 0.9985569985569985,
         "field_accuracy": {
-          "qty": 0.9942196531791907,
+          "qty": 1.0,
           "qty_unit": 1.0,
           "description": 0.9971098265895953,
           "catalog_number": 0.9971098265895953,
           "mfr": 1.0,
           "finish": 1.0,
-          "notes": 0.9942196531791907
+          "notes": 1.0
         },
         "fuzzy": {
           "description": 0.9996475398279995,
           "catalog_number": 0.9997697778533378
         },
         "location_iou": 0.9610414685300792,
-        "set_fully_correct": 0.84
+        "set_fully_correct": 0.92
       },
       "sets": [
         {
@@ -27211,7 +27211,7 @@
             },
             {
               "gold_idx": 15,
-              "pred_idx": 16,
+              "pred_idx": 15,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -27223,18 +27223,11 @@
                 "notes": true
               },
               "diffs": []
-            },
-            {
-              "gold_idx": null,
-              "pred_idx": 15,
-              "similarity": null,
-              "field_correct": {},
-              "diffs": []
             }
           ],
           "n_missed_components": 0,
-          "n_spurious_components": 1,
-          "fully_correct": false
+          "n_spurious_components": 0,
+          "fully_correct": true
         },
         {
           "set_number": "017",
@@ -27283,28 +27276,15 @@
               "pred_idx": 2,
               "similarity": 100.0,
               "field_correct": {
-                "qty": false,
+                "qty": true,
                 "qty_unit": true,
                 "description": true,
                 "catalog_number": true,
                 "mfr": true,
                 "finish": true,
-                "notes": false
+                "notes": true
               },
-              "diffs": [
-                {
-                  "field": "qty",
-                  "gold": 2,
-                  "pred": null,
-                  "confidence": 0.93
-                },
-                {
-                  "field": "notes",
-                  "gold": "[BULLETIN 023, 251218]",
-                  "pred": "[BULLETIN 023, 251218] [BULLETIN 023, 251218] [BULLETIN 023, 251218]",
-                  "confidence": 0.9
-                }
-              ]
+              "diffs": []
             },
             {
               "gold_idx": 3,
@@ -27326,32 +27306,19 @@
               "pred_idx": 4,
               "similarity": 100.0,
               "field_correct": {
-                "qty": false,
+                "qty": true,
                 "qty_unit": true,
                 "description": true,
                 "catalog_number": true,
                 "mfr": true,
                 "finish": true,
-                "notes": false
+                "notes": true
               },
-              "diffs": [
-                {
-                  "field": "qty",
-                  "gold": 3,
-                  "pred": null,
-                  "confidence": 0.93
-                },
-                {
-                  "field": "notes",
-                  "gold": "[BULLETIN 023, 251218]",
-                  "pred": null,
-                  "confidence": 0.9
-                }
-              ]
+              "diffs": []
             },
             {
               "gold_idx": 5,
-              "pred_idx": 6,
+              "pred_idx": 5,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -27366,7 +27333,7 @@
             },
             {
               "gold_idx": 6,
-              "pred_idx": 7,
+              "pred_idx": 6,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -27381,7 +27348,7 @@
             },
             {
               "gold_idx": 7,
-              "pred_idx": 8,
+              "pred_idx": 7,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -27396,7 +27363,7 @@
             },
             {
               "gold_idx": 8,
-              "pred_idx": 9,
+              "pred_idx": 8,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -27411,7 +27378,7 @@
             },
             {
               "gold_idx": 9,
-              "pred_idx": 10,
+              "pred_idx": 9,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -27426,7 +27393,7 @@
             },
             {
               "gold_idx": 10,
-              "pred_idx": 11,
+              "pred_idx": 10,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -27441,7 +27408,7 @@
             },
             {
               "gold_idx": 11,
-              "pred_idx": 12,
+              "pred_idx": 11,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -27456,7 +27423,7 @@
             },
             {
               "gold_idx": 12,
-              "pred_idx": 13,
+              "pred_idx": 12,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -27471,7 +27438,7 @@
             },
             {
               "gold_idx": 13,
-              "pred_idx": 14,
+              "pred_idx": 13,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -27486,7 +27453,7 @@
             },
             {
               "gold_idx": 14,
-              "pred_idx": 15,
+              "pred_idx": 14,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -27501,7 +27468,7 @@
             },
             {
               "gold_idx": 15,
-              "pred_idx": 16,
+              "pred_idx": 15,
               "similarity": 100.0,
               "field_correct": {
                 "qty": true,
@@ -27513,18 +27480,11 @@
                 "notes": true
               },
               "diffs": []
-            },
-            {
-              "gold_idx": null,
-              "pred_idx": 5,
-              "similarity": null,
-              "field_correct": {},
-              "diffs": []
             }
           ],
           "n_missed_components": 0,
-          "n_spurious_components": 1,
-          "fully_correct": false
+          "n_spurious_components": 0,
+          "fully_correct": true
         },
         {
           "set_number": "018",
@@ -29610,84 +29570,6 @@
         }
       ],
       "errors": [
-        {
-          "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
-          "kind": "spurious_component",
-          "severity": 1,
-          "set_number": "016",
-          "set_idx": 12,
-          "page": 31,
-          "line_id": "L31_0",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "predicted component #15"
-        },
-        {
-          "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
-          "kind": "wrong_qty",
-          "severity": 2,
-          "set_number": "017",
-          "set_idx": 13,
-          "page": 31,
-          "line_id": "L31_40",
-          "field": "qty",
-          "gold": 2,
-          "pred": null,
-          "message": "component #2: qty"
-        },
-        {
-          "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "017",
-          "set_idx": 13,
-          "page": 31,
-          "line_id": "L31_40",
-          "field": "notes",
-          "gold": "[BULLETIN 023, 251218]",
-          "pred": "[BULLETIN 023, 251218] [BULLETIN 023, 251218] [BULLETIN 023, 251218]",
-          "message": "component #2: notes"
-        },
-        {
-          "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
-          "kind": "wrong_qty",
-          "severity": 2,
-          "set_number": "017",
-          "set_idx": 13,
-          "page": 31,
-          "line_id": "L31_40",
-          "field": "qty",
-          "gold": 3,
-          "pred": null,
-          "message": "component #4: qty"
-        },
-        {
-          "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
-          "kind": "wrong_field",
-          "severity": 1,
-          "set_number": "017",
-          "set_idx": 13,
-          "page": 31,
-          "line_id": "L31_40",
-          "field": "notes",
-          "gold": "[BULLETIN 023, 251218]",
-          "pred": null,
-          "message": "component #4: notes"
-        },
-        {
-          "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
-          "kind": "spurious_component",
-          "severity": 1,
-          "set_number": "017",
-          "set_idx": 13,
-          "page": 31,
-          "line_id": "L31_40",
-          "field": null,
-          "gold": null,
-          "pred": null,
-          "message": "predicted component #5"
-        },
         {
           "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
           "kind": "wrong_field",
@@ -39664,34 +39546,6 @@
       "link": "http://localhost:8000/#doc=roselle-public-library--087100-fl-door-hardware-ifb-revised&set=22"
     },
     {
-      "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
-      "kind": "wrong_qty",
-      "severity": 2,
-      "set_number": "017",
-      "set_idx": 13,
-      "page": 31,
-      "line_id": "L31_40",
-      "field": "qty",
-      "gold": 2,
-      "pred": null,
-      "message": "component #2: qty",
-      "link": "http://localhost:8000/#doc=hfh-dg-hospital--08-71-00-door-hardware&set=13"
-    },
-    {
-      "doc_id": "hfh-dg-hospital--08-71-00-door-hardware",
-      "kind": "wrong_qty",
-      "severity": 2,
-      "set_number": "017",
-      "set_idx": 13,
-      "page": 31,
-      "line_id": "L31_40",
-      "field": "qty",
-      "gold": 3,
-      "pred": null,
-      "message": "component #4: qty",
-      "link": "http://localhost:8000/#doc=hfh-dg-hospital--08-71-00-door-hardware&set=13"
-    },
-    {
       "doc_id": "2353-gerrard-street-shelter--hdw-spec-sch-ift-5",
       "kind": "wrong_field",
       "severity": 1,
@@ -39788,6 +39642,34 @@
       "pred": null,
       "message": "component #11: notes",
       "link": "http://localhost:8000/#doc=2353-gerrard-street-shelter--hdw-spec-sch-ift-5&set=30"
+    },
+    {
+      "doc_id": "2353-gerrard-street-shelter--hdw-spec-sch-ift-5",
+      "kind": "wrong_field",
+      "severity": 1,
+      "set_number": "32",
+      "set_idx": 31,
+      "page": 35,
+      "line_id": "L35_2",
+      "field": "description",
+      "gold": "Push to Lock Button",
+      "pred": "Push to Lock Button Shared with D14B",
+      "message": "component #11: description",
+      "link": "http://localhost:8000/#doc=2353-gerrard-street-shelter--hdw-spec-sch-ift-5&set=31"
+    },
+    {
+      "doc_id": "2353-gerrard-street-shelter--hdw-spec-sch-ift-5",
+      "kind": "wrong_field",
+      "severity": 1,
+      "set_number": "32",
+      "set_idx": 31,
+      "page": 35,
+      "line_id": "L35_2",
+      "field": "description",
+      "gold": "Wiring Diagrams",
+      "pred": "Wiring Diagrams Interlock with D147B.",
+      "message": "component #15: description",
+      "link": "http://localhost:8000/#doc=2353-gerrard-street-shelter--hdw-spec-sch-ift-5&set=31"
     }
   ]
 }

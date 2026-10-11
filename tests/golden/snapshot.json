@@ -1,7 +1,7 @@
 {
  "set_recall": 1.0,
- "set_fully_correct": 0.9319,
- "component_f1": 0.995,
+ "set_fully_correct": 0.9391,
+ "component_f1": 0.9954,
  "per_book": {
   "valor-acres-building-e--087100-door-hardware-rev-2": {
    "set_recall": 1.0,
@@ -25,7 +25,7 @@
   },
   "hfh-dg-hospital--08-71-00-door-hardware": {
    "set_recall": 1.0,
-   "set_fully_correct": 0.84
+   "set_fully_correct": 0.92
   },
   "81-85-bridgeport--08-70-00-hardware-schedule": {
    "set_recall": 1.0,

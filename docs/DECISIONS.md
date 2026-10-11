@@ -276,3 +276,33 @@ misreads. The full list is in the handoff notes and in the user-facing summary.
   - Gold: roselle 75.8% → 90.9%. No other gold book changed. Total 91.4% → 93.2%.
   - Dev and negatives: 0 components changed.
   - The unit test fails on the previous code and passes now.
+
+### Fix 3: strikethrough, from drawn strokes and whole rows
+
+- **3a. A strike flag contradicted by the drawn strokes is cleared, at ingest.** MuPDF sets its strikeout
+  flag per span, and in hfh it also flagged the bold `2` in `2 (1)`, where the only stroke crosses `(1)`.
+  - Ingest now collects every thin horizontal stroke on the page, however short. Table rules still need
+    6 pt, but a struck single digit has a shorter stroke.
+  - A flagged token keeps its flag unless a stroke runs right beside it in the same middle band while
+    none crosses it. With no stroke nearby, the flag stands.
+  - `INGEST_VERSION` went from 3 to 4, and every book was re-ingested (10m42s).
+  - **Rejected first version:** a pipeline-level check against the stored rules, which have the 6 pt
+    minimum. Short struck words such as `1` lost their own strokes and came back as live text,
+    producing spurious rows. That is why the check moved to ingest.
+  - **Audit across all 44 PDFs:** 31 flags cleared.
+    - hfh, all correct: `2 (1)`, `3 (2)`, and `630/62`+`6` `(626)`, where the bold new finish digit is
+      followed by the struck old value.
+    - The rest are on drawing and form pages (dimension strings, a bond form) that never reach extraction.
+- **3b. A struck-out row takes its revision tag with it.** Rows whose quantity line is struck are found
+  before struck tokens are removed (`deleted_row_tops`). Revision-tag lines inside a deleted row's span
+  are dropped with that row instead of attaching to the revised row above.
+- **3c. A tag wrapped down a narrow quantity column is a tag.** An open `[` in the quantity or unit cell
+  makes the next fragments in that column part of the tag, so `2512` (half of `251218]`) is no longer a
+  quantity. Its words were broken by the column, so the tag text is re-joined, with spaces only at
+  letter-to-digit changes and after commas.
+- **3d. A bold quantity marks a revised row.** This is the same "bold = revised" convention the tag rule
+  already used for descriptions.
+- **Results.**
+  - Gold: hfh 84.0% → 92.0% (sets 016 and 017). Total 93.2% → 94.3%.
+  - The quantity that the README listed as an ambiguous known failure is now extracted correctly.
+  - Dev and negatives: 0 components changed.

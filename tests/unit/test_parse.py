@@ -9,6 +9,7 @@ from helpers.synth import COL_X, make_page
 from hwsets.columns.legend import Legend, LegendEntry
 from hwsets.components.parse import ParsedRows, parse_rows
 from hwsets.components.rows import ColumnModel
+from hwsets.layout.lines import deleted_row_tops
 
 ROLES6 = ("qty", "unit", "description", "catalog", "finish", "mfr")
 MODEL = ColumnModel(xs=COL_X, roles=ROLES6, margins=(0.8,) * 6)
@@ -248,3 +249,51 @@ def test_wrapped_note_continues_the_row_note() -> None:
     )
     assert parsed.components[0].notes.value == "ELECTRIC UNLOCKING; COORDINATE W/ SECURITY VENDOR"
     assert parsed.set_note_tokens == []
+
+
+def test_revision_tag_of_a_struck_row_goes_with_its_row() -> None:
+    """A struck-out row leaves only its (unstruck, bold) revision tag; the tag must not attach to
+    the revised row above it."""
+    rows = [
+        ("2|EA|ELEC FIRE EXIT|LXRX 24 VDC [BULLETIN 023, 251218]|630|VON", {"bold": True}),
+        ("2|EA|LONG DOOR PULL|9264F 72 O|630|IVE", {"strike": True}),
+        ("|||[BULLETIN 023, 251218]", {"bold": True}),
+        ("1|EA|AUTOMATIC OPERATOR|BY OTHERS||B/O", {}),
+    ]
+    sp = make_page(1, rows, MODEL.xs)
+    deleted = {1: deleted_row_tops(sp.tokens)}
+    parsed = parse_rows(sp.lines(), sp.toks, MODEL, Legend(), deleted_rows=deleted)
+    exit_dev, operator = parsed.components
+    assert exit_dev.notes.value == "[BULLETIN 023, 251218]"  # its own tag, once
+    assert operator.description.value == "AUTOMATIC OPERATOR"
+    assert parsed.set_note_tokens == []
+
+
+def test_deleted_row_needs_a_struck_quantity() -> None:
+    sp = make_page(
+        1, [("2|EA|HINGE|5BB1|652|IVE", {}), ("|||OLD TEXT", {"strike": True})], MODEL.xs
+    )
+    assert deleted_row_tops(sp.tokens) == []
+
+
+def test_revision_tag_wrapped_down_the_quantity_column_is_not_a_quantity() -> None:
+    """``3 (2)`` with the tag "[BULLETIN 023, 251218]" broken over the narrow QTY column: the
+    fragment "2512" must not become a component, and the tag stays with the revised row."""
+    rows = [
+        ("3|EA|WAVE ACTUATOR|BY RELATED SECTION|626|B/O", {}),
+        ("[BUL|||13", {}),
+        ("LETI", {}),
+        ("N", {}),
+        ("023,", {}),
+        ("2512", {}),
+        ("18]", {}),
+        ("2|EA|ARMOR PLATE|8400 34 IN|630|IVE", {}),
+    ]
+    sp = make_page(1, rows, MODEL.xs)
+    sp.tokens[0] = sp.tokens[0].model_copy(update={"bold": True})  # the revised quantity
+    toks = {t.id: t for t in sp.tokens}
+    parsed = parse_rows(sp.lines(), toks, MODEL, Legend())
+    assert [c.qty.value for c in parsed.components] == [3, 2]
+    wave = parsed.components[0]
+    assert wave.catalog_number.value == "BY RELATED SECTION 13"
+    assert wave.notes.value == "[BULLETIN 023, 251218]"

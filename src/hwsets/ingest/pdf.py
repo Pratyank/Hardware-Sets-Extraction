@@ -8,7 +8,7 @@ normalized to the page *as displayed* (rotation applied), so they line up with r
 from __future__ import annotations
 
 import logging
-from collections.abc import Iterable
+from collections.abc import Iterable, Sequence
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -125,14 +125,14 @@ _RULE_MIN_LEN = 6.0
 _MAX_RULES_PER_PAGE = 4000
 
 
-def page_rules(page: pymupdf.Page) -> list[Rule]:
-    """Thin horizontal / vertical drawn lines (strokes or filled hairline rectangles)."""
-    rules: list[Rule] = []
+def _segments(page: pymupdf.Page) -> list[BBox]:
+    """Every drawn straight stroke or rectangle, in displayed-page coordinates."""
     try:
         drawings = page.get_drawings()
     except Exception:  # malformed content streams must not stop ingest
         log.warning("could not read drawings on page %d", page.number + 1)
-        return rules
+        return []
+    out: list[BBox] = []
     for d in drawings:
         for item in d.get("items", ()):
             kind = item[0]
@@ -144,15 +144,28 @@ def page_rules(page: pymupdf.Page) -> list[Rule]:
                 raw = (r.x0, r.y0, r.x1, r.y1)
             else:
                 continue
-            bbox = _display_bbox(raw, page)
-            w, h = bbox[2] - bbox[0], bbox[3] - bbox[1]
-            if h <= _RULE_THICK and w >= _RULE_MIN_LEN:
-                rules.append(Rule(bbox=bbox, horizontal=True))
-            elif w <= _RULE_THICK and h >= _RULE_MIN_LEN:
-                rules.append(Rule(bbox=bbox, horizontal=False))
-            if len(rules) >= _MAX_RULES_PER_PAGE:
-                return rules
+            out.append(_display_bbox(raw, page))
+    return out
+
+
+def page_rules(page: pymupdf.Page, segments: Sequence[BBox] | None = None) -> list[Rule]:
+    """Thin horizontal / vertical drawn lines (strokes or filled hairline rectangles)."""
+    rules: list[Rule] = []
+    for bbox in _segments(page) if segments is None else segments:
+        w, h = bbox[2] - bbox[0], bbox[3] - bbox[1]
+        if h <= _RULE_THICK and w >= _RULE_MIN_LEN:
+            rules.append(Rule(bbox=bbox, horizontal=True))
+        elif w <= _RULE_THICK and h >= _RULE_MIN_LEN:
+            rules.append(Rule(bbox=bbox, horizontal=False))
+        if len(rules) >= _MAX_RULES_PER_PAGE:
+            break
     return rules
+
+
+def strike_strokes(segments: Sequence[BBox]) -> list[BBox]:
+    """Thin horizontal strokes of any length: candidate strike lines (a single struck digit has
+    a stroke shorter than any table rule)."""
+    return [b for b in segments if b[3] - b[1] <= _RULE_THICK and b[2] - b[0] >= 1.0]
 
 
 def apply_drawn_strikes(tokens: list[Token], rules: list[Rule]) -> list[Token]:
@@ -184,6 +197,39 @@ def _crossed(t: Token, hz: list[Rule]) -> bool:
     return False
 
 
+def reconcile_strikes(tokens: Sequence[Token], strokes: Sequence[BBox]) -> list[Token]:
+    """Clear a font strikeout flag that the drawn strike strokes contradict.
+
+    MuPDF's strikeout flag is set per span by its own heuristic, and it can flag a neighbour of the
+    struck text (the bold ``2`` in ``2 (1)``, where only ``(1)`` is crossed). ``strokes`` holds
+    every thin horizontal stroke on the page, however short. When a stroke runs through this
+    token's middle band right beside it but none crosses the token itself, the strike belongs to
+    the neighbour and the flag is cleared. Tokens with no stroke nearby are left as flagged.
+    """
+    if not strokes:
+        return list(tokens)
+    return [
+        t.model_copy(update={"strike": False}) if _strike_contradicted(t, strokes) else t
+        for t in tokens
+    ]
+
+
+def _strike_contradicted(t: Token, strokes: Sequence[BBox]) -> bool:
+    if not t.strike:
+        return False
+    x0, y0, x1, y1 = t.bbox
+    h, w = y1 - y0, max(x1 - x0, 0.1)
+    lo, hi = y0 + 0.3 * h, y0 + 0.72 * h
+    near = [
+        b
+        for b in strokes
+        if lo <= (b[1] + b[3]) / 2 <= hi and b[0] - x1 < 0.6 * h and x0 - b[2] < 0.6 * h
+    ]
+    if not near:
+        return False
+    return max(min(x1, b[2]) - max(x0, b[0]) for b in near) < 0.2 * w
+
+
 def extract_document(path: Path) -> tuple[list[PageInfo], list[list[Token]]]:
     """Tokenize every page (see ``extract_document_with_rules``)."""
     pages, tokens, _rules = extract_document_with_rules(path)
@@ -200,8 +246,10 @@ def extract_document_with_rules(
     per_page_rules: list[list[Rule]] = []
     with pymupdf.open(path) as doc:
         for page in doc:
-            rules = page_rules(page)
+            segments = _segments(page)
+            rules = page_rules(page, segments)
             tokens = apply_drawn_strikes(page_tokens(page), rules)
+            tokens = reconcile_strikes(tokens, strike_strokes(segments))
             has_images = bool(page.get_images(full=False))
             used_ocr = False
             if len(tokens) < OCR_MIN_WORDS and has_images:

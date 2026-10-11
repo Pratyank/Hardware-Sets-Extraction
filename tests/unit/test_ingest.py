@@ -8,8 +8,9 @@ import pymupdf
 import pytest
 
 from hwsets.ingest import render
-from hwsets.ingest.pdf import extract_document
+from hwsets.ingest.pdf import extract_document, reconcile_strikes
 from hwsets.ingest.store import TokenStore, doc_id_for, sha256_file
+from hwsets.models import Token
 
 LINES = [
     ("HARDWARE SET NO. 01", True),
@@ -139,3 +140,48 @@ def test_strikethrough_detected(tmp_path: Path) -> None:
     _, pages = extract_document(path)
     flags = {t.text: t.strike for t in pages[0]}
     assert flags == {"SCH": True, "BES": False}
+
+
+def _tok(text: str, x0: float, x1: float, *, strike: bool) -> Token:
+    return Token(id=f"p1_w{int(x0)}", page=1, text=text, bbox=(x0, 110.0, x1, 121.2),
+                 font_size=10.0, bold=False, block=0, line=0, strike=strike)  # fmt: skip
+
+
+def test_strike_flag_on_a_neighbour_of_the_struck_text_is_cleared() -> None:
+    """``2 (1)``: MuPDF flags both spans, but the drawn stroke crosses only ``(1)``."""
+    two = _tok("2", 80.1, 85.6, strike=True)
+    one = _tok("(1)", 88.3, 100.5, strike=True)
+    stroke = (85.6, 116.5, 100.6, 117.0)
+    out = {t.text: t.strike for t in reconcile_strikes([two, one], [stroke])}
+    assert out == {"2": False, "(1)": True}
+
+
+def test_strike_flag_kept_without_contradicting_stroke() -> None:
+    """No stroke beside the token: no evidence against the flag, so it stands."""
+    tok = _tok("SCH", 80.0, 98.0, strike=True)
+    far = (300.0, 116.5, 340.0, 117.0)  # a stroke elsewhere on the line
+    assert reconcile_strikes([tok], [far])[0].strike
+    assert reconcile_strikes([tok], [])[0].strike
+
+
+def test_short_word_with_its_own_short_stroke_stays_struck() -> None:
+    """A one-digit word has a stroke shorter than any table rule; it still counts."""
+    one = _tok("1", 80.0, 85.5, strike=True)
+    ea = _tok("EA", 88.0, 100.0, strike=True)
+    strokes = [(80.0, 116.5, 85.5, 117.0), (88.0, 116.5, 100.0, 117.0)]
+    assert all(t.strike for t in reconcile_strikes([one, ea], strokes))
+
+
+def test_ingest_clears_neighbour_flag_end_to_end(tmp_path: Path) -> None:
+    path = tmp_path / "redline.pdf"
+    doc = pymupdf.open()
+    page = doc.new_page(width=612, height=792)
+    page.insert_text((80, 120), "2", fontname="hebo", fontsize=10)
+    page.insert_text((88, 120), "(1)", fontname="helv", fontsize=10)
+    page.draw_line((88, 116.5), (101, 116.5), color=(0, 0, 0), width=0.6)
+    doc.save(path)
+    doc.close()
+    _, pages = extract_document(path)
+    flags = {t.text: t.strike for t in pages[0]}
+    assert flags["(1)"] is True
+    assert flags["2"] is False

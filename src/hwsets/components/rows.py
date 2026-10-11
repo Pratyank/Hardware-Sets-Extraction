@@ -89,6 +89,8 @@ class Row:
     lines: list[Line] = field(default_factory=list)
     cells: dict[str, list[Token]] = field(default_factory=dict)
     note_tokens: list[Token] = field(default_factory=list)
+    # A revision tag wrapped down a narrow quantity column ("[BUL" / "LETI" / "N" / "023,").
+    tag_tokens: list[Token] = field(default_factory=list)
     fit: float = 1.0  # share of tokens that fell in a known column
 
     def add(self, role: str, tok: Token) -> None:
@@ -129,8 +131,13 @@ def assemble_rows(
     model: ColumnModel,
     set_desc: list[str] | None = None,
     rules: RuleIndex = EMPTY_RULES,
+    *,
+    deleted_rows: Mapping[int, Sequence[float]] | None = None,
 ) -> tuple[list[Row], list[str]]:
     """Group candidate row lines into logical rows. Returns rows and set-note token ids.
+
+    ``deleted_rows`` holds the top y of struck-out rows per page (``deleted_row_tops``): a
+    revision tag left behind by a deleted row is dropped with it.
 
     Tokens in a table's SET column are collected into ``set_desc`` (the set's description).
     """
@@ -152,10 +159,43 @@ def assemble_rows(
     pending: list[Line] = []  # fragments of a vertically centred cell, held for the next row
     prev_ln: Line | None = None
     in_remark = False  # inside a remark block (rhythm.py): its wrapped lines are remark too
-    for idx, ln in enumerate(lines):
+    deleted = deleted_rows or {}
+    in_deleted = False  # just below a struck-out row
+    tag_depth = 0  # open "[" of a deleted row's revision tag
+    open_tag: str | None = None  # narrow column holding an unfinished revision tag
+    for idx, line in enumerate(lines):
+        ln = line  # may be narrowed below (revision-tag fragments taken out)
         tokens = [toks[i] for i in ln.token_ids]
         if not tokens:
             continue
+        if open_tag is not None:
+            if rows and ln.page == rows[-1].lines[-1].page:
+                tag_part = [t for t in tokens if model.role_of(t) == open_tag]
+                if tag_part:
+                    # Fragments of the tag, never a quantity (a "2512" here is half a date).
+                    rows[-1].tag_tokens.extend(tag_part)
+                    if any("]" in t.text for t in tag_part):
+                        open_tag = None
+                    tokens = [t for t in tokens if t not in tag_part]
+                    if not tokens:
+                        rows[-1].lines.append(ln)
+                        prev_ln = ln
+                        continue
+                    ln = ln.model_copy(update={"token_ids": [t.id for t in tokens]})
+                else:
+                    open_tag = None
+            else:
+                open_tag = None
+        prev_top = prev_ln.bbox[1] if prev_ln is not None and prev_ln.page == ln.page else -1.0
+        if any(prev_top < y <= ln.bbox[1] + 0.5 for y in deleted.get(ln.page, ())):
+            in_deleted = True
+        if in_deleted:
+            if ln.text.startswith("[") or tag_depth > 0:
+                # The revision tag of a struck-out row: deleted along with its row.
+                tag_depth = max(0, tag_depth + ln.text.count("[") - ln.text.count("]"))
+                prev_ln = ln
+                continue
+            in_deleted, tag_depth = False, 0
         # A full row pitch above this line (in a layout that spaces rows wider than wraps).
         block = opens_block(prev_ln, ln, model.rhythm)
         within = in_block(prev_ln, ln, model.rhythm)
@@ -249,6 +289,7 @@ def assemble_rows(
                 # The quantity is centred on a wrapped description: printed alone, mid-cell.
                 row.add("qty", tokens[0])
                 _add_line(row, ln, toks, model, skip=1)
+                open_tag = _take_open_tag(row, model)
                 last_bottom, last_page = ln.bbox[3], ln.page
                 continue
         elif rows and _closer_to_next(
@@ -297,6 +338,7 @@ def assemble_rows(
             set_notes.extend(ln.token_ids)
             continue
         _add_line(row, ln, toks, model)
+        open_tag = _take_open_tag(row, model) or open_tag
         last_bottom, last_page = ln.bbox[3], ln.page
     if pending and rows:
         for frag in pending:
@@ -322,6 +364,19 @@ def _add_line(
     row.lines.append(ln)
     if tokens:
         row.fit = min(row.fit, known / len(tokens))
+
+
+def _take_open_tag(row: Row, model: ColumnModel) -> str | None:
+    """A revision tag started in a narrow quantity/unit cell but not closed there continues down
+    that column. Move its opening fragment to the row's tag tokens; return the column's role."""
+    for role in ("qty", "unit"):
+        cell = row.cells.get(role, [])
+        for k, t in enumerate(cell):
+            if t.text.startswith("[") and not any("]" in u.text for u in cell[k:]):
+                row.tag_tokens.extend(cell[k:])
+                row.cells[role] = cell[:k]
+                return role if model.has(role) else None
+    return None
 
 
 def _closer_to_next(

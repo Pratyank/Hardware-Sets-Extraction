@@ -23,7 +23,7 @@ from typing import Any
 
 from hwsets.models import PageInfo, Rule, Token
 
-INGEST_VERSION = 3
+INGEST_VERSION = 4
 _SLUG_RE = re.compile(r"[^a-z0-9]+")
 
 

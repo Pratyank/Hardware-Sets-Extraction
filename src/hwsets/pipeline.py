@@ -27,7 +27,7 @@ from hwsets.components.rhythm import estimate_rhythm
 from hwsets.components.rows import ColumnModel, line_starts_row
 from hwsets.layout.chrome import chrome_keys, header_row_roles, is_chrome
 from hwsets.layout.columns import Layout, column_of, infer_layouts, layout_for_page
-from hwsets.layout.lines import clean_tokens, group_lines, union_bbox
+from hwsets.layout.lines import clean_tokens, deleted_row_tops, group_lines, union_bbox
 from hwsets.layout.rules import RuleIndex
 from hwsets.models import (
     Component,
@@ -63,16 +63,21 @@ class _Doc:
     toks: dict[str, Token]
     lines_by_page: dict[int, list[Line]]
     heights: dict[int, float]
+    deleted_rows: dict[int, list[float]] = dataclasses.field(default_factory=dict)
 
 
 def _prepare(pages: Sequence[PageInfo], tokens_by_page: Mapping[int, Sequence[Token]]) -> _Doc:
     toks: dict[str, Token] = {}
     lines_by_page: dict[int, list[Line]] = {}
+    deleted: dict[int, list[float]] = {}
     for info in pages:
-        cleaned = clean_tokens(tokens_by_page.get(info.page, []))
+        raw = tokens_by_page.get(info.page, [])
+        cleaned = clean_tokens(raw)
         toks.update({t.id: t for t in cleaned})
         lines_by_page[info.page] = group_lines(cleaned)
-    return _Doc(toks, lines_by_page, {p.page: p.height for p in pages})
+        if any(t.strike for t in raw):
+            deleted[info.page] = deleted_row_tops(raw)
+    return _Doc(toks, lines_by_page, {p.page: p.height for p in pages}, deleted)
 
 
 def _layout_model(
@@ -296,7 +301,9 @@ def _build_set(
             else:
                 groups.append((model, [ln]))
         for model, lines in groups:
-            parsed = parse_rows(lines, doc.toks, model, legend, rules)
+            parsed = parse_rows(
+                lines, doc.toks, model, legend, rules, deleted_rows=doc.deleted_rows
+            )
             components.extend(parsed.components)
             set_level.extend(parsed.set_note_tokens)
             if h.inline and not h.desc_token_ids:

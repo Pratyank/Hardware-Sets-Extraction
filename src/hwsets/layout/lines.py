@@ -9,6 +9,7 @@ Pure function of tokens. Struck-through tokens are excluded (they are redline de
 
 from __future__ import annotations
 
+import re
 from collections.abc import Iterable, Sequence
 
 from hwsets.models import BBox, Line, Token
@@ -138,3 +139,36 @@ def group_lines(tokens: Sequence[Token]) -> list[Line]:
             )
         )
     return lines
+
+
+_QTY_LIKE = re.compile(r"^\d{1,4}$")
+_TAG_LIKE = re.compile(r"[\[\]]")
+
+
+def deleted_row_tops(tokens: Sequence[Token]) -> list[float]:
+    """Top y of each struck-out row on a page: a visual line that starts with a struck quantity and
+    whose text, apart from bracketed revision tags, is all struck.
+
+    Struck tokens are dropped before lines are grouped, so a deleted row leaves nothing behind
+    except what was not struck: the revision tag next to it. Row assembly uses these positions
+    to drop such leftovers with their row instead of attaching them to the row above.
+    """
+    unstruck = [t.model_copy(update={"strike": False}) if t.strike else t for t in tokens]
+    struck_ids = {t.id for t in tokens if t.strike}
+    out: list[float] = []
+    for ln in group_lines(unstruck):
+        ids = ln.token_ids
+        if not ids or ids[0] not in struck_ids:
+            continue
+        by_id = {t.id: t for t in unstruck if t.id in set(ids)}
+        if not _QTY_LIKE.match(by_id[ids[0]].text):
+            continue
+        # The row's own words, without its revision tag (bracketed, and bold when unstruck).
+        body = [
+            i
+            for i in ids
+            if not _TAG_LIKE.search(by_id[i].text) and not (by_id[i].bold and i not in struck_ids)
+        ]
+        if len(body) >= 2 and all(i in struck_ids for i in body):
+            out.append(ln.bbox[1])
+    return out
