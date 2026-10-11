@@ -338,5 +338,5 @@ FUNCTION)`).
   `(NIGHT`.
 - **Results.**
   - Gold: valor 94.6% → 100%.
-  - Total, including the hfh 027 gold change committed separately: 93.9% → 95.3%.
+  - Total, including the hfh 027 gold change committed separately: 93.9% → 95.0%.
   - Dev and negatives: 0 components changed.
