@@ -14,7 +14,7 @@ Documents: 8
 | component precision | 99.7% | - |
 | component F1 | 99.5% | - |
 | location IoU (mean) | 0.919 | 0.929 |
-| set_fully_correct | 91.4% | 90.8% |
+| set_fully_correct | 93.2% | 92.7% |
 
 Sets: 279 gold, 281 predicted, 279 matched (0 by IoU fallback). Components (in matched sets): 2184 gold, 2174 predicted, 2168 matched.
 
@@ -23,7 +23,7 @@ Sets: 279 gold, 281 predicted, 279 matched (0 by IoU fallback). Components (in m
 | doc | pages | gold | pred | matched | R | P | F1 | status | comp R | comp P | mfr | finish | qty | loc IoU | fully correct |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | valor-acres-building-e--087100-door-hardware-rev-2 | 7-18 | 37 | 37 | 37 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 99.6% | 100.0% | 100.0% | 100.0% | 0.976 | 94.6% |
-| roselle-public-library--087100-fl-door-hardware-ifb-revised | 15-17 | 33 | 33 | 33 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 99.5% | 100.0% | 100.0% | 0.925 | 75.8% |
+| roselle-public-library--087100-fl-door-hardware-ifb-revised | 15-17 | 33 | 33 | 33 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 99.5% | 100.0% | 100.0% | 0.925 | 90.9% |
 | jc-ryan-2--087100-door-hardware-6 | 24-46 | 38 | 38 | 38 | 100.0% | 100.0% | 100.0% | 100.0% | 99.6% | 100.0% | 100.0% | 100.0% | 100.0% | 0.933 | 97.4% |
 | 2353-gerrard-street-shelter--hdw-spec-sch-ift-5 | 19-36 | 35 | 35 | 35 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.970 | 91.4% |
 | lyons-township-hs--project-manual-1 | 285-294 | 29 | 29 | 29 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.974 | 100.0% |
@@ -41,7 +41,7 @@ Sets: 279 gold, 281 predicted, 279 matched (0 by IoU fallback). Components (in m
 | catalog_number | 2161/2168 | 99.7% | 0.999 |
 | mfr | 2167/2168 | 100.0% | - |
 | finish | 2168/2168 | 100.0% | - |
-| notes | 2154/2168 | 99.4% | - |
+| notes | 2159/2168 | 99.6% | - |
 
 ## Manufacturer vs finish confusion
 

@@ -265,3 +265,14 @@ misreads. The full list is in the handoff notes and in the user-facing summary.
   gold was the same but dev changed 46 components. Many of those were new one-word "components" made from
   operational text, and starhardware's paragraphs were chopped up. The conditions above were added to fix
   that, judged on the dev books, not on gold.
+
+### Fix 2: notes-column remark rows
+
+- **Rule.** A line whose only text is in the notes column, below a row that has no note, has nothing to
+  wrap from. It is a remark row about the set, so it becomes a set note. Before, it was attached to
+  whichever component came last. This generalises the existing ruled-table rule, which needed drawn row
+  rules.
+- **Results.**
+  - Gold: roselle 75.8% → 90.9%. No other gold book changed. Total 91.4% → 93.2%.
+  - Dev and negatives: 0 components changed.
+  - The unit test fails on the previous code and passes now.

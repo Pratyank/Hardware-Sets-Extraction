@@ -217,3 +217,34 @@ def test_legend_resolves_collision_code_with_higher_confidence() -> None:
 def test_finish_code_in_manufacturer_column_warns() -> None:
     parsed, _ = _parse(["1|EA|STOP|WS406|630|626"])
     assert any("finish-like code" in w for w in parsed.warnings)
+
+
+# qty, description, catalog, finish, notes: a table with its own notes column
+X_NOTES = (72.0, 110.0, 230.0, 380.0, 430.0)
+MODEL_NOTES = ColumnModel(xs=X_NOTES, roles=("qty", "description", "catalog", "finish", "notes"),
+                          margins=(0.8,) * 5)  # fmt: skip
+
+
+def test_notes_column_remark_after_a_row_without_a_note_is_a_set_note() -> None:
+    parsed, text = _parse(
+        [
+            "1|PIVOT HINGE|CLEAR VIEW|613|FULL HEIGHT STYLE",
+            "1|FLOOR STOP|446|613",
+            "||||COORDINATE W/ ENTRANCE MFR.",
+        ],
+        model=MODEL_NOTES,
+    )
+    assert [c.notes.value for c in parsed.components] == ["FULL HEIGHT STYLE", None]
+    assert _words(parsed.set_note_tokens, text) == "COORDINATE W/ ENTRANCE MFR."
+
+
+def test_wrapped_note_continues_the_row_note() -> None:
+    parsed, _ = _parse(
+        [
+            "1|MORTISE LOCK|L9092EU|613|ELECTRIC UNLOCKING; COORDINATE W/",
+            "||||SECURITY VENDOR",
+        ],
+        model=MODEL_NOTES,
+    )
+    assert parsed.components[0].notes.value == "ELECTRIC UNLOCKING; COORDINATE W/ SECURITY VENDOR"
+    assert parsed.set_note_tokens == []

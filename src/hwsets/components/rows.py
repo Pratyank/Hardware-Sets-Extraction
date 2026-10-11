@@ -221,10 +221,14 @@ def assemble_rows(
         if (
             rows
             and notes_only
-            and rules.row_ruled(ln.page)
-            and rules.separated(rows[-1].lines[-1], ln)
+            and (
+                (rules.row_ruled(ln.page) and rules.separated(rows[-1].lines[-1], ln))
+                # Nothing to continue: the row above has no note, so this is not a wrapped note
+                # but a remark row about the set.
+                or not rows[-1].cells.get("notes")
+            )
         ):
-            set_notes.extend(ln.token_ids)  # a ruled row holding only a remark: set-level note
+            set_notes.extend(ln.token_ids)  # a row holding only a remark: set-level note
             last_bottom, last_page = ln.bbox[3], ln.page
             continue
         if (
